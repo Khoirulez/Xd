@@ -68,28 +68,29 @@ def back():
 ###-----[ LOGO BANNER ]-----###
 def banner():
  prints(panel(f"""{M2}                                   
- ⠀⠀                      ⠀⠀⠀⠀⠀⠀⣀⣀⣤⣴⣶⣶⣶⣶⣦⣤⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀                     ⠀⣠⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⣄⠀⠀⠀⠀⠀⠀
-⠀⠀      ⠀               ⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⠏⠁⠀⢶⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠀⠀
-⠀                     ⠀⢀⣾⣿⣿⣿⣿⣿⣿⡿⠿⣿⠀⠀⠀⠀⣿⠿⢿⣿⣿⣿⣿⣿⣿⣷⡀⠀⠀
-⠀                     ⢠⣾⣿⣿⣿⣿⣿⡿⠋⣠⣴⣿⣷⣤⣤⣾⣿⣦⣄⠙⢿⣿⣿⣿⣿⣿⣷⡄⠀
-⠀                     ⣼⣿⣿⣿⣿⣿⡏⢀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡀⢹⣿⣿⣿⣿⣿⣧⠀
-                     ⢰⣿⣿⣿⣿⣿⡿⠀⣾⣿⣿⣿⣿⠟⠉⠉⠻⣿⣿⣿⣿⣷⠀⢿⣿⣿⣿⣿⣿⡆
-                     ⢸⣿⣿⣿⣿⣿⣇⣰⣿⣿⣿⣿⡇⠀⠀⠀⠀⢸⣿⣿⣿⣿⣆⣸⣿⣿⣿⣿⣿⡇ 
-                     ⠸⣿⣿⣿⡿⣿⠟⠋⠙⠻⣿⣿⣿⣦⣀⣀⣴⣿⣿⣿⣿⠛⠙⠻⣿⣿⣿⣿⣿⠇
-⠀                     ⢻⣿⣿⣧⠉⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠈⣿⣿⣿⡟⠀
-⠀                     ⠘⢿⣿⣿⣷⣦⣤⣴⣾⠛⠻⢿⣿⣿⣿⣿⡿⠟⠋⣿⣦⣤⠀⣰⣿⣿⡿⠃⠀
-⠀⠀                     ⠈⢿⣿⣿⣿⣿⣿⣿⣷⣶⣤⣄⣈⣁⣠⣤⣶⣾⣿⣿⣷⣾⣿⣿⡿⠁⠀⠀
-⠀⠀⠀                      ⠀⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠋⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀                     ⠙⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠋⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀                     ⠀⠀⠉⠉⠛⠻⠿⠿⠿⠿⠟⠛⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀
+ ⠀⠀                      ⠀⠀⠀⠀⠀⣀⣀⣤⣴⣶⣶⣶⣶⣦⣤⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀                    ⠀⣠⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⣄⠀⠀⠀⠀⠀⠀
+⠀⠀      ⠀              ⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⠏⠁⠀⢶⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠀⠀
+⠀                     ⢀⣾⣿⣿⣿⣿⣿⣿⡿⠿⣿⠀⠀⠀⠀⣿⠿⢿⣿⣿⣿⣿⣿⣿⣷⡀⠀⠀
+⠀                    ⢠⣾⣿⣿⣿⣿⣿⡿⠋⣠⣴⣿⣷⣤⣤⣾⣿⣦⣄⠙⢿⣿⣿⣿⣿⣿⣷⡄⠀
+⠀                    ⣼⣿⣿⣿⣿⣿⡏⢀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡀⢹⣿⣿⣿⣿⣿⣧⠀
+                    ⢰⣿⣿⣿⣿⣿⡿⠀⣾⣿⣿⣿⣿⠟⠉⠉⠻⣿⣿⣿⣿⣷⠀⢿⣿⣿⣿⣿⣿⡆
+                    ⢸⣿⣿⣿⣿⣿⣇⣰⣿⣿⣿⣿⡇⠀⠀⠀⠀⢸⣿⣿⣿⣿⣆⣸⣿⣿⣿⣿⣿⡇ 
+                    ⠸⣿⣿⣿⡿⣿⠟⠋⠙⠻⣿⣿⣿⣦⣀⣀⣴⣿⣿⣿⣿⠛⠙⠻⣿⣿⣿⣿⣿⠇
+⠀                    ⢻⣿⣿⣧⠉⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠈⣿⣿⣿⡟⠀
+⠀                    ⠘⢿⣿⣿⣷⣦⣤⣴⣾⠛⠻⢿⣿⣿⣿⣿⡿⠟⠋⣿⣦⣤⠀⣰⣿⣿⡿⠃⠀
+⠀⠀                    ⠈⢿⣿⣿⣿⣿⣿⣿⣷⣶⣤⣄⣈⣁⣠⣤⣶⣾⣿⣿⣷⣾⣿⣿⡿⠁⠀⠀
+⠀⠀⠀                      ⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠋⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀                    ⠙⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠋⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀                    ⠀⠀⠉⠉⠛⠻⠿⠿⠿⠿⠟⠛⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀
 """,style=f"white"))
+     print(f"\n{O}  - Recode By Khoirul. {O}")
 ###-----[ LOGIN COOKIES V1 ]-----###
 ses = requests.Session()
 def awalan():
 	clear();banner()
 	print(f"\n{B}  - Recode By Khoirul. {B}")
-	menu = input(f"\n{U}  - 1. login cookies. \n  - 2. crack id via file nologin. \n  - 3. cek hasil crack. \n  • pilih : ")
+	menu = input(f"\n{U}  - 1. login cookies. \n  - 2. crack id via file nologin. \n  - 3. cek hasil crack. \n  •  : ")
 	if menu in ["01","1"]:
 		login()
 	elif menu in ["02","2"]:
@@ -138,7 +139,7 @@ def menu():
 		os.system('clear')
 	#prints(panel(f"{H2}uid  facebook : {uidfb} \nnama facebook : {nama} \nmetode login  : validate facebook.com,",style=f"white"))
 	prints(panel(f"{H2}1. crack id publik. \n2. crack id publik massal disarankan. \n3. crack id dari file. \n4. cek hasil crack. \n0. keluar",style=f"white"))
-	menu = input(f'\n>>> pilih  : ')
+	menu = input(f'\n{O}>>> • pilih  : ')
 	if menu in ["01","1"]:
 		idt = input('>> ID Target : ')
 		dump(idt,"",{"cookie":cok},token)
@@ -380,7 +381,7 @@ def setting():
 		print(f"  - input hanya dengan angka,jangan kosong.")
 		exit()
 	prints(panel(f"{H2}1. metode API \n2. metode Async \n3. metode Validate\n4. metode Messenger",style=f"white"))
-	login_metode = input(f'\n>>> • pilih : ')
+	login_metode = input(f'\n{O}>>> • pilih : ')
 	if login_metode in ["1","01"]:
 		prints(f"\n>>> anda menggunakan metode api.")
 		method.append('Api')
@@ -397,7 +398,7 @@ def setting():
 		print(f">>> input hanya dengan angka,jangan kosong.")
 		exit()
 	prints(panel(f"{H2}1. password otomatis \n2. password gabung \n3. password manual",style=f"white"))
-	password_metode = input(f'\n{O}>>>• pilih  : ')
+	password_metode = input(f'\n{O}>>> • pilih  : ')
 	if password_metode in ['1','01']:
 		Otomatis()
 	elif password_metode in ['2','02']:
@@ -409,7 +410,7 @@ def setting():
 		exit()
 ###-----[ SETTING PASSWORD OTOMATIS ]-----###
 def Otomatis():
-	ua = input(f'>>> ingin menggunakan user agent manual ? y/t : ')
+	ua = input(f'{P}>>> ingin menggunakan user agent manual ? y/t : ')
 	if ua in ['y','Ya','ya','Y']:
 		uadarimu.append('uadia');bz = input(f'>>> input user agent manual anda : ');uadia.append(bz)
 	if ua in ['t','T','']:
