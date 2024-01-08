@@ -84,7 +84,7 @@ def banner():
 ⠀⠀⠀⠀⠀⠀                    ⠙⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠋⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀                    ⠀⠀⠉⠉⠛⠻⠿⠿⠿⠿⠟⠛⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀
 """,style=f"white"))
-     print(f"\n{O}  - Recode By Khoirul. {O}")
+ print(f"\n{O}  - Recode By Khoirul. {O}")
 ###-----[ LOGIN COOKIES V1 ]-----###
 ses = requests.Session()
 def awalan():
