@@ -387,7 +387,7 @@ def get_ip_info():
         data = response.json()
 
         # Menampilkan informasi yang diperoleh
-        cetak(panel(f",title=f"[bold green]Menu Crack",padding=(0,8),style=f"bold white"))
+        cetak(panel(f"bold white]] INFO USER"))
         print("IP Address:", data['ip'])
         print("Lokasi:", data['loc'])
         print("Region:", data['region'])
