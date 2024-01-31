@@ -309,6 +309,12 @@ def login():
 	os.system('clear')
 	loading()
 	banner()
+	prints(nel(f'              {P2}INFO AUTHOR{P2}',width=70,padding=(0,7),style=f"{color_panel} 
+[{color_text}Author:{P2}]  Khoirul-Xd  [{color_text}Wa:{P2}] 081283547452
+[{color_text}Status:{P2}] Premium    [{color_text}Github{P2}] https://github.com/khoirulez")) 
+    prints(nel(f'              {P2}INFO USER{P2}',width=70,padding=(0,7),style=f"{color_panel}  
+[{color_text}("Your Ip:", data['ip']){P2}]    [{color_text}("Lokasi:", data['loc']){P2}]
+[{color_text}("Region:", data['region']){P2}]    [{color_text}("Kota:", data['city']){P2}]"))
 	prints(nel(f'              {P2}Menu Tools Crack{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
 	prints(nel(f"""{P2}[{color_text}01{P2}] Crack Massal    [{color_text}04{P2}] Cek Ressult
 [{color_text}02{P2}] Crack Publik    [{color_text}05{P2}] Crack File
@@ -373,32 +379,6 @@ def dump(idt,fields,cookie,token):
 			sys.stdout.flush()
 		dump(idt,url["friends"]["paging"]["cursors"]["after"],cookie,token)
 	except:pass
-#----------------------[ INFO-AUTHOR ]----------------------#
-def info_author():
-	cetak(panel(f"[bold white]] Author : Khoirul-Xd                  [bold white]] Wa : 081283547452 \n[bold white]] Status : Premium                  [bold white]] Github : https://github.com/khoirulez"))
-	bray = input(f' [+] INFO AUTHOR')
-#----------------------[ INFO-USER ]----------------------#
-import requests
-
-def get_ip_info():
-    try:
-        # Mendapatkan informasi IP dari layanan ipinfo.io
-        response = requests.get('https://ipinfo.io')
-        data = response.json()
-
-        # Menampilkan informasi yang diperoleh
-        cetak(panel(f"bold white]] INFO USER"))
-        print("IP Address:", data['ip'])
-        print("Lokasi:", data['loc'])
-        print("Region:", data['region'])
-        print("Kota:", data['city'])
-        print("Timezone:", data['timezone'])
-
-    except Exception as e:
-        print("Terjadi kesalahan:", e)
-
-# Memanggil fungsi untuk mendapatkan informasi
-get_ip_info()
 #----------------------[ MENU CRACK LAINNYA ]----------------------#
 def lainnya():
 	cetak(panel(f"[[bold cyan]01[bold white]] Crack Username                   [[bold cyan]03[bold white]] Crack File \n[[bold cyan]02[bold white]] Crack Followers                  [[bold cyan]04[bold white]] Crack Email ",width=90,title=f"[bold green]Menu Crack",padding=(0,8),style=f"bold white"))
