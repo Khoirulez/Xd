@@ -226,7 +226,8 @@ def banner():
      | |_) | |  | |_| | ||  __/ |  _| | |_) |    
      |____/|_|   \__,_|\__\___| |_|   |_.__/                      
              """,width=90,padding=(0,8),title=f"\r",style=f"bold white"))
-class Author:
+#------------------[ INFO-AUTHOR ]-----------------#
+class Author():
     def __init__(self, name, whatsapp, status, github):
         self.name = name
         self.whatsapp = whatsapp
@@ -244,6 +245,7 @@ author_info = Author("Khoirul-Xd", "081283547452", "Premium", "https://github.co
 
 # Tampilkan biodata
 author_info.display_biodata()
+#------------------[ INFO-USER ]-----------------#
 def get_ip_info():
     try:
         # Mendapatkan informasi IP dari layanan ipinfo.io
