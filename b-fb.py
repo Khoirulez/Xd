@@ -310,7 +310,7 @@ def login():
 	loading()
 	banner()
 	prints(nel(f'              {P2}INFO AUTHOR{P2}',width=70,padding=(0,7),style=f"{color_panel}"))
-    prints(nel(f"""Author: Khoirul-Xd   Wa: 081283547452  Status: Premium    Github: https://github.com/khoirulez""",width=70,padding=(0,7),style=f"{color_panel}"))
+    prints(nel(f'Author: Khoirul-Xd   Wa: 081283547452  Status: Premium    Github: https://github.com/khoirulez",width=70,padding=(0,7),style=f"{color_panel}"))
     prints(nel(f'              {P2}INFO USER{P2}',width=70,padding=(0,7),style=f"{color_panel}"))  
     prints(nel(f"""{P2}[{color_text}("Your Ip:", data['ip']){P2}]    [{color_text}("Lokasi:", data['loc']){P2}]
                   [{color_text}("Region:", data['region']){P2}]    [{color_text}("Kota:", data['city']){P2}]""",width=70,padding=(0,7),style=f"{color_panel}"))
