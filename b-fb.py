@@ -309,7 +309,7 @@ def login():
 	os.system('clear')
 	loading()
 	banner()
-	prints(nel(f'              {P2}INFO AUTHOR{P2}',width=70,padding=(0,7),style=f"{color_panel} 
+	prints(nel(f'              {P2}INFO AUTHOR{P2}',width=70,padding=(0,7),style=f"{color_panel}"))
 [{color_text}Author:{P2}]  Khoirul-Xd  [{color_text}Wa:{P2}] 081283547452
 [{color_text}Status:{P2}] Premium    [{color_text}Github{P2}] https://github.com/khoirulez")) 
     prints(nel(f'              {P2}INFO USER{P2}',width=70,padding=(0,7),style=f"{color_panel}  
