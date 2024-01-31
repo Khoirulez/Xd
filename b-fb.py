@@ -310,10 +310,10 @@ def login():
 	loading()
 	banner()
 	prints(nel(f'              {P2}INFO AUTHOR{P2}',width=70,padding=(0,7),style=f"{color_panel}"))
-    prints(nel(f"""[{color_text}Author:{P2}]  Khoirul-Xd  [{color_text}Wa:{P2}] 081283547452
+    prints(nel(f"""{P2}[{color_text}Author:{P2}]  Khoirul-Xd  [{color_text}Wa:{P2}] 081283547452
                   [{color_text}Status:{P2}] Premium    [{color_text}Github{P2}] https://github.com/khoirulez""",width=70,padding=(0,7),style=f"{color_panel}"))
     prints(nel(f'              {P2}INFO USER{P2}',width=70,padding=(0,7),style=f"{color_panel}"))  
-    prints(nel(f"""[{color_text}("Your Ip:", data['ip']){P2}]    [{color_text}("Lokasi:", data['loc']){P2}]
+    prints(nel(f"""{P2}[{color_text}("Your Ip:", data['ip']){P2}]    [{color_text}("Lokasi:", data['loc']){P2}]
                   [{color_text}("Region:", data['region']){P2}]    [{color_text}("Kota:", data['city']){P2}]""",width=70,padding=(0,7),style=f"{color_panel}"))
 	prints(nel(f'              {P2}Menu Tools Crack{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
 	prints(nel(f"""{P2}[{color_text}01{P2}] Crack Massal    [{color_text}04{P2}] Cek Ressult
