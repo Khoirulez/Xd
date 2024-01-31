@@ -216,42 +216,17 @@ def loading():
         sys.stdout.write(f"\r>> {H}Loading...{N} " + animation[i % len(animation)] +"\x1b[0m ")
         sys.stdout.flush()
         time.sleep(0.05)
+        
 #------------------[ LOGO-LAKNAT ]-----------------#
 def banner():
 	cetak(panel(f"""[bold Red]               
  ____             _        _____ _     
- | __ ) _ __ _   _| |_ ___  |  ___| |__  Author : Khoirul-Xd
- |  _ \| '__| | | | __/ _ \ | |_  | '_ \    wa : 081283547452
- | |_) | |  | |_| | ||  __/ |  _| | |_) |    status : premium
- |____/|_|   \__,_|\__\___| |_|   |_.__/   github : https://github.com/Khoirulez
+ | __ ) _ __ _   _| |_ ___  |  ___| |__  
+ |  _ \| '__| | | | __/ _ \ | |_  | '_ \   
+ | |_) | |  | |_| | ||  __/ |  _| | |_) |    
+ |____/|_|   \__,_|\__\___| |_|   |_.__/   
                                          
              """,width=90,padding=(0,8),title=f"\r",style=f"bold white"))
-#------------------[ INFORMASI-USER ]-----------------#
-import requests
-from tabulate import tabulate
-
-def get_ip_info():
-    try:
-        # Mendapatkan informasi IP dari layanan ipinfo.io
-        response = requests.get('https://ipinfo.io')
-        data = response.json()
-
-        # Menampilkan informasi yang diambil dalam bentuk tabel
-        table = [
-            ["Alamat IP", data.get('ip')],
-            ["Region", data.get('region')],
-            ["Lokasi", data.get('loc')],
-            ["Kota", data.get('city')],
-        ]
-
-        # Menampilkan tabel dengan menggunakan modul tabulate
-        print(tabulate(table, headers=["Informasi", "Nilai"], tablefmt="pretty"))
-
-    except Exception as e:
-        print("Terjadi kesalahan:", e)
-
-# Panggil fungsi untuk mendapatkan informasi IP
-get_ip_info()
 #--------------------[ BAGIAN-MASUK ]--------------#
 def login():
 	try:
@@ -398,6 +373,32 @@ def dump(idt,fields,cookie,token):
 			sys.stdout.flush()
 		dump(idt,url["friends"]["paging"]["cursors"]["after"],cookie,token)
 	except:pass
+#----------------------[ INFO-AUTHOR ]----------------------#
+def info_author():
+	cetak(panel(f"[bold white]] Author : Khoirul-Xd                  [bold white]] Wa : 081283547452 \n[bold white]] Status : Premium                  [bold white]] Github : https://github.com/khoirulez"))
+	bray = input(f' [+] INFO AUTHOR')
+#----------------------[ INFO-USER ]----------------------#
+import requests
+
+def get_ip_info():
+    try:
+        # Mendapatkan informasi IP dari layanan ipinfo.io
+        response = requests.get('https://ipinfo.io')
+        data = response.json()
+
+        # Menampilkan informasi yang diperoleh
+        cetak(panel(f",title=f"[bold green]Menu Crack",padding=(0,8),style=f"bold white"))
+        print("IP Address:", data['ip'])
+        print("Lokasi:", data['loc'])
+        print("Region:", data['region'])
+        print("Kota:", data['city'])
+        print("Timezone:", data['timezone'])
+
+    except Exception as e:
+        print("Terjadi kesalahan:", e)
+
+# Memanggil fungsi untuk mendapatkan informasi
+get_ip_info()
 #----------------------[ MENU CRACK LAINNYA ]----------------------#
 def lainnya():
 	cetak(panel(f"[[bold cyan]01[bold white]] Crack Username                   [[bold cyan]03[bold white]] Crack File \n[[bold cyan]02[bold white]] Crack Followers                  [[bold cyan]04[bold white]] Crack Email ",width=90,title=f"[bold green]Menu Crack",padding=(0,8),style=f"bold white"))
