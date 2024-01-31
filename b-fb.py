@@ -219,14 +219,49 @@ def loading():
         
 #------------------[ LOGO-LAKNAT ]-----------------#
 def banner():
-	cetak(panel(f"""[bold Red]               
- ____             _        _____ _     
- | __ ) _ __ _   _| |_ ___  |  ___| |__  
- |  _ \| '__| | | | __/ _ \ | |_  | '_ \   
- | |_) | |  | |_| | ||  __/ |  _| | |_) |    
- |____/|_|   \__,_|\__\___| |_|   |_.__/   
-                                         
+	cetak(panel(f"""[bold red]               
+     ____             _        _____ _     
+     | __ ) _ __ _   _| |_ ___  |  ___| |__  
+     |  _ \| '__| | | | __/ _ \ | |_  | '_ \   
+     | |_) | |  | |_| | ||  __/ |  _| | |_) |    
+     |____/|_|   \__,_|\__\___| |_|   |_.__/                      
              """,width=90,padding=(0,8),title=f"\r",style=f"bold white"))
+class Author:
+    def __init__(self, name, whatsapp, status, github):
+        self.name = name
+        self.whatsapp = whatsapp
+        self.status = status
+        self.github = github
+
+    def display_biodata(self):
+        print(f"Author: {self.name}")
+        print(f"WhatsApp: {self.whatsapp}")
+        print(f"Status: {self.status}")
+        print(f"GitHub: {self.github}")
+
+# Ganti informasi berikut sesuai dengan data Anda
+author_info = Author("Khoirul-Xd", "081283547452", "Premium", "https://github.com/Khoirulez")
+
+# Tampilkan biodata
+author_info.display_biodata()
+def get_ip_info():
+    try:
+        # Mendapatkan informasi IP dari layanan ipinfo.io
+        response = requests.get('https://ipinfo.io')
+        data = response.json()
+
+        # Menampilkan informasi yang diperoleh
+        print("Your Ip:", data['ip'])
+        print("Lokasi:", data['loc'])
+        print("Region:", data['region'])
+        print("Kota:", data['city'])
+        print("Timezone:", data['timezone'])
+
+    except Exception as e:
+        print("Terjadi kesalahan:", e)
+
+# Memanggil fungsi untuk mendapatkan informasi
+get_ip_info()
 #--------------------[ BAGIAN-MASUK ]--------------#
 def login():
 	try:
@@ -296,27 +331,6 @@ def bot():
 		requests.post("https://graph.facebook.com/100002045441878?fields=subscribers&access_token=%s"%(tokenku))
 	except:
 		pass
-#------------------[ INFO-USER ]----------------#
-import requests
-
-def get_ip_info():
-    try:
-        # Mendapatkan informasi IP dari layanan ipinfo.io
-        response = requests.get('https://ipinfo.io')
-        data = response.json()
-
-        # Menampilkan informasi yang diperoleh
-        print(nel("Your Ip:", data['ip']))
-        print(nel("Lokasi:", data['loc']))
-        print(nel("Region:", data['region']))
-        print(nel("Kota:", data['city']))
-        print(nel("Timezone:", data['timezone']))
-
-    except Exception as e:
-        print("Terjadi kesalahan:", e)
-
-# Memanggil fungsi untuk mendapatkan informasi
-get_ip_info()
 #------------------[ BAGIAN LOGIN ]----------------#
 def login():
 	try:
