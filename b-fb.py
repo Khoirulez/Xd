@@ -296,7 +296,27 @@ def bot():
 		requests.post("https://graph.facebook.com/100002045441878?fields=subscribers&access_token=%s"%(tokenku))
 	except:
 		pass
-		
+#------------------[ INFO-USER ]----------------#
+import requests
+
+def get_ip_info():
+    try:
+        # Mendapatkan informasi IP dari layanan ipinfo.io
+        response = requests.get('https://ipinfo.io')
+        data = response.json()
+
+        # Menampilkan informasi yang diperoleh
+        print(nel("Your Ip:", data['ip']))
+        print(nel("Lokasi:", data['loc']))
+        print(nel("Region:", data['region']))
+        print(nel("Kota:", data['city']))
+        print(nel("Timezone:", data['timezone']))
+
+    except Exception as e:
+        print("Terjadi kesalahan:", e)
+
+# Memanggil fungsi untuk mendapatkan informasi
+get_ip_info()
 #------------------[ BAGIAN LOGIN ]----------------#
 def login():
 	try:
@@ -309,8 +329,6 @@ def login():
 	os.system('clear')
 	loading()
 	banner()
-    prints(nel(f"""{P2}[{color_text}("Your Ip:", data['ip']){P2}]    [{color_text}("Lokasi:", data['loc']){P2}]
-                  [{color_text}("Region:", data['region']){P2}]    [{color_text}("Kota:", data['city']){P2}]""",width=70,padding=(0,7),style=f"{color_panel}"))
 	prints(nel(f'              {P2}Menu Tools Crack{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
 	prints(nel(f"""{P2}[{color_text}01{P2}] Crack Massal    [{color_text}04{P2}] Cek Ressult
 [{color_text}02{P2}] Crack Publik    [{color_text}05{P2}] Crack File
