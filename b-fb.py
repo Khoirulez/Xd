@@ -310,8 +310,17 @@ def login():
 	loading()
 	banner()
 	prints(nel(f'              {P2}INFO AUTHOR{P2}',width=70,padding=(0,7),style=f"{color_panel}"))
-    prints(nel(f'              {P2}Author: Khoirul-Xd{P2}   {P2}Wa: 081283547452{P2}  
-                              {P2}Status: Premium{P2}    {P2}Github: https://github.com/khoirulez{P2}',width=70,padding=(0,7),style=f"{color_panel}"))
+def nel(s, width, padding, style):
+    # Assuming nel is a function for formatting, but its definition is not provided
+
+P2 = ""  # Assuming P2 is a variable, but its value is not provided
+color_panel = ""  # Assuming color_panel is a variable, but its value is not provided
+
+info_text = f"              {P2}Author: Khoirul-Xd{P2}   {P2}Wa: 081283547452{P2} \n\
+                              {P2}Status: Premium{P2}    {P2}Github: https://github.com/khoirulez{P2}"
+
+formatted_info = nel(info_text, width=70, padding=(0, 7), style=f"{color_panel}")
+print(formatted_info)
     prints(nel(f'              {P2}INFO USER{P2}',width=70,padding=(0,7),style=f"{color_panel}"))  
     prints(nel(f"""{P2}[{color_text}("Your Ip:", data['ip']){P2}]    [{color_text}("Lokasi:", data['loc']){P2}]
                   [{color_text}("Region:", data['region']){P2}]    [{color_text}("Kota:", data['city']){P2}]""",width=70,padding=(0,7),style=f"{color_panel}"))
