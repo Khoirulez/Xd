@@ -234,7 +234,7 @@ def banner():
      | |_) | |  | |_| | ||  __/ |  _| | |_) |    
      |____/|_|   \__,_|\__\___| |_|   |_.__/                      
              """,width=90,padding=(0,8),title=f"\r",style=f"bold white"))
-    prints(panel(f"{H2}Author: Khoirul-Xd \nWhatsapp: 081283547452 \nStatus: Premium \nGithub: https://github.com/Khoirulez",style=f"white"))
+    print(panel(f"{H2}Author: Khoirul-Xd \nWhatsapp: 081283547452 \nStatus: Premium \nGithub: https://github.com/Khoirulez",style=f"white"))
 #------------------[ INFO AUTHOR ]-----------------#
 class Author():
     def __init__(self, name, whatsapp, status, github):
