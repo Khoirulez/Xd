@@ -199,6 +199,14 @@ bln = dic[(str(datetime.datetime.now().month))]
 thn = datetime.datetime.now().year
 okc = 'OK-'+str(tgl)+'-'+str(bln)+'-'+str(thn)+'.txt'
 cpc = 'CP-'+str(tgl)+'-'+str(bln)+'-'+str(thn)+'.txt'
+def waktu():
+	now = datetime.datetime.now()
+	hours = now.hour
+	if 4 <= hours < 12:timenow = "Selamat Pagi ðŸ‘‹"
+	elif 12 <= hours < 15:timenow = "Selamat Siang ðŸ‘‹"
+	elif 15 <= hours < 18:timenow = "Selamat Sore ðŸ‘‹"
+	else:timenow = "Selamat Malam ðŸ‘‹"
+	return timenow
 #------------------[ MACHINE-SUPPORT ]---------------#
 def clear():
     os.system('clear')
@@ -219,13 +227,14 @@ def loading():
         
 #------------------[ LOGO-LAKNAT ]-----------------#
 def banner():
-	cetak(panel(f"""[bold red]               
+	prints(panel(f"""[bold red]               
      ____             _        _____ _     
      | __ ) _ __ _   _| |_ ___  |  ___| |__  
      |  _ \| '__| | | | __/ _ \ | |_  | '_ \   
      | |_) | |  | |_| | ||  __/ |  _| | |_) |    
      |____/|_|   \__,_|\__\___| |_|   |_.__/                      
              """,width=90,padding=(0,8),title=f"\r",style=f"bold white"))
+    prints(panel(f"{H2}Author: Khoirul-Xd \nWhatsapp: 081283547452 \nStatus: Premium \nGithub: https://github.com/Khoirulez",style=f"white"))
 #------------------[ INFO AUTHOR ]-----------------#
 class Author():
     def __init__(self, name, whatsapp, status, github):
@@ -241,7 +250,7 @@ class Author():
         print(f"GitHub: {self.github}")
 
 # Ganti informasi berikut sesuai dengan data Anda
-author_info = Author(panel("Khoirul-Xd", "081283547452", "Premium", "https://github.com/Khoirulez"))
+author_info = Author("Khoirul-Xd", "081283547452", "Premium", "https://github.com/Khoirulez")
 
 # Tampilkan biodata
 author_info.display_biodata()
@@ -253,7 +262,7 @@ def get_ip_info():
         data = response.json()
 
         # Menampilkan informasi yang diperoleh
-        print(panel("Your Ip:", data['ip']))
+        print("Your Ip:", data['ip'])
         print("Lokasi:", data['loc'])
         print("Region:", data['region'])
         print("Kota:", data['city'])
@@ -1656,7 +1665,7 @@ class Author():
         print(f"GitHub: {self.github}")
 
 # Ganti informasi berikut sesuai dengan data Anda
-author_info = Author(panel("Khoirul-Xd", "081283547452", "Premium", "https://github.com/Khoirulez"))
+author_info = Author("Khoirul-Xd", "081283547452", "Premium", "https://github.com/Khoirulez")
 
 # Tampilkan biodata
 author_info.display_biodata()
@@ -1668,7 +1677,7 @@ def get_ip_info():
         data = response.json()
 
         # Menampilkan informasi yang diperoleh
-        print(panel("Your Ip:", data['ip']))
+        print("Your Ip:", data['ip'])
         print("Lokasi:", data['loc'])
         print("Region:", data['region'])
         print("Kota:", data['city'])
