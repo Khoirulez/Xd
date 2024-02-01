@@ -249,14 +249,14 @@ def jalan(z):
     for e in z + '\n':
         sys.stdout.write(e)
         sys.stdout.flush()
-        time.sleep(0.05)
+        time.sleep(0.03)
 def loading():
     animation = ["[\x1b[1;91m■\x1b[0m□□□□□□□□□]","[\x1b[1;92m■■\x1b[0m□□□□□□□□]", "[\x1b[1;93m■■■\x1b[0m□□□□□□□]", "[\x1b[1;94m■■■■\x1b[0m□□□□□□]", "[\x1b[1;95m■■■■■\x1b[0m□□□□□]", "[\x1b[1;96m■■■■■■\x1b[0m□□□□]", "[\x1b[1;97m■■■■■■■\x1b[0m□□□]", "[\x1b[1;98m■■■■■■■■\x1b[0m□□]", "[\x1b[1;99m■■■■■■■■■\x1b[0m□]", "[\x1b[1;910m■■■■■■■■■■\x1b[0m]"]
     for i in range(50):
-        time.sleep(0.05)
+        time.sleep(0.03)
         sys.stdout.write(f"\r>> {H}Loading...{N} " + animation[i % len(animation)] +"\x1b[0m ")
         sys.stdout.flush()
-        time.sleep(0.05)
+        time.sleep(0.03)
 
 # ------------------[ LOGO-LAKNAT ]-----------------#
 def banner():
@@ -344,13 +344,13 @@ def login():
 		cok = open('.cok.txt','r').read()
 	except IOError:
 		print('[×] Kues Kadaluarsa ')
-		time.sleep(5)
+		time.sleep(3)
 		login_lagi334()
 	os.system('clear')
 	loading()
-	
+	os.system('clear')
 	banner()
-	print(nel(pesan_selamat))
+	print(nel(" "* spasi_awal + pesan_selamat))
 	print(nel(f"""             [green]Author: [purple]Khoirul-Xd
              [green]Status: [red]Premium
              [green]Wa: [blue]081283547452
