@@ -233,40 +233,49 @@ def loading():
         sys.stdout.flush()
         time.sleep(0.08)
         
-#------------------[ LOGO-LAKNAT ]-----------------#
+import requests
+from geopy.geocoders import Nominatim
+
+# ------------------[ LOGO-LAKNAT ]-----------------#
 def banner():
-	prints(panel(f"""[bold red]               
+    prints(panel(f"""[bold red]               
      ____             _        _____ _     
      | __ ) _ __ _   _| |_ ___  |  ___| |__  
      |  _ \| '__| | | | __/ _ \ | |_  | '_ \   
      | |_) | |  | |_| | ||  __/ |  _| | |_) |    
      |____/|_|   \__,_|\__\___| |_|   |_.__/                      
-             """,width=90,padding=(0,8),title=f"\r",style=f"bold white"))
-import requests
+             """, width=90, padding=(0, 8), title=f"\r", style=f"bold white"))
 
-def get_ip_info():
-    try:
-        # Mendapatkan alamat IP publik
-        response = requests.get('https://api64.ipify.org?format=json')
-        ip_data = response.json()
+def get_ip_info(ip_address):
+    url = f"http://ip-api.com/json/{ip_address}"
+    response = requests.get(url)
+    data = response.json()
+    return data
 
-        # Mendapatkan informasi detail berdasarkan alamat IP
-        info = get_info(ip_data['ip'])
-        
-        # Menampilkan hasil
-        print(f"IP Address: {info.ip}")
-        print(f"Region: {info.region}")
-        print(f"Lokasi: {info.city}")
-        print(f"Kota: {info.region_name}")
-        print(f"Timezone: {info.timezone}")
-    
-    except Exception as e:
-        print(f"Error: {e}")
+def get_location_details(latitude, longitude):
+    geolocator = Nominatim(user_agent="your_app_name")
+    location = geolocator.reverse((latitude, longitude))
+    return location.address, location.raw['timezone']
 
-if __name__ == "__main__":
-    banner()  # Memanggil fungsi banner
-    get_ip_info()  # Memanggil fungsi get_ip_info
-#------------------[ INFO WAKTU ]-----------------#
+# Example usage:
+ip_address = "8.8.8.8"  # Replace with the desired IP address
+ip_info = get_ip_info(ip_address)
+
+if ip_info['status'] == 'success':
+    city = ip_info['city']
+    region = ip_info['regionName']
+    latitude = ip_info['lat']
+    longitude = ip_info['lon']
+
+    location_details, timezone = get_location_details(latitude, longitude)
+
+    print(f"IP Address: {ip_address}")
+    print(f"City: {city}")
+    print(f"Region: {region}")
+    print(f"Location: {location_details}")
+    print(f"Timezone: {timezone}")
+else:
+    print(f"Failed to retrieve information for IP address: {ip_address}")
 def waktu():
 	now = datetime.datetime.now()
 	hours = now.hour
