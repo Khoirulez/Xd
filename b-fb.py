@@ -685,7 +685,7 @@ def setting():
 			xx = random.randint(0,len(id2))
 			id2.insert(xx,bacot)
 	else:
-		prints(nel(f'         {P2[bold red]}Input Tidak Diketahui{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
+		prints(nel(f'         {P2}[bold red]Input Tidak Diketahui{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
 		exit()
 	prints(nel(f'               {P2}[bold green]login Method{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
 	prints(nel(f'{P2}[{color_text}01{P2}]. [bold green]Method free.facebook.com [[green] Validate [white]]\n[{color_text}02{P2}]. Method [bold green]m.facebook.com [[green] Async [white]]\n[{color_text}03{P2}]. [bold green]Method graph.facebook.com [[green] B-Api [white]]',width=70,padding=(0,7),style=f"{color_panel}")) 
