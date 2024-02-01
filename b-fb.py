@@ -262,13 +262,11 @@ if ip_info['status'] == 'success':
     latitude = ip_info['lat']
     longitude = ip_info['lon']
 
-    location_details, timezone = get_location_details(latitude, longitude)
 
     print(f"IP Address: {ip_address}")
     print(f"City: {city}")
     print(f"Region: {region}")
     print(f"Location: {location_details}")
-    print(f"Timezone: {timezone}")
 else:
     print(f"Failed to retrieve information for IP address: {ip_address}")
 def waktu():
