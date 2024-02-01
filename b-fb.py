@@ -346,8 +346,9 @@ def login():
 		print('[×] Kues Kadaluarsa ')
 		time.sleep(5)
 		login_lagi334()
-    loading()
 	os.system('clear')
+	loading()
+	
 	banner()
 	print(nel(pesan_selamat))
 	print(nel(f"""             [green]Author: [purple]Khoirul-Xd
