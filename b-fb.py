@@ -342,9 +342,9 @@ def login():
 	loading()
 	banner()
 	waktu()
-	print(nel(f"""[green]Author: [purple]Khoirul-Xd\n
-        [green]Status: [red]Premium\n
-        [green]GitHub: [blue]https://github.com/khoirulez\n""",width=70, padding=(0, 7), style=f"{color_panel}"))
+	print(nel(f"""[green]Author: [purple]Khoirul-Xd
+        [green]Status: [red]Premium
+        [green]GitHub: [blue]https://github.com/khoirulez""",width=70, padding=(0, 7), style=f"{color_panel}"))
     print(nel(f"[bold cyan]Your IP: [bold green]{cek_data}\n
         f"[bold cyan]Region: [bold green]{asal_reg}\n
         f"[bold cyan]Kota: [bold green]{city}\n
