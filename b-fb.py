@@ -346,9 +346,9 @@ def login():
         [green]Status: [red]Premium
         [green]GitHub: [blue]https://github.com/khoirulez""",width=70, padding=(0, 7), style=f"{color_panel}"))
     print(nel(f"[bold cyan]Your IP: [bold green]{cek_data}
-        f"[bold cyan]Region: [bold green]{asal_reg}
-        f"[bold cyan]Kota: [bold green]{city}
-        f"[bold cyan]Timezone: [bold green]{times}",width=70, padding=(0, 7), style=f"{color_panel}"))
+        [bold cyan]Region: [bold green]{asal_reg}
+        [bold cyan]Kota: [bold green]{city}
+        [bold cyan]Timezone: [bold green]{times}",width=70, padding=(0, 7), style=f"{color_panel}"))
     console.print(Panel(ip_info, width=70, padding=(0, 7), style=f"{color_panel}"))
 	prints(nel(f'              {P2}Menu Tools Crack{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
 	prints(nel(f"""{P2}[{color_text}01{P2}] Crack Massal    [{color_text}04{P2}] Cek Ressult
