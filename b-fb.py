@@ -234,10 +234,31 @@ def banner():
      | |_) | |  | |_| | ||  __/ |  _| | |_) |    
      |____/|_|   \__,_|\__\___| |_|   |_.__/                      
              """,width=90,padding=(0,8),title=f"\r",style=f"bold white"))
-        print("Your Ip:", data['cek_data'])
-        print("Region:", data['asal_reg'])
-        print("Kota:", data['city'])
-        print("Timezone:", data['times'])
+import requests
+from ipinfo import get_info
+
+def get_ip_info():
+    try:
+        # Mendapatkan alamat IP publik
+        response = requests.get('https://api64.ipify.org?format=json')
+        ip_data = response.json()
+
+        # Mendapatkan informasi detail berdasarkan alamat IP
+        info = get_info(ip_data['ip'])
+        
+        # Menampilkan hasil
+        print(f"IP Address: {info.ip}")
+        print(f"Region: {info.region}")
+        print(f"Lokasi: {info.city}")
+        print(f"Kota: {info.region_name}")
+        print(f"Timezone: {info.timezone}")
+    
+    except Exception as e:
+        print(f"Error: {e}")
+
+if __name__ == "__main__":
+    banner()  # Memanggil fungsi banner
+    get_ip_info()  # Memanggil fungsi get_ip_info
 #------------------[ INFO WAKTU ]-----------------#
 def waktu():
 	now = datetime.datetime.now()
