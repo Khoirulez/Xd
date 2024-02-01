@@ -228,8 +228,6 @@ author_info = Author(name="Khoirul-Xd", status="Premium", github="https://github
 
 # Menampilkan informasi penulis di tengah
 author_info.display_info()
-import tkinter as tk
-from tkinter import Label, StringVar
 import requests
 import geocoder
 
@@ -242,31 +240,15 @@ def get_ip_info():
     # Mendapatkan informasi lokasi berdasarkan alamat IP
     location_info = geocoder.ip(ip_address)
 
-    # Menampilkan informasi di GUI
-    result.set(
-        f"[bold green]Your Ip: [bold cyan]{ip_address}\n"
-        f"[bold green]Region: [bold cyan]{location_info.region}\n"
-        f"[bold green]Kota: [bold cyan]{location_info.city}\n"
-        f"[bold green]Timezone: [bold cyan]{location_info.timezone}"
-    )
+    # Menampilkan informasi
+    print(f"[bold cyan]Your Ip: [bold green]{ip_address}")
+    print(f"[bold cyan]Region: [bold green]{location_info.region}")
+    print(f"[bold cyan]Kota: [bold green]{location_info.city}")
+    print(f"[bold cyan]Timezone: [bold green]{location_info.timezone}")
 
-# Membuat GUI dengan tkinter
-app = tk.Tk()
-app.title("IP Info App")
+if __name__ == "__main__":
+    get_ip_info()
 
-# StringVar untuk menampilkan hasil
-result = StringVar()
-
-# Label untuk menampilkan hasil
-result_label = Label(app, textvariable=result, justify="left", padx=20, pady=20)
-result_label.pack()
-
-# Tombol untuk mendapatkan informasi IP
-get_info_button = tk.Button(app, text="Dapatkan Informasi IP", command=get_ip_info)
-get_info_button.pack()
-
-# Menjalankan aplikasi GUI
-app.mainloop()
 from rich import print
 import datetime
 
