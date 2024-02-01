@@ -23,6 +23,9 @@ from rich.markdown import Markdown as mark
 from concurrent.futures import ThreadPoolExecutor as tred
 from concurrent.futures import ThreadPoolExecutor as BrayennnXD 
 from rich.progress import Progress,SpinnerColumn,BarColumn,TextColumn
+from rich.console import Console
+from rich.panel import Panel
+from rich.style import Style
 #------------------[  MODULE  ]-------------------#
 try:
         import rich
@@ -39,6 +42,11 @@ try:
 except ImportError:
 	cetak(nel('\t• Sedang Menginstall Modul Requests •'))
 	os.system('pip install requests && pip install mechanize ')
+try:
+	import requests
+except ImportError:
+	cetak(nel('\t• Sedang Menginstall Modul Requests •'))
+	os.system('pip install requests ipinfo ')
 	
 #------------------[ USER-AGENT ]-------------------#
 pretty.install()
