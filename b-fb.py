@@ -200,34 +200,6 @@ except:times = cek_data['-']
 try:city = cek_data["city"]
 except:city = cek_data['-']
 from rich import print
-
-class Author:
-    def __init__(self, name, status, github):
-        self.name = name
-        self.status = status
-        self.github = github
-
-    def display_info(self):
-        info = (
-            f"[green]Author: [purple]{self.name}\n"
-            f"[green]Status: [red]{self.status}\n"
-            f"[green]GitHub: [blue]{self.github}\n"
-        )
-
-        # Menentukan lebar layar
-        lebar_layar = 50
-
-        # Menghitung jumlah spasi di awal untuk menengahkan informasi
-        spasi_awal = (lebar_layar - len(info)) // 2
-
-        # Menampilkan informasi di tengah
-        print(" " * spasi_awal + info)
-
-# Membuat objek Author
-author_info = Author(name="Khoirul-Xd", status="Premium", github="https://github.com/khoirulez")
-
-# Menampilkan informasi penulis di tengah
-author_info.display_info()
 import requests
 import geocoder
 from rich.console import Console
@@ -394,13 +366,14 @@ def login():
 		print('[×] Kues Kadaluarsa ')
 		time.sleep(2)
 		login_lagi334()
-	loading()
 	os.system('clear')
+	loading()
 	banner()
 	waktu()
-	author_info.display_info()
-	get_ip_info()
-	print(panel("waktu()"))
+	print(panel(f"[green]Author: [purple]Khoirul-Xd\n"
+            f"[green]Status: [red]Premium\n"
+            f"[green]GitHub: [blue]https://github.com/khoirulez\n"))
+    print(panel(f' get_ip_info()'))
 	prints(nel(f'              {P2}Menu Tools Crack{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
 	prints(nel(f"""{P2}[{color_text}01{P2}] Crack Massal    [{color_text}04{P2}] Cek Ressult
 [{color_text}02{P2}] Crack Publik    [{color_text}05{P2}] Crack File
