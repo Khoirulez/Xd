@@ -243,7 +243,6 @@ def banner():
      |____/|_|   \__,_|\__\___| |_|   |_.__/                      
              """,width=90,padding=(0,8),title=f"\r",style=f"bold white"))
 import requests
-from ipinfo import get_info
 
 def get_ip_info():
     try:
