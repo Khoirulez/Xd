@@ -213,9 +213,6 @@ try:
         # Mendapatkan informasi lokasi berdasarkan alamat IP
         location_info = geocoder.ip(ip_address)
 
-from rich import print
-import datetime
-
 def waktu():
     now = datetime.datetime.now()
     hours = now.hour
