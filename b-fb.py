@@ -230,21 +230,29 @@ author_info = Author(name="Khoirul-Xd", status="Premium", github="https://github
 author_info.display_info()
 import requests
 import geocoder
+from rich.console import Console
 
 def get_ip_info():
-    # Mendapatkan alamat IP pengguna
-    ip_response = requests.get('https://api64.ipify.org?format=json')
-    ip_data = ip_response.json()
-    ip_address = ip_data['ip']
+    try:
+        # Mendapatkan alamat IP pengguna
+        ip_response = requests.get('https://api64.ipify.org?format=json')
+        ip_data = ip_response.json()
+        ip_address = ip_data['ip']
 
-    # Mendapatkan informasi lokasi berdasarkan alamat IP
-    location_info = geocoder.ip(ip_address)
+        # Mendapatkan informasi lokasi berdasarkan alamat IP
+        location_info = geocoder.ip(ip_address)
 
-    # Menampilkan informasi
-    print(f"[bold cyan]Your Ip: [bold green]{ip_address}")
-    print(f"[bold cyan]Region: [bold green]{location_info.region}")
-    print(f"[bold cyan]Kota: [bold green]{location_info.city}")
-    print(f"[bold cyan]Timezone: [bold green]{location_info.timezone}")
+        # Menampilkan informasi dengan pewarnaan menggunakan rich
+        console = Console()
+        console.print(f"[bold cyan]Your IP: [bold green]{ip_address}")
+        console.print(f"[bold cyan]Region: [bold green]{location_info.region}")
+        console.print(f"[bold cyan]Kota: [bold green]{location_info.city}")
+        console.print(f"[bold cyan]Timezone: [bold green]{location_info.timezone}")
+
+    except Exception as e:
+        # Menangani kesalahan dan menampilkan pesan
+        console = Console()
+        console.print(f"[bold red]Error: {e}")
 
 if __name__ == "__main__":
     get_ip_info()
@@ -300,6 +308,7 @@ def loading():
 
 # ------------------[ LOGO-LAKNAT ]-----------------#
 def banner():
+
     prints(panel(f"""[bold red]               
      ____             _        _____ _     
      | __ ) _ __ _   _| |_ ___  |  ___| |__  
@@ -385,11 +394,13 @@ def login():
 		print('[×] Kues Kadaluarsa ')
 		time.sleep(2)
 		login_lagi334()
+	loading()
 	os.system('clear')
 	banner()
 	waktu()
 	author_info.display_info()
 	get_ip_info()
+	print(panel("waktu()"))
 	prints(nel(f'              {P2}Menu Tools Crack{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
 	prints(nel(f"""{P2}[{color_text}01{P2}] Crack Massal    [{color_text}04{P2}] Cek Ressult
 [{color_text}02{P2}] Crack Publik    [{color_text}05{P2}] Crack File
