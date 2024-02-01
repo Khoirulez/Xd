@@ -204,15 +204,6 @@ import requests
 import geocoder
 from rich.console import Console
 
-try:
-        # Mendapatkan alamat IP pengguna
-        ip_response = requests.get('https://api64.ipify.org?format=json')
-        ip_data = ip_response.json()
-        ip_address = ip_data['ip']
-
-        # Mendapatkan informasi lokasi berdasarkan alamat IP
-        location_info = geocoder.ip(ip_address)
-
 def waktu():
     now = datetime.datetime.now()
     hours = now.hour
@@ -361,7 +352,7 @@ def login():
     console.print(Panel(author_info, width=70, padding=(0, 7), style=f"{color_panel}"))
 
     ip_info = (
-        f"[bold cyan]Your IP: [bold green]{ip_address}\n"
+        f"[bold cyan]Your IP: [bold green]{cek_data}\n"
         f"[bold cyan]Region: [bold green]{asal_reg}\n"
         f"[bold cyan]Kota: [bold green]{city}\n"
         f"[bold cyan]Timezone: [bold green]{times}"
