@@ -345,10 +345,6 @@ def login():
 	print(nel(f"""[green]Author: [purple]Khoirul-Xd
         [green]Status: [red]Premium
         [green]GitHub: [blue]https://github.com/khoirulez""",width=70, padding=(0, 7), style=f"{color_panel}"))
-    print(nel(f"""[bold cyan]Your IP: [bold green]{cek_data}
-     [bold cyan]Region: [bold green]{asal_reg}
-     [bold cyan]Kota: [bold green]{city} 
-     [bold cyan]Timezone: [bold green]{times}""",width=70, padding=(0, 7), style=f"{color_panel}"))
 	prints(nel(f'              {P2}Menu Tools Crack{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
 	prints(nel(f"""{P2}[{color_text}01{P2}] Crack Massal    [{color_text}04{P2}] Cek Ressult
 [{color_text}02{P2}] Crack Publik    [{color_text}05{P2}] Crack File
