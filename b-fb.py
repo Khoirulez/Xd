@@ -233,7 +233,7 @@ def waktu():
 pesan_selamat = waktu()
 
 # Menentukan lebar layar secara dinamis
-lebar_layar = 100
+lebar_layar = 80
 
 # Menghitung jumlah spasi di awal untuk menengahkan pesan
 spasi_awal = (lebar_layar - len(pesan_selamat)) // 2
@@ -350,14 +350,14 @@ def login():
 	os.system('clear')
 	banner()
 	print(nel(" "* spasi_awal + pesan_selamat))
-	print(nel(f"""             [green]Author: [purple]Khoirul-Xd
-             [green]Status: [red]Premium
-             [green]WhatsApp: [blue]081283547452
-             [green]GitHub: [blue]https://github.com/khoirulez""",width=70, padding=(0, 7), style=f"{color_panel}"))
+	print(nel(f"""             [bold green]Author: [purple]Khoirul-Xd
+             [bold green]Status: [red]Premium
+             [bold green]WhatsApp: [blue]081283547452
+             [bold green]GitHub: [blue]https://github.com/khoirulez""",width=70, padding=(0, 7), style=f"{color_panel}"))
 	prints(nel(f'              {P2}[bold blue]Menu Tools Crack{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
-	prints(nel(f"""{P2}[{color_text}01{P2}] [bold green]Crack Massal    [{color_text}04{P2}] [bold green]Cek Ressult
-[{color_text}02{P2}] [bold green]Crack Publik    [{color_text}05{P2}] [bold green]Crack File
-[{color_text}03{P2}] [bold green]Clone ID Email  [{color_text}00{P2}] [bold green]Exit Program""",width=70,padding=(0,7),style=f"{color_panel}"))
+	prints(nel(f"""{P2}{color_text}01{P2} [green]Crack Massal    {color_text}04{P2} [green]Cek Ressult
+{color_text}02{P2} [green]Crack Publik    {color_text}05{P2} [green]Crack File
+{color_text}03{P2} [green]Clone ID Email  {color_text}00{P2} [green]Exit Program""",width=70,padding=(0,7),style=f"{color_panel}"))
 	___Sllowly_ID____ = input(f'✶ ━━⫸ {H} Input{N} : ')
 	if ___Sllowly_ID____ in ['1']:
 		massal()
