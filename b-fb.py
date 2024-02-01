@@ -1,4 +1,4 @@
-------------------[ IMPORT MODULE ]-------------------#
+#------------------[ IMPORT MODULE ]-------------------#
 import requests,bs4,json,os,sys,random,datetime,time,re,urllib3,rich,base64
 from time import sleep
 from rich import pretty
