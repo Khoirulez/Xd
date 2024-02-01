@@ -207,14 +207,35 @@ bln = dic[(str(datetime.datetime.now().month))]
 thn = datetime.datetime.now().year
 okc = 'OK-'+str(tgl)+'-'+str(bln)+'-'+str(thn)+'.txt'
 cpc = 'CP-'+str(tgl)+'-'+str(bln)+'-'+str(thn)+'.txt'
+#------------------[ INFO-WAKTU ]---------------#
+import datetime
+
 def waktu():
-	now = datetime.datetime.now()
-	hours = now.hour
-	if 4 <= hours < 12:timenow = "Selamat Pagi ðŸ‘‹"
-	elif 12 <= hours < 15:timenow = "Selamat Siang ðŸ‘‹"
-	elif 15 <= hours < 18:timenow = "Selamat Sore ðŸ‘‹"
-	else:timenow = "Selamat Malam ðŸ‘‹"
-	return timenow
+    now = datetime.datetime.now()
+    hours = now.hour
+
+    if 4 <= hours < 12:
+        timenow = "Selamat Pagi 👋"
+    elif 12 <= hours < 15:
+        timenow = "Selamat Siang 👋"
+    elif 15 <= hours < 18:
+        timenow = "Selamat Sore 👋"
+    else:
+        timenow = "Selamat Malam 👋"
+
+    return timenow
+
+# Memanggil fungsi
+pesan_selamat = waktu()
+
+# Menentukan lebar layar
+lebar_layar = 50
+
+# Menghitung jumlah spasi di awal untuk menengahkan pesan
+spasi_awal = (lebar_layar - len(pesan_selamat)) // 2
+
+# Menampilkan pesan selamat di tengah
+print(" " * spasi_awal + pesan_selamat)
 #------------------[ MACHINE-SUPPORT ]---------------#
 def clear():
     os.system('clear')
@@ -228,19 +249,77 @@ def jalan(z):
 def loading():
     animation = ["[\x1b[1;91m■\x1b[0m□□□□□□□□□]","[\x1b[1;92m■■\x1b[0m□□□□□□□□]", "[\x1b[1;93m■■■\x1b[0m□□□□□□□]", "[\x1b[1;94m■■■■\x1b[0m□□□□□□]", "[\x1b[1;95m■■■■■\x1b[0m□□□□□]", "[\x1b[1;96m■■■■■■\x1b[0m□□□□]", "[\x1b[1;97m■■■■■■■\x1b[0m□□□]", "[\x1b[1;98m■■■■■■■■\x1b[0m□□]", "[\x1b[1;99m■■■■■■■■■\x1b[0m□]", "[\x1b[1;910m■■■■■■■■■■\x1b[0m]"]
     for i in range(50):
-        time.sleep(0.08)
+        time.sleep(0.05)
         sys.stdout.write(f"\r>> {H}Loading...{N} " + animation[i % len(animation)] +"\x1b[0m ")
         sys.stdout.flush()
-        time.sleep(0.08)
-        
+        time.sleep(0.05)
+# ------------------[ INFO-AUTHOR ]-----------------#
+class Author:
+    def __init__(self, name, status, github):
+        self.name = name
+        self.status = status
+        self.github = github
+
+    def display_info(self):
+        info = (
+            f"Nama: {self.name}\n"
+            f"Status: {self.status}\n"
+            f"GitHub: {self.github}\n"
+        )
+
+        # Menentukan lebar layar
+        lebar_layar = 50
+
+        # Menghitung jumlah spasi di awal untuk menengahkan informasi
+        spasi_awal = (lebar_layar - len(info)) // 2
+
+        # Menampilkan informasi di tengah
+        print(" " * spasi_awal + info)
+
+# Membuat objek Author
+author_info = Author(name="Khoirul-Xd", status="Premium", github="https://github.com/khoirulez")
+
+# Menampilkan informasi penulis di tengah
+author_info.display_info()
+# ------------------[ INFO-USER ]-----------------#
 import requests
 from geopy.geocoders import Nominatim
 
-# ------------------[ LOGO-LAKNAT ]-----------------#
-import requests
-from rich.console import Console
+def get_ip_info():
+    try:
+        # Mendapatkan informasi alamat IP menggunakan API eksternal
+        response = requests.get('https://api64.ipify.org?format=json')
+        ip_data = response.json()
+        ip_address = ip_data['ip']
+        
+        # Mendapatkan informasi lokasi berdasarkan koordinat
+        geolocator = Nominatim(user_agent="ip_locator")
+        location = geolocator.reverse((ip_data['location']['lat'], ip_data['location']['lng']))
+        
+        # Menyusun informasi dalam format string
+        info = (
+            f"IP Address: {ip_address}\n"
+            f"Region: {location.raw['address']['state']}\n"
+            f"Kota: {location.raw['address']['city']}\n"
+            f"Lokasi: {location.address}\n"
+            f"Timezone: {location.raw['timezone']}"
+        )
 
-# Your existing banner function
+        # Menentukan lebar layar
+        lebar_layar = 50
+
+        # Menghitung jumlah spasi di awal untuk menengahkan informasi
+        spasi_awal = (lebar_layar - len(info)) // 2
+
+        # Menampilkan informasi di tengah
+        print(" " * spasi_awal + info)
+    except Exception as e:
+        print(f"Error: {e}")
+
+if __name__ == "__main__":
+    get_ip_info()
+
+# ------------------[ LOGO-LAKNAT ]-----------------#
 def banner():
     prints(panel(f"""[bold red]               
      ____             _        _____ _     
@@ -249,38 +328,6 @@ def banner():
      | |_) | |  | |_| | ||  __/ |  _| | |_) |    
      |____/|_|   \__,_|\__\___| |_|   |_.__/                      
              """, width=90, padding=(0, 8), title=f"\r", style=f"bold white"))
-
-# Function to get IP information
-def get_ip_info():
-    try:
-        response = requests.get("https://ipinfo.io")
-        ip_data = response.json()
-        return ip_data
-    except Exception as e:
-        return f"Error: {e}"
-
-# Add IP information below the banner
-def banner_with_ip():
-    banner()
-    ip_info = get_ip_info()
-    if isinstance(ip_info, dict):
-        console = Console()
-        console.print(f"\n[bold cyan]IP Address Details:")
-        console.print(f"  [bold]IP Address:[/bold] {ip_info.get('ip', 'N/A')}")
-        console.print(f"  [bold]Region:[/bold] {ip_info.get('region', 'N/A')}")
-        console.print(f"  [bold]City:[/bold] {ip_info.get('city', 'N/A')}")
-        console.print(f"  [bold]Timezone:[/bold] {ip_info.get('timezone', 'N/A')}\n")
-
-# Call the banner_with_ip function to display the information
-banner_with_ip()
-def waktu():
-	now = datetime.datetime.now()
-	hours = now.hour
-	if 4 <= hours < 12:timenow = "Selamat Pagi ðŸ‘‹"
-	elif 12 <= hours < 15:timenow = "Selamat Siang ðŸ‘‹"
-	elif 15 <= hours < 18:timenow = "Selamat Sore ðŸ‘‹"
-	else:timenow = "Selamat Malam ðŸ‘‹"
-	return timenow
 #--------------------[ BAGIAN-MASUK ]--------------#
 def login():
 	try:
@@ -363,7 +410,8 @@ def login():
 	loading()
 	banner()
 	waktu()
-	banner_with_ip()
+	author_info.display_info()
+	get_ip_info()
 	prints(nel(f'              {P2}Menu Tools Crack{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
 	prints(nel(f"""{P2}[{color_text}01{P2}] Crack Massal    [{color_text}04{P2}] Cek Ressult
 [{color_text}02{P2}] Crack Publik    [{color_text}05{P2}] Crack File
