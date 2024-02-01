@@ -212,6 +212,8 @@ bln = dic[(str(datetime.datetime.now().month))]
 thn = datetime.datetime.now().year
 okc = 'OK-'+str(tgl)+'-'+str(bln)+'-'+str(thn)+'.txt'
 cpc = 'CP-'+str(tgl)+'-'+str(bln)+'-'+str(thn)+'.txt'
+import datetime
+
 def waktu():
     now = datetime.datetime.now()
     hours = now.hour
@@ -230,8 +232,14 @@ def waktu():
 # Memanggil fungsi
 pesan_selamat = waktu()
 
-# Menampilkan pesan selamat dengan warna menggunakan rich
-print(pesan_selamat)
+# Menentukan lebar layar secara dinamis
+lebar_layar = 50
+
+# Menghitung jumlah spasi di awal untuk menengahkan pesan
+spasi_awal = (lebar_layar - len(pesan_selamat)) // 2
+
+# Menampilkan pesan selamat di tengah
+print(" " * spasi_awal + pesan_selamat)
 #------------------[ MACHINE-SUPPORT ]---------------#
 def clear():
     os.system('clear')
@@ -336,14 +344,15 @@ def login():
 		cok = open('.cok.txt','r').read()
 	except IOError:
 		print('[×] Kues Kadaluarsa ')
-		time.sleep(2)
+		time.sleep(5)
 		login_lagi334()
-		loading()
+    loading()
 	os.system('clear')
 	banner()
-	print(nel(                          pesan_selamat))
+	print(nel(pesan_selamat))
 	print(nel(f"""             [green]Author: [purple]Khoirul-Xd
              [green]Status: [red]Premium
+             [green]Wa: [blue]081283547452
              [green]GitHub: [blue]https://github.com/khoirulez""",width=70, padding=(0, 7), style=f"{color_panel}"))
 	prints(nel(f'              {P2}Menu Tools Crack{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
 	prints(nel(f"""{P2}[{color_text}01{P2}] Crack Massal    [{color_text}04{P2}] Cek Ressult
