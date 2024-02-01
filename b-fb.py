@@ -362,7 +362,7 @@ def login():
 	if ___Sllowly_ID____ in ['1']:
 		massal()
 	elif ___Sllowly_ID____ in ['2']:
-		prints(nel(f'               {P2[bold green]}Publik Crack{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
+		prints(nel(f'               {P2}[bold green]Publik Crack{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
 		idt = input('✶ ━━⫸[bold green] ID Target : ')
 		dump(idt,"",{"Kue":cok},token)
 		setting()
