@@ -254,8 +254,8 @@ def get_ip_info(ip_address):
 
 def get_location_details(latitude, longitude):
     geolocator = Nominatim(user_agent="your_app_name")
-    location = geolocator.reverse((latitude, longitude))
-    return location.address, location.raw['timezone']
+    location = geolocator.reverse((latitude, longitude), language='en')
+    return location.address, location.raw['timezone']['timezone_id']
 
 # Example usage:
 ip_address = "8.8.8.8"  # Replace with the desired IP address
