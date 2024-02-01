@@ -215,13 +215,13 @@ def waktu():
     hours = now.hour
 
     if 4 <= hours < 12:
-        timenow = "Selamat Pagi 👋"
+        timenow = "[purple]Selamat Pagi 👋"
     elif 12 <= hours < 15:
-        timenow = "Selamat Siang 👋"
+        timenow = "[purple]Selamat Siang 👋"
     elif 15 <= hours < 18:
-        timenow = "Selamat Sore 👋"
+        timenow = "[purple]Selamat Sore 👋"
     else:
-        timenow = "Selamat Malam 👋"
+        timenow = "[purple]Selamat Malam 👋"
 
     return timenow
 
@@ -253,7 +253,7 @@ def loading():
         sys.stdout.write(f"\r>> {H}Loading...{N} " + animation[i % len(animation)] +"\x1b[0m ")
         sys.stdout.flush()
         time.sleep(0.05)
-# ------------------[ INFO-AUTHOR ]-----------------#
+        
 class Author:
     def __init__(self, name, status, github):
         self.name = name
@@ -262,16 +262,16 @@ class Author:
 
     def display_info(self):
         info = (
-            f"Nama: {self.name}\n"
-            f"Status: {self.status}\n"
-            f"GitHub: {self.github}\n"
+            f"[green]Author: [purple]{self.name}\n"
+            f"[green]Status: [red]{self.status}\n"
+            f"[green]GitHub: [blue]{self.github}\n"
         )
 
         # Menentukan lebar layar
         lebar_layar = 50
 
         # Menghitung jumlah spasi di awal untuk menengahkan informasi
-        spasi_awal = (lebar_layar - len(info)) // 2
+        spasi_awal = (lebar_layar - len(info)) // 5
 
         # Menampilkan informasi di tengah
         print(" " * spasi_awal + info)
@@ -281,7 +281,7 @@ author_info = Author(name="Khoirul-Xd", status="Premium", github="https://github
 
 # Menampilkan informasi penulis di tengah
 author_info.display_info()
-# ------------------[ INFO-USER ]-----------------#
+
 import requests
 from geopy.geocoders import Nominatim
 
@@ -298,18 +298,18 @@ def get_ip_info():
         
         # Menyusun informasi dalam format string
         info = (
-            f"IP Address: {ip_address}\n"
-            f"Region: {location.raw['address']['state']}\n"
-            f"Kota: {location.raw['address']['city']}\n"
-            f"Lokasi: {location.address}\n"
-            f"Timezone: {location.raw['timezone']}"
+            f"[blue]Your Ip: [green]{ip_address}\n"
+            f"[blue]Region: [green]{location.raw['address']['state']}\n"
+            f"[blue]Kota: [green]{location.raw['address']['city']}\n"
+            f"[blue]Lokasi: [green]{location.address}\n"
+            f"[blue]Timezone: [green]{location.raw['timezone']}"
         )
 
         # Menentukan lebar layar
         lebar_layar = 50
 
         # Menghitung jumlah spasi di awal untuk menengahkan informasi
-        spasi_awal = (lebar_layar - len(info)) // 2
+        spasi_awal = (lebar_layar - len(info)) // 5
 
         # Menampilkan informasi di tengah
         print(" " * spasi_awal + info)
@@ -407,7 +407,6 @@ def login():
 		time.sleep(2)
 		login_lagi334()
 	os.system('clear')
-	loading()
 	banner()
 	waktu()
 	author_info.display_info()
