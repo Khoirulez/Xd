@@ -236,7 +236,7 @@ pesan_selamat = waktu()
 lebar_layar = 50
 
 # Menghitung jumlah spasi di awal untuk menengahkan pesan
-spasi_awal = (lebar_layar - len(pesan_selamat)) // 2
+spasi_awal = (lebar_layar - len(pesan_selamat)) // 5
 
 # Menampilkan pesan selamat di tengah
 print(" " * spasi_awal + pesan_selamat)
@@ -353,7 +353,7 @@ def login():
 	print(nel(" "* spasi_awal + pesan_selamat))
 	print(nel(f"""             [green]Author: [purple]Khoirul-Xd
              [green]Status: [red]Premium
-             [green]Wa: [blue]081283547452
+             [green]WhatsApp: [blue]081283547452
              [green]GitHub: [blue]https://github.com/khoirulez""",width=70, padding=(0, 7), style=f"{color_panel}"))
 	prints(nel(f'              {P2}Menu Tools Crack{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
 	prints(nel(f"""{P2}[{color_text}01{P2}] Crack Massal    [{color_text}04{P2}] Cek Ressult
