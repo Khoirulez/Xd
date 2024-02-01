@@ -237,6 +237,10 @@ import requests
 from geopy.geocoders import Nominatim
 
 # ------------------[ LOGO-LAKNAT ]-----------------#
+import requests
+from rich.console import Console
+
+# Your existing banner function
 def banner():
     prints(panel(f"""[bold red]               
      ____             _        _____ _     
@@ -246,29 +250,29 @@ def banner():
      |____/|_|   \__,_|\__\___| |_|   |_.__/                      
              """, width=90, padding=(0, 8), title=f"\r", style=f"bold white"))
 
-def get_ip_info(ip_address):
-    url = f"http://ip-api.com/json/{ip_address}"
-    response = requests.get(url)
-    data = response.json()
-    return data
+# Function to get IP information
+def get_ip_info():
+    try:
+        response = requests.get("https://ipinfo.io")
+        ip_data = response.json()
+        return ip_data
+    except Exception as e:
+        return f"Error: {e}"
 
-# Example usage:
-ip_address = "8.8.8.8"  # Replace with the desired IP address
-ip_info = get_ip_info(ip_address)
+# Add IP information below the banner
+def banner_with_ip():
+    banner()
+    ip_info = get_ip_info()
+    if isinstance(ip_info, dict):
+        console = Console()
+        console.print(f"\n[bold cyan]IP Address Details:")
+        console.print(f"  [bold]IP Address:[/bold] {ip_info.get('ip', 'N/A')}")
+        console.print(f"  [bold]Region:[/bold] {ip_info.get('region', 'N/A')}")
+        console.print(f"  [bold]City:[/bold] {ip_info.get('city', 'N/A')}")
+        console.print(f"  [bold]Timezone:[/bold] {ip_info.get('timezone', 'N/A')}\n")
 
-if ip_info['status'] == 'success':
-    city = ip_info['city']
-    region = ip_info['regionName']
-    latitude = ip_info['lat']
-    longitude = ip_info['lon']
-
-
-    print(f"IP Address: {ip_address}")
-    print(f"City: {city}")
-    print(f"Region: {region}")
-    print(f"Location: {location_details}")
-else:
-    print(f"Failed to retrieve information for IP address: {ip_address}")
+# Call the banner_with_ip function to display the information
+banner_with_ip()
 def waktu():
 	now = datetime.datetime.now()
 	hours = now.hour
