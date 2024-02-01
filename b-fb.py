@@ -23,9 +23,6 @@ from rich.markdown import Markdown as mark
 from concurrent.futures import ThreadPoolExecutor as tred
 from concurrent.futures import ThreadPoolExecutor as BrayennnXD 
 from rich.progress import Progress,SpinnerColumn,BarColumn,TextColumn
-from rich.console import Console
-from rich.panel import Panel
-from rich.style import Style
 #------------------[  MODULE  ]-------------------#
 try:
         import rich
@@ -42,11 +39,6 @@ try:
 except ImportError:
 	cetak(nel('\t• Sedang Menginstall Modul Requests •'))
 	os.system('pip install requests && pip install mechanize ')
-try:
-	import requests
-except ImportError:
-	cetak(nel('\t• Sedang Menginstall Modul Requests •'))
-	os.system('pip install requests ipinfo ')
 	
 #------------------[ USER-AGENT ]-------------------#
 pretty.install()
@@ -199,10 +191,6 @@ try:times = cek_data["timezone"]
 except:times = cek_data['-']
 try:city = cek_data["city"]
 except:city = cek_data['-']
-from rich import print
-import requests
-import geocoder
-from rich.console import Console
 #--------------------[ CONVERTER-BULAN ]--------------#
 dic = {'1':'January','2':'February','3':'March','4':'April','5':'May','6':'June','7':'July','8':'August','9':'September','10':'October','11':'November','12':'December'}
 dic2 = {'01':'January','02':'February','03':'March','04':'April','05':'May','06':'June','07':'July','08':'August','09':'September','10':'October','11':'November','12':'Devember'}
