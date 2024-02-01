@@ -204,8 +204,7 @@ import requests
 import geocoder
 from rich.console import Console
 
-def get_ip_info():
-    try:
+try:
         # Mendapatkan alamat IP pengguna
         ip_response = requests.get('https://api64.ipify.org?format=json')
         ip_data = ip_response.json()
@@ -213,21 +212,6 @@ def get_ip_info():
 
         # Mendapatkan informasi lokasi berdasarkan alamat IP
         location_info = geocoder.ip(ip_address)
-
-        # Menampilkan informasi dengan pewarnaan menggunakan rich
-        console = Console()
-        console.print(f"[bold cyan]Your IP: [bold green]{ip_address}")
-        console.print(f"[bold cyan]Region: [bold green]{location_info.region}")
-        console.print(f"[bold cyan]Kota: [bold green]{location_info.city}")
-        console.print(f"[bold cyan]Timezone: [bold green]{location_info.timezone}")
-
-    except Exception as e:
-        # Menangani kesalahan dan menampilkan pesan
-        console = Console()
-        console.print(f"[bold red]Error: {e}")
-
-if __name__ == "__main__":
-    get_ip_info()
 
 from rich import print
 import datetime
@@ -370,10 +354,13 @@ def login():
 	loading()
 	banner()
 	waktu()
-	print(panel(f"[green]Author: [purple]Khoirul-Xd\n"
-            f"[green]Status: [red]Premium\n"
-            f"[green]GitHub: [blue]https://github.com/khoirulez\n"))
-    print(panel(f' {get_ip_info()}'))
+	print(panel(f'    [green]Author: [purple]Khoirul-Xd\n
+	 [green]Status: [red]Premium\n
+	 [green]GitHub: [blue]https://github.com/khoirulez\n',width=70,padding=(0,7),style=f"{color_panel}"))
+    prints(nel(f"""[bold cyan]Your IP: [bold green]{ip_address}
+                [bold cyan]Region: [bold green]{asal_reg}
+                [bold cyan]Kota: [bold green]{city}
+                [bold cyan]Timezone: [bold green]{times}""",width=70,padding=(0,7),style=f"{color_panel}"))
 	prints(nel(f'              {P2}Menu Tools Crack{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
 	prints(nel(f"""{P2}[{color_text}01{P2}] Crack Massal    [{color_text}04{P2}] Cek Ressult
 [{color_text}02{P2}] Crack Publik    [{color_text}05{P2}] Crack File
