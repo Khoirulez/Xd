@@ -226,6 +226,7 @@ def waktu():
         timenow = "[bold blue]Selamat Malam 👋"
 
     return timenow
+    loading()
 
 # Memanggil fungsi
 pesan_selamat = waktu()
@@ -340,10 +341,10 @@ def login():
 		login_lagi334()
 	os.system('clear')
 	banner()
-	print(pesan_selamat)
+	print(nel(pesan_selamat))
 	print(nel(f"""             [green]Author: [purple]Khoirul-Xd
-        [green]Status: [red]Premium
-        [green]GitHub: [blue]https://github.com/khoirulez""",width=70, padding=(0, 7), style=f"{color_panel}"))
+                     [green]Status: [red]Premium
+                     [green]GitHub: [blue]https://github.com/khoirulez""",width=70, padding=(0, 7), style=f"{color_panel}"))
 	prints(nel(f'              {P2}Menu Tools Crack{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
 	prints(nel(f"""{P2}[{color_text}01{P2}] Crack Massal    [{color_text}04{P2}] Cek Ressult
 [{color_text}02{P2}] Crack Publik    [{color_text}05{P2}] Crack File
