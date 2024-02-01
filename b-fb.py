@@ -199,61 +199,8 @@ try:times = cek_data["timezone"]
 except:times = cek_data['-']
 try:city = cek_data["city"]
 except:city = cek_data['-']
-#--------------------[ CONVERTER-BULAN ]--------------#
-dic = {'1':'January','2':'February','3':'March','4':'April','5':'May','6':'June','7':'July','8':'August','9':'September','10':'October','11':'November','12':'December'}
-dic2 = {'01':'January','02':'February','03':'March','04':'April','05':'May','06':'June','07':'July','08':'August','09':'September','10':'October','11':'November','12':'Devember'}
-tgl = datetime.datetime.now().day
-bln = dic[(str(datetime.datetime.now().month))]
-thn = datetime.datetime.now().year
-okc = 'OK-'+str(tgl)+'-'+str(bln)+'-'+str(thn)+'.txt'
-cpc = 'CP-'+str(tgl)+'-'+str(bln)+'-'+str(thn)+'.txt'
-#------------------[ INFO-WAKTU ]---------------#
-import datetime
+from rich import print
 
-def waktu():
-    now = datetime.datetime.now()
-    hours = now.hour
-
-    if 4 <= hours < 12:
-        timenow = "[purple]Selamat Pagi 👋"
-    elif 12 <= hours < 15:
-        timenow = "[purple]Selamat Siang 👋"
-    elif 15 <= hours < 18:
-        timenow = "[purple]Selamat Sore 👋"
-    else:
-        timenow = "[purple]Selamat Malam 👋"
-
-    return timenow
-
-# Memanggil fungsi
-pesan_selamat = waktu()
-
-# Menentukan lebar layar
-lebar_layar = 50
-
-# Menghitung jumlah spasi di awal untuk menengahkan pesan
-spasi_awal = (lebar_layar - len(pesan_selamat)) // 2
-
-# Menampilkan pesan selamat di tengah
-print(" " * spasi_awal + pesan_selamat)
-#------------------[ MACHINE-SUPPORT ]---------------#
-def clear():
-    os.system('clear')
-def back():
-    login()
-def jalan(z):
-    for e in z + '\n':
-        sys.stdout.write(e)
-        sys.stdout.flush()
-        time.sleep(0.05)
-def loading():
-    animation = ["[\x1b[1;91m■\x1b[0m□□□□□□□□□]","[\x1b[1;92m■■\x1b[0m□□□□□□□□]", "[\x1b[1;93m■■■\x1b[0m□□□□□□□]", "[\x1b[1;94m■■■■\x1b[0m□□□□□□]", "[\x1b[1;95m■■■■■\x1b[0m□□□□□]", "[\x1b[1;96m■■■■■■\x1b[0m□□□□]", "[\x1b[1;97m■■■■■■■\x1b[0m□□□]", "[\x1b[1;98m■■■■■■■■\x1b[0m□□]", "[\x1b[1;99m■■■■■■■■■\x1b[0m□]", "[\x1b[1;910m■■■■■■■■■■\x1b[0m]"]
-    for i in range(50):
-        time.sleep(0.05)
-        sys.stdout.write(f"\r>> {H}Loading...{N} " + animation[i % len(animation)] +"\x1b[0m ")
-        sys.stdout.flush()
-        time.sleep(0.05)
-        
 class Author:
     def __init__(self, name, status, github):
         self.name = name
@@ -271,7 +218,7 @@ class Author:
         lebar_layar = 50
 
         # Menghitung jumlah spasi di awal untuk menengahkan informasi
-        spasi_awal = (lebar_layar - len(info)) // 5
+        spasi_awal = (lebar_layar - len(info)) // 2
 
         # Menampilkan informasi di tengah
         print(" " * spasi_awal + info)
@@ -281,43 +228,93 @@ author_info = Author(name="Khoirul-Xd", status="Premium", github="https://github
 
 # Menampilkan informasi penulis di tengah
 author_info.display_info()
-
+import tkinter as tk
+from tkinter import Label, StringVar
 import requests
-from geopy.geocoders import Nominatim
+import geocoder
 
 def get_ip_info():
-    try:
-        # Mendapatkan informasi alamat IP menggunakan API eksternal
-        response = requests.get('https://api64.ipify.org?format=json')
-        ip_data = response.json()
-        ip_address = ip_data['ip']
-        
-        # Mendapatkan informasi lokasi berdasarkan koordinat
-        geolocator = Nominatim(user_agent="ip_locator")
-        location = geolocator.reverse((ip_data['location']['lat'], ip_data['location']['lng']))
-        
-        # Menyusun informasi dalam format string
-        info = (
-            f"[blue]Your Ip: [green]{ip_address}\n"
-            f"[blue]Region: [green]{location.raw['address']['state']}\n"
-            f"[blue]Kota: [green]{location.raw['address']['city']}\n"
-            f"[blue]Lokasi: [green]{location.address}\n"
-            f"[blue]Timezone: [green]{location.raw['timezone']}"
-        )
+    # Mendapatkan alamat IP pengguna
+    ip_response = requests.get('https://api64.ipify.org?format=json')
+    ip_data = ip_response.json()
+    ip_address = ip_data['ip']
 
-        # Menentukan lebar layar
-        lebar_layar = 50
+    # Mendapatkan informasi lokasi berdasarkan alamat IP
+    location_info = geocoder.ip(ip_address)
 
-        # Menghitung jumlah spasi di awal untuk menengahkan informasi
-        spasi_awal = (lebar_layar - len(info)) // 5
+    # Menampilkan informasi di GUI
+    result.set(
+        f"[bold green]Your Ip: [bold cyan]{ip_address}\n"
+        f"[bold green]Region: [bold cyan]{location_info.region}\n"
+        f"[bold green]Kota: [bold cyan]{location_info.city}\n"
+        f"[bold green]Timezone: [bold cyan]{location_info.timezone}"
+    )
 
-        # Menampilkan informasi di tengah
-        print(" " * spasi_awal + info)
-    except Exception as e:
-        print(f"Error: {e}")
+# Membuat GUI dengan tkinter
+app = tk.Tk()
+app.title("IP Info App")
 
-if __name__ == "__main__":
-    get_ip_info()
+# StringVar untuk menampilkan hasil
+result = StringVar()
+
+# Label untuk menampilkan hasil
+result_label = Label(app, textvariable=result, justify="left", padx=20, pady=20)
+result_label.pack()
+
+# Tombol untuk mendapatkan informasi IP
+get_info_button = tk.Button(app, text="Dapatkan Informasi IP", command=get_ip_info)
+get_info_button.pack()
+
+# Menjalankan aplikasi GUI
+app.mainloop()
+from rich import print
+import datetime
+
+def waktu():
+    now = datetime.datetime.now()
+    hours = now.hour
+
+    if 4 <= hours < 12:
+        timenow = "[bold yellow]Selamat Pagi 👋"
+    elif 12 <= hours < 15:
+        timenow = "[bold green]Selamat Siang 👋"
+    elif 15 <= hours < 18:
+        timenow = "[bold orange3]Selamat Sore 👋"
+    else:
+        timenow = "[bold blue]Selamat Malam 👋"
+
+    return timenow
+
+# Memanggil fungsi
+pesan_selamat = waktu()
+
+# Menampilkan pesan selamat dengan warna menggunakan rich
+print(pesan_selamat)
+#--------------------[ CONVERTER-BULAN ]--------------#
+dic = {'1':'January','2':'February','3':'March','4':'April','5':'May','6':'June','7':'July','8':'August','9':'September','10':'October','11':'November','12':'December'}
+dic2 = {'01':'January','02':'February','03':'March','04':'April','05':'May','06':'June','07':'July','08':'August','09':'September','10':'October','11':'November','12':'Devember'}
+tgl = datetime.datetime.now().day
+bln = dic[(str(datetime.datetime.now().month))]
+thn = datetime.datetime.now().year
+okc = 'OK-'+str(tgl)+'-'+str(bln)+'-'+str(thn)+'.txt'
+cpc = 'CP-'+str(tgl)+'-'+str(bln)+'-'+str(thn)+'.txt'
+#------------------[ MACHINE-SUPPORT ]---------------#
+def clear():
+    os.system('clear')
+def back():
+    login()
+def jalan(z):
+    for e in z + '\n':
+        sys.stdout.write(e)
+        sys.stdout.flush()
+        time.sleep(0.05)
+def loading():
+    animation = ["[\x1b[1;91m■\x1b[0m□□□□□□□□□]","[\x1b[1;92m■■\x1b[0m□□□□□□□□]", "[\x1b[1;93m■■■\x1b[0m□□□□□□□]", "[\x1b[1;94m■■■■\x1b[0m□□□□□□]", "[\x1b[1;95m■■■■■\x1b[0m□□□□□]", "[\x1b[1;96m■■■■■■\x1b[0m□□□□]", "[\x1b[1;97m■■■■■■■\x1b[0m□□□]", "[\x1b[1;98m■■■■■■■■\x1b[0m□□]", "[\x1b[1;99m■■■■■■■■■\x1b[0m□]", "[\x1b[1;910m■■■■■■■■■■\x1b[0m]"]
+    for i in range(50):
+        time.sleep(0.05)
+        sys.stdout.write(f"\r>> {H}Loading...{N} " + animation[i % len(animation)] +"\x1b[0m ")
+        sys.stdout.flush()
+        time.sleep(0.05)
 
 # ------------------[ LOGO-LAKNAT ]-----------------#
 def banner():
