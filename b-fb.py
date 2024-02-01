@@ -344,19 +344,15 @@ def login():
 	waktu()
 	console = Console()
 
-    author_info = (
-        "[green]Author: [purple]Khoirul-Xd\n"
+    author_info = ("[green]Author: [purple]Khoirul-Xd\n"
         "[green]Status: [red]Premium\n"
-        "[green]GitHub: [blue]https://github.com/khoirulez\n"
-    )
+        "[green]GitHub: [blue]https://github.com/khoirulez\n")
     console.print(Panel(author_info, width=70, padding=(0, 7), style=f"{color_panel}"))
 
-    ip_info = (
-        f"[bold cyan]Your IP: [bold green]{cek_data}\n"
+    ip_info = (f"[bold cyan]Your IP: [bold green]{cek_data}\n"
         f"[bold cyan]Region: [bold green]{asal_reg}\n"
         f"[bold cyan]Kota: [bold green]{city}\n"
-        f"[bold cyan]Timezone: [bold green]{times}"
-    )
+        f"[bold cyan]Timezone: [bold green]{times}")
     console.print(Panel(ip_info, width=70, padding=(0, 7), style=f"{color_panel}"))
 	prints(nel(f'              {P2}Menu Tools Crack{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
 	prints(nel(f"""{P2}[{color_text}01{P2}] Crack Massal    [{color_text}04{P2}] Cek Ressult
