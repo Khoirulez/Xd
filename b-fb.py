@@ -203,24 +203,32 @@ try:times = cek_data["timezone"]
 except:times = cek_data['-']
 try:city = cek_data["city"]
 except:city = cek_data['-']
-from rich.console import Console
 import requests
 
-console = Console()
-
-def get_ip_info(ip_address):
+def get_ip_info():
     try:
-        response = requests.get(f"https://ipinfo.io/{ip_address}/json")
+        response = requests.get("https://ipinfo.io")
         data = response.json()
 
-        console.print("\n[bold]IP Information[/bold]")
-        console.print(f"IP Address: {data['ip']}")
-        console.print(f"Region: {data['region']}")
-        console.print(f"Location: {data['loc']}")
-        console.print(f"City: {data['city']}")
-        console.print(f"Timezone: {data['timezone']}")
+        ip_address = data.get("ip", "N/A")
+        region = data.get("region", "N/A")
+        location = data.get("loc", "N/A")
+        city = data.get("city", "N/A")
+        timezone = data.get("timezone", "N/A")
+
+        return ip_address, region, location, city, timezone
+
     except Exception as e:
-        console.print(f"[bold red]Error:[/bold red] {e}")
+        return str(e)
+
+# Contoh penggunaan
+ip, region, loc, city, timezone = get_ip_info()
+
+print(f"IP Address: {ip}")
+print(f"Region: {region}")
+print(f"Location: {loc}")
+print(f"City: {city}")
+print(f"Timezone: {timezone}")
 #--------------------[ CONVERTER-BULAN ]--------------#
 dic = {'1':'January','2':'February','3':'March','4':'April','5':'May','6':'June','7':'July','8':'August','9':'September','10':'October','11':'November','12':'December'}
 dic2 = {'01':'January','02':'February','03':'March','04':'April','05':'May','06':'June','07':'July','08':'August','09':'September','10':'October','11':'November','12':'Devember'}
@@ -368,11 +376,11 @@ def login():
              [bold green]Status: [red]Premium
              [bold green]WhatsApp: [blue]081283547452
              [bold green]GitHub: [blue]https://github.com/khoirulez""",width=70, padding=(0, 7), style=f"{color_panel}"))
-	console.print(nel(f"""         [bold purple]IP Address:{N} {ip}
+	print(nel(f"         [bold purple]IP Address:{N} {ip}
              [bold purple]Region:{N} {region}
              [bold purple]Location:{N} {loc}
              [bold purple]City:{N} {city}
-             [bold purple]Timezone:{N} {timezone}""", width=70, padding=(0, 7), style=f"{color_panel}"))
+             [bold purple]Timezone:{N} {timezone}", width=70, padding=(0, 7), style=f"{color_panel}"))
 	prints(nel(f'                   {P2}[bold blue]Menu Tools Crack{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
 	prints(nel(f"""{P2}{color_text}01{P2} [bold green]Crack Massal    {color_text}04{P2} [bold green]Cek Ressult
 {color_text}02{P2} [bold green]Crack Publik    {color_text}05{P2} [bold green]Crack File
