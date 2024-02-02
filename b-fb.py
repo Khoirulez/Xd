@@ -372,11 +372,11 @@ def login():
 	os.system('clear')
 	banner()
 	print(nel(" "* spasi_awal + pesan_selamat))
-print(nel(f"{U}IP Address{N}: {ip}"))
-print(nel(f"{U}Region{N}: {region}"))
-print(nel(f"{U}Location{N}: {loc}"))
-print(nel(f"{U}City{N}: {city}"))
-print(nel(f"{U}Timezone{N}: {timezone}"))
+    print(nel(f"{U}IP Address{N}: {ip}"))
+    print(nel(f"{U}Region{N}: {region}"))
+    print(nel(f"{U}Location{N}: {loc}"))
+    print(nel(f"{U}City{N}: {city}"))
+    print(nel(f"{U}Timezone{N}: {timezone}"))
 	print(nel(f"""           [bold green]Author: [purple]Khoirul-Xd
            [bold green]Status: [red]Premium
            [bold green]WhatsApp: [blue]081283547452
