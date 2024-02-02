@@ -205,24 +205,26 @@ try:city = cek_data["city"]
 except:city = cek_data['-']
 import requests
 
-def get_ip_info():
+def dapatkan_informasi_ip():
     try:
-        response = requests.get("https://ipinfo.io")
+        response = requests.get('https://ipinfo.io')
         data = response.json()
 
-        ip_address = data.get("ip", "N/A")
-        region = data.get("region", "N/A")
-        location = data.get("loc", "N/A")
-        city = data.get("city", "N/A")
-        timezone = data.get("timezone", "N/A")
+        alamat_ip = data.get('ip')
+        region = data.get('region')
+        lokasi = data.get('loc')
+        kota = data.get('city')
+        zona_waktu = data.get('timezone')
 
-        return ip_address, region, location, city, timezone
+        print(f"Alamat IP: {alamat_ip}")
+        print(f"Region: {region}")
+        print(f"Lokasi: {lokasi}")
+        print(f"Kota: {kota}")
+        print(f"Zona Waktu: {zona_waktu}")
 
     except Exception as e:
-        return str(e)
+        print(f"Error: {e}")
 
-# Contoh penggunaan
-ip, region, loc, city, timezone = get_ip_info()
 
 #--------------------[ CONVERTER-BULAN ]--------------#
 dic = {'1':'January','2':'February','3':'March','4':'April','5':'May','6':'June','7':'July','8':'August','9':'September','10':'October','11':'November','12':'December'}
@@ -367,17 +369,12 @@ def login():
 	os.system('clear')
 	banner()
 	print('')
-	print(nel(f"{U}IP Address{N}: {ip}"))
-    print(nel(f"{U}Region{N}: {region}"))
-    print(nel(f"{U}Location{N}: {loc}"))
-    print(nel(f"{U}City{N}: {city}"))
-    print(nel(f"{U}Timezone{N}: {timezone}"))
-	print('')
 	print(nel(" "* spasi_awal + pesan_selamat))
 	print(nel(f"""           [bold green]Author: [purple]Khoirul-Xd
            [bold green]Status: [red]Premium
            [bold green]WhatsApp: [blue]081283547452
            [bold green]GitHub: [blue]https://github.com/khoirulez""",width=70, padding=(0, 7), style=f"{color_panel}"))
+    dapatkan_informasi_ip()
 	prints(nel(f'                   {P2}[bold blue]Menu Tools Crack{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
 	prints(nel(f""".    {P2}{color_text}01{P2} [bold green]Crack Massal    {color_text}04{P2} [bold green]Cek Ressult
      {color_text}02{P2} [bold green]Crack Publik    {color_text}05{P2} [bold green]Crack File
@@ -1689,3 +1686,4 @@ if __name__=='__main__':
 	try:os.system('clear')
 	except:pass
 	login()
+	dapatkan_informasi_ip()
