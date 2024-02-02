@@ -284,8 +284,8 @@ def info_user():
         zona_waktu = data.get('timezone')
         
         prints(nel(f'                      {P2}[bold blue]Info User{P2}',width=70,padding=(0,7),style=f"{color_panel}"))
-        print(f'✶[bold purple] Your Name{x} : %s '%(sy2))
-	    print(f'✶[bold purple] Your Idz{x} : '+str(sy3))
+        print(f"✶[bold purple] Your Name{x} : [blue]{sy2}")
+	    print(f"✶[bold purple] Your Idz{x} : [blue]{sy3}")
         print(f"✶[bold purple] Alamat IP{x}: [blue]{alamat_ip}")
         print(f"✶[bold purple] Region{x}: [blue]{region}")
         print(f"✶[bold purple] Lokasi{x}: [blue]{lokasi}")
