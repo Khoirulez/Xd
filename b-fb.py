@@ -368,7 +368,7 @@ def login():
              [bold green]Status: [red]Premium
              [bold green]WhatsApp: [blue]081283547452
              [bold green]GitHub: [blue]https://github.com/khoirulez""",width=70, padding=(0, 7), style=f"{color_panel}"))
-	consol.print(nel(f"""              [bold blue]IP Information[bold blue]
+	console.print(nel(f"""              [bold blue]IP Information[bold blue]
         [bold purple]IP Address:{N} {data['ip']}
         [bold purple]Region:{N} {data['region']}
         [bold purple]Location:{N} {data['loc']}
