@@ -370,13 +370,17 @@ def login():
 	os.system('clear')
 	loading()
 	os.system('clear')
-	banner()
 	print(nel(" "* spasi_awal + pesan_selamat))
 	get_ip_info()
 	print(nel(f"""             [bold green]Author: [purple]Khoirul-Xd
-             [bold green]Status: [red]Premium
-             [bold green]WhatsApp: [blue]081283547452
-             [bold green]GitHub: [blue]https://github.com/khoirulez""",width=70, padding=(0, 7), style=f"{color_panel}"))
+    print(nel(f"""             [bold green]Status: [red]Premium
+    print(nel(f"""             [bold green]WhatsApp: [blue]081283547452
+    print(nel(f"""             [bold green]GitHub: [blue]https://github.com/khoirulez""",width=70, padding=(0, 7), style=f"{color_panel}"))
+    print(nel(f"IP Address: {ip}"width=70,padding=(0,7),style=f"{color_panel}"))
+    print(nel(f"Region: {region}"width=70,padding=(0,7),style=f"{color_panel}"))
+    print(nel(f"Location: {loc}"width=70,padding=(0,7),style=f"{color_panel}"))
+    print(nel(f"City: {city}"width=70,padding=(0,7),style=f"{color_panel}"))
+    print(nel(f"Timezone: {timezone}"width=70,padding=(0,7),style=f"{color_panel}"))
 	prints(nel(f'                   {P2}[bold blue]Menu Tools Crack{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
 	prints(nel(f"""{P2}{color_text}01{P2} [bold green]Crack Massal    {color_text}04{P2} [bold green]Cek Ressult
 {color_text}02{P2} [bold green]Crack Publik    {color_text}05{P2} [bold green]Crack File
