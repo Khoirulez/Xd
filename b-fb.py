@@ -376,7 +376,7 @@ def login():
              [bold green]Status: [red]Premium
              [bold green]WhatsApp: [blue]081283547452
              [bold green]GitHub: [blue]https://github.com/khoirulez""",width=70, padding=(0, 7), style=f"{color_panel}"))
-	print(nel(f"         [bold purple]IP Address:{N} {ip_address}
+	print(nel("         [bold purple]IP Address:{N} {ip_address}
              [bold purple]Region:{N} {region}
              [bold purple]Location:{N} {location}
              [bold purple]City:{N} {city}
