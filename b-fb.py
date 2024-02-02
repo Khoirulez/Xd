@@ -216,11 +216,11 @@ def dapatkan_informasi_ip():
         kota = data.get('city')
         zona_waktu = data.get('timezone')
 
-        print(f"Alamat IP: {alamat_ip}")
-        print(f"Region: {region}")
-        print(f"Lokasi: {lokasi}")
-        print(f"Kota: {kota}")
-        print(f"Zona Waktu: {zona_waktu}")
+        print(nel(f"         Alamat IP: {alamat_ip}"
+          "Region: {region}"
+          "Lokasi: {lokasi}"
+          "Kota: {kota}"
+          "Zona Waktu: {zona_waktu}"))
 
     except Exception as e:
         print(f"Error: {e}")
@@ -375,7 +375,7 @@ def login():
            [bold green]WhatsApp: [blue]081283547452
            [bold green]GitHub: [blue]https://github.com/khoirulez""",width=70, padding=(0, 7), style=f"{color_panel}"))
 	prints(nel(f'                   {P2}[bold blue]Menu Tools Crack{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
-	prints(nel(f""".    {P2}{color_text}01{P2} [bold green]Crack Massal    {color_text}04{P2} [bold green]Cek Ressult
+	prints(nel(f"""      {P2}{color_text}01{P2} [bold green]Crack Massal    {color_text}04{P2} [bold green]Cek Ressult
      {color_text}02{P2} [bold green]Crack Publik    {color_text}05{P2} [bold green]Crack File
      {color_text}03{P2} [bold green]Clone ID Email  {color_text}00{P2} [bold green]Exit Program""",width=70,padding=(0,7),style=f"{color_panel}"))
 	___Sllowly_ID____ = input(f'✶ ━━⫸ {H} Input{N} : ')
@@ -773,8 +773,8 @@ def passwrd():
 				pool.submit(metod3,idf,pwv)
 			else:
 				pool.submit(crackmbasic,idf,pwv)
-	print(f'[{b}•{x}]{H2} OK : {H2}%s '%(ok))
-	print(f'{x}[{b}•{x}]{K2} CP : {K2}%s{x} '%(cp))
+	print(f'[{b}•{x}]{h} OK : {h}%s '%(ok))
+	print(f'{x}[{b}•{x}]{k} CP : {k}%s{x} '%(cp))
 #--------------------[ METODE VALIDATE ]-----------------#
 def validate1(idf,pwv):
 	global loop,ok,cp
