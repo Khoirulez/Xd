@@ -662,7 +662,7 @@ def massal():
 		exit()
 ###----------[ ATUR SBLUM KREK ]----------###
 def setting():
-	prints(nel(f'               {P2}{bold blue}login ID Crack{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
+	prints(nel(f'               {P2}{B}login ID Crack{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
 	cetak(nel(f"{P2}[{color_text}01{P2}]. Facebook ID {M2}Old\n{P2}[{color_text}02{P2}]. Facebook ID {K2}New\n{P2}[{color_text}03{P2}]. Facebook ID {H2}Random{P2}",title=f"{H2}{len(id)}{P2}{H} ID TELAH DIKUMPULKAN",width=70,padding=(0,7),style=f"{color_panel}")) 
 	hu = input(f'✶ ━━⫸{H} Input :{H} ')
 	if hu in ['1','01']:
@@ -684,7 +684,7 @@ def setting():
 	else:
 		prints(nel(f'         {P2}{M}Input Tidak Diketahui{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
 		exit()
-	prints(nel(f'               {P2}{bold blue}login Method{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
+	prints(nel(f'               {P2}{B}login Method{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
 	prints(nel(f'{P2}[{color_text}01{P2}]. Method free.facebook.com [[green] Validate [white]]\n[{color_text}02{P2}]. Method m.facebook.com [[green] Async [white]]\n[{color_text}03{P2}]. Method graph.facebook.com [[green] B-Api [white]]',width=70,padding=(0,7),style=f"{color_panel}")) 
 	hc = input(f'✶ ━━⫸ {H} Input{N} : ')
 	if hc in ['1','01']:
@@ -697,7 +697,7 @@ def setting():
 		method.append('metod4')
 	else:
 		method.append('metod1')
-	prints(nel(f'              {P2}{bold blue}Manual Password?{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
+	prints(nel(f'              {P2}{B}Manual Password?{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
 	pwplus=input(f'✶ ━━⫸ {H}Tambahkan Password Manual {N}{M}( Y/t ) {N}')
 	if pwplus in ['y','Y']:
 		pwpluss.append('ya')
