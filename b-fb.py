@@ -265,7 +265,7 @@ def banner():
         |____/|_|   \__,_|\__\___| |_|   |_.__/                      
              """,width=90, padding=(0, 8), title=f"\r", style=f"bold white"))
 def author():
-     prints(nel(f'                     {P2}[bold blue]Info Author{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
+     prints(nel(f'                      {P2}[bold blue]Info Author{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
      print(f"✶[bold green] Author: [purple]Khoirul-Xd")
      print(f"✶[bold green] Status: [red]Premium")
      print(f"✶[bold green] WhatsApp: [blue]081283547452")
@@ -283,12 +283,14 @@ def info_user():
         kota = data.get('city')
         zona_waktu = data.get('timezone')
         
-        prints(nel(f'                     {P2}[bold blue]Info User{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
-        print(f"✶[bold purple] Alamat IP{N}: {b}{alamat_ip}")
-        print(f"✶[bold purple] Region{N}: {b}{region}")
-        print(f"✶[bold purple] Lokasi{N}: {b}{lokasi}")
-        print(f"✶[bold purple] Kota{N}: {b}{kota}")
-        print(f"✶[bold purple] Zona Waktu{N}: {b}{zona_waktu}")
+        prints(nel(f'                      {P2}[bold blue]Info User{P2}',width=70,padding=(0,7),style=f"{color_panel}"))
+        print(f"✶[bold purple] Your Name : '+str(sy2)")
+	    print(f"✶[bold purple] Your Idz : '+str(sy3)") 
+        print(f"✶[bold purple] Alamat IP{N}: [blue]{alamat_ip}")
+        print(f"✶[bold purple] Region{N}: [blue]{region}")
+        print(f"✶[bold purple] Lokasi{N}: [blue]{lokasi}")
+        print(f"✶[bold purple] Kota{N}: [blue]{kota}")
+        print(f"✶[bold purple] Zona Waktu{N}: [blue]{zona_waktu}")
 
     except Exception as e:
         print(f"Error: {e}")
@@ -638,7 +640,7 @@ def massal():
 	except IOError:
 	    exit()
 	try:
-		kumpulkan = int(input(f'{H}Mau Berapa ID ? : '))
+		kumpulkan = int(input(f'{U}Mau Berapa ID ? : '))
 	except ValueError:
 	    exit()
 	if kumpulkan<1 or kumpulkan>1000:
@@ -647,7 +649,7 @@ def massal():
 	bilangan = 0
 	for KOTG49H in range(kumpulkan):
 		bilangan+=1
-		Masukan = input(f'{H}ID Ke  '+str(bilangan)+f' : ')
+		Masukan = input(f'{U}ID Ke  '+str(bilangan)+f' : ')
 		uid.append(Masukan)
 	for user in uid:
 	    try:
@@ -680,7 +682,7 @@ def massal():
 	    except requests.exceptions.ConnectionError:
 	        exit()
 	try:
-	      print("{H}Total DUMP  : "+str(len(id))) 
+	      print("{U}Total DUMP  : "+str(len(id))) 
 	      setting()
 	except requests.exceptions.ConnectionError:
 	    exit()
