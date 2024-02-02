@@ -216,11 +216,11 @@ def dapatkan_informasi_ip():
         kota = data.get('city')
         zona_waktu = data.get('timezone')
 
-        print(nel(f"         Alamat IP: {alamat_ip}"
-          "Region: {region}"
-          "Lokasi: {lokasi}"
-          "Kota: {kota}"
-          "Zona Waktu: {zona_waktu}"))
+        print(nel(f"         Alamat IP: {alamat_ip}"))
+        print(nel(f"Region: {region}"))
+        print(nel(f"Lokasi: {lokasi}"))
+        print(nel(f"Kota: {kota}"))
+        print(nel(f"Zona Waktu: {zona_waktu}"))
 
     except Exception as e:
         print(f"Error: {e}")
@@ -773,8 +773,8 @@ def passwrd():
 				pool.submit(metod3,idf,pwv)
 			else:
 				pool.submit(crackmbasic,idf,pwv)
-	print(f'[{b}•{x}]{h} OK : {h}%s '%(ok))
-	print(f'{x}[{b}•{x}]{k} CP : {k}%s{x} '%(cp))
+	print(f'[[blue]•{x}][bold green] OK : [bold green]%s '%(ok))
+	print(f'{x}[[blue]•{x}][bold yellow]CP : [bold yellow]%s{x} '%(cp))
 #--------------------[ METODE VALIDATE ]-----------------#
 def validate1(idf,pwv):
 	global loop,ok,cp
