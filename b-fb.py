@@ -351,7 +351,7 @@ def login():
              [bold green]Status: [red]Premium
              [bold green]WhatsApp: [blue]081283547452
              [bold green]GitHub: [blue]https://github.com/khoirulez""",width=70, padding=(0, 7), style=f"{color_panel}"))
-	cetak(nel(f'(" "* spasi_awal + pesan_selamat) [green]%s[white] Ngentod'%(my_name)'))
+	cetak(nel('\(" "* spasi_awal + pesan_selamat) [green]%s[white] Ngentod'%(my_name)))
 	alvino_xy(f'{H} Your Idz{N} : '+str(my_id))
 	alvino_xy(f'{H} Your Ip{N}  : {cek_data}')
 	prints(nel(f'              {P2}[bold blue]Menu Tools Crack{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
