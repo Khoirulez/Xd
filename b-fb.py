@@ -203,28 +203,6 @@ try:times = cek_data["timezone"]
 except:times = cek_data['-']
 try:city = cek_data["city"]
 except:city = cek_data['-']
-import requests
-
-def dapatkan_informasi_ip():
-    try:
-        response = requests.get('https://ipinfo.io')
-        data = response.json()
-
-        alamat_ip = data.get('ip')
-        region = data.get('region')
-        lokasi = data.get('loc')
-        kota = data.get('city')
-        zona_waktu = data.get('timezone')
-
-        print(nel(f"         Alamat IP: {alamat_ip}"))
-        print(nel(f"Region: {region}"))
-        print(nel(f"Lokasi: {lokasi}"))
-        print(nel(f"Kota: {kota}"))
-        print(nel(f"Zona Waktu: {zona_waktu}"))
-
-    except Exception as e:
-        print(f"Error: {e}")
-
 
 #--------------------[ CONVERTER-BULAN ]--------------#
 dic = {'1':'January','2':'February','3':'March','4':'April','5':'May','6':'June','7':'July','8':'August','9':'September','10':'October','11':'November','12':'December'}
@@ -285,7 +263,35 @@ def banner():
      |  _ \| '__| | | | __/ _ \ | |_  | '_ \   
      | |_) | |  | |_| | ||  __/ |  _| | |_) |    
      |____/|_|   \__,_|\__\___| |_|   |_.__/                      
-             """, width=90, padding=(0, 8), title=f"\r", style=f"bold white"))
+             """,width=90, padding=(0, 8), title=f"\r", style=f"bold white"))
+def author():
+     prints(nel(f'                   {P2}[bold blue]Info Author{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
+     print(nel(f"[bold green]Author: [purple]Khoirul-Xd",width=90, padding=(0, 8), title=f"\r", style=f"bold white"))
+     print(nel(f"[bold green]Status: [red]Premium",width=90, padding=(0, 8), title=f"\r", style=f"bold white"))
+     print(nel(f"[bold green]WhatsApp: [blue]081283547452",width=90, padding=(0, 8), title=f"\r", style=f"bold white"))
+     print(nel(f"[bold green]GitHub: [blue]https://github.com/khoirulez",width=90, padding=(0, 8), title=f"\r", style=f"bold white"))
+import requests
+
+def user():
+    try:
+        response = requests.get('https://ipinfo.io')
+        data = response.json()
+
+        alamat_ip = data.get('ip')
+        region = data.get('region')
+        lokasi = data.get('loc')
+        kota = data.get('city')
+        zona_waktu = data.get('timezone')
+        
+        prints(nel(f'                   {P2}[bold blue]Info User{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
+        print(nel(f"[bold purple]Alamat IP[bold purple]: {alamat_ip}"))
+        print(nel(f"[bold purple]Region[bold purple]: {region}"))
+        print(nel(f"[bold purple]Lokasi[bold purple]: {lokasi}"))
+        print(nel(f"[bold purple]Kota[bold purple]: {kota}"))
+        print(nel(f"[bold purple]Zona Waktu[bold purple]: {zona_waktu}"))
+
+    except Exception as e:
+        print(f"Error: {e}")
 #--------------------[ BAGIAN-MASUK ]--------------#
 def login():
 	try:
@@ -368,16 +374,14 @@ def login():
 	loading()
 	os.system('clear')
 	banner()
-	dapatkan_informasi_ip()
 	print(nel(" "* spasi_awal + pesan_selamat))
-	print(nel(f"""           [bold green]Author: [purple]Khoirul-Xd
-           [bold green]Status: [red]Premium
-           [bold green]WhatsApp: [blue]081283547452
-           [bold green]GitHub: [blue]https://github.com/khoirulez""",width=70, padding=(0, 7), style=f"{color_panel}"))
+	author()
+	user()
+	print(nel(" "* spasi_awal + pesan_selamat))
 	prints(nel(f'                   {P2}[bold blue]Menu Tools Crack{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
-	prints(nel(f"""      {P2}{color_text}01{P2} [bold green]Crack Massal    {color_text}04{P2} [bold green]Cek Ressult
-     {color_text}02{P2} [bold green]Crack Publik    {color_text}05{P2} [bold green]Crack File
-     {color_text}03{P2} [bold green]Clone ID Email  {color_text}00{P2} [bold green]Exit Program""",width=70,padding=(0,7),style=f"{color_panel}"))
+	prints(nel(f"""        {P2}{color_text}01{P2} [bold green]Crack Massal    {color_text}04{P2} [bold green]Cek Ressult
+        {color_text}02{P2} [bold green]Crack Publik    {color_text}05{P2} [bold green]Crack File
+        {color_text}03{P2} [bold green]Clone ID Email  {color_text}00{P2} [bold green]Exit Program""",width=70,padding=(0,7),style=f"{color_panel}"))
 	___Sllowly_ID____ = input(f'✶ ━━⫸ {H} Input{N} : ')
 	if ___Sllowly_ID____ in ['1']:
 		massal()
