@@ -286,7 +286,7 @@ def info_user():
         prints(nel(f'                     {P2}[bold blue]Info User{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
         print(f"✶[bold purple] Alamat IP{N}: {b}{alamat_ip}")
         print(f"✶[bold purple] Region{N}: {b}{region}")
-        print(f"✶[bold purple] LokasiN}: {b}{lokasi}")
+        print(f"✶[bold purple] Lokasi{N}: {b}{lokasi}")
         print(f"✶[bold purple] Kota{N}: {b}{kota}")
         print(f"✶[bold purple] Zona Waktu{N}: {b}{zona_waktu}")
 
