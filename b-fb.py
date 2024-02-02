@@ -531,9 +531,10 @@ def crack_file():
 def result():
 	clear()
 	loading()
+	clear()
 	banner()
-	print(f'{B}[{J}01{B}] {P}Hasil {h}OK{x} Anda ')
-	print(f'{B}[{J}02{B}] {P}Hasil {k}CP{x} Anda ')
+	print(f'[01] [white]Hasil [green]OK [white]Anda ')
+	print(f'[02] [white]Hasil [yellow]CP [white]Anda ')
 	kz = input(f' └──{H} Pilih : ')
 	if kz in ['02','2']:
 		
@@ -785,8 +786,8 @@ def passwrd():
 				pool.submit(metod3,idf,pwv)
 			else:
 				pool.submit(crackmbasic,idf,pwv)
-	print(f'[[blue]•{x}][bold green] OK : [bold green]%s '%(ok))
-	print(f'[[blue]•{x}][bold yellow]CP : [bold yellow]%s '%(cp))
+	print(f'[[blue]•][bold green] OK : [bold green]%s '%(ok))
+	print(f'[[blue]•][bold yellow]CP : [bold yellow]%s '%(cp))
 #--------------------[ METODE VALIDATE ]-----------------#
 def validate1(idf,pwv):
 	global loop,ok,cp
