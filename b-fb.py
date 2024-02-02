@@ -372,7 +372,7 @@ def login():
 	os.system('clear')
 	banner()
 	cetak(nel('\t>> Your Name : {name}'))
-	print(f'>> Your Idz : {idz}')
+	print(f'>> Your Idz : {idt}')
 	print(f'>> Your Ip  : {ip}')
 	print(f'>> Your Region : {reg}')
 	print(f'>> Your location : {loc}')
