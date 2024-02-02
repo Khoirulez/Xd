@@ -203,6 +203,24 @@ try:times = cek_data["timezone"]
 except:times = cek_data['-']
 try:city = cek_data["city"]
 except:city = cek_data['-']
+from rich.console import Console
+import requests
+
+console = Console()
+
+def get_ip_info(ip_address):
+    try:
+        response = requests.get(f"https://ipinfo.io/{ip_address}/json")
+        data = response.json()
+
+        console.print("\n[bold]IP Information[/bold]")
+        console.print(f"IP Address: {data['ip']}")
+        console.print(f"Region: {data['region']}")
+        console.print(f"Location: {data['loc']}")
+        console.print(f"City: {data['city']}")
+        console.print(f"Timezone: {data['timezone']}")
+    except Exception as e:
+        console.print(f"[bold red]Error:[/bold red] {e}")
 #--------------------[ CONVERTER-BULAN ]--------------#
 dic = {'1':'January','2':'February','3':'March','4':'April','5':'May','6':'June','7':'July','8':'August','9':'September','10':'October','11':'November','12':'December'}
 dic2 = {'01':'January','02':'February','03':'March','04':'April','05':'May','06':'June','07':'July','08':'August','09':'September','10':'October','11':'November','12':'Devember'}
@@ -341,24 +359,7 @@ def login():
 		print('[×] Kues Kadaluarsa ')
 		time.sleep(3)
 		login_lagi334()
-from rich.console import Console
-import requests
-
-console = Console()
-
-def get_ip_info(ip_address):
-    try:
-        response = requests.get(f"https://ipinfo.io/{ip_address}/json")
-        data = response.json()
-
-        console.print("\n[bold]IP Information[/bold]")
-        console.print(f"IP Address: {data['ip']}")
-        console.print(f"Region: {data['region']}")
-        console.print(f"Location: {data['loc']}")
-        console.print(f"City: {data['city']}")
-        console.print(f"Timezone: {data['timezone']}")
-    except Exception as e:
-        console.print(f"[bold red]Error:[/bold red] {e}")
+	os.system('clear')
 	loading()
 	os.system('clear')
 	banner()
