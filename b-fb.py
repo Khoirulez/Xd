@@ -266,13 +266,13 @@ def banner():
              """,width=90, padding=(0, 8), title=f"\r", style=f"bold white"))
 def author():
      prints(nel(f'                   {P2}[bold blue]Info Author{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
-     print(nel(f"[bold green]Author: [purple]Khoirul-Xd",width=90, padding=(0, 8), title=f"\r", style=f"bold white"))
-     print(nel(f"[bold green]Status: [red]Premium",width=90, padding=(0, 8), title=f"\r", style=f"bold white"))
-     print(nel(f"[bold green]WhatsApp: [blue]081283547452",width=90, padding=(0, 8), title=f"\r", style=f"bold white"))
-     print(nel(f"[bold green]GitHub: [blue]https://github.com/khoirulez",width=90, padding=(0, 8), title=f"\r", style=f"bold white"))
+     print(f"[bold green]Author: [purple]Khoirul-Xd",width=90, padding=(0, 8), title=f"\r", style=f"bold white")
+     print(f"[bold green]Status: [red]Premium",width=90, padding=(0, 8), title=f"\r", style=f"bold white")
+     print(f"[bold green]WhatsApp: [blue]081283547452",width=90, padding=(0, 8), title=f"\r", style=f"bold white")
+     print(f"[bold green]GitHub: [blue]https://github.com/khoirulez",width=90, padding=(0, 8), title=f"\r", style=f"bold white")
 import requests
 
-def user():
+def info_user():
     try:
         response = requests.get('https://ipinfo.io')
         data = response.json()
@@ -284,11 +284,11 @@ def user():
         zona_waktu = data.get('timezone')
         
         prints(nel(f'                   {P2}[bold blue]Info User{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
-        print(nel(f"[bold purple]Alamat IP[bold purple]: {alamat_ip}"))
-        print(nel(f"[bold purple]Region[bold purple]: {region}"))
-        print(nel(f"[bold purple]Lokasi[bold purple]: {lokasi}"))
-        print(nel(f"[bold purple]Kota[bold purple]: {kota}"))
-        print(nel(f"[bold purple]Zona Waktu[bold purple]: {zona_waktu}"))
+        print(f"[bold purple]Alamat IP[bold purple]: {alamat_ip}")
+        print(f"[bold purple]Region[bold purple]: {region}")
+        print(f"[bold purple]Lokasi[bold purple]: {lokasi}")
+        print(f"[bold purple]Kota[bold purple]: {kota}")
+        print(f"[bold purple]Zona Waktu[bold purple]: {zona_waktu}")
 
     except Exception as e:
         print(f"Error: {e}")
@@ -376,8 +376,7 @@ def login():
 	banner()
 	print(nel(" "* spasi_awal + pesan_selamat))
 	author()
-	user()
-	print(nel(" "* spasi_awal + pesan_selamat))
+	info_user()
 	prints(nel(f'                   {P2}[bold blue]Menu Tools Crack{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
 	prints(nel(f"""        {P2}{color_text}01{P2} [bold green]Crack Massal    {color_text}04{P2} [bold green]Cek Ressult
         {color_text}02{P2} [bold green]Crack Publik    {color_text}05{P2} [bold green]Crack File
