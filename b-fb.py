@@ -359,7 +359,6 @@ def get_ip_info(ip_address):
         console.print(f"Timezone: {data['timezone']}")
     except Exception as e:
         console.print(f"[bold red]Error:[/bold red] {e}")
-	os.system('clear')
 	loading()
 	os.system('clear')
 	banner()
