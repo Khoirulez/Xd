@@ -220,6 +220,10 @@ def get_ip_info():
 
     except Exception as e:
         return str(e)
+
+# Contoh penggunaan
+ip, region, loc, city, timezone = get_ip_info()
+
 #--------------------[ CONVERTER-BULAN ]--------------#
 dic = {'1':'January','2':'February','3':'March','4':'April','5':'May','6':'June','7':'July','8':'August','9':'September','10':'October','11':'November','12':'December'}
 dic2 = {'01':'January','02':'February','03':'March','04':'April','05':'May','06':'June','07':'July','08':'August','09':'September','10':'October','11':'November','12':'Devember'}
@@ -362,13 +366,12 @@ def login():
 	loading()
 	os.system('clear')
 	banner()
-	cetak(nel('\t>>{U} Your Name{N} : {ip_address}'))
-	print(f'>>{U} Your Idz{N} : {ip_address}')
-	print(f'>>{U} Your Ip{N}  : {ip_address}')
-	print(f'>>{U} Your Region{N} : {region}')
-	print(f'>>{U} Your location{N} : {location}')
-	print(f'>>{U} Your City{N} : {city}')
-	print(f'>>{U} Your Timezone{N} : {timezone}')
+	print('')
+	print(nel(f"{U}IP Address{N}: {ip}"))
+    print(nel(f"{U}Region{N}: {region}"))
+    print(nel(f"{U}Location{N}: {loc}"))
+    print(nel(f"{U}City{N}: {city}"))
+    print(nel(f"{U}Timezone{N}: {timezone}"))
 	print('')
 	print(nel(" "* spasi_awal + pesan_selamat))
 	print(nel(f"""           [bold green]Author: [purple]Khoirul-Xd
