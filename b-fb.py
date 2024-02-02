@@ -371,12 +371,15 @@ def login():
 	loading()
 	os.system('clear')
 	banner()
+	cetak(nel('\t>> Your Name : {name}'))
+	prot(f'>> Your Idz : {idz}')
+	prot(f'>> Your Ip  : {ip}')
+	prot(f'>> Your Region : {reg}')
+	prot(f'>> Your location : {loc}')
+	prot(f'>> Your City : {city}')
+	prot(f'>> Your Timezone: {timezone}')
+	print('')
 	print(nel(" "* spasi_awal + pesan_selamat))
-    print(nel(f"{U}IP Address{N}: {ip}"))
-    print(nel(f"{U}Region{N}: {region}"))
-    print(nel(f"{U}Location{N}: {loc}"))
-    print(nel(f"{U}City{N}: {city}"))
-    print(nel(f"{U}Timezone{N}: {timezone}"))
 	print(nel(f"""           [bold green]Author: [purple]Khoirul-Xd
            [bold green]Status: [red]Premium
            [bold green]WhatsApp: [blue]081283547452
