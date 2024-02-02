@@ -204,6 +204,9 @@ except:times = cek_data['-']
 try:city = cek_data["city"]
 except:city = cek_data['-']
 import requests
+from rich.console import Console
+
+console = Console()
 
 def dapatkan_info_lokasi():
     try:
@@ -211,23 +214,18 @@ def dapatkan_info_lokasi():
         response = requests.get('https://ipinfo.io')
         data = response.json()
 
-        # Menampilkan informasi yang diperoleh
-        print(f"{H2}Alamat IP{H2}: {data['ip']}")
-        print(f"{H2}Region{H2}: {data['region']}")
-        print(f"{H2}Lokasi{H2}: {data['loc']}")
-        print(f"{H2}Kota{H2}: {data['city']}")
-        print(f"{H2}Timezone{H2}: {data['timezone']}")
+        # Menampilkan informasi yang diperoleh dengan format kaya
+        console.print(f"{H2}Alamat IP{N}: {data['ip']}", justify="center")
+        console.print(f"{H2}Region{N}: {data['region']}", justify="center")
+        console.print(f"{H2}Lokasi{N}: {data['loc']}", justify="center")
+        console.print(f"{H2}Kota{N}: {data['city']}", justify="center")
+        console.print(f"{H2}Timezone{N}: {data['timezone']}", justify="center")
 
     except Exception as e:
-        print(f"Error: {e}")
-# Memanggil fungsi
-info_user = dapatkan_info_lokasi()
+        console.print(f"Error: {e}", justify="center")
 
-# Menentukan lebar layar secara dinamis
-lebar_layar = 80
-
-# Menghitung jumlah spasi di awal untuk menengahkan pesan
-spasi_awal = (lebar_layar - len(info_user)) // 2
+# Pastikan Anda telah menginstal library rich sebelum menjalankan kode ini
+# Install dengan perintah: pip install rich
 #--------------------[ CONVERTER-BULAN ]--------------#
 dic = {'1':'January','2':'February','3':'March','4':'April','5':'May','6':'June','7':'July','8':'August','9':'September','10':'October','11':'November','12':'December'}
 dic2 = {'01':'January','02':'February','03':'March','04':'April','05':'May','06':'June','07':'July','08':'August','09':'September','10':'October','11':'November','12':'Devember'}
@@ -375,7 +373,7 @@ def login():
              [bold green]Status: [red]Premium
              [bold green]WhatsApp: [blue]081283547452
              [bold green]GitHub: [blue]https://github.com/khoirulez""",width=70, padding=(0, 7), style=f"{color_panel}"))
-	print(nel(" "* spasi_awal+info_user))
+	print(nel(" (dapatkan_info_lokasi())"))
 	prints(nel(f'              {P2}[bold blue]Menu Tools Crack{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
 	prints(nel(f"""{P2}{color_text}01{P2} [bold green]Crack Massal    {color_text}04{P2} [bold green]Cek Ressult
 {color_text}02{P2} [bold green]Crack Publik    {color_text}05{P2} [bold green]Crack File
@@ -775,8 +773,8 @@ def passwrd():
 				pool.submit(metod3,idf,pwv)
 			else:
 				pool.submit(crackmbasic,idf,pwv)
-	print(f'[{b}•{x}]{h2} OK : {h2}%s '%(ok))
-	print(f'{x}[{b}•{x}]{k2} CP : {k2}%s{x} '%(cp))
+	print(f'[{b}•{x}]{H2} OK : {H2}%s '%(ok))
+	print(f'{x}[{b}•{x}]{K2} CP : {K2}%s{x} '%(cp))
 #--------------------[ METODE VALIDATE ]-----------------#
 def validate1(idf,pwv):
 	global loop,ok,cp
