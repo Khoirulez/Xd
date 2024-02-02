@@ -258,18 +258,18 @@ def loading():
 # ------------------[ LOGO-LAKNAT ]-----------------#
 def banner():
     prints(panel(f"""[bold red]               
-     ____             _        _____ _     
-     | __ ) _ __ _   _| |_ ___  |  ___| |__  
-     |  _ \| '__| | | | __/ _ \ | |_  | '_ \   
-     | |_) | |  | |_| | ||  __/ |  _| | |_) |    
-     |____/|_|   \__,_|\__\___| |_|   |_.__/                      
+        ____             _        _____ _     
+        | __ ) _ __ _   _| |_ ___  |  ___| |__  
+        |  _ \| '__| | | | __/ _ \ | |_  | '_ \   
+        | |_) | |  | |_| | ||  __/ |  _| | |_) |    
+        |____/|_|   \__,_|\__\___| |_|   |_.__/                      
              """,width=90, padding=(0, 8), title=f"\r", style=f"bold white"))
 def author():
-     prints(nel(f'                   {P2}[bold blue]Info Author{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
-     print(f"[bold green]Author: [purple]Khoirul-Xd")
-     print(f"[bold green]Status: [red]Premium")
-     print(f"[bold green]WhatsApp: [blue]081283547452")
-     print(f"[bold green]GitHub: [blue]https://github.com/khoirulez")
+     prints(nel(f'                     {P2}[bold blue]Info Author{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
+     print(f"✶[bold green] Author: [purple]Khoirul-Xd")
+     print(f"✶[bold green] Status: [red]Premium")
+     print(f"✶[bold green] WhatsApp: [blue]081283547452")
+     print(f"✶[bold green] GitHub: [blue]https://github.com/khoirulez")
 import requests
 
 def info_user():
@@ -283,12 +283,12 @@ def info_user():
         kota = data.get('city')
         zona_waktu = data.get('timezone')
         
-        prints(nel(f'                   {P2}[bold blue]Info User{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
-        print(f"[bold purple]Alamat IP[bold purple]: {alamat_ip}")
-        print(f"[bold purple]Region[bold purple]: {region}")
-        print(f"[bold purple]Lokasi[bold purple]: {lokasi}")
-        print(f"[bold purple]Kota[bold purple]: {kota}")
-        print(f"[bold purple]Zona Waktu[bold purple]: {zona_waktu}")
+        prints(nel(f'                     {P2}[bold blue]Info User{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
+        print(f"✶[bold purple] Alamat IP{N}: [blue]{alamat_ip}")
+        print(f"✶[bold purple] Region{N}: [blue]{region}")
+        print(f"✶[bold purple] LokasiN}: [blue]{lokasi}")
+        print(f"✶[bold purple] Kota{N}: [blue]{kota}")
+        print(f"✶[bold purple] Zona Waktu{N}: [blue]{zona_waktu}")
 
     except Exception as e:
         print(f"Error: {e}")
