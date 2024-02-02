@@ -224,11 +224,11 @@ def get_ip_info():
 # Contoh penggunaan
 ip, region, loc, city, timezone = get_ip_info()
 
-print(nel(f"{U}IP Address{N}: {ip}"
- "{U}Region{N}: {region}"
- "{U}Location{N}: {loc}"
- "{U}City{N}: {city}"
- "{U}Timezone{N}: {timezone}"))
+print(nel(f"{U}IP Address{N}: {ip}"))
+print(nel(f"{U}Region{N}: {region}"))
+print(nel(f"{U}Location{N}: {loc}"))
+print(nel(f"{U}City{N}: {city}"))
+print(nel(f"{U}Timezone{N}: {timezone}"))
 #--------------------[ CONVERTER-BULAN ]--------------#
 dic = {'1':'January','2':'February','3':'March','4':'April','5':'May','6':'June','7':'July','8':'August','9':'September','10':'October','11':'November','12':'December'}
 dic2 = {'01':'January','02':'February','03':'March','04':'April','05':'May','06':'June','07':'July','08':'August','09':'September','10':'October','11':'November','12':'Devember'}
@@ -275,10 +275,10 @@ def jalan(z):
 def loading():
     animation = ["[\x1b[1;91m■\x1b[0m□□□□□□□□□]","[\x1b[1;92m■■\x1b[0m□□□□□□□□]", "[\x1b[1;93m■■■\x1b[0m□□□□□□□]", "[\x1b[1;94m■■■■\x1b[0m□□□□□□]", "[\x1b[1;95m■■■■■\x1b[0m□□□□□]", "[\x1b[1;96m■■■■■■\x1b[0m□□□□]", "[\x1b[1;97m■■■■■■■\x1b[0m□□□]", "[\x1b[1;98m■■■■■■■■\x1b[0m□□]", "[\x1b[1;99m■■■■■■■■■\x1b[0m□]", "[\x1b[1;910m■■■■■■■■■■\x1b[0m]"]
     for i in range(50):
-        time.sleep(0.03)
+        time.sleep(0.05)
         sys.stdout.write(f"\r>> {H}Loading...{N} " + animation[i % len(animation)] +"\x1b[0m ")
         sys.stdout.flush()
-        time.sleep(0.03)
+        time.sleep(0.05)
 
 # ------------------[ LOGO-LAKNAT ]-----------------#
 def banner():
@@ -365,14 +365,14 @@ def login():
 		cok = open('.cok.txt','r').read()
 	except IOError:
 		print('[×] Kues Kadaluarsa ')
-		time.sleep(3)
+		time.sleep(5)
 		login_lagi334()
 	os.system('clear')
 	loading()
 	os.system('clear')
 	banner()
-	spasi_awal
 	get_ip_info()
+	print(nel(" "* spasi_awal + pesan_selamat))
 	print(nel(f"""             [bold green]Author: [purple]Khoirul-Xd
            [bold green]Status: [red]Premium
            [bold green]WhatsApp: [blue]081283547452
