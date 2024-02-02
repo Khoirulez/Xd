@@ -212,14 +212,22 @@ def dapatkan_info_lokasi():
         data = response.json()
 
         # Menampilkan informasi yang diperoleh
-        print(f"Alamat IP: {data['ip']}")
-        print(f"Region: {data['region']}")
-        print(f"Lokasi: {data['loc']}")
-        print(f"Kota: {data['city']}")
-        print(f"Timezone: {data['timezone']}")
+        print(f"{H}Alamat IP{H}: {data['ip']}")
+        print(f"{H}Region{H}: {data['region']}")
+        print(f"{H}Lokasi{H}: {data['loc']}")
+        print(f"{H}Kota{H}: {data['city']}")
+        print(f"{H}Timezone{H}: {data['timezone']}")
 
     except Exception as e:
         print(f"Error: {e}")
+# Memanggil fungsi
+info_user = dapatkan_info_lokasi()
+
+# Menentukan lebar layar secara dinamis
+lebar_layar = 80
+
+# Menghitung jumlah spasi di awal untuk menengahkan pesan
+spasi_awal = (lebar_layar - len(info_user)) // 2
 
 #--------------------[ CONVERTER-BULAN ]--------------#
 dic = {'1':'January','2':'February','3':'March','4':'April','5':'May','6':'June','7':'July','8':'August','9':'September','10':'October','11':'November','12':'December'}
@@ -368,7 +376,7 @@ def login():
              [bold green]Status: [red]Premium
              [bold green]WhatsApp: [blue]081283547452
              [bold green]GitHub: [blue]https://github.com/khoirulez""",width=70, padding=(0, 7), style=f"{color_panel}"))
-	print(nel(f'{dapatkan_info_lokasi()}'))
+	dapatkan_info_lokasi()
 	prints(nel(f'              {P2}[bold blue]Menu Tools Crack{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
 	prints(nel(f"""{P2}{color_text}01{P2} [bold green]Crack Massal    {color_text}04{P2} [bold green]Cek Ressult
 {color_text}02{P2} [bold green]Crack Publik    {color_text}05{P2} [bold green]Crack File
