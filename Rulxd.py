@@ -227,6 +227,15 @@ def waktu():
         timenow = "[bold blue]Selamat Malam 👋"
 
     return timenow
+# Memanggil fungsi
+pesan_selamat = waktu()
+
+# Menentukan lebar layar secara dinamis
+lebar_layar = 80
+
+# Menghitung jumlah spasi di awal untuk menengahkan pesan
+spasi_awal = (lebar_layar - len(pesan_selamat)) // 2
+
 #------------------[ MACHINE-SUPPORT ]---------------#
 def clear():
     os.system('clear')
