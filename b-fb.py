@@ -334,7 +334,7 @@ def bot():
 	except:
 		pass
 #------------------[ BAGIAN LOGIN ]----------------#
-def login():
+def login(my_name,my_id):
 	try:
 		token = open('.token.txt','r').read()
 		cok = open('.cok.txt','r').read()
