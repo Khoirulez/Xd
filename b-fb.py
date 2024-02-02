@@ -351,10 +351,9 @@ def login():
              [bold green]Status: [red]Premium
              [bold green]WhatsApp: [blue]081283547452
              [bold green]GitHub: [blue]https://github.com/khoirulez""",width=70, padding=(0, 7), style=f"{color_panel}"))
-    ip = requests.get("https://api.ipify.org")
-	cetak(nel('\tSelamat Datang [green]%s[white] Ngentod'%(my_name)))
+	cetak(nel(f'(" "* spasi_awal + pesan_selamat) [green]%s[white] Ngentod'%(my_name)'))
 	alvino_xy(f'{H} Your Idz{N} : '+str(my_id))
-	alvino_xy(f'{H} Your Ip{N}  : {ip}')
+	alvino_xy(f'{H} Your Ip{N}  : {cek_data}')
 	prints(nel(f'              {P2}[bold blue]Menu Tools Crack{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
 	prints(nel(f"""{P2}{color_text}01{P2} [bold green]Crack Massal    {color_text}04{P2} [bold green]Cek Ressult
 {color_text}02{P2} [bold green]Crack Publik    {color_text}05{P2} [bold green]Crack File
