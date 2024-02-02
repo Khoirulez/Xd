@@ -266,10 +266,10 @@ def banner():
              """,width=90, padding=(0, 8), title=f"\r", style=f"bold white"))
 def author():
      prints(nel(f'                   {P2}[bold blue]Info Author{P2}',width=70,padding=(0,7),style=f"{color_panel}")) 
-     print(f"[bold green]Author: [purple]Khoirul-Xd",width=90, padding=(0, 8), title=f"\r", style=f"bold white")
-     print(f"[bold green]Status: [red]Premium",width=90, padding=(0, 8), title=f"\r", style=f"bold white")
-     print(f"[bold green]WhatsApp: [blue]081283547452",width=90, padding=(0, 8), title=f"\r", style=f"bold white")
-     print(f"[bold green]GitHub: [blue]https://github.com/khoirulez",width=90, padding=(0, 8), title=f"\r", style=f"bold white")
+     print(f"[bold green]Author: [purple]Khoirul-Xd")
+     print(f"[bold green]Status: [red]Premium")
+     print(f"[bold green]WhatsApp: [blue]081283547452")
+     print(f"[bold green]GitHub: [blue]https://github.com/khoirulez")
 import requests
 
 def info_user():
