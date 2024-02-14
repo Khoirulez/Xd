@@ -279,7 +279,7 @@ def menu():
 ###-----[ DUMP PUBLIK ]-----###
 def dump(idt, fields, cookie, token):
     idt = input('└──[ ID Target : ')
-	dump(idt, "", {"cookie":cok}, token)
+    dump(idt, "", {"cookie":cok}, token)
     try:
         headers = {
             "connection": "keep-alive",
