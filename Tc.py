@@ -278,6 +278,8 @@ def menu():
 
 ###-----[ DUMP PUBLIK ]-----###
 def dump():
+    token = open('.token.txt','r').read()
+    cok = open('.cok.txt','r').read()
     idt = input('└──[ ID Target : ')
     dump(idt, "", {"cookie":cok}, token)
     try:
