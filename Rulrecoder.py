@@ -1622,7 +1622,7 @@ def run():
                 os.system("clear")
                 login_cookie()
     except (IOError,FileNotFoundError):
-       license_key = input(f"[{h}•{x}]{U}Masukkan lisensi{x}:{B} ")
+       license_key = input(f"[{h}•]{U}Masukkan lisensi:{B} ")
        licen=open(".save_license.txt", "w").write(license_key)
        time.sleep(0.03)
 
@@ -1646,8 +1646,6 @@ def run():
 
 #-----------------------[ SYSTEM-CONTROL ]--------------------#
 if __name__=='__main__':
-	try:os.system('git pull')
-	except:pass
 	try:os.system('clear')
 	except:pass
 	login()
