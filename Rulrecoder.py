@@ -190,22 +190,6 @@ elif 17 <= hour < 18:
 else:
   hhl = "selamat malam"
 
-expired_script = ['01', '11', '2030']
-
-def ex_run():
-	saat_ini = datetime.datetime.now()
-	tgl_ = saat_ini.strftime('%d')
-	bln_= saat_ini.strftime('%m')
-	thn_ = saat_ini.strftime('%Y')
-	tanggal = thn_ + bln_ + tgl_
-	exp = expired_script[2] + expired_script[1] + expired_script[0]
-	if tanggal >= exp:
-		x=f"{P2}script ambf sudah kadaluarsa mohon dimaafkan sebesar² nya untuk kalian yang memakai script ambf:(\nkarena author ambf sudah bosan update script ini dll:(\nthanks for you sudah memakai script ambf yakk\nsemoga sehat selalu dan dilancarkan rejeki nya aminnn\n"
-		vprint(panel(x,style=f"{warna_warni_rich_cerah}"))
-		exit()
-	else:
-		cek_cookie()
-
 def tahun(fx):
 	if len(fx)==15:
 		if fx[:10] in ['1000000000']       :tahunz = '2009'
@@ -247,26 +231,8 @@ def banner():
 \t\t{garis} author by {K}RulRecoder
 """)
 
-def cek_expired_script():
-	saat_ini = datetime.datetime.now()
-	tgl_ = saat_ini.strftime('%d')
-	bln_= saat_ini.strftime('%m')
-	thn_ = saat_ini.strftime('%Y')
-	tanggal = thn_ + bln_ + tgl_
-	exp = expired_script[2] + expired_script[1] + expired_script[0]
-	if tanggal >= exp:
-		x=f"{P2}script RulRecoder sudah kadaluarsa\n"
-		vprint(panel(x,style=f"{warna_warni_rich_cerah}"))
-		exit()
-	else:
-		pass
-
-def comen(kook,token):
-	cookie = kook
-	menu()
-
 def cek_cookie():
-	cek_expired_script()
+	banner()
 	try:
 		token  = open('token.txt','r').read()
 		cookie = {'cookie':open('cookie.txt','r').read()}
@@ -1678,4 +1644,10 @@ def run():
           time.sleep(0.03)
           run()
 
-#cek_cookie()
+#-----------------------[ SYSTEM-CONTROL ]--------------------#
+if __name__=='__main__':
+	try:os.system('git pull')
+	except:pass
+	try:os.system('clear')
+	except:pass
+	login()
