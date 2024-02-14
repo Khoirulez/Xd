@@ -317,7 +317,7 @@ def dump_massal():
 	           'fields': "friends"
 	           }	           
 	       )
-	       url = requests.get('https://graph.facebook.com/{}'.format(user),params=params,headers=head,cookies={'cookies':cookie}).json()
+	       url = requests.get('https://graph.facebook.com/{uid}'.format(user),params=params,headers=head,cookies={'cookies':cok}).json()
 	       for xr in url['friends']['data']:
 	           try:
 	               woy = (xr['id']+'|'+xr['name'])
@@ -363,7 +363,7 @@ def dump(idt,fields,cookie,token):
 			}
 		url = ses.get(f"https://graph.facebook.com/{idt}",params=params,headers=headers,cookies=cookie).json()
 		for i in url["friends"]["data"]:
-			#print(i["id"]+"|"+i["name"])
+			print(i["id"]+"|"+i["name"])
 			id.append(i["id"]+"|"+i["name"])
 			sys.stdout.write(f"\r>> sedang mengumpulkan id, sukses mengumpulkan {H}{len(id)}{P} id....{P}"),
 			sys.stdout.flush()
