@@ -264,7 +264,7 @@ def menu():
 	prints(panel(f"""[white][[cyan]•[white]] Name Tumbal [[green] {nama} [white]] \n[[cyan]•[white]] Idz Tumbal [white][[green] {uidfb} [white]]""",width=43,title=f"[[green] INFO TUMBAL [/]]",style=f"bold green"))
 	prints(panel(f"""[white][[cyan]01[white]] Crack Publik [[green] ON [white]] \n[[cyan]02[white]] Crack Massal [white][[green] ON [white]] \n[[cyan]03[white]] Result Cp [[green] ON [white]]\n[[cyan]04[white]] Result Ok [white][[green] ON [white]] \n[[cyan][red]00[white]] logout [white][ [red]ngapus kokie [white]] [ [green]ON [white]] """,width=43,title=f"[[green] MENU HIDANGAN [/]]",style=f"bold green"))
 	print(f"{kun}╭────────────────────────────────────────────{puti}")
-	CYXIEON_GANTENG = input(f'{kun}└──[{puti} Input menu : ')
+	CYXIEON_GANTENG = input(f'{hijo}└──[{puti} Input menu : ')
 	if CYXIEON_GANTENG in ['01','1']:
 	        idt = input('\n└──[ ID Target : ')
 	        dump(idt,"",{"cookie":cok},token)
@@ -329,7 +329,7 @@ def dump_massal():
 	    except requests.exceptions.ConnectionError:
 	        exit()
 	try: 
-	      prints(panel(f" sedanng mengumpulkan id, telah sukses mengumpulkan [green]{len(id)}[white] id....",title=f"[[green]RULXD[/]]",style=f"bold green"))
+	      prints(panel(f"{puti} sedanng mengumpulkan id, telah sukses mengumpulkan [green]{len(id)}[white] id....",title=f"[[green]RULXD[/]]",style=f"bold green"))
 	      atur_id()
 	except requests.exceptions.ConnectionError:
 	    exit()
