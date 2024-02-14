@@ -260,7 +260,7 @@ def cek_cookie():
 			vprint(panel(x,style=f"{warna_warni_rich_cerah}"))
 			os.system('rm -rf cookie.txt')
 			os.system('rm -rf token.txt')
-			turu(0.05)
+			turu(0.03)
 			login()
 		except requests.exceptions.ConnectionError:
 			x=f"{P2}koneksi internet bermasalah"
@@ -1592,7 +1592,7 @@ def run():
             if saved_license and is_license_valid(saved_license):
                 time.sleep(0.03)
                 print(f"{H}Lisensi valid. Selamat menggunakan program.")
-                time.sleep(2)
+                time.sleep(1)
                 os.system("clear")
                 cek_cookie()
     except (IOError,FileNotFoundError):
@@ -1609,7 +1609,7 @@ def run():
           if saved_license and is_license_valid(saved_license):
               time.sleep(0.03)
               print(f"{H}Lisensi valid. Selamat menggunakan program.")
-              time.sleep(2)
+              time.sleep(1)
               os.system("clear")
               cek_cookie()
        else:
