@@ -281,7 +281,6 @@ def dump():
     token = open('.token.txt','r').read()
     cok = open('.cok.txt','r').read()
     idt = input('└──[ ID Target : ')
-    dump(idt, "", {"cookie":cok}, token)
     try:
         headers = {
             "connection": "keep-alive",
@@ -310,14 +309,14 @@ def dump():
             f"https://graph.facebook.com/{idt}",
             params=params,
             headers=headers,
-            cookies=cookie,
+            cookies=cok,
         ).json()
         for i in url["friends"]["data"]:
             # print(i["id"]+"|"+i["name"])
             id.append(i["id"] + "|" + i["name"])
             sys.stdout.write(f"\r sedang dump... {len(id)}"),
             sys.stdout.flush()
-        dump(idt, url["friends"]["paging"]["cursors"]["after"], cookie, token)
+        dump(idt, url["friends"]["paging"]["cursors"]["after"], cookies, token)
     except:
         pass
     atur_id()
