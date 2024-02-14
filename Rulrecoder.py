@@ -1678,5 +1678,4 @@ def run():
           time.sleep(0.03)
           run()
 
-ex_run()
 #cek_cookie()
