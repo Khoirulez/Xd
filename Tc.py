@@ -174,13 +174,13 @@ def ganti_cokies():
 def banner():
       if "win" in sys.platform:os.system("cls")
       else:os.system("clear")
-      print(f'''{biru}\t ____        ______                      __         
-  \t / __ \__  __/ / __ \___  _________  ____/ /__  _____
-  \t/ /_/ / / / / / /_/ / _ \/ ___/ __ \/ __  / _ \/ ___/
- \t/ _, _/ /_/ / / _, _/  __/ /__/ /_/ / /_/ /  __/ /    
+      print(panel(f'''{biru}\t ____        ______                      __         
+     \t / __ \__  __/ / __ \___  _________  ____/ /__  _____
+    \t/ /_/ / / / / / /_/ / _ \/ ___/ __ \/ __  / _ \/ ___/
+  \t/ _, _/ /_/ / / _, _/  __/ /__/ /_/ / /_/ /  __/ /    
 \t/_/ |_|\__,_/_/_/ |_|\___/\___/\____/\__,_/\___/_/{xxx}
-\t\t• Multi Brute Force Facebook •
-\t\t[•] author by {K}RulRecoder''')
+\t\t• {m}Multi Brute Force Facebook{xxx} •
+\t\t {u}author by {K}RulRecoder''',width=43,title=f"[[green] RulRecoder [/]]",style=f"bold white"))
 #kukis
 def login3():
 	try:
@@ -245,7 +245,7 @@ def menu():
 		token = open('.token.txt','r').read()
 		cok = open('.cok.txt','r').read()
 	except (IOError,KeyError,FileNotFoundError):
-		print(f'\n{P} [:] cookies kamu invalid.{P}')
+		print(f'\n{P} [•] cookies kamu invalid.{P}')
 		time.sleep(2);os.system('clear')
 		login3()
 	try:
@@ -257,10 +257,11 @@ def menu():
 	except KeyError:
 		try:os.remove(".cok.txt");os.remove(".token.txt")
 		except:pass
-		print(f"\n{P} [:] sepertinya akun tumbal mu terkena checkpoint...{P}");time.sleep(2)
+		print(f"\n{P} [•] sepertinya akun tumbal mu terkena checkpoint...{P}");time.sleep(2)
 		os.system('clear')
 		login3()
 		banner()
+	prints(panel(f"""[white][[cyan]1[white]] Name Tumbal [[green]{nama}[white]] \n[[cyan]2[white]] Idz Tumbal [white][[green]{uidfb} [white]]""",width=43,title=f"[[green] INFO USER [/]]",style=f"bold white"))
 	prints(panel(f"""[white][[cyan]1[white]] prack publik [[green]  ON[white]] \n[[cyan]2[white]] file clone [white][[green] ON [white]] \n[[cyan]3[white]] email clone [[green] ON [white]]\n[[cyan]4[white]] join my group [white][[green] ON [white]] \n[[cyan]G[white]] result [[green] ON [white]]\n[[cyan]7[white]] brutal [[green] ON [white]]\n[[cyan]5[white]] logout [white][ [red]ngapus kokie [white]] [ [green]ON [white]] """,width=43,title=f"[[green] MENU HIDANGAN [/]]",style=f"bold white"))
 	print(f"{kun}╭────────────────────────────────────────────{puti}")
 	CYXIEON_GANTENG = input(f'{kun}└──[{puti} Input menu : ')
