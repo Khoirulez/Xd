@@ -396,14 +396,14 @@ def menu():
 	x=f"\t\t\t{P2}[{H2}•{P2}] data hp kamu\n{P2}IP kamu : {H2}{IP}\n{P2}negara kamu : {H2}{nibba}\n\t\t\t{P2}[{H2}•{P2}] data akun facebook kamu\n{P2}{hhl} {K2}{nama}\n{P2}tanggal lahirmu : {H2}{pko}\n{P2}ID kamu : {H2}{tumbal_id}\n{P2}tanggal sekarang : {H2}{sekarang}\n{P2}pembuatan akun pada : {H2}{tahunx}\n{P2}nomor telepon yang terkait : {H2}{no_kep}\n{P2}email yang terkait : {H2}{co}\n{P2}lokasi akun : {H2}{lok}"
 	vprint(panel(x,style=f"{warna_warni_rich_cerah}"))
 	print("")
-	x=f"{P2}[01] crack massal\n{P2}[04] crack public\n{P2}[03] crack mail\n{P2}[04] hasil crack\n{P2}[05] opsi detectored with hasil cp\n{P2}[{M2}00{P2}] exit/delete cookie"
+	x=f"{P2}[01] crack massal\n{P2}[02] crack public\n{P2}[03] crack mail\n{P2}[04] hasil crack\n{P2}[05] opsi detectored with hasil cp\n{P2}[{M2}00{P2}] exit/delete cookie"
 	vprint(panel(x,style=f"{warna_warni_rich_cerah}"))
 	HikmatXD = input(f"{garis} pilih : {H}")
 	if HikmatXD in ["1","01"]:
 		massal_cracked_public()
-	elif HikmatXd in ["2","02"]:
+	elif HikmatXD in ["2","02"]:
 		cracked_public()
-	elif HikmatXd in ["3","03"]:
+	elif HikmatXD in ["3","03"]:
 		cracked_email()
 	elif HikmatXD in ["4","04"]:
 		hasil_crack()
