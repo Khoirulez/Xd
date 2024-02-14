@@ -294,7 +294,7 @@ def login():
 		login()
 
 def login_cookie():
-    banner()
+	banner()
 	print("")
 	#testi_ua()
 	x = f"\t\t{P2}Gunakan akun tumbal jangan akun utama"
