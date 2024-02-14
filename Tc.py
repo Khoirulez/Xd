@@ -335,7 +335,7 @@ def massalx():
 	bilangan = 0
 	for KOTG49H in range(kumpulkan):
 		bilangan+=1
-		Masukan = input(f">>> {H}Masukan Ids Ke {P}" +str(bilangan)+f' : ')
+		Masukan = input(f">>> {H}Masukan Idz Ke {P}" +str(bilangan)+f' : ')
 		uid.append(Masukan)
 	for user in uid:
 	    try:
@@ -366,7 +366,7 @@ def massalx():
 	    except (KeyError,IOError):
 	      pass
 	    except requests.exceptions.ConnectionError:
-	        exit()
+	       exit()
 	try:
 	      print("Total DUMP  : "+str(len(id))) 
 	      atur_id()
