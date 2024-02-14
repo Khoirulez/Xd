@@ -277,7 +277,7 @@ def menu():
             ganti_cokies()
 
 ###-----[ DUMP PUBLIK ]-----###
-def dump(idt, fields, cookie, token):
+def dump():
     idt = input('└──[ ID Target : ')
     dump(idt, "", {"cookie":cok}, token)
     try:
