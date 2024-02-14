@@ -1612,6 +1612,7 @@ def run():
     try:
         with open(LICENSE_FILE_PATH, 'r') as file:
             print(f'  [•]{M} Sedang Mengecek Lisensi..... !!!! ')
+            saved_license = open(".save_license.txt", "r").read()
             expiration_date = get_expiration_date(saved_license)
             print(f"{H}Lisensi kadaluwarsa pada tanggal: {B}{expiration_date.strftime('%Y-%m-%d %H:%M')}");time.sleep(2)
             if saved_license and is_license_valid(saved_license):
@@ -1628,6 +1629,7 @@ def run():
        if check_license(license_key):
           print(f'  [•]{M} Sedang Mengecek Lisensi..... !!!! ')
           time.sleep(1)
+          saved_license = open(".save_license.txt", "r").read()
           expiration_date = get_expiration_date(saved_license)
           print(f"{H}Lisensi kadaluwarsa pada tanggal: {B}{expiration_date.strftime('%Y-%m-%d %H:%M')}");time.sleep(2)
           if saved_license and is_license_valid(saved_license):
