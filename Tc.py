@@ -262,7 +262,7 @@ def menu():
 		login3()
 		banner()
 	prints(panel(f"""[white][[cyan]•[white]] Name Tumbal [[green]{nama}[white]] \n[[cyan]•[white]] Idz Tumbal [white][[green]{uidfb}[white]]""",width=43,title=f"[[green] INFO TUMBAL [/]]",style=f"bold green"))
-	prints(panel(f"""[white][[cyan]01[white]] Crack Publik [[green]ON[white]] \n[[cyan]02[white]] Crack Massal [white][[green]ON[white]] \n[[cyan]03[white]] Result Cp [[green]ON[white]]\n[[cyan]04[white]] Result Ok [white][[green]ON[white]] \n[[cyan][red]00[white]] logout [white][ [red]ngapus kokie [white][green]ON[white]] """,width=43,title=f"[[green] MENU HIDANGAN [/]]",style=f"bold green"))
+	prints(panel(f"""[white][[cyan]01[white]] Crack Publik [[green]ON[white]] \n[[cyan]02[white]] Crack Massal [white][[green]ON[white]] \n[[cyan]03[white]] Result Cp [[green]ON[white]]\n[[cyan]04[white]] Result Ok [white][[green]ON[white]] \n[[cyan][red]00[white]] logout [white][[red]ngapus kokie[white]] [[green]ON[white]] """,width=43,title=f"[[green] MENU HIDANGAN [/]]",style=f"bold green"))
 	print(f"{kun}╭────────────────────────────────────────────{puti}")
 	CYXIEON_GANTENG = input(f'{hijo}└──[{puti} Input menu : ')
 	if CYXIEON_GANTENG in ['01','1']:
@@ -321,7 +321,7 @@ def dump(idt, fields, cookie, token):
     atur_id()
 ####---------------[ DUMP MASSAL ]----------------]####
 def massalx():
-	token = open('.tok.txt','r').read()
+	token = open('.token.txt','r').read()
 	cok = open('.cok.txt','r').read()
 	try:
 		kumpulkan = int(input(f'>>> {H}Mau Berapa ID ?{P} : '))
