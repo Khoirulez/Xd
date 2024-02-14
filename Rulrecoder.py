@@ -1560,7 +1560,7 @@ def cek_apk(ses,kuki):
 import requests
 from datetime import datetime
 
-LICENSE_FILE_PATH = "save_license.txt"
+LICENSE_FILE_PATH = "saved_license.txt"
 
 def is_license_valid(license_info):
     # Split license_info into components
@@ -1611,35 +1611,35 @@ def get_expiration_date(license_info):
 def run():
     try:
         with open(LICENSE_FILE_PATH, 'r') as file:
-            print(f'  [•]{M} Sedang Mengecek Lisensi..... !!!! ')
-            saved_license = open(".save_license.txt", "r").read()
+            print(f'  [•][bold green] Sedang Mengecek Lisensi..... !!!! ')
+            saved_license = file.read()
             expiration_date = get_expiration_date(saved_license)
-            print(f"{H}Lisensi kadaluwarsa pada tanggal: {B}{expiration_date.strftime('%Y-%m-%d %H:%M')}");time.sleep(2)
+            print(f"[bold green]Lisensi kadaluwarsa pada tanggal: {B2}{expiration_date.strftime('%Y-%m-%d %H:%M')}");time.sleep(2)
             if saved_license and is_license_valid(saved_license):
                 time.sleep(0.03)
-                print(f"{H}Lisensi valid. Selamat menggunakan program.")
-                time.sleep(2)
-                os.system("clear")
+                print(f"[bold green]Lisensi valid. Selamat menggunakan program.")
+                time.sleep(3)
+                clear()
                 login_cookie()
     except (IOError,FileNotFoundError):
        license_key = input(f"[{h}•]{U}Masukkan lisensi:{B} ")
-       licen=open(".save_license.txt", "w").write(license_key)
+       licen=open(".saved_license.txt", "w").write(license_key)
        time.sleep(0.03)
 
        if check_license(license_key):
-          print(f'  [•]{M} Sedang Mengecek Lisensi..... !!!! ')
+          print(f'  [•][bold green] Sedang Mengecek Lisensi..... !!!! ')
           time.sleep(1)
-          saved_license = open(".save_license.txt", "r").read()
+          saved_license = file.read()
           expiration_date = get_expiration_date(saved_license)
-          print(f"{H}Lisensi kadaluwarsa pada tanggal: {B}{expiration_date.strftime('%Y-%m-%d %H:%M')}");time.sleep(2)
+          print(f"[bold green]Lisensi kadaluwarsa pada tanggal: {B2}{expiration_date.strftime('%Y-%m-%d %H:%M')}");time.sleep(2)
           if saved_license and is_license_valid(saved_license):
               time.sleep(0.03)
-              print(f"{H}Lisensi valid. Selamat menggunakan program.")
-              time.sleep(2)
-              os.system("clear")
+              print(f"[bold green]Lisensi valid. Selamat menggunakan program.")
+              time.sleep(3)
+              clear()
               login_cookie()
        else:
-          os.system("rm -f .save_license.txt")
+          os.system("rm -f .saved_license.txt")
           print(f"{m}Lisensi tidak valid atau telah kadaluarsa. Tolong masukan lisensi dengan benar.")
           time.sleep(0.03)
           run()
