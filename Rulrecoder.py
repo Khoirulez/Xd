@@ -787,6 +787,7 @@ def cracked_email():
 			x +=1
 			id.append(email+"<=>"+nama)
 			sys.stdout.write(f"\r{garis} sedang mengumpulkan id {len(id)} ");sys.stdout.flush()
+			settingers()
 	elif sae in["2"]:
 		email = "@yahoo.com"
 		nama = input(f"{garis} input nama : ")
@@ -795,6 +796,7 @@ def cracked_email():
 			x +=1
 			id.append(email+"<=>"+nama)
 			sys.stdout.write(f"\r{garis} sedang mengumpulkan id {len(id)} ");sys.stdout.flush()
+			settingers()
 	elif sae in["3"]:
 		email = "@hotmail.com"
 		nama = input(f"{garis} input nama : ")
@@ -803,6 +805,7 @@ def cracked_email():
 			x +=1
 			id.append(email+"<=>"+nama)
 			sys.stdout.write(f"\r{garis} sedang mengumpulkan id {len(id)} ");sys.stdout.flush()
+			settingers()
 	elif sae in["4"]:
 		email = "@outlook.com"
 		nama = input(f"{garis} input nama : ")
@@ -811,7 +814,7 @@ def cracked_email():
 			x +=1
 			id.append(email+"<=>"+nama)
 			sys.stdout.write(f"\r{garis} sedang mengumpulkan id {len(id)} ");sys.stdout.flush()
-	settingers()
+	        settingers()
 
 def massal_cracked_public():
 	print("")
@@ -1015,27 +1018,6 @@ def crack_public_pilihan():
 		pw_tambahan.append("no")
 	else:
 		pw_tambahan.append("no")
-	nanya_proxy = input(garis+" ingin menambahkan proxy tambahan ("+H+"y"+P+"/"+M+"t"+P+") ? :"+H+" ")
-	if nanya_proxy in ["y","Y","yes","Ya"]:
-		proxp()
-	elif nanya_proxy in ["t","T","tidak","Tidak"]:
-		proxp()
-	else:
-		proxp()
-	uar = input(f"{garis} ingin memasukan ua tambahan kamu ({H}y{P}/{M}t{P}) ? : {H}")
-	if uar in ["y","Y","ya"]:
-		ua = input(f"{garis} masukan ua : {H}")
-		ugent = ua.split(',')
-		ugent = open('useragent.txt','w')
-		ugent.write(ua)
-		ugent.close()
-	elif uar in ["t","T","tidak"]:
-		pass
-	else:
-		jalan(f"{garis} isi yang benar ")
-		crack_public_pilihan()
-	x=f"{P2}maaf fitur opsi gk saya adakan.. karena gk recomended buat crack:)"
-	vprint(panel(x,style=f"{warna_warni_rich_cerah}"))
 	#tamtttl = input(garis+" ingin memunculkan ttl akun cp/ok ("+H+"y"+P+"/"+M+"t"+P+") ? :"+H+" ")
 	#if tamtttl in ["y","Y","ya"]:
 		#tampilkan_ttl.append("ya")
@@ -1057,19 +1039,6 @@ def crack_public_pilihan():
 		tampilkan_apk.append("no")
 	else:
 		tampilkan_apk.append("no")
-	pw_tambahai = input(garis+" ingin menambahkan password belakang nama ("+H+"y"+P+"/"+M+"t"+P+") ? :"+H+" ")
-	if pw_tambahai in ["y","Y","yes","Ya","Yes"]:
-		pw_belakang.append("ya")
-		x=f"{P2}contoh password belakang : {H2}anjing,ngentot,sayang "
-		vprint(panel(x,style=f"{warna_warni_rich_cerah}"))
-		pw_nya_cok = input(garis+" password belakang nama :"+H+" ")
-		pw_gw=pw_nya_cok.split(',')
-		for cpw in pw_gw:
-			pw_lu.append(cpw)
-	elif pw_tambahai in ["t","T","Tidak","tidak","no"]:
-		pw_belakang.append("no")
-	else:
-		pw_belakang.append("no")
 	pilpas = input(garis+" ingin memakai password manual ("+H+"y"+P+"/"+M+"t"+P+") ? :"+H+" ")
 	if pilpas in ["y","Y","ya","yes"]:
 		with tread(max_workers=30) as HikmatXF:
