@@ -815,6 +815,13 @@ def cracked_email():
 			id.append(email+"<=>"+nama)
 			sys.stdout.write(f"\r{garis} sedang mengumpulkan id {len(id)} ");sys.stdout.flush()
 			settingers()
+	nama = input(f"{garis} input nama : ")
+	jumlah = int(input(f"{garis} input limit : "))
+	for z in range(jumlah):
+		x +=1
+		id.append(email+"<=>"+nama)
+		sys.stdout.write(f"\r{garis} sedang mengumpulkan id {len(id)} ");sys.stdout.flush()
+		settingers()
 
 def massal_cracked_public():
 	print("")
