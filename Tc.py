@@ -224,13 +224,13 @@ def login_lagi334():
         find_token = re.search("(EAAG\w+)", data.text)
         ken = open(".token.txt", "w").write(find_token.group(1))
         cok = open(".cok.txt", "w").write(cookie)
-        print(f'  [•]{H2} Login Berhasil !!!! ')
+        print(f'  [•]{H} Login Berhasil !!!! ')
         time.sleep(0.02)
         menu()
     except Exception as e:
         os.system("rm -f .token.txt")
         os.system("rm -f .cok.txt")
-        print(f' [•]{M2} Login Gagal..... Cek Tumbal Lu Bng !!!!')
+        print(f' [•]{M} Login Gagal..... Cek Tumbal Lu Bng !!!!')
         exit()
 def bot():
 	try:
