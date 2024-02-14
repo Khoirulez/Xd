@@ -1611,32 +1611,32 @@ def get_expiration_date(license_info):
 def run():
     try:
         with open(LICENSE_FILE_PATH, 'r') as file:
-            print(f'  [•][bold green] Sedang Mengecek Lisensi..... !!!! ')
+            print(f'  [•]{M} Sedang Mengecek Lisensi..... !!!! ')
             saved_license = file.read()
             expiration_date = get_expiration_date(saved_license)
-            print(f"[bold green]Lisensi kadaluwarsa pada tanggal: {B2}{expiration_date.strftime('%Y-%m-%d %H:%M')}");time.sleep(2)
+            print(f"{H}Lisensi kadaluwarsa pada tanggal: {B}{expiration_date.strftime('%Y-%m-%d %H:%M')}");time.sleep(2)
             if saved_license and is_license_valid(saved_license):
                 time.sleep(0.03)
-                print(f"[bold green]Lisensi valid. Selamat menggunakan program.")
-                time.sleep(3)
-                clear()
+                print(f"{H}Lisensi valid. Selamat menggunakan program.")
+                time.sleep(2)
+                os.system("clear")
                 login_cookie()
     except (IOError,FileNotFoundError):
-       license_key = input(f"[{h}•]{U}Masukkan lisensi:{B} ")
+       license_key = input(f"{garis}{U}Masukkan lisensi:{B} ")
        licen=open(".saved_license.txt", "w").write(license_key)
        time.sleep(0.03)
 
        if check_license(license_key):
-          print(f'  [•][bold green] Sedang Mengecek Lisensi..... !!!! ')
+          print(f'  [•]{M} Sedang Mengecek Lisensi..... !!!! ')
           time.sleep(1)
           saved_license = file.read()
           expiration_date = get_expiration_date(saved_license)
-          print(f"[bold green]Lisensi kadaluwarsa pada tanggal: {B2}{expiration_date.strftime('%Y-%m-%d %H:%M')}");time.sleep(2)
+          print(f"{H}Lisensi kadaluwarsa pada tanggal: {B}{expiration_date.strftime('%Y-%m-%d %H:%M')}");time.sleep(2)
           if saved_license and is_license_valid(saved_license):
               time.sleep(0.03)
-              print(f"[bold green]Lisensi valid. Selamat menggunakan program.")
-              time.sleep(3)
-              clear()
+              print(f"{H}Lisensi valid. Selamat menggunakan program.")
+              time.sleep(2)
+              os.system("clear")
               login_cookie()
        else:
           os.system("rm -f .saved_license.txt")
