@@ -815,6 +815,7 @@ def cracked_email():
 			id.append(email+"<=>"+nama)
 			sys.stdout.write(f"\r{garis} sedang mengumpulkan id {len(id)} ");sys.stdout.flush()
 			settingers()
+	email = "@gmail.com;@yahoo.com;@hotmail.com;@outlook.com"
 	nama = input(f"{garis} input nama : ")
 	jumlah = int(input(f"{garis} input limit : "))
 	for z in range(jumlah):
