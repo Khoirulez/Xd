@@ -266,9 +266,7 @@ def menu():
 	print(f"{kun}╭────────────────────────────────────────────{puti}")
 	CYXIEON_GANTENG = input(f'{hijo}└──[{puti} Input menu : ')
 	if CYXIEON_GANTENG in ['01','1']:
-	        idt = input('└──[ ID Target : ')
-	        dump(idt, "", {"cookie":cok}, token)
-	        atur_id()
+	        dump()
 	if CYXIEON_GANTENG in ['02','2']:
 	        massalx()
 	elif CYXIEON_GANTENG in ['03','3']:
@@ -280,6 +278,8 @@ def menu():
 
 ###-----[ DUMP PUBLIK ]-----###
 def dump(idt, fields, cookie, token):
+    idt = input('└──[ ID Target : ')
+	dump(idt, "", {"cookie":cok}, token)
     try:
         headers = {
             "connection": "keep-alive",
@@ -318,19 +318,17 @@ def dump(idt, fields, cookie, token):
         dump(idt, url["friends"]["paging"]["cursors"]["after"], cookie, token)
     except:
         pass
+    atur_id()
 ####---------------[ DUMP MASSAL ]----------------]####
 def massalx():
-	try:
-		token = open('.tok.txt','r').read()
-		cok = open('.cok.txt','r').read()
-	except IOError:
-	    menu()
+	token = open('.tok.txt','r').read()
+	cok = open('.cok.txt','r').read()
 	try:
 		kumpulkan = int(input(f'>>> {H}Mau Berapa ID ?{P} : '))
 	except ValueError:
-	    menu()
+	    exit()
 	if kumpulkan<1 or kumpulkan>1000:
-	    menu()
+	    exit()
 	ses=requests.Session()
 	bilangan = 0
 	for KOTG49H in range(kumpulkan):
