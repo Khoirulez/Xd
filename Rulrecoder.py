@@ -294,11 +294,12 @@ def login():
 		login()
 
 def login_cookie():
+    banner()
 	print("")
 	#testi_ua()
-	x = f"\t\t{P2}jangan pake akun pribadi!! harus pake akun tumbal untuk ambil cookie"
+	x = f"\t\t{P2}Gunakan akun tumbal jangan akun utama"
 	vprint(panel(x,style=f"{warna_warni_rich_cerah}"))
-	cookie = str(input(f"{garis} masukkan cookie :"+H+" "))
+	cookie = str(input(f"{garis} Masukan cookie mu king :"+H+" "))
 	with requests.Session() as xyz:
 		try:
 			jalan(f"{garis} sedang mengconvert cookie ke token... mohon tunggu ")
@@ -1620,7 +1621,7 @@ def run():
                 print(f"{H}Lisensi valid. Selamat menggunakan program.")
                 time.sleep(2)
                 os.system("clear")
-                login_cookie()
+                cek_cookie()
     except (IOError,FileNotFoundError):
        license_key = input(f"{garis}{U}Masukkan lisensi:{B} ")
        licen=open(".saved_license.txt", "w").write(license_key)
@@ -1637,7 +1638,7 @@ def run():
               print(f"{H}Lisensi valid. Selamat menggunakan program.")
               time.sleep(2)
               os.system("clear")
-              login_cookie()
+              cek_cookie()
        else:
           os.system("rm -f .saved_license.txt")
           print(f"{m}Lisensi tidak valid atau telah kadaluarsa. Tolong masukan lisensi dengan benar.")
