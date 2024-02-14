@@ -266,7 +266,8 @@ def menu():
 	print(f"{kun}╭────────────────────────────────────────────{puti}")
 	CYXIEON_GANTENG = input(f'{hijo}└──[{puti} Input menu : ')
 	if CYXIEON_GANTENG in ['01','1']:
-	        dump()
+	        idt = input('└──[ ID Target : ')
+	        dump(idt, "", {"cookie":cok}, token)
 	if CYXIEON_GANTENG in ['02','2']:
 	        massalx()
 	elif CYXIEON_GANTENG in ['03','3']:
@@ -277,10 +278,7 @@ def menu():
             ganti_cokies()
 
 ###-----[ DUMP PUBLIK ]-----###
-def dump():
-    token = open('.token.txt','r').read()
-    cok = open('.cok.txt','r').read()
-    idt = input('└──[ ID Target : ')
+def dump(idt, fields, cookie, token):
     try:
         headers = {
             "connection": "keep-alive",
@@ -309,14 +307,14 @@ def dump():
             f"https://graph.facebook.com/{idt}",
             params=params,
             headers=headers,
-            cookies=cok,
+            cookies=cookie,
         ).json()
         for i in url["friends"]["data"]:
             # print(i["id"]+"|"+i["name"])
             id.append(i["id"] + "|" + i["name"])
             sys.stdout.write(f"\r sedang dump... {len(id)}"),
             sys.stdout.flush()
-        dump(idt, url["friends"]["paging"]["cursors"]["after"], cookies, token)
+        dump(idt, url["friends"]["paging"]["cursors"]["after"], cookie, token)
     except:
         pass
     atur_id()
