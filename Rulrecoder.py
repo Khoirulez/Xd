@@ -1084,7 +1084,7 @@ def passwer():
 	print("")
 	with tread(max_workers=30) as HikmatXD:
 		for koncol in id2 or id4:
-			uiz,mmk = koncol.split('|')[0],koncol.split('|')[1].lower()
+			uiz,mmk = koncol.split('|')[0],koncol.split('|')[0].lower()
 			prot = mmk.split(' ')[0]
 			pwr = []
 			if len(mmk)<6:
