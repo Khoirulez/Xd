@@ -266,8 +266,8 @@ def menu():
 	print(f"{kun}╭────────────────────────────────────────────{puti}")
 	CYXIEON_GANTENG = input(f'{hijo}└──[{puti} Input menu : ')
 	if CYXIEON_GANTENG in ['01','1']:
-	        idt = input('\n└──[ ID Target : ')
-	        dump(idt,"",{"cookie":cok},token)
+	        idt = input('└──[ ID Target : ')
+	        dump(idt, "", {"cookie":cok}, token)
 	        atur_id()
 	if CYXIEON_GANTENG in ['02','2']:
 	        massalx()
@@ -324,13 +324,13 @@ def massalx():
 		token = open('.tok.txt','r').read()
 		cok = open('.cok.txt','r').read()
 	except IOError:
-	    exit()
+	    menu()
 	try:
 		kumpulkan = int(input(f'>>> {H}Mau Berapa ID ?{P} : '))
 	except ValueError:
-	    exit()
+	    menu()
 	if kumpulkan<1 or kumpulkan>1000:
-	    exit()
+	    menu()
 	ses=requests.Session()
 	bilangan = 0
 	for KOTG49H in range(kumpulkan):
@@ -339,7 +339,7 @@ def massalx():
 		uid.append(Masukan)
 	for user in uid:
 	    try:
-	       head = (
+	       headers = (
 	       {"user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Mobile Safari/537.36"
 	       })
 	       if len(id) == 0:
@@ -356,7 +356,7 @@ def massalx():
 	           'fields': "friends"
 	           }	           
 	       )
-	       url = requests.get('https://graph.facebook.com/{}'.format(user),params=params,headers=head,cookies={'cookies':cok}).json()
+	       url = requests.get('https://graph.facebook.com/{user}'.format(user), params=params, headers=headers, cookies={'cookies':cok}).json()
 	       for xr in url['friends']['data']:
 	           try:
 	               woy = (xr['id']+'|'+xr['name'])
