@@ -1605,7 +1605,7 @@ def check_license(license_key):
         print(f"Error: {e}")
         return False
 def get_expiration_date(license_info):
-    _, _, end_time_str = license_info.split('|')
+    end_time_str = license_info.split('|')
     end_time = datetime.strptime(end_time_str, '%Y-%m-%d %H:%M')
     return end_time
 def run():
