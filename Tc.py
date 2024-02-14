@@ -482,7 +482,7 @@ def dump_massal():
 			print('└─ unstable signal ')
 			exit()
 	try:
-		print(f'🌏 Target Terkumpul : '+str(len(id)))
+		print(f' Target Terkumpul : '+str(len(id)))
 		atur_id()
 	except requests.exceptions.ConnectionError:
 		print(f'{x}')
