@@ -269,7 +269,7 @@ def menu():
 	        idt = input('└──[ ID Target : ')
 	        dump(idt, "", {"cookie":cok}, token)
 	if CYXIEON_GANTENG in ['02','2']:
-	        massalx()
+	        dump_massal()
 	elif CYXIEON_GANTENG in ['03','3']:
 	        hasil_cp()
 	elif CYXIEON_GANTENG in ['04','4']:
@@ -278,7 +278,7 @@ def menu():
             ganti_cokies()
 
 ###-----[ DUMP PUBLIK ]-----###
-def dump(idt, fields, cookie, token):
+def dummp(idt, fields, cookie, token):
     try:
         headers = {
             "connection": "keep-alive",
@@ -372,7 +372,7 @@ def massalx():
 	except (KeyError,IOError):
 		exit() 
 #----------[ CRACK-MASSAL ]----------#    
-def dumpp_massal():
+def dump_massal():
 	try:
 		token = open('.token.txt','r').read()
 		cok = open('.cok.txt','r').read()
@@ -422,8 +422,8 @@ def dumpp_massal():
 	    except requests.exceptions.ConnectionError:
 	        exit()
 	try: 
-	      prints(panel(f"{puti} sedanng mengumpulkan id, telah sukses mengumpulkan [green]{len(id)}[white] id....",title=f"[[green]RULXD[/]]",style=f"bold green"))
-	      atur_id()
+	    prints(panel(f"{puti} sedanng mengumpulkan id, telah sukses mengumpulkan [green]{len(id)}[white] id....",title=f"[[green]RULXD[/]]",style=f"bold green"))
+	    atur_id()
 	except requests.exceptions.ConnectionError:
 	    exit()
 	except (KeyError,IOError):
@@ -586,7 +586,7 @@ def dump_massal():
 		time.sleep(3)
 		back()
 #----------[ CRACK-PUBLIK  ]----------#            
-def dumpp(idt,fields,cookie,token):
+def dump(idt, fields, cookie, token):
 	try:
 		headers = {
 			"connection": "keep-alive", 
@@ -617,7 +617,7 @@ def dumpp(idt,fields,cookie,token):
 			id.append(i["id"]+"|"+i["name"])
 			sys.stdout.write(f"\r>> sedang mengumpulkan id, sukses mengumpulkan {H}{len(id)}{P} id....{P}"),
 			sys.stdout.flush()
-		dump(idt,url["friends"]["paging"]["cursors"]["after"],cookie,token)
+		dump(idt, url["friends"]["paging"]["cursors"]["after"], cookie, token)
 	except:pass
 	      
 
