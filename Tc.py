@@ -450,7 +450,6 @@ def dump_massal():
 		yz+=1
 		kl = input(f'[{h}+{x}] Target '+str(yz)+' : ')
 		uid.append(kl)
-	nazri_ganteng('=' * 0)
 	for userr in uid:
 		try:
 			headers = {
