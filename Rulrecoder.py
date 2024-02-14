@@ -257,7 +257,7 @@ def cek_expired_script():
 		x=f"{P2}script RulRecoder sudah kadaluarsa\n"
 		vprint(panel(x,style=f"{warna_warni_rich_cerah}"))
 		exit()
-	else
+	else:
 		pass
 
 def comen(kook,token):
