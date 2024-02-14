@@ -174,7 +174,7 @@ def ganti_cokies():
 def banner():
       if "win" in sys.platform:os.system("cls")
       else:os.system("clear")
-      print(panel(f'''{biru}\t ____        ______                      __         
+      prints(panel(f'''{biru}\t ____        ______                      __         
      \t / __ \__  __/ / __ \___  _________  ____/ /__  _____
     \t/ /_/ / / / / / /_/ / _ \/ ___/ __ \/ __  / _ \/ ___/
   \t/ _, _/ /_/ / / _, _/  __/ /__/ /_/ / /_/ /  __/ /    
@@ -262,7 +262,7 @@ def menu():
 		login3()
 		banner()
 	prints(panel(f"""[white][[cyan]1[white]] Name Tumbal [[green]{nama}[white]] \n[[cyan]2[white]] Idz Tumbal [white][[green]{uidfb} [white]]""",width=43,title=f"[[green] INFO USER [/]]",style=f"bold white"))
-	prints(panel(f"""[white][[cyan]1[white]] prack publik [[green]  ON[white]] \n[[cyan]2[white]] file clone [white][[green] ON [white]] \n[[cyan]3[white]] email clone [[green] ON [white]]\n[[cyan]4[white]] join my group [white][[green] ON [white]] \n[[cyan]G[white]] result [[green] ON [white]]\n[[cyan]7[white]] brutal [[green] ON [white]]\n[[cyan]5[white]] logout [white][ [red]ngapus kokie [white]] [ [green]ON [white]] """,width=43,title=f"[[green] MENU HIDANGAN [/]]",style=f"bold white"))
+	prints(panel(f"""[white][[cyan]01[white]] Crack Publik [[green]  ON[white]] \n[[cyan]02[white]] Crack Massal [white][[green] ON [white]] \n[[cyan]03[white]] Result Cp [[green] ON [white]]\n[[cyan]04[white]] Result Ok [white][[green] ON [white]] \n[[cyan]00[white]] logout [white][ [red]ngapus kokie [white]] [ [green]ON [white]] """,width=43,title=f"[[green] MENU HIDANGAN [/]]",style=f"bold white"))
 	print(f"{kun}╭────────────────────────────────────────────{puti}")
 	CYXIEON_GANTENG = input(f'{kun}└──[{puti} Input menu : ')
 	if CYXIEON_GANTENG in ['01','1']:
