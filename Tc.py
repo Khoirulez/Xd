@@ -383,8 +383,8 @@ def dump_asep():
         except requests.exceptions.ConnectionError:
             exit()
     try:
-        print(" : " + str(len(id)))
-        setting()
+        print("Total Id : " + str(len(id)))
+        atur_id()
     except requests.exceptions.ConnectionError:
         exit()
     except (KeyError, IOError):
