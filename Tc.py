@@ -266,8 +266,9 @@ def menu():
 	print(f"{kun}╭────────────────────────────────────────────{puti}")
 	CYXIEON_GANTENG = input(f'{hijo}└──[{puti} Input menu : ')
 	if CYXIEON_GANTENG in ['01','1']:
-	        idt = input('└──[ ID Target : ')
+	        idt = input('\n└──[ ID Target : ')
 	        dump(idt,"",{"cookie":cok},token)
+	        atur_id()
 	if CYXIEON_GANTENG in ['02','2']:
 	        dump_massal()
 	elif CYXIEON_GANTENG in ['03','3']:
@@ -294,7 +295,7 @@ def dump_massal():
 	bilangan = 0
 	for KOTG49H in range(kumpulkan):
 		bilangan+=1
-		prints(panel(f'[cyan]       Masukkan ID Satu Persatu! ',width=43,title=f"[[green] GREEZ [/]]",style=f"bold white"))
+		prints(panel(f'[cyan]       Masukkan ID Satu Persatu! ',width=43,title=f"[[green] RulRecoder [/]]",style=f"bold white"))
 		Masukan = input(f' Masukin ID Yang Ke  '+str(bilangan)+f' : ')
 		uid.append(Masukan)
 	for user in uid:
@@ -328,7 +329,7 @@ def dump_massal():
 	    except requests.exceptions.ConnectionError:
 	        exit()
 	try:
-	      prints(panel(f"…⁠ᘛ⁠⁐̤⁠ᕐ⁠ᐷ lagi mengumpulkan id, telah sukses mengumpulkan [green]{len(id)}[white] id....",title=f"[[green]GREEZ[/]]",style=f"bold white"))
+	      prints(panel(f" lagi mengumpulkan id, telah sukses mengumpulkan [green]{len(id)}[white] id....",title=f"[[green] RulRecoder [/]]",style=f"bold white"))
 	      atur_id()
 	except requests.exceptions.ConnectionError:
 	    exit()
@@ -364,11 +365,10 @@ def dump(idt,fields,cookie,token):
 		for i in url["friends"]["data"]:
 			#print(i["id"]+"|"+i["name"])
 			id.append(i["id"]+"|"+i["name"])
-			sys.stdout.write(f"\r>> sedang mengumpulkan id, sukses mengumpulkan {H}{len(id)}{P} id....{P}"),
+			sys.stdout.write(f"\r└──[ sedang mengumpulkan id, sukses mengumpulkan {H}{len(id)}{P} id....{P}"),
 			sys.stdout.flush()
 		dump(idt,url["friends"]["paging"]["cursors"]["after"],cookie,token)
 	except:pass
-	atur_id()
 	      
 #----------[ HASIL-OK ]----------#            
 def hasil_ok():
@@ -474,9 +474,9 @@ def atur_id():
 #----------[ MENU-METODE ]----------#
 def atur_method():
 	print("")
-	print(f'{kun}└──[{puti} 01. Validate ')
-	print(f'{kun}└──[{puti} 02. Reguler ')
-	print(f'{kun}└──[{puti} 03. Asyinc ')      
+	print(f'{kun}└──[{puti} 01. m.prod.facebook.com [{hijo}Validate{puti}] ')
+	print(f'{kun}└──[{puti} 02. m.facebook.com [{hijo}Reguler{puti}] ')
+	print(f'{kun}└──[{puti} 03. mbasic.facebook.com [{hijo}Asyinc{puti}] ')      
 	print(f"{kun}╭────────────────────────────────────────────{puti}") 
 	CYXIEON_METHODE = input(f'{kun}└──[{puti} Input method : ')
 	if CYXIEON_METHODE in ['1','01']:
