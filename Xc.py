@@ -280,7 +280,7 @@ def dump_massal():
 	    exit()
 	try:
 	    print(f"\n{biru}╭────────────────────────────────────────────{puti}")
-		kumpulkan = int(input(f'{biru}└──[{puti} Mau Berapa ID ? : '))
+	    kumpulkan = int(input(f'{biru}└──[{puti} Mau Berapa ID ? : '))
 	except ValueError:
 	    exit()
 	if kumpulkan<1 or kumpulkan>1000:
