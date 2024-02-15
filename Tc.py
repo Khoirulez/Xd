@@ -477,7 +477,7 @@ def atur_id():
 def atur_method():
 	print("")
 	print(f'{kun}└──[{puti} 01. m.prod.facebook.com [{hijo}Validate{puti}] ')
-	print(f'{kun}└──[{puti} 02. m.facebook.com [{kun}Reguler{puti]} ')
+	print(f'{kun}└──[{puti} 02. m.facebook.com [{kun}Reguler{puti}] ')
 	print(f'{kun}└──[{puti} 03. mbasic.facebook.com [{mer}Asyinc{puti}] ')      
 	print(f"{kun}╭────────────────────────────────────────────{puti}") 
 	CYXIEON_METHODE = input(f'{kun}└──[{puti} Input method : ')
