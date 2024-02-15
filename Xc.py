@@ -259,9 +259,9 @@ def menu():
 	CYXIEON_GANTENG = input(f'{biru}└──[{puti} Input menu : ')
 	if CYXIEON_GANTENG in ['01','1']:
            print(f"\n{biru}╭────────────────────────────────────────────{puti}")
-	        idt = input('{biru}└──[{puti} ID Target : ')
-	        dump(idt,"",{"cookie":cok},token)
-	        atur_id()
+           idt = input('{biru}└──[{puti} ID Target : ')
+           dump(idt,"",{"cookie":cok},token)
+           atur_id()
 	if CYXIEON_GANTENG in ['02','2']:
 	        dump_massal()
 	elif CYXIEON_GANTENG in ['03','3']:
