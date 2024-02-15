@@ -259,7 +259,7 @@ def menu():
 	CYXIEON_GANTENG = input(f'{biru}└──[{puti} Input menu : ')
 	if CYXIEON_GANTENG in ['01','1']:
            print(f"\n{biru}╭────────────────────────────────────────────{puti}")
-           idt = input('{biru}└──[{puti} ID Target : ')
+           idt = input('└──[ ID Target : ')
            dump(idt,"",{"cookie":cok},token)
            atur_id()
 	if CYXIEON_GANTENG in ['02','2']:
@@ -289,7 +289,6 @@ def dump_massal():
 	bilangan = 0
 	for KOTG49H in range(kumpulkan):
 		bilangan+=1
-		print(f"{biru}╭────────────────────────────────────────────{puti}")
 		Masukan = input(f'{biru}└──[{puti} Masukin ID Yang Ke  '+str(bilangan)+f' : ')
 		uid.append(Masukan)
 	for user in uid:
@@ -323,7 +322,7 @@ def dump_massal():
 	    except requests.exceptions.ConnectionError:
 	        exit()
 	try:
-	      prints(f" lagi mengumpulkan id, telah sukses mengumpulkan [green]{len(id)}[white] id")
+	      prints(f"{biru}└──[{puti} lagi mengumpulkan id, telah sukses mengumpulkan [green]{len(id)}[white] id")
 	      atur_id()
 	except requests.exceptions.ConnectionError:
 	    exit()
@@ -469,8 +468,8 @@ def atur_id():
 #----------[ MENU-METODE ]----------#
 def atur_method():
 	print("")
-	print(f"{biru}╭────────────────────────────────────────────{puti}")
-	print(f'\n{biru}└──[{puti} {biru}01.{puti} m.prod.facebook.com ({hijo}Validate{puti}) ')
+	print(f"\n{biru}╭────────────────────────────────────────────{puti}")
+	print(f'{biru}└──[{puti} {biru}01.{puti} m.prod.facebook.com ({hijo}Validate{puti}) ')
 	print(f'{biru}└──[{puti} {biru}02.{puti} m.facebook.com ({mer}Reguler{puti}) ')
 	print(f'{biru}└──[{puti} {biru}03.{puti} mbasic.facebook.com ({kun}Asyinc{puti}) ')      
 	print(f"{biru}╭────────────────────────────────────────────{puti}") 
