@@ -218,8 +218,8 @@ def banner():
 \t\t    {u}author by {K}RulRecoder\n''')
 def awal():
 	banner()
-	prints(panel(f"{P}Silahkan login menggunakan {P}Lisensi Jika tidak memiliki lisensi{P} bisa hubungi admin !!",width=43,title=f"[[red] WARNING!!! [/]]",style=f"bold blue"))
-	prints(panel(f"{P}[{B}01{P}] Login With Lisensi\n{P}[{B}02{P}] Hubungi Admin\n{P}[{M}00{P}] exit ",width=43,title=f"[[green] LOG IN [/]]",style=f"bold blue"))
+	prints(panel(f"{puti}Silahkan login menggunakan Lisensi Jika tidak memiliki lisensi bisa hubungi admin !!{puti}",width=43,title=f"[[red] WARNING!!! [/]]",style=f"bold blue"))
+	prints(panel(f"{P}[01] Login With Lisensi\n{P}[02] Hubungi Admin\n{P}[{M}00{P}] exit ",width=43,title=f"[[green] LOG IN [/]]",style=f"bold blue"))
 	cukuf = input(f"{biru}└──[{puti} Input : {H}")
 	if cukuf in ["1","01"]:
 		run()
@@ -347,7 +347,6 @@ def menu():
 	try:
 		token = open('.tok.txt','r').read()
 		cok = open('.cok.txt','r').read()
-		print(f"{h}cookie telah aktif")
 	except (IOError,KeyError,FileNotFoundError):
 		print(f'{m}cookies telah kadaluarsa bro')
 		time.sleep(4)
@@ -362,6 +361,7 @@ def menu():
 		try:os.remove(".cok.txt");os.remove(".tok.txt")
 		except:pass
 		login()
+	print(f"{h}cookie telah aktif")
 	os.system('clear')
 	banner()
 	prints(panel(f"""[white][[cyan]•[white]] Name Tumbal [[green]{nama}[white]] \n[[cyan]•[white]] Idz Tumbal [white][[green]{uidfb}[white]]""",width=43,title=f"[[green] INFO TUMBAL [/]]",style=f"bold blue"))
@@ -384,7 +384,7 @@ def menu():
 #-------------------[ CRACK-PUBLIK ]----------------#
 def dump_massal():
 	try:
-		token = open('.token.txt','r').read()
+		token = open('.tok.txt','r').read()
 		cok = open('.cok.txt','r').read()
 	except IOError:
 		exit()
