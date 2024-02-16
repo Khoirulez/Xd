@@ -218,7 +218,7 @@ def banner():
 \t\t    {u}author by {K}RulRecoder\n''')
 def awal():
 	banner()
-	prints(panel(f"{P}Silahkan login menggunakan Lisensi\n{P}Jika tidak memiliki lisensi bisa hubungi admin !!",width=43,title=f"[[green] WARNING!!! [/]]",style=f"bold blue"))
+	prints(panel(f"{P}Silahkan login menggunakan Lisensi Jika tidak memiliki lisensi bisa hubungi admin !!",width=43,title=f"[[green] WARNING!!! [/]]",style=f"bold blue"))
 	prints(panel(f"{P}[01] Login With Lisensi\n{P}[02] Hubungi Admin\n{P}[{M}00{P}] exit ",width=43,title=f"[[green] LOG IN [/]]",style=f"bold blue"))
 	cukuf = input(f"{biru}└──[{puti} Input : {H}")
 	if cukuf in ["1","01"]:
@@ -343,6 +343,7 @@ def login():
   
 #----------[ BAGIAN-MENU ]----------#            
 def menu():
+    banner()
 	try:
 		token = open('.tok.txt','r').read()
 		cok = open('.cok.txt','r').read()
