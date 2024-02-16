@@ -218,14 +218,14 @@ def banner():
 \t\t    {u}author by {K}RulRecoder\n''')
 def awal():
 	banner()
-	prints(panel(f"{P}Silahkan login menggunakan Lisensi\n{P}Jika tidak memiliki lisensi bisa hubungi admin !!"))
-	prints(panel(f"{P}[01] Login With Lisensi\n{P}[02] Hubungi Admin\n{P}[{M}00{P}] exit "))
-	cukuf = input(f" {P}[{biru}•{P}] Input : {H}")
+	prints(panel(f"{P}Silahkan login menggunakan Lisensi\n{P}Jika tidak memiliki lisensi bisa hubungi admin !!",width=43,title=f"[[green] WARNING!!! [/]]",style=f"bold blue"))
+	prints(panel(f"{P}[01] Login With Lisensi\n{P}[02] Hubungi Admin\n{P}[{M}00{P}] exit ",width=43,title=f"[[green] LOG IN [/]]",style=f"bold blue"))
+	cukuf = input(f"{biru}└──[{puti} Input : {H}")
 	if cukuf in ["1","01"]:
 		run()
 	elif cukuf in ["2","02"]:
 		print("")
-		print(f"{P}sedang diarahkan ke whastapp author")
+		print(f"{biru}└──[{P}sedang diarahkan ke whastapp author")
 		os.system('xdg-open https://wa.me/+6281283547452?text=bang+minta+lisensi+sc+nya!!')
 		input(f" {P}[{biru}•{P}] Enter")
 		awal()
@@ -302,7 +302,7 @@ def run():
                 menu()
     except (IOError,FileNotFoundError):
        license_key = input(f"[•]{U}Masukkan lisensi:{B} ")
-       licen=open(".saved_license.txt", "w").write(license_key)
+       licen = open(".saved_license.txt", "w").write(license_key)
        time.sleep(0.03)
 
        if check_license(license_key):
@@ -387,7 +387,7 @@ def dump_massal():
 	except IOError:
 		exit()
 	try:
-		jum = int(input('{biru}└──[{puti}Mau Berapa Target Njing ? : '))
+		jum = int(input('└──[ Mau Berapa Target Njing ? : '))
 	except ValueError:
 		print('>> Masukkan Angka Anjing, Malah Huruff ')
 		exit()
@@ -398,7 +398,7 @@ def dump_massal():
 	yz = 0
 	for met in range(jum):
 		yz+=1
-		kl = input('{biru}└──[{puti} Masukkan Idz Yang Ke '+str(yz)+' : ')
+		kl = input('└──[ Masukkan Idz Yang Ke '+str(yz)+' : ')
 		uid.append(kl)
 	for userr in uid:
 		try:
@@ -416,7 +416,7 @@ def dump_massal():
 			exit()
 	try:
 		print('')
-		print(f'{biru}└──[{puti} Total Idz Yang Terkumpul🔥{h}'+str(len(id)))
+		print(f'└──[ Total Idz Yang Terkumpul🔥{h}'+str(len(id)))
 		atur_id()
 	except requests.exceptions.ConnectionError:
 		print(f'{x}')
@@ -435,7 +435,7 @@ def dumpp_massal():
 	    exit()
 	try:
 	    print(f"\n{biru}╭────────────────────────────────────────────{puti}")
-	    kumpulkan = int(input(f'{biru}└──[{puti} Mau Berapa ID ? : '))
+	    kumpulkan = int(input(f'└──[ Mau Berapa ID ? : '))
 	except ValueError:
 	    exit()
 	if kumpulkan<1 or kumpulkan>1000:
