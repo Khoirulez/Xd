@@ -218,8 +218,8 @@ def banner():
 \t\t    {u}author by {K}RulRecoder\n''')
 def awal():
 	banner()
-	prints(panel(f"{P}Silahkan login menggunakan Lisensi Jika tidak memiliki lisensi bisa hubungi admin !!",width=43,title=f"[[green] WARNING!!! [/]]",style=f"bold blue"))
-	prints(panel(f"{P}[01] Login With Lisensi\n{P}[02] Hubungi Admin\n{P}[{M}00{P}] exit ",width=43,title=f"[[green] LOG IN [/]]",style=f"bold blue"))
+	prints(panel(f"{P}Silahkan login menggunakan {P}Lisensi Jika tidak memiliki lisensi{P} bisa hubungi admin !!",width=43,title=f"[[red] WARNING!!! [/]]",style=f"bold blue"))
+	prints(panel(f"{P}[{B}01{P}] Login With Lisensi\n{P}[{B}02{P}] Hubungi Admin\n{P}[{M}00{P}] exit ",width=43,title=f"[[green] LOG IN [/]]",style=f"bold blue"))
 	cukuf = input(f"{biru}└──[{puti} Input : {H}")
 	if cukuf in ["1","01"]:
 		run()
@@ -389,6 +389,7 @@ def dump_massal():
 	except IOError:
 		exit()
 	try:
+		print(f"\n{biru}╭────────────────────────────────────────────{puti}")
 		jum = int(input('└──[ Mau Berapa Target Njing ? : '))
 	except ValueError:
 		print('>> Masukkan Angka Anjing, Malah Huruff ')
@@ -404,7 +405,7 @@ def dump_massal():
 		uid.append(kl)
 	for userr in uid:
 		try:
-			col = ses.get('https://graph.facebook.com/v2.0/'+userr+'?fields=friends.limit(5000)&access_token='+tokenku[0], cookies = {'cookies':cok}).json()
+			col = ses.get('https://graph.facebook.com/v2.0/'+userr+'?fields=friends.limit(5000)&access_token='+token[0], cookies = {'cookies':cok}).json()
 			for mi in col['friends']['data']:
 				try:
 					iso = (mi['id']+'|'+mi['name'])
@@ -626,9 +627,9 @@ def atur_id():
 def atur_method():
 	print("")
 	print(f"\n{biru}╭────────────────────────────────────────────{puti}")
-	print(f'{biru}└──[{puti} {biru}01.{puti} m.prod.facebook.com ({hijo}Validate{puti}) ')
-	print(f'{biru}└──[{puti} {biru}02.{puti} m.facebook.com ({mer}Reguler{puti}) ')
-	print(f'{biru}└──[{puti} {biru}03.{puti} mbasic.facebook.com ({kun}Asyinc{puti}) ')      
+	print(f'{biru}└──[{puti} {mer}01.{puti} m.prod.facebook.com ({hijo}Validate{puti}) ')
+	print(f'{biru}└──[{puti} {mer}02.{puti} m.facebook.com ({mer}Reguler{puti}) ')
+	print(f'{biru}└──[{puti} {mer}03.{puti} mbasic.facebook.com ({kun}Asyinc{puti}) ')      
 	print(f"{biru}╭────────────────────────────────────────────{puti}") 
 	CYXIEON_METHODE = input(f'{biru}└──[{puti} Input method : ')
 	if CYXIEON_METHODE in ['1','01']:
