@@ -218,7 +218,6 @@ def banner():
 \t\t    {u}author by {K}RulRecoder\n''')
 def awal():
 	banner()
-	prints(panel(f"{puti}Silahkan login menggunakan Lisensi Jika tidak memiliki lisensi bisa hubungi admin !!{puti}",width=43,title=f"[[red] WARNING!!! [/]]",style=f"bold blue"))
 	prints(panel(f"{P}[01] Login With Lisensi\n{P}[02] Hubungi Admin\n{P}[{M}00{P}] exit ",width=43,title=f"[[green] LOG IN [/]]",style=f"bold blue"))
 	cukuf = input(f"{biru}└──[{puti} Input : {H}")
 	if cukuf in ["1","01"]:
@@ -307,14 +306,14 @@ def run():
 
        if check_license(license_key):
           print(f'  [•]{M} Sedang Mengecek Lisensi..... !!!! ')
-          time.sleep(1)
+          time.sleep(2)
           saved_license = file.read()
           expiration_date = get_expiration_date(saved_license)
           print(f"{H}Lisensi kadaluwarsa pada tanggal: {B}{expiration_date.strftime('%Y-%m-%d %H:%M')}");time.sleep(2)
           if saved_license and is_license_valid(saved_license):
               time.sleep(0.03)
               print(f"{H}Lisensi valid. Selamat menggunakan program.")
-              time.sleep(1)
+              time.sleep(2)
               os.system("clear")
               menu()
        else:
@@ -344,6 +343,8 @@ def login():
 #----------[ BAGIAN-MENU ]----------#            
 def menu():
 	banner()
+	print(f'  [•]{M} Sedang Mengecek Cookies..... !!!! ')
+    time.sleep(2)
 	try:
 		token = open('.tok.txt','r').read()
 		cok = open('.cok.txt','r').read()
@@ -362,6 +363,7 @@ def menu():
 		except:pass
 		login()
 	print(f"{h}cookie telah aktif")
+	time.sleep(2)
 	os.system('clear')
 	banner()
 	prints(panel(f"""[white][[cyan]•[white]] Name Tumbal [[green]{nama}[white]] \n[[cyan]•[white]] Idz Tumbal [white][[green]{uidfb}[white]]""",width=43,title=f"[[green] INFO TUMBAL [/]]",style=f"bold blue"))
@@ -405,7 +407,7 @@ def dump_massal():
 		uid.append(kl)
 	for userr in uid:
 		try:
-			col = ses.get('https://graph.facebook.com/v2.0/'+userr+'?fields=friends.limit(5000)&access_token='+token[0], cookies = {'cookies':cok}).json()
+			col = ses.get('https://graph.facebook.com/v2.0/'+userr+'?fields=friends.limit(5000)&access_token='+token[1], cookies = {'cookies':cok}).json()
 			for mi in col['friends']['data']:
 				try:
 					iso = (mi['id']+'|'+mi['name'])
@@ -418,7 +420,6 @@ def dump_massal():
 			print('>> Sinyal Loh Kek Kontoll ')
 			exit()
 	try:
-		print('')
 		print(f'└──[ Total Idz Yang Terkumpul🔥{h}'+str(len(id)))
 		atur_id()
 	except requests.exceptions.ConnectionError:
