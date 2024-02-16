@@ -343,10 +343,11 @@ def login():
   
 #----------[ BAGIAN-MENU ]----------#            
 def menu():
-    banner()
+	banner()
 	try:
 		token = open('.tok.txt','r').read()
 		cok = open('.cok.txt','r').read()
+		print(f"{h}cookie telah aktif")
 	except (IOError,KeyError,FileNotFoundError):
 		print(f'{m}cookies telah kadaluarsa bro')
 		time.sleep(4)
