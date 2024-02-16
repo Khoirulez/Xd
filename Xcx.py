@@ -343,8 +343,7 @@ def login():
 #----------[ BAGIAN-MENU ]----------#            
 def menu():
 	banner()
-	print(f'  [•]{M} Sedang Mengecek Cookies..... !!!! ')
-    time.sleep(2)
+	print(f'  [•]{M} Sedang Mengecek Cookies..... !!!! ');time.sleep(2)
 	try:
 		token = open('.tok.txt','r').read()
 		cok = open('.cok.txt','r').read()
