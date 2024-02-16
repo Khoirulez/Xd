@@ -218,8 +218,8 @@ def banner():
 \t\t    {u}author by {K}RulRecoder\n''')
 def awal():
 	banner()
-	prints(nel(f"{P2}Silahkan login menggunakan Lisensi\n{P2}Jika tidak memiliki lisensi bisa hubungi admin !!"))
-	prints(nel(f"{P2}[01] Login With Lisensi\n{P2}[02] Hubungi Admin\n{P2}[{M2}00{P2}] exit "))
+	prints(panel(f"{P2}Silahkan login menggunakan Lisensi\n{P2}Jika tidak memiliki lisensi bisa hubungi admin !!"))
+	prints(panel(f"{P2}[01] Login With Lisensi\n{P2}[02] Hubungi Admin\n{P2}[{M2}00{P2}] exit "))
 	cukuf = input(f" {P}[{biru}•{P}] Input : {H}")
 	if cukuf in ["1","01"]:
 		run()
