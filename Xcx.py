@@ -218,14 +218,14 @@ def banner():
 \t\t    {u}author by {K}RulRecoder\n''')
 def awal():
 	banner()
-	prints(panel(f"{P2}Silahkan login menggunakan Lisensi\n{P2}Jika tidak memiliki lisensi bisa hubungi admin !!"))
-	prints(panel(f"{P2}[01] Login With Lisensi\n{P2}[02] Hubungi Admin\n{P2}[{M2}00{P2}] exit "))
+	prints(panel(f"{P}Silahkan login menggunakan Lisensi\n{P}Jika tidak memiliki lisensi bisa hubungi admin !!"))
+	prints(panel(f"{P}[01] Login With Lisensi\n{P}[02] Hubungi Admin\n{P}[{M}00{P}] exit "))
 	cukuf = input(f" {P}[{biru}•{P}] Input : {H}")
 	if cukuf in ["1","01"]:
 		run()
 	elif cukuf in ["2","02"]:
 		print("")
-		print(f"{P2}sedang diarahkan ke whastapp author")
+		print(f"{P}sedang diarahkan ke whastapp author")
 		os.system('xdg-open https://wa.me/+6281283547452?text=bang+minta+lisensi+sc+nya!!')
 		input(f" {P}[{biru}•{P}] Enter")
 		awal()
