@@ -379,7 +379,7 @@ def menu():
 	os.system('clear')
 	banner()
 	prints(panel(f"""[white][[cyan]•[white]] Name Tumbal [[green]{nama}[white]] \n[[cyan]•[white]] Idz Tumbal [white][[green]{uidfb}[white]]""",width=43,title=f"[[green] INFO TUMBAL [/]]",style=f"bold blue"))
-	prints(panel(f"""[white][[cyan]01[white]] Crack Publik [[green]ON[white]] \n[[cyan]02[white]] Crack Massal [white][[red]OF[white]] \n[[cyan]03[white]] Crack Email [white][[green]ON[white]] \n[[cyan]04[white]] Crack File [white][[green]ON[white]] \n[[cyan]05[white]] Result CP [[green]ON[white]]\n[[cyan]06[white]] Result OK [white][[green]ON[white]]\n[[cyan]{mer}00[white]] logout [white][[red]hapus cookies[white]] [[green]ON[white]] """,width=43,title=f"[[green] MENU CRACK [/]]",style=f"bold blue"))
+	prints(panel(f"""[white][[cyan]01[white]] Crack Publik [[green]ON[white]] \n[[cyan]02[white]] Crack Massal [white][[red]OF[white]] \n[[cyan]03[white]] Crack Email [white][[green]ON[white]] \n[[cyan]04[white]] Crack File [white][[red]OF[white]] \n[[cyan]05[white]] Result CP [[green]ON[white]]\n[[cyan]06[white]] Result OK [white][[green]ON[white]]\n[[cyan]{mer}00[white]] logout [white][[red]hapus cookies[white]] [[green]ON[white]] """,width=43,title=f"[[green] MENU CRACK [/]]",style=f"bold blue"))
 	print(f"{biru}╭────────────────────────────────────────────{puti}")
 	CYXIEON_GANTENG = input(f'{biru}└──[{puti} Input menu : ')
 	if CYXIEON_GANTENG in ['01','1']:
@@ -537,7 +537,7 @@ def mail2():
 ###-----[ CRACK FILE ]-----###
 def Crack_file():
 	print(f"\n{biru}╭────────────────────────────────────────────{puti}")
-	file = input(f"\n└──[ masukan nama folder/file : ")
+	file = input(f"└──[ masukan nama folder/file : ")
 	try:
 		uid = open(file,"r").read().splitlines()
 		for data in uid:
