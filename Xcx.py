@@ -204,6 +204,11 @@ def ganti_cokies():
       try:os.remove(".cyxieontoken.txt")
       except:pass
       login()
+#----------[ HAPUS-LISENSI ]----------#		
+def ganti_lisensi():
+      try:os.remove("saved_license.txt")
+      except:pass
+      login()
       	
 #----------[ BANNER ]----------#
 def banner():
@@ -218,7 +223,7 @@ def banner():
 \t\t    {u}author by {K}RulRecoder\n''')
 def awal():
 	banner()
-	prints(panel(f"{P}[01] Login With Lisensi\n{P}[02] Hubungi Admin\n{P}[{M}00{P}] exit ",width=43,title=f"[[green] LOG IN [/]]",style=f"bold blue"))
+	prints(panel(f"{P}[01] Login With Lisensi\n{P}[02] Hubungi Admin\n{P}[03] Ganti Lisensi\n{P}[{M}00{P}] exit ",width=43,title=f"[[green] LOG IN [/]]",style=f"bold blue"))
 	cukuf = input(f"{biru}└──[{puti} Input : {H}")
 	if cukuf in ["1","01"]:
 		run()
@@ -228,6 +233,10 @@ def awal():
 		os.system('xdg-open https://wa.me/+6281283547452?text=bang+minta+lisensi+sc+nya!!')
 		input(f" {P}[{biru}•{P}] Enter")
 		awal()
+	elif cukuf in ["3","03"]:
+	    print("")
+		print(f"{biru}└──[{P}sedang menghapus lisensi")
+		ganti_lisensi()
 	elif cukuf in ["0","00"]:
 		exit()
 	else:
@@ -366,7 +375,7 @@ def menu():
 	os.system('clear')
 	banner()
 	prints(panel(f"""[white][[cyan]•[white]] Name Tumbal [[green]{nama}[white]] \n[[cyan]•[white]] Idz Tumbal [white][[green]{uidfb}[white]]""",width=43,title=f"[[green] INFO TUMBAL [/]]",style=f"bold blue"))
-	prints(panel(f"""[white][[cyan]01[white]] Crack Publik [[green]ON[white]] \n[[cyan]02[white]] Crack Massal [white][[red]OF[white]] \n[[cyan]03[white]] Crack Email [white][[green]ON[white]] \n[[cyan]04[white]] Crack File [white][[red]ON[white]] \n[[cyan]05[white]] Result CP [[green]ON[white]]\n[[cyan]06[white]] Result OK [white][[green]ON[white]]\n[[cyan]{mer}00[white]] logout [white][[red]hapus cookies[white]] [[green]ON[white]] """,width=43,title=f"[[green] MENU CRACK [/]]",style=f"bold blue"))
+	prints(panel(f"""[white][[cyan]01[white]] Crack Publik [[green]ON[white]] \n[[cyan]02[white]] Crack Massal [white][[red]OF[white]] \n[[cyan]03[white]] Crack Email [white][[green]ON[white]] \n[[cyan]04[white]] Crack File [white][[green]ON[white]] \n[[cyan]05[white]] Result CP [[green]ON[white]]\n[[cyan]06[white]] Result OK [white][[green]ON[white]]\n[[cyan]{mer}00[white]] logout [white][[red]hapus cookies[white]] [[green]ON[white]] """,width=43,title=f"[[green] MENU CRACK [/]]",style=f"bold blue"))
 	print(f"{biru}╭────────────────────────────────────────────{puti}")
 	CYXIEON_GANTENG = input(f'{biru}└──[{puti} Input menu : ')
 	if CYXIEON_GANTENG in ['01','1']:
@@ -428,11 +437,11 @@ def dump_massal():
 	except requests.exceptions.ConnectionError:
 		print(f'{x}')
 		print('>> Sinyal Lo kek Kontol ')
-		back()
+		exit()
 	except (KeyError,IOError):
 		print(f'>>{k} Pertemanan Tidak Public {x}')
 		time.sleep(3)
-		back()
+		exit()
 #----------[ CRACK-MASSAL ]----------#      
 def dumpp_massal():
 	try:
@@ -525,13 +534,13 @@ def mail2():
 def crack_file():
 	try:vin = os.listdir('/sdcard/downloads/')
 	except FileNotFoundError:
-		print(' [+] [red]File Tidak Ditemukan ')
+		print(' [+] File Tidak Ditemukan ')
 		time.sleep(2)
-		back()
+		exit()
 	if len(vin)==0:
-		print(' [+] [red] Kamu Tidak Memiliki File Dump ')
+		print(' [+] Kamu Tidak Memiliki File Dump ')
 		time.sleep(2)
-		back()
+		exit()
 	else:
 		cih = 0
 		lol = {}
@@ -551,14 +560,14 @@ def crack_file():
 		geeh = input(' [+] Pilih : ')
 		try:geh = lol[geeh]
 		except KeyError:
-			print(f' [+] [red] Pilih Yang Bener Kontol {x}')
+			print(f' [+]  Pilih Yang Bener Kontol {x}')
 			time.sleep(3)
-			back()
+			exit()
 		try:lin = open('/sdcard/DUMP-FILE/'+geh,'r').read().splitlines()
 		except:
-			print(' [+] [red] File Tidak Ditemukan, Coba Lagi Nanti ')
+			print(' [+]  File Tidak Ditemukan, Coba Lagi Nanti ')
 			time.sleep(2)
-			back()
+			exit()
 		atur_id()
 #----------[ CRACK-PUBLIK  ]----------#            
 def dump(idt,fields,cookie,token):
