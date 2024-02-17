@@ -223,7 +223,7 @@ def banner():
 \t\t    {u}author by {K}RulRecoder\n''')
 def awal():
 	banner()
-	prints(panel(f"""{P}[01] Login With Lisensi\n{P}[02] Hubungi Admin\n{P}[{M}00{P}] Exit """,width=43,title=f"[[green] LOG IN [/]]",style=f"bold blue"))
+	prints(panel(f"""{P}[01] Login With Lisensi\n{P}[02] Hubungi Admin\n{P}[{M}00{P}] Exit Licensi """,width=43,title=f"[[green] LOG IN [/]]",style=f"bold blue"))
 	cukuf = input(f"{biru}└──[{puti} Input : {H}")
 	if cukuf in ["1","01"]:
 		run()
@@ -297,9 +297,9 @@ def get_expiration_date(license_info):
 def run():
     try:
         LICENSE_FILE_PATH = "saved_license.txt"
+        print(f'  [•]{M} Sedang Mengecek Lisensi..... !!!! ')
         with open(LICENSE_FILE_PATH, 'r') as file:
-            print(f'  [•]{M} Sedang Mengecek Lisensi..... !!!! ')
-            saved_license = open('.saved_license.txt','r').read()
+            saved_license = file.read()
             expiration_date = get_expiration_date(saved_license)
             print(f"{H}Lisensi kadaluwarsa pada tanggal: {B}{expiration_date.strftime('%Y-%m-%d %H:%M')}");time.sleep(2)
             if saved_license and is_license_valid(saved_license):
