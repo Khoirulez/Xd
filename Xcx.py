@@ -515,11 +515,11 @@ def mail2():
 	print(f"\n{biru}╭────────────────────────────────────────────{puti}")
 	nama = input(f'└──[ nama target : ')
 	if ',' in str(nama):
-		print(f'  └──[[red] masukan nama, jangan kosong ')
+		print(f'  └──[ masukan nama, jangan kosong ')
 		time.sleep(3);str(nama)
 	doma = input(f'└──[ domain (ex:@gmail.com) : ')
 	if '@' not in str(doma) or '.com' not in str(doma):
-		print(f'  └──[[red]  masukkan domain dengan benar ')
+		print(f'  └──[ masukkan domain dengan benar ')
 		time.sleep(3);str(doma)
 	jumlah = input(f'└──[ total dump (max:10000) : ')
 	for xyz in range(int(jumlah)):
@@ -538,11 +538,11 @@ def mail2():
 def crack_file():
 	try:vin = os.listdir('/sdcard/downloads/')
 	except FileNotFoundError:
-		print(' [+] File Tidak Ditemukan ')
+		print('└──[  File Tidak Ditemukan ')
 		time.sleep(2)
 		exit()
 	if len(vin)==0:
-		print(' [+] Kamu Tidak Memiliki File Dump ')
+		print('└──[ Kamu Tidak Memiliki File Dump ')
 		time.sleep(2)
 		exit()
 	else:
@@ -556,20 +556,20 @@ def crack_file():
 				nom = ''+str(cih)
 				lol.update({str(cih):str(isi)})
 				lol.update({nom:str(isi)})
-				print(f'\n %s. %s ({h} %s{x} idz )'%(nom,isi,len(hem)))
+				print(f'\n└──[  %s. %s ({h} %s{x} idz )'%(nom,isi,len(hem)))
 			else:
 				lol.update({str(cih):str(isi)})
 				print('['+str(cih)+'] '+isi+' [ '+str(len(hem))+' Account ]'+x)
-				print(' [+] %s. %s ({h} %s {x}idz) '%(cih,isi,len(hem)))
-		geeh = input(' [+] Pilih : ')
+				print(' └──[  %s. %s ({h} %s {x}idz) '%(cih,isi,len(hem)))
+		geeh = input(' └──[  Pilih : ')
 		try:geh = lol[geeh]
 		except KeyError:
-			print(f' [+]  Pilih Yang Bener Kontol {x}')
+			print(f' └──[ Pilih Yang Bener Kontol {x}')
 			time.sleep(3)
 			exit()
 		try:lin = open('/sdcard/DUMP-FILE/'+geh,'r').read().splitlines()
 		except:
-			print(' [+]  File Tidak Ditemukan, Coba Lagi Nanti ')
+			print(' └──[  File Tidak Ditemukan, Coba Lagi Nanti ')
 			time.sleep(2)
 			exit()
 		atur_id()
