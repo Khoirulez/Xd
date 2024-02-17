@@ -97,12 +97,12 @@ for xd in range(10000):
 	zax5=f'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{z}.0.0.0 Mobile Safari/537.36'
 	aseph=f'Mozilla/5.0 (Windows NT 10.0; {crot} AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{z}.0.0.0 Safari/537.36 Edge/12.{t}'
 	hi=f'Mozilla/5.0 (Linux; Android 10; Infinix X682B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{z}.0.0.0 Mobile Safari/537.36{model}'
-	uaku2 = random.choice([zax1,zax5,aseph])
-	ugen2.append(uaku2)
+	uaku2 = random.choice([zax1,zax2,zax3,zax4,hi,zax5,aseph])
+	ugen.append(uaku2)
 for mek in range(1000):
  device2 = str(random.choice(["CPH"]))
  ua2 = f"Mozilla/5.0 (Linux; Android {str(random.randint(3,15))}; {device2}{str(random.randint(1000,10000))}) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/{str(random.randint(40,114))}.0.{str(random.randint(2200,4200))}.{str(random.randint(40,140))} Mobile Safari/537.36"
- ugen.append(ua2)
+ ugen2.append(ua2)
 #--------[ TAHUN-AKUN ]--------#    
 def tahun(fx):
 	if len(fx)==15:
