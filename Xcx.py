@@ -234,7 +234,7 @@ def awal():
 		input(f" {P}[{biru}•{P}] Enter")
 		awal()
 	elif cukuf in ["3","03"]:
-	    print("")
+		print("")
 		print(f"{biru}└──[{P}sedang menghapus lisensi")
 		ganti_lisensi()
 	elif cukuf in ["0","00"]:
