@@ -208,7 +208,7 @@ def ganti_cokies():
 def ganti_lisensi():
       try:os.remove("saved_license.txt")
       except:pass
-      run()
+      exit()
       	
 #----------[ BANNER ]----------#
 def banner():
@@ -223,23 +223,24 @@ def banner():
 \t\t    {u}author by {K}RulRecoder\n''')
 def awal():
 	banner()
-	prints(panel(f"{P}[01] Login With Lisensi\n{P}[02] Hubungi Admin\n{P}[{M}00{P}] Exit [[red]hapus Lisensi[white]]",width=43,title=f"[[green] LOG IN [/]]",style=f"bold blue"))
+	prints(panel(f"""{P}[01] Login With Lisensi\n{P}[02] Hubungi Admin\n{P}[{M}00{P}] Exit [[red]hapus Lisensi[white]]""",width=43,title=f"[[green] LOG IN [/]]",style=f"bold blue"))
 	cukuf = input(f"{biru}└──[{puti} Input : {H}")
 	if cukuf in ["1","01"]:
 		run()
 	elif cukuf in ["2","02"]:
 		print("")
 		print(f"{biru}└──[{P}sedang diarahkan ke whastapp author")
-		os.system('xdg-open https://wa.me/+6281283547452?text=bang+minta+lisensi+sc+nya!!')
+		os.system('xdg-open https://wa.me/+6281283547452?text=bang+minta+lisensi+sc+ini!!')
 		input(f" {P}[{biru}•{P}] Enter")
 		awal()
 	elif cukuf in ["0","00"]:
 		print("")
-		print(f"{biru}└──[{P}sedang menghapus lisensi")
+		print(f"{biru}└──[{P}sedang menghapus lisensi......!!!")
+		time.sleep(2)
 		ganti_lisensi()
 	else:
 		print("")
-		jalan(f"{garis} isi yang benar!! ")
+		jalan(f"{m} isi yang benar!! ")
 		awal()
 #----------------------[ LICENSE ]---------------------#
 import requests
