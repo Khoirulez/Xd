@@ -314,7 +314,7 @@ def run():
        licen = open(".saved_license.txt", "w").write(license_key)
        time.sleep(0.03)
 
-       if check_license(license_key) and open(LICENSE_FILE_PATH, 'r') as file:
+       if check_license(license_key) and with open(LICENSE_FILE_PATH, 'r') as file:
           saved_license = file.read()
           expiration_date = get_expiration_date(saved_license)
           print(f'  [•]{M} Sedang Mengecek Lisensi..... !!!! ');time.sleep(2)
