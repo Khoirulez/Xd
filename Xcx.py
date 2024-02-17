@@ -392,7 +392,7 @@ def menu():
 	elif CYXIEON_GANTENG in ['03','3']:
 	        mail2()
 	elif CYXIEON_GANTENG in ['04','4']:
-	        crack_file()
+	        Crack_file()
 	elif CYXIEON_GANTENG in ['05','5']:
 	        hasil_cp()
 	elif CYXIEON_GANTENG in ['06','6']:
@@ -534,45 +534,19 @@ def mail2():
 		time.sleep(0.0000003)
 	print("\r")
 	atur_id()
-#-----------------[ CRACK FILE ]-----------------#
-def crack_file():
-	try:vin = os.listdir('/sdcard/downloads/')
-	except FileNotFoundError:
-		print('└──[  File Tidak Ditemukan ')
-		time.sleep(2)
-		exit()
-	if len(vin)==0:
-		print('└──[ Kamu Tidak Memiliki File Dump ')
-		time.sleep(2)
-		exit()
-	else:
-		cih = 0
-		lol = {}
-		for isi in vin:
-			try:hem = open('/sdcard/DUMP-FILE/'+isi,'r').readlines()
+###-----[ CRACK FILE ]-----###
+def Crack_file():
+	file = input(f"\n>>> masukan nama folder/file : ")
+	try:
+		uid = open(file,"r").read().splitlines()
+		for data in uid:
+			try:user,nama = data.split('|')
 			except:continue
-			cih+=1
-			if cih<100:
-				nom = ''+str(cih)
-				lol.update({str(cih):str(isi)})
-				lol.update({nom:str(isi)})
-				print(f'\n└──[  %s. %s ({h} %s{x} idz )'%(nom,isi,len(hem)))
-			else:
-				lol.update({str(cih):str(isi)})
-				print('['+str(cih)+'] '+isi+' [ '+str(len(hem))+' Account ]'+x)
-				print(' └──[  %s. %s ({h} %s {x}idz) '%(cih,isi,len(hem)))
-		geeh = input(' └──[  Pilih : ')
-		try:geh = lol[geeh]
-		except KeyError:
-			print(f' └──[ Pilih Yang Bener Kontol {x}')
-			time.sleep(3)
-			exit()
-		try:lin = open('/sdcard/DUMP-FILE/'+geh,'r').read().splitlines()
-		except:
-			print(' └──[  File Tidak Ditemukan, Coba Lagi Nanti ')
-			time.sleep(2)
-			exit()
-		atur_id()
+			sys.stdout.write(f"\r>>> sedang mengumpulkan id, sukses mengumpulkan {U}{len(id)}{U} id....{U}"),
+			sys.stdout.flush()
+			id.append(data)
+	except FileNotFoundError:exit(f">>> file tidak ada")
+	atur_id()
 #----------[ CRACK-PUBLIK  ]----------#            
 def dump(idt,fields,cookie,token):
 	try:
