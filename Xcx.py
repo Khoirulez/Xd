@@ -536,16 +536,17 @@ def mail2():
 	atur_id()
 ###-----[ CRACK FILE ]-----###
 def Crack_file():
-	file = input(f"\n>>> masukan nama folder/file : ")
+    print(f"\n{biru}╭────────────────────────────────────────────{puti}")
+	file = input(f"\n└──[ masukan nama folder/file : ")
 	try:
 		uid = open(file,"r").read().splitlines()
 		for data in uid:
 			try:user,nama = data.split('|')
 			except:continue
-			sys.stdout.write(f"\r>>> sedang mengumpulkan id, sukses mengumpulkan {U}{len(id)}{U} id....{U}"),
+			sys.stdout.write(f"\r└──[ sedang mengumpulkan id, sukses mengumpulkan {B}{len(id)}{P} id...."),
 			sys.stdout.flush()
 			id.append(data)
-	except FileNotFoundError:exit(f">>> file tidak ada")
+	except FileNotFoundError:exit(f"└──[ file tidak ada")
 	atur_id()
 #----------[ CRACK-PUBLIK  ]----------#            
 def dump(idt,fields,cookie,token):
