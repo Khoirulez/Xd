@@ -223,7 +223,7 @@ def banner():
 \t\t    {u}author by {K}RulRecoder\n''')
 def awal():
 	banner()
-	prints(panel(f"""{P}[01] Login With Lisensi\n{P}[02] Hubungi Admin\n{P}[{M}00{P}] Exit <{mer}Licensi{puti}> """,width=43,title=f"[[green] LOG IN [/]]",style=f"bold blue"))
+	prints(panel(f"""{P}[01] Login With Lisensi\n{P}[02] Hubungi Admin\n{P}[{M}00{P}] Exit """,width=43,title=f"[[green] LOG IN [/]]",style=f"bold blue"))
 	cukuf = input(f"{biru}└──[{puti} Input : {H}")
 	if cukuf in ["1","01"]:
 		run()
@@ -294,6 +294,13 @@ def get_expiration_date(license_info):
     _, _, end_time_str = license_info.split('|')
     end_time = datetime.strptime(end_time_str, '%Y-%m-%d %H:%M')
     return end_time
+def file.read():
+    try:
+		licen = open('.saved_license.txt','r').read()
+	except (IOError,KeyError,FileNotFoundError):
+		print(f'{m}Lisensi telah kadaluarsa bro')
+		time.sleep(4)
+		run()
 def run():
     try:
         LICENSE_FILE_PATH = "saved_license.txt"
@@ -309,6 +316,7 @@ def run():
                 os.system("clear")
                 menu()
     except (IOError,FileNotFoundError):
+       print("")
        license_key = input(f"[•]{U}Masukkan lisensi:{B} ")
        licen = open(".saved_license.txt", "w").write(license_key)
        time.sleep(0.03)
@@ -317,8 +325,6 @@ def run():
           print(f'  [•]{M} Sedang Mengecek Lisensi..... !!!! ')
           time.sleep(2)
           saved_license = file.read()
-          if saved_license and is_license_valid(saved_license):
-                return True
           expiration_date = get_expiration_date(saved_license)
           print(f"{H}Lisensi kadaluwarsa pada tanggal: {B}{expiration_date.strftime('%Y-%m-%d %H:%M')}");time.sleep(2)
           if saved_license and is_license_valid(saved_license):
