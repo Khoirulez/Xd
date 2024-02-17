@@ -536,7 +536,7 @@ def mail2():
 	atur_id()
 ###-----[ CRACK FILE ]-----###
 def Crack_file():
-    print(f"\n{biru}╭────────────────────────────────────────────{puti}")
+	print(f"\n{biru}╭────────────────────────────────────────────{puti}")
 	file = input(f"\n└──[ masukan nama folder/file : ")
 	try:
 		uid = open(file,"r").read().splitlines()
