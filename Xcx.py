@@ -297,10 +297,10 @@ def get_expiration_date(license_info):
 def run():
     try:
         LICENSE_FILE_PATH = "saved_license.txt"
-        print(f'  [•]{M} Sedang Mengecek Lisensi..... !!!! ')
         with open(LICENSE_FILE_PATH, 'r') as file:
             saved_license = file.read()
             expiration_date = get_expiration_date(saved_license)
+            print(f'  [•]{M} Sedang Mengecek Lisensi..... !!!! ');time.sleep(2)
             print(f"{H}Lisensi kadaluwarsa pada tanggal: {B}{expiration_date.strftime('%Y-%m-%d %H:%M')}");time.sleep(2)
             if saved_license and is_license_valid(saved_license):
                 time.sleep(0.03)
@@ -315,10 +315,9 @@ def run():
        time.sleep(0.03)
 
        if check_license(license_key):
-          print(f'  [•]{M} Sedang Mengecek Lisensi..... !!!! ')
-          time.sleep(2)
-          saved_license = open('.saved_license.txt','r').read()
+          saved_license = file.read()
           expiration_date = get_expiration_date(saved_license)
+          print(f'  [•]{M} Sedang Mengecek Lisensi..... !!!! ');time.sleep(2)
           print(f"{H}Lisensi kadaluwarsa pada tanggal: {B}{expiration_date.strftime('%Y-%m-%d %H:%M')}");time.sleep(2)
           if saved_license and is_license_valid(saved_license):
               time.sleep(0.03)
