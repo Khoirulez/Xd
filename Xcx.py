@@ -208,7 +208,7 @@ def ganti_cokies():
 def ganti_lisensi():
       try:os.remove("saved_license.txt")
       except:pass
-      login()
+      run()
       	
 #----------[ BANNER ]----------#
 def banner():
@@ -223,7 +223,7 @@ def banner():
 \t\t    {u}author by {K}RulRecoder\n''')
 def awal():
 	banner()
-	prints(panel(f"{P}[01] Login With Lisensi\n{P}[02] Hubungi Admin\n{P}[03] Ganti Lisensi\n{P}[{M}00{P}] exit ",width=43,title=f"[[green] LOG IN [/]]",style=f"bold blue"))
+	prints(panel(f"{P}[01] Login With Lisensi\n{P}[02] Hubungi Admin\n{P}[{M}00{P}] Exit [[red]hapus Lisensi[white]]",width=43,title=f"[[green] LOG IN [/]]",style=f"bold blue"))
 	cukuf = input(f"{biru}└──[{puti} Input : {H}")
 	if cukuf in ["1","01"]:
 		run()
@@ -233,12 +233,10 @@ def awal():
 		os.system('xdg-open https://wa.me/+6281283547452?text=bang+minta+lisensi+sc+nya!!')
 		input(f" {P}[{biru}•{P}] Enter")
 		awal()
-	elif cukuf in ["3","03"]:
+	elif cukuf in ["0","00"]:
 		print("")
 		print(f"{biru}└──[{P}sedang menghapus lisensi")
 		ganti_lisensi()
-	elif cukuf in ["0","00"]:
-		exit()
 	else:
 		print("")
 		jalan(f"{garis} isi yang benar!! ")
@@ -297,6 +295,7 @@ def get_expiration_date(license_info):
     return end_time
 def run():
     try:
+        LICENSE_FILE_PATH = "saved_license.txt"
         with open(LICENSE_FILE_PATH, 'r') as file:
             print(f'  [•]{M} Sedang Mengecek Lisensi..... !!!! ')
             saved_license = file.read()
