@@ -294,13 +294,6 @@ def get_expiration_date(license_info):
     _, _, end_time_str = license_info.split('|')
     end_time = datetime.strptime(end_time_str, '%Y-%m-%d %H:%M')
     return end_time
-def file_read():
-    try:
-		licen = open('.saved_license.txt','r').read()
-	except (IOError,KeyError,FileNotFoundError):
-		print(f'{m}Lisensi telah kadaluarsa bro')
-		time.sleep(4)
-		run()
 def run():
     try:
         LICENSE_FILE_PATH = "saved_license.txt"
