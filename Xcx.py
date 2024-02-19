@@ -84,8 +84,7 @@ ugen = random.choice(["Mozilla/5.0 (Linux; Android 11; Redmi Note 9 Pro Build/RK
 for x in range(1000):
 	rr = random.randint
 	redmi = f"Mozilla/5.0 (Linux; Android {str(rr(9,10))}; Redmi Note 9 Pro) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{str(rr(0,200))}.0.{str(rr(500,4000))}.{str(rr(0,200))} Mobile SFB/{str(rr(0,150))}.0.{str(rr(0,5000))}.{str(rr(0,200))} Mobile Safari/537.36"
-	memek = (redmi)
-	ugen.append(memek)
+	ugen = (redmi)
    
 #--------[ TAHUN-AKUN ]--------#    
 def tahun(fx):
