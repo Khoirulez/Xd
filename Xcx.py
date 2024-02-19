@@ -37,7 +37,7 @@ method, ugen, ugen2 = [],[],[]
 loop, ok, cp = 0,0,0
 
 #----------[ USER-CRACK ]----------#  
-def iphone():
+for x in range(1000):
   rr = random.randint
   rc = random.choice
   androversi = random.choice(["15_4","14_3","13_5","14_5","13_4"])
@@ -46,9 +46,8 @@ def iphone():
   asep5 = f"viabrowser;Safary-Mozilla/5.0 (iPhone; CPU iPhone OS {androversi} like Mac OS X) AppleWebKit/{str(rr(500,800))}.{str(rr(2,50))} (KHTML, like Gecko) Version/{str(rr(10,20))}.{str(rr(4,80))} Mobile/{asep1} Safari/{str(rr(500,800))}.{str(rr(2,30))}"
   raii = rc([ase4, asep5])
     ugen.append(raii)
-import random
 
-def redmi():
+for x in range(1000):
     rr = random.randint
     rc = random.choice
     androversi = random.choice(["11_0","10_3","9_0","10_0","9_2"])
