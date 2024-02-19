@@ -44,7 +44,7 @@ for x in range(1000):
   asep1 = random.choice(["Y6MLQN","8G7LN3","2783VM","X35XFL","W5T30Y"])
   asep4 = f"Mozilla/5.0 (iPhone; CPU iPhone OS {androversi} like Mac OS X) AppleWebKit/{str(rr(500,800))}.{str(rr(2,50))} (KHTML, like Gecko) Version/{str(rr(10,20))}.{str(rr(4,80))} Mobile/{asep1} Safari/{str(rr(500,800))}.{str(rr(2,30))}"
   asep5 = f"viabrowser;Safary-Mozilla/5.0 (iPhone; CPU iPhone OS {androversi} like Mac OS X) AppleWebKit/{str(rr(500,800))}.{str(rr(2,50))} (KHTML, like Gecko) Version/{str(rr(10,20))}.{str(rr(4,80))} Mobile/{asep1} Safari/{str(rr(500,800))}.{str(rr(2,30))}"
-  raii = rc([ase4, asep5])
+  raii = rc([asep4, asep5])
   ugen.append(raii)
 
 for x in range(1000):
