@@ -114,6 +114,7 @@ for mek in range(1000):
  device2 = str(random.choice(["CPH"]))
  ua2 = f"Mozilla/5.0 (Linux; Android {str(random.randint(3,15))}; {device2}{str(random.randint(1000,10000))}) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/{str(random.randint(40,114))}.0.{str(random.randint(2200,4200))}.{str(random.randint(40,140))} Mobile Safari/537.36"
  ugen2.append(ua2)
+ 
  for xd in range(10000):
     aa='Mozilla/5.0 (Linux; U; Android 11;'
     b=random.choice(['6','7','8','9','10','11','12'])
@@ -240,6 +241,7 @@ for mek in range(1000):
     l='Chrome/107.0.0.0 Mobile Safari/537.36'
     uaku2=f'{aa} {b}; {c}{d}{e}{f}) {g}{h}.{i}.{j}.{k} {l}'
     ugen.append(uaku2)
+    
 #--------[ TAHUN-AKUN ]--------#    
 def tahun(fx):
 	if len(fx)==15:
