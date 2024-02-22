@@ -779,9 +779,9 @@ def passwordlist():
 	print(f'{biru}└──[{puti} CP {kun}: %s'%(cp))
 	print(f"{biru}─────────────────────────────────────────────{puti}")
 	print(f"{biru}╭────────────────────────────────────────────{puti}")
-		input(f'{biru}└──[{mer} Klik Enter {kun}]')
-		os.system('clear')
-		menu()
+	input(f'{biru}└──[{mer} Klik Enter {kun}]')
+	os.system('clear')
+	menu()
 	
 #----------[ METODE-VALIDATE ]----------#	
 def crackvalidate(idf,pwx,url):
