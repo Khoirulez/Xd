@@ -357,7 +357,7 @@ def menu():
 	    response = requests.get('https://ipinfo.io')
 	    data = response.json()
 	    alamat_ip = data.get('ip')
-    except requests.exceptions.ConnectionError:
+	except requests.exceptions.ConnectionError:
 		exit(f"\n{P} [:] Tidak ada koneksi{P}")
 	except KeyError:
 		try:os.remove(".cok.txt");os.remove(".tok.txt")
