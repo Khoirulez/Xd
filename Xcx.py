@@ -862,7 +862,7 @@ def crackreguler(idf,pwx,url):
 	rr = random.randint
 	rc = random.choice
 	emot = rc(["😝","😜","🤪"])
-	prog.update(des,description=f"\r {emot} ( REGULER ) (%s OK : {ok} %s) (%s CP : {cp} %s) (%s {loop} %s) "%(hijo,puti,kun,puti,hijo,puti))
+	prog.update(des,description=f"\r {emot}(REGULER)(%sOK:{ok}%s)(%sCP:{cp}%s)(%s{loop}%s)"%(hijo,puti,kun,puti,hijo,puti))
 	prog.advance(des)
 	for pw in pwx:
 		try:
