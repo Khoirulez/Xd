@@ -357,6 +357,10 @@ def menu():
 		uidfb = info_datafb["id"]
 	except requests.exceptions.ConnectionError:
 		exit(f"\n{P} [:] Tidak ada koneksi{P}")
+	except KeyError:
+		try:os.remove(".cok.txt");os.remove(".tok.txt")
+		except:pass
+		login()
 	try:
 	    response = requests.get('https://ipinfo.io')
 	    data = response.json()
