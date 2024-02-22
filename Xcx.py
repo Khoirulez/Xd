@@ -191,6 +191,10 @@ def ganti_cokies():
 def ganti_lisensi():
       try:os.remove("saved_license.txt")
       except:pass
+      try:os.remove(".cok.txt")
+      except:pass
+      try:os.remove(".tok.txt")
+      except:pass
       exit()
       	
 #----------[ BANNER ]----------#
