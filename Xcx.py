@@ -353,6 +353,12 @@ def menu():
 		uidfb = info_datafb["id"]
 	except requests.exceptions.ConnectionError:
 		exit(f"\n{P} [:] Tidak ada koneksi{P}")
+	try:
+	    response = requests.get('https://ipinfo.io')
+	    data = response.json()
+	    alamat_ip = data.get('ip')
+    except requests.exceptions.ConnectionError:
+		exit(f"\n{P} [:] Tidak ada koneksi{P}")
 	except KeyError:
 		try:os.remove(".cok.txt");os.remove(".tok.txt")
 		except:pass
@@ -361,7 +367,7 @@ def menu():
 	time.sleep(2)
 	os.system('clear')
 	banner()
-	prints(panel(f"""[white][[cyan]•[white]] Name Tumbal [[green]{nama}[white]] \n[[cyan]•[white]] Idz Tumbal [white][[green]{uidfb}[white]]""",width=43,title=f"[[green] INFO TUMBAL [/]]",style=f"bold blue"))
+	prints(panel(f"""[white][[cyan]•[white]] Name Tumbal [[green]{nama}[white]]\n[[cyan]•[white]] Idz Tumbal [white][[green]{uidfb}[white]]\n[white][[cyan]•[white]] Your Ip [[green]{alamat_ip}[white]]""",width=43,title=f"[[green] INFO TUMBAL [/]]",style=f"bold blue"))
 	prints(panel(f"""[white][[cyan]01[white]] Crack Publik [[green]ON[white]] \n[[cyan]02[white]] Crack Massal [white][[red]OF[white]] \n[[cyan]03[white]] Crack Email [white][[green]ON[white]] \n[[cyan]04[white]] Crack File [white][[green]ON[white]] \n[[cyan]05[white]] Result CP [[green]ON[white]]\n[[cyan]06[white]] Result OK [white][[green]ON[white]]\n[[cyan]{mer}00[white]] logout [white][[red]hapus cookies[white]] [[green]ON[white]] """,width=43,title=f"[[green] MENU CRACK [/]]",style=f"bold blue"))
 	print(f"{biru}╭────────────────────────────────────────────{puti}")
 	CYXIEON_GANTENG = input(f'{biru}└──[{puti} Input menu : ')
@@ -1007,10 +1013,3 @@ if __name__=='__main__':
 	awal()
 	
 	
-#>>>>> THANKS TO <<<<<#
-
-#    *--> BASARI ID
-#    *--> ALVINO ADIJAYA
-#    *--> AOREC-XD
-
-#>>>>> THANKS TO <<<<<#
