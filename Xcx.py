@@ -380,12 +380,12 @@ def menu():
 	print(f"{biru}╭────────────────────────────────────────────{puti}")
 	CYXIEON_GANTENG = input(f'{biru}└──[{puti} Input menu : ')
 	if CYXIEON_GANTENG in ['01','1']:
-           print(f"\n{biru}╭────────────────────────────────────────────{puti}")
-           idt = input('└──[ ID Target : ')
-           dump(idt,"",{"cookie":cok},token)
-           atur_id()
-	elif CYXIEON_GANTENG in ['02','2']:
-	       dump_massal()
+	        print(f"\n{biru}╭────────────────────────────────────────────{puti}")
+	        idt = input('└──[ ID Target : ')
+	        dump(idt,"",{"cookie":cok},token)
+	        atur_id()
+	if CYXIEON_GANTENG in ['02','2']:
+	        dump_massal()
 	elif CYXIEON_GANTENG in ['03','3']:
 	        mail2()
 	elif CYXIEON_GANTENG in ['04','4']:
@@ -397,7 +397,7 @@ def menu():
 	elif CYXIEON_GANTENG in ['00','0']:
             ganti_cokies()
 #----------[ CRACK-MASSAL ]----------#     
-def dump_massal():
+def dumpp_massal():
 	try:
 		token = open('.token.txt','r').read()
 		cok = open('.cok.txt','r').read()
@@ -453,7 +453,7 @@ def dump_massal():
 	except (KeyError,IOError):
 		back()
 #----------[ CRACK-MASSAL ]----------#      
-def dumpp_massal():
+def dump_massal():
 	try:
 		token = open('.token.txt','r').read()
 		cok = open('.cok.txt','r').read()
