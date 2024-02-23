@@ -396,8 +396,64 @@ def menu():
 	        hasil_ok()
 	elif CYXIEON_GANTENG in ['00','0']:
             ganti_cokies()
-#----------[ CRACK-MASSAL ]----------#      
+#----------[ CRACK-MASSAL ]----------#     
 def dump_massal():
+	try:
+		token = open('.token.txt','r').read()
+		cok = open('.cok.txt','r').read()
+	except IOError:
+	    exit()
+	try:
+		kumpulkan = int(input(b+f" ➪ MAU BERAPA ID  : {h}"))
+	except ValueError:
+	    exit()
+	if kumpulkan<1 or kumpulkan>1000:
+	    exit()
+	ses=requests.Session()
+	bilangan = 0
+	for KOTG49H in range(kumpulkan):
+		bilangan+=1
+		Masukan = input(b+f' ➪ ID YANG KE '+str(bilangan)+f'   :{h} ')
+		uid.append(Masukan)
+	for user in uid:
+	    try:
+	       head = (
+	       {"user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Mobile Safari/537.36"
+	       })
+	       if len(id) == 0:
+	           params = (
+	           {
+	           'access_token': token,
+	           'fields': "friends"
+	           }	          
+	       )
+	       else:
+	           params = (
+	           {
+	           'access_token': token,
+	           'fields': "friends"
+	           }	           
+	       )
+	       url = requests.get('https://graph.facebook.com/{}'.format(user),params=params,headers=head,cookies={'cookies':cok}).json()
+	       for xr in url['friends']['data']:
+	           try:
+	               woy = (xr['id']+'|'+xr['name'])
+	               if woy in id:pass
+	               else:id.append(woy)
+	           except:continue
+	    except (KeyError,IOError):
+	      pass
+	    except requests.exceptions.ConnectionError:
+	        back()
+	try:
+	      print(b+f" ➪ TOTAL          : "+h+str(len(id))) 
+	      user_id()
+	except requests.exceptions.ConnectionError:
+	    back()
+	except (KeyError,IOError):
+		back()
+#----------[ CRACK-MASSAL ]----------#      
+def dumpp_massal():
 	try:
 		token = open('.token.txt','r').read()
 		cok = open('.cok.txt','r').read()
