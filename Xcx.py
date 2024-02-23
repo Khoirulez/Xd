@@ -385,7 +385,7 @@ def menu():
            dump(idt,"",{"cookie":cok},token)
            atur_id()
 	elif CYXIEON_GANTENG in ['02','2']:
-	        dump_massal()
+	       dump_massal()
 	elif CYXIEON_GANTENG in ['03','3']:
 	        mail2()
 	elif CYXIEON_GANTENG in ['04','4']:
