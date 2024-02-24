@@ -210,7 +210,7 @@ def banner():
 \t\t    {u}author by {K}RulRecoder\n''')
 def awal():
 	banner()
-	prints(panel(f"""{P}[01] Login With Lisensi\n{P}[02] Hubungi Admin\n{P}[01] Crack No login\n{P}[{M}00{P}] Exit Licensi """,width=43,title=f"[[green] LOG IN [/]]",style=f"bold blue"))
+	prints(panel(f"""{P}[01] Login With Lisensi\n{P}[02] Hubungi Admin\n{P}[03] Crack No login\n{P}[{M}00{P}] Exit Licensi """,width=43,title=f"[[green] LOG IN [/]]",style=f"bold blue"))
 	cukuf = input(f"{biru}└──[{puti} Input : {H}")
 	if cukuf in ["1","01"]:
 		run()
