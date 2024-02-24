@@ -791,16 +791,14 @@ def passwordlist():
 	input(f'{biru}└──[{mer} Klik Enter {kun}]')
 	os.system('clear')
 	menu()
-	
 #----------[ METODE-VALIDATE ]----------#	
 def crackvalidate(idf,pwx,url):
 	global loop,ok,cp
 	ses = requests.Session()
 	rr = random.randint
 	rc = random.choice
-	asu = random.choice([m, k, h, u, b])
-	emot = rc(["😝","😜","🤪"])
-	prog.update(des,description=f"\r {emot}({asu}RulValidate{puti})(%sOK:{ok}%s)(%sCP:{cp}%s)(%s {loop}%s)"%(hijo,puti,kun,puti,hijo,puti))
+	emot = rc(["🥸",])
+	prog.update(des,description=f"\r {emot}(Validate)(%sOK:{ok}%s)(%sCP:{cp}%s)(%s {loop}%s)"%(hijo,puti,kun,puti,hijo,puti))
 	prog.advance(des)
 	for pw in pwx:
 		try:
@@ -883,9 +881,8 @@ def crackreguler(idf,pwx,url):
 	ses = requests.Session()
 	rr = random.randint
 	rc = random.choice
-	asu = random.choice([m, k, h, u, b])
 	emot = rc(["😝","😜","🤪"])
-	prog.update(des,description=f"\r {emot}({asu}RulReguler{puti})(%sOK:{ok}%s)(%sCP:{cp}%s)(%s{loop}%s)"%(hijo,puti,kun,puti,hijo,puti))
+	prog.update(des,description=f"\r {emot}(REGULER)(%sOK:{ok}%s)(%sCP:{cp}%s)(%s{loop}%s) "%(hijo,puti,kun,puti,hijo,puti))
 	prog.advance(des)
 	for pw in pwx:
 		try:
@@ -961,7 +958,6 @@ def crackreguler(idf,pwx,url):
 		except requests.exceptions.ConnectionError:
 			time.sleep(31)
 	loop+=1
-
 #----------[ CEK-OPSI ]----------#
 def ceker(idf,pw):
 	global cp
