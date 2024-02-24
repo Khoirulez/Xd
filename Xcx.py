@@ -865,11 +865,11 @@ def crackvalidate(idf,pwx,url):
 				print(f"⌲ Password: {kun}{pw}{puti}")
 				print(f"⌲ Tahun: {mer}{tahun(idf)}{puti}")
 				print(f'{kun}{ua}')
-			    open('CYXIEON-CP/'+'CYXIEON-CP.txt','a').write(idf+'|'+pw+'|'+'\n')
-			    akune.append(idf+'|'+pw)
-			    ceker(idf,pw)
-			    cp+=1
-			    break	
+				open('CYXIEON-CP/'+'CYXIEON-CP.txt','a').write(idf+'|'+pw+'|'+'\n')
+				akune.append(idf+'|'+pw)
+				ceker(idf,pw)
+				cp+=1
+				break	
 				
 			else:
 				continue
