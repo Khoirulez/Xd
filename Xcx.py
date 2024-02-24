@@ -1208,7 +1208,7 @@ def exit():
     sleep(1)
     os.system("mkdir main.py")
     os.system("bash")
-    os.system("kredit)
+    os.system("kredit")
 #kredit oleh u0-a154, maaf jika Anda tidak sengaja mengaktifkan alatnya :/
 #----------[ SYSTEM-CONTROL ]----------#	
 if __name__=='__main__':
