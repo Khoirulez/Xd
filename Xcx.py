@@ -594,13 +594,13 @@ def dump(idt,fields,cookie,token):
 def hasil_ok():
 	try:vin = os.listdir('CYXIEON-OK')
 	except FileNotFoundError:
-		print(f"{kun}╭────────────────────────────────────────────{puti}")
-		exit(f"{kun}└──[{mer} File tidak di temukan ")
+		print(f"{biru}╭────────────────────────────────────────────{puti}")
+		exit(f"{biru}└──[{mer} File tidak di temukan ")
 	if len(vin)==0:
-		print(f"{kun}╭────────────────────────────────────────────{puti}")
-		exit(f"{kun}└──[{mer} Tidak mempuyai file OK ")
+		print(f"{biru}╭────────────────────────────────────────────{puti}")
+		exit(f"{biru}└──[{mer} Tidak mempuyai file OK ")
 	else:
-		print(f"{kun}╭────────────────────────────────────────────{puti}")
+		print(f"{biru}╭────────────────────────────────────────────{puti}")
 		cih = 0
 		lol = {}
 		for isi in vin:
@@ -611,19 +611,19 @@ def hasil_ok():
 				nom = '0'+str(cih)
 				lol.update({str(cih):str(isi)})
 				lol.update({nom:str(isi)})
-				print(f'{kun}└──[{puti} %s. %s ( %s Idz )'%(nom,isi,len(hem)))
+				print(f'{biru}└──[{puti} %s. %s ( %s Idz )'%(nom,isi,len(hem)))
 			else:
 				lol.update({str(cih):str(isi)})
-				print(f'{kun}└──[{puti} %s. %s ( %s Idz )'%(nom,isi,len(hem)))
-		print(f"{kun}╭────────────────────────────────────────────{puti}")
-		geeh = input(f'{kun}└──[{puti} Input file : ')
+				print(f'{biru}└──[{puti} %s. %s ( %s Idz )'%(nom,isi,len(hem)))
+		print(f"{biru}╭────────────────────────────────────────────{puti}")
+		geeh = input(f'{biru}└──[{puti} Input file : ')
 		try:geh = lol[geeh]
 		except KeyError:
-		    print(f"{kun}╭────────────────────────────────────────────{puti}")
-		    exit(f"{kun}└──[{mer} Pilih yang bener :-( ")
+		    print(f"{biru}╭────────────────────────────────────────────{puti}")
+		    exit(f"{biru}└──[{mer} Pilih yang bener :-( ")
 		try:lin = open('CYXIEON-OK/'+geh,'r').read().splitlines()
 		except:
-		    print(f"{kun}╭────────────────────────────────────────────{puti}")
+		    print(f"{biru}╭────────────────────────────────────────────{puti}")
 		    exit(f"{kun}└──[{mer} File tidak di temukan ")
 		nocp=0
 		for cpku in range(len(lin)):
@@ -633,21 +633,21 @@ def hasil_ok():
 			tree.add(f"{hijo}{cpkuni[2]}{puti}")
 			prints(tree)
 			nocp +=1
-		print(f"{kun}╭────────────────────────────────────────────{puti}")
-		input(f'{kun}└──[{mer} Klik Enter {kun}]')
+		print(f"{biru}╭────────────────────────────────────────────{puti}")
+		input(f'{biru}└──[{mer} Klik Enter {biru}]')
 		menu()
 
 #----------[ HASIL-CP]----------#            
 def hasil_cp():
 	try:vin = os.listdir('CYXIEON-CP')
 	except FileNotFoundError:
-		print(f"{kun}╭────────────────────────────────────────────{puti}")
-		exit(f"{kun}└──[{mer} File tidak di temukan ")
+		print(f"{biru}╭────────────────────────────────────────────{puti}")
+		exit(f"{biru}└──[{mer} File tidak di temukan ")
 	if len(vin)==0:
-		print(f"{kun}╭────────────────────────────────────────────{puti}")
-		exit(f"{kun}└──[{mer} Tidak mempuyai file OK ")
+		print(f"{biru}╭────────────────────────────────────────────{puti}")
+		exit(f"{biru}└──[{mer} Tidak mempuyai file OK ")
 	else:
-		print(f"{kun}╭────────────────────────────────────────────{puti}")
+		print(f"{biru}╭────────────────────────────────────────────{puti}")
 		cih = 0
 		lol = {}
 		for isi in vin:
@@ -658,29 +658,29 @@ def hasil_cp():
 				nom = '0'+str(cih)
 				lol.update({str(cih):str(isi)})
 				lol.update({nom:str(isi)})
-				print(f'{kun}└──[{puti} %s. %s ( %s Idz )'%(nom,isi,len(hem)))
+				print(f'{biru}└──[{puti} %s. %s ( %s Idz )'%(nom,isi,len(hem)))
 			else:
 				lol.update({str(cih):str(isi)})
-				print(f'{kun}└──[{puti} %s. %s ( %s Idz )'%(nom,isi,len(hem)))
-		print(f"{kun}╭────────────────────────────────────────────{puti}")
-		geeh = input(f'{kun}└──[{puti} Input file : ')
+				print(f'{biru}└──[{puti} %s. %s ( %s Idz )'%(nom,isi,len(hem)))
+		print(f"{biru}╭────────────────────────────────────────────{puti}")
+		geeh = input(f'{biru}└──[{puti} Input file : ')
 		try:geh = lol[geeh]
 		except KeyError:
-		    print(f"{kun}╭────────────────────────────────────────────{puti}")
-		    exit(f"{kun}└──[{mer} Pilih yang bener :-( ")
+		    print(f"{biru}╭────────────────────────────────────────────{puti}")
+		    exit(f"{biru}└──[{mer} Pilih yang bener :-( ")
 		try:lin = open('CYXIEON-CP/'+geh,'r').read().splitlines()
 		except:
-		    print(f"{kun}╭────────────────────────────────────────────{puti}")
-		    exit(f"{kun}└──[{mer} File tidak di temukan ")
+		    print(f"{biru}╭────────────────────────────────────────────{puti}")
+		    exit(f"{biru}└──[{mer} File tidak di temukan ")
 		nocp=0
 		for cpku in range(len(lin)):
 			cpkuni=lin[nocp].split('|')
 			tree = Tree("")
-			tree.add(f"{kun}{cpkuni[0]}{puti}").add(f"{kun}{cpkuni[1]}{puti}")
+			tree.add(f"{kun}{cpbirui[0]}{puti}").add(f"{biru}{cpbirui[1]}{puti}")
 			prints(tree)
 			nocp +=1
-		print(f"{kun}╭────────────────────────────────────────────{puti}")
-		input(f'{kun}└──[{mer} Klik Enter {kun}]')
+		print(f"{biru}╭────────────────────────────────────────────{puti}")
+		input(f'{biru}└──[{mer} Klik Enter {biru}]')
 		menu()
 																		
 #----------[ MENU-IDZ ]----------#		
@@ -694,25 +694,25 @@ def atur_id():
 #----------[ MENU-METODE ]----------#
 def atur_method():
 	print("")
-	print(f"{kun}╭────────────────────────────────────────────{puti}") 
-	print(f'{kun}└──[{puti} 01. Validate ')
-	print(f'{kun}└──[{puti} 02. Reguler ')
-	print(f"{kun}╭────────────────────────────────────────────{puti}") 
-	CYXIEON_METHODE = input(f'{kun}└──[{puti} Input method : ')
+	print(f"{biru}╭────────────────────────────────────────────{puti}") 
+	print(f'{biru}└──[{puti} 01. Validate ')
+	print(f'{biru}└──[{puti} 02. Reguler ')
+	print(f"{biru}╭────────────────────────────────────────────{puti}") 
+	CYXIEON_METHODE = input(f'{biru}└──[{puti} Input method : ')
 	if CYXIEON_METHODE in ['1','01']:
 	   method.append('validate')  
 	elif CYXIEON_METHODE in ['2','02']:
 	   method.append('reguler')       
 	else:
 		method.append('validate')
-	print(f"{kun}╭────────────────────────────────────────────{puti}")
-	print(f'{kun}└──[{puti} Tambahkan pw manual (y/t) ')
-	print(f"{kun}╭────────────────────────────────────────────{puti}") 	
-	passwtamb = input(f'{kun}└──[{puti} Input : ')
+	print(f"{biru}╭────────────────────────────────────────────{puti}")
+	print(f'{biru}└──[{puti} Tambahkan pw manual (y/t) ')
+	print(f"{biru}╭────────────────────────────────────────────{puti}") 	
+	passwtamb = input(f'{biru}└──[{puti} Input : ')
 	if passwtamb in ['y','Y']:
 		     sandine.append('ya')
-		     print(f"{kun}╭────────────────────────────────────────────{puti}")
-		     sandiku = input(f'{kun}└──[{puti} Input Pw : ')
+		     print(f"{biru}╭────────────────────────────────────────────{puti}")
+		     sandiku = input(f'{biru}└──[{puti} Input Pw : ')
 		     sandimu = sandiku.split(',')
 		     for sandixnxx in sandimu:
 		         sandina.append(sandixnxx)		 
@@ -723,9 +723,9 @@ def atur_method():
 #----------[ BAGIAN-WORDLIST ]----------#	
 def passwordlist():
 	global prog,des
-	print(f"{kun}╭────────────────────────────────────────────{puti}")
-	print(f'{kun}└──[{puti} WAITING ')
-	print(f"{kun}─────────────────────────────────────────────{puti}")
+	print(f"{biru}╭────────────────────────────────────────────{puti}")
+	print(f'{biru}└──[{puti} WAITING ')
+	print(f"{biru}─────────────────────────────────────────────{puti}")
 	prog = Progress(TextColumn('{task.description}'),BarColumn(),TextColumn('{task.percentage:.0f}%'))
 	des = prog.add_task('',total=len(id2))
 	with prog:
@@ -785,12 +785,12 @@ def passwordlist():
 				else:
 				    pemuda_tersakiti.submit(crackvalidate,idf,pwx,'m.facebook.com')
 				    
-	print(f"{kun}╭────────────────────────────────────────────{puti}")
-	print(f'{kun}└──[{puti} OK {hijo}: %s'%(ok))
-	print(f'{kun}└──[{puti} CP {kun}: %s'%(cp))
-	print(f"{kun}─────────────────────────────────────────────{puti}")
-	print(f"{kun}╭────────────────────────────────────────────{puti}")
-	input(f'{kun}└──[{mer} Klik Enter {kun}]')
+	print(f"{biru}╭────────────────────────────────────────────{puti}")
+	print(f'{biru}└──[{puti} OK {hijo}: %s'%(ok))
+	print(f'{biru}└──[{puti} CP {kun}: %s'%(cp))
+	print(f"{biru}─────────────────────────────────────────────{puti}")
+	print(f"{biru}╭────────────────────────────────────────────{puti}")
+	input(f'{biru}└──[{mer} Klik Enter {biru}]')
 	menu()
 	
 #----------[ METODE-VALIDATE ]----------#	
