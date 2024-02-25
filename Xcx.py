@@ -40,7 +40,7 @@ try:
 	open('.prox.txt','w').write(prox)
 except Exception as e:
 	print('[[\x1b[1;92m•\x1b[1;97m] [\x1b[1;96mKontolodon')
-prox = open('.prox.txt','r').read().splitlines()
+prox=open('.prox.txt','r').read().splitlines()
 for xd in range(10000):
 	rr = random.randint; rc = random.choice
 	a=random.choice(["9.1.5","5.1.6","4.0.1","3.0.1","4.0.2","5.0.2","6.0.1","6.2.2","7.0.1","7.1.0","8.1.0","4.4.4","5.6.1","6.1.3"])
@@ -803,9 +803,8 @@ def crackvalidate(idf,pwx,url):
 	ses = requests.Session()
 	rr = random.randint
 	rc = random.choice
-	asu = random.choice([m, k, h, u, b])
 	emot = rc(["😝","😜","🤪"])
-	prog.update(des,description=f"\r {emot}({asu}Validate{puti})(%sOK:{ok}%s)(%sCP:{cp}%s)(%s {loop}%s)"%(hijo,puti,kun,puti,hijo,puti))
+	prog.update(des,description=f"\r {emot}(Validate)(%sOK:{ok}%s)(%sCP:{cp}%s)(%s {loop}%s)"%(hijo,puti,kun,puti,hijo,puti))
 	prog.advance(des)
 	for pw in pwx:
 		try:
@@ -888,9 +887,8 @@ def crackreguler(idf,pwx,url):
 	ses = requests.Session()
 	rr = random.randint
 	rc = random.choice
-	asu = random.choice([m, k, h, u, b])
 	emot = rc(["😝","😜","🤪"])
-	prog.update(des,description=f"\r {emot}({asu}Reguler{puti})(%sOK:{ok}%s)(%sCP:{cp}%s)(%s{loop}%s) "%(hijo,puti,kun,puti,hijo,puti))
+	prog.update(des,description=f"\r {emot}(Reguler)(%sOK:{ok}%s)(%sCP:{cp}%s)(%s{loop}%s) "%(hijo,puti,kun,puti,hijo,puti))
 	prog.advance(des)
 	for pw in pwx:
 		try:
