@@ -325,9 +325,9 @@ def run():
 #result
 def result1():
     prints(panel(f"""[white][[cyan]01[white]] Result Ok [[green]ON[white]] \n[[cyan]02[white]] Result Cp [white][[green]ON[white]]  """,width=43,title=f"[[green] RESULT [/]]",style=f"bold blue"))
-	print(f"{biru}╭────────────────────────────────────────────{puti}")
-	babi = input(f'{biru}└──[{puti} Input Result : ')
-	if babi in ['01','1']:
+    print(f"{biru}╭────────────────────────────────────────────{puti}")
+    babi = input(f'{biru}└──[{puti} Input Result : ')
+    if babi in ['01','1']:
 	    hasil_ok()    
 	elif babi in ['02','2']:
 	    hasil_cp()    
