@@ -410,7 +410,7 @@ def menu():
 	        result1()
 	elif CYXIEON_GANTENG in ['00','0']:
             ganti_cokies()
-###----------[ DUMP ID PUBLIK ]----------###
+#----------[ CRACK-MASSAL ]----------#      
 def massal():
 	try:
 		token = open('.tok.txt','r').read()
@@ -418,7 +418,8 @@ def massal():
 	except IOError:
 	    exit()
 	try:
-		kumpulkan = int(input(f'Mau Berapa ID ? : '))
+	    print(f"\n{biru}╭────────────────────────────────────────────{puti}")
+	    kumpulkan = int(input(f'└──[ Mau Berapa ID ? : '))
 	except ValueError:
 	    exit()
 	if kumpulkan<1 or kumpulkan>1000:
@@ -427,7 +428,7 @@ def massal():
 	bilangan = 0
 	for KOTG49H in range(kumpulkan):
 		bilangan+=1
-		Masukan = input(f'ID Ke  '+str(bilangan)+f' : ')
+		Masukan = input(f'{biru}└──[{puti} Masukin ID Yang Ke  '+str(bilangan)+f' : ')
 		uid.append(Masukan)
 	for user in uid:
 	    try:
@@ -448,7 +449,7 @@ def massal():
 	           'fields': "friends"
 	           }	           
 	       )
-	       url = requests.get('https://graph.facebook.com/{}'.format(user),params=params,headers=head,cookies={'cookies':cok}).json()
+	       url = requests.get('https://graph.facebook.com/{}'.format(user),params=params,headers=head,cookies={'cookie':cok}).json()
 	       for xr in url['friends']['data']:
 	           try:
 	               woy = (xr['id']+'|'+xr['name'])
@@ -458,9 +459,9 @@ def massal():
 	    except (KeyError,IOError):
 	      pass
 	    except requests.exceptions.ConnectionError:
-	        exit()
+	      exit()
 	try:
-	      print("Total DUMP  : "+str(len(id))) 
+	      prints(f"{biru}└──[{puti} lagi mengumpulkan id, telah sukses mengumpulkan [green]{len(id)}[white] id")
 	      atur_id()
 	except requests.exceptions.ConnectionError:
 	    exit()
