@@ -363,7 +363,7 @@ def menu():
 	try:
 		token = open('.tok.txt','r').read()
 		cok = open('.cok.txt','r').read()
-		print(f"{u}Token : {h}{token} ")
+		print(f"\n{u}Token : {h}{token} ")
 	except (IOError,KeyError,FileNotFoundError):
 		print(f'{m}cookies telah kadaluarsa bro')
 		time.sleep(2)
@@ -658,7 +658,6 @@ def atur_method():
 	print(f'{biru}└──[{puti} {biru}01.{puti} m.prod.facebook.com ({hijo}Validate{puti}) ')
 	print(f'{biru}└──[{puti} {biru}02.{puti} m.facebook.com ({mer}Reguler{puti}) ')
 	print(f'{biru}└──[{puti} {biru}03.{puti} mbasic.facebook.com ({kun}Asyinc{puti}) ')      
-	print(f"{biru}╭────────────────────────────────────────────{puti}") 
 	CYXIEON_METHODE = input(f'{biru}└──[{puti} Input method : ')
 	if CYXIEON_METHODE in ['1','01']:
 	   method.append('validate')  
@@ -670,11 +669,9 @@ def atur_method():
 		method.append('validate')
 	print(f"\n{biru}╭────────────────────────────────────────────{puti}")
 	print(f'{biru}└──[{puti} Tambahkan pw manual (y/t) ')
-	print(f"{biru}╭────────────────────────────────────────────{puti}") 	
 	passwtamb = input(f'{biru}└──[{puti} Input : ')
 	if passwtamb in ['y','Y']:
 		     sandine.append('ya')
-		     print(f"{biru}╭────────────────────────────────────────────{puti}")
 		     sandiku = input(f'{biru}└──[{puti} Input Pw : ')
 		     sandimu = sandiku.split(',')
 		     for sandixnxx in sandimu:
