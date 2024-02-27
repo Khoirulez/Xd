@@ -332,9 +332,9 @@ def result1():
     elif babi in ['02','2']:
         hasil_cp()
     else:
-		print("")
-		jalan(f"{m} isi yang benar!! ")
-		menu()
+       print("")
+       jalan(f"{m} isi yang benar!! ")
+       menu()
 #kukis
 def login():
 	os.system('clear')
