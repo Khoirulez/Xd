@@ -148,6 +148,7 @@ u = '\033[95m'  # UNGU
 kk = '\033[33m'  # KUNING -
 b = '\33[1;96m'  # BIRU -
 p = '\x1b[0;34m'  # BIRU +
+c = '\033[36m' # cyan
 # Warna
 H = ('\x1b[1;90m')
 M = ('\x1b[1;91m')
@@ -210,8 +211,8 @@ def banner():
 \t\t    {u}author by {K}RulRecoder\n''')
 def awal():
 	banner()
-	prints(panel(f"""{P}[01] Login With Lisensi\n{P}[02] Hubungi Admin\n{P}[{M}00{P}] Exit Licensi """,width=43,title=f"[[green] LOG IN [/]]",style=f"bold blue"))
-	cukuf = input(f"{biru}└──[{puti} Input : {H}")
+	prints(panel(f"""{P}[{c}01{P}] Login With Lisensi\n{P}[{c}02{P}] Hubungi Admin\n{P}[{M}00{P}] Exit Licensi """,width=43,title=f"[[green] LOG IN [/]]",style=f"bold blue"))
+	cukuf = input(f"{biru}└──[{puti}{ung} Input{puti} : {H}")
 	if cukuf in ["1","01"]:
 		run()
 	elif cukuf in ["2","02"]:
@@ -398,6 +399,7 @@ def menu():
 	CYXIEON_GANTENG = input(f'{biru}└──[{puti}{ung} Input {puti}:{hijo} ')
 	if CYXIEON_GANTENG in ['01','1']:
 	    print(f"\n{biru}╭────────────────────────────────────────────{puti}")
+	    print(f"└──[ Ketik me untuk dump pertemanan dari akun tumbal")
 	    idt = input('└──[ ID Target : ')
 	    dump(idt,"",{"cookie":cok},token)
 	    atur_id()
@@ -655,9 +657,9 @@ def atur_id():
 def atur_method():
 	print("")
 	print(f"\n{biru}╭────────────────────────────────────────────{puti}")
-	print(f'{biru}└──[{puti} {biru}01.{puti} m.prod.facebook.com ({hijo}Validate{puti}) ')
-	print(f'{biru}└──[{puti} {biru}02.{puti} m.facebook.com ({mer}Reguler{puti}) ')
-	print(f'{biru}└──[{puti} {biru}03.{puti} mbasic.facebook.com ({kun}Asyinc{puti}) ')      
+	print(f'{biru}└──[{puti} {c}01.{puti} m.prod.facebook.com ({hijo}Validate{puti}) ')
+	print(f'{biru}└──[{puti} {c}02.{puti} m.facebook.com ({mer}Reguler{puti}) ')
+	print(f'{biru}└──[{puti} {c}03.{puti} mbasic.facebook.com ({kun}Asyinc{puti}) ')      
 	CYXIEON_METHODE = input(f'{biru}└──[{puti}{ung} Input{puti} :{hijo} ')
 	if CYXIEON_METHODE in ['1','01']:
 	   method.append('validate')  
