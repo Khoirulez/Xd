@@ -328,8 +328,8 @@ def result1():
     print(f"{biru}╭────────────────────────────────────────────{puti}")
     babi = input(f'{biru}└──[{puti} Input Result : ')
     if babi in ['01','1']:
-	    hasil_ok()    
-	elif babi in ['02','2']:
+       hasil_ok()
+    elif babi in ['02','2']:
 	    hasil_cp()    
 	else:
 		print("")
