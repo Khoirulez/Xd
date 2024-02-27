@@ -400,7 +400,7 @@ def menu():
 	        dump(idt,"",{"cookie":cok},token)
 	        atur_id()
 	elif CYXIEON_GANTENG in ['02','2']:
-	        dump_massal()
+	        massal()
 	elif CYXIEON_GANTENG in ['03','3']:
 	        mail2()
 	elif CYXIEON_GANTENG in ['04','4']:
@@ -409,15 +409,15 @@ def menu():
 	        result1()
 	elif CYXIEON_GANTENG in ['00','0']:
             ganti_cokies()
-#----------[ CRACK-MASSAL ]----------#     
-def dumpp_massal():
+###----------[ DUMP ID PUBLIK ]----------###
+def massal():
 	try:
 		token = open('.token.txt','r').read()
 		cok = open('.cok.txt','r').read()
 	except IOError:
 	    exit()
 	try:
-		kumpulkan = int(input(b+f" ➪ MAU BERAPA ID  : {h}"))
+		kumpulkan = int(input(f'Mau Berapa ID ? : '))
 	except ValueError:
 	    exit()
 	if kumpulkan<1 or kumpulkan>1000:
@@ -426,7 +426,7 @@ def dumpp_massal():
 	bilangan = 0
 	for KOTG49H in range(kumpulkan):
 		bilangan+=1
-		Masukan = input(b+f' ➪ ID YANG KE '+str(bilangan)+f'   :{h} ')
+		Masukan = input(f'ID Ke  '+str(bilangan)+f' : ')
 		uid.append(Masukan)
 	for user in uid:
 	    try:
@@ -457,66 +457,9 @@ def dumpp_massal():
 	    except (KeyError,IOError):
 	      pass
 	    except requests.exceptions.ConnectionError:
-	        back()
+	        exit()
 	try:
-	      print(b+f" ➪ TOTAL          : "+h+str(len(id))) 
-	      user_id()
-	except requests.exceptions.ConnectionError:
-	    back()
-	except (KeyError,IOError):
-		back()
-#----------[ CRACK-MASSAL ]----------#      
-def dump_massal():
-	try:
-		token = open('.token.txt','r').read()
-		cok = open('.cok.txt','r').read()
-	except IOError:
-	    exit()
-	try:
-	    print(f"\n{biru}╭────────────────────────────────────────────{puti}")
-	    kumpulkan = int(input(f'└──[ Mau Berapa ID ? : '))
-	except ValueError:
-	    exit()
-	if kumpulkan<1 or kumpulkan>1000:
-	    exit()
-	ses=requests.Session()
-	bilangan = 0
-	for KOTG49H in range(kumpulkan):
-		bilangan+=1
-		Masukan = input(f'{biru}└──[{puti} Masukin ID Yang Ke  '+str(bilangan)+f' : ')
-		uid.append(Masukan)
-	for user in uid:
-	    try:
-	       head = (
-	       {"user-agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Mobile Safari/537.36"
-	       })
-	       if len(id) == 0:
-	           params = (
-	           {
-	           'access_token': token,
-	           'fields': "friends"
-	           }	          
-	       )
-	       else:
-	           params = (
-	           {
-	           'access_token': token,
-	           'fields': "friends"
-	           }	           
-	       )
-	       url = requests.get('https://graph.facebook.com/{}'.format(user),params=params,headers=head,cookies={'cookie':cok}).json()
-	       for xr in url['friends']['data']:
-	           try:
-	               woy = (xr['id']+'|'+xr['name'])
-	               if woy in id:pass
-	               else:id.append(woy)
-	           except:continue
-	    except (KeyError,IOError):
-	      pass
-	    except requests.exceptions.ConnectionError:
-	      exit()
-	try:
-	      prints(f"{biru}└──[{puti} lagi mengumpulkan id, telah sukses mengumpulkan [green]{len(id)}[white] id")
+	      print("Total DUMP  : "+str(len(id))) 
 	      atur_id()
 	except requests.exceptions.ConnectionError:
 	    exit()
@@ -608,13 +551,13 @@ def dump(idt,fields,cookie,token):
 def hasil_ok():
 	try:vin = os.listdir('CYXIEON-OK')
 	except FileNotFoundError:
-		print(f"{kun}╭────────────────────────────────────────────{puti}")
-		exit(f"{kun}└──[{mer} File tidak di temukan ")
+		print(f"{biru}╭────────────────────────────────────────────{puti}")
+		exit(f"{biru}└──[{mer} File tidak di temukan ")
 	if len(vin)==0:
-		print(f"{kun}╭────────────────────────────────────────────{puti}")
-		exit(f"{kun}└──[{mer} Tidak mempuyai file OK ")
+		print(f"{biru}╭────────────────────────────────────────────{puti}")
+		exit(f"{biru}└──[{mer} Tidak mempuyai file OK ")
 	else:
-		print(f"{kun}╭────────────────────────────────────────────{puti}")
+		print(f"{biru}╭────────────────────────────────────────────{puti}")
 		cih = 0
 		lol = {}
 		for isi in vin:
@@ -625,20 +568,20 @@ def hasil_ok():
 				nom = '0'+str(cih)
 				lol.update({str(cih):str(isi)})
 				lol.update({nom:str(isi)})
-				print(f'{kun}└──[{puti} %s. %s ( %s Idz )'%(nom,isi,len(hem)))
+				print(f'{biru}└──[{puti} %s. %s ( %s Idz )'%(nom,isi,len(hem)))
 			else:
 				lol.update({str(cih):str(isi)})
-				print(f'{kun}└──[{puti} %s. %s ( %s Idz )'%(nom,isi,len(hem)))
-		print(f"{kun}╭────────────────────────────────────────────{puti}")
-		geeh = input(f'{kun}└──[{puti} Input file : ')
+				print(f'{biru}└──[{puti} %s. %s ( %s Idz )'%(nom,isi,len(hem)))
+		print(f"{biru}╭────────────────────────────────────────────{puti}")
+		geeh = input(f'{biru}└──[{puti} Input file : ')
 		try:geh = lol[geeh]
 		except KeyError:
-		    print(f"{kun}╭────────────────────────────────────────────{puti}")
-		    exit(f"{kun}└──[{mer} Pilih yang bener :-( ")
+		    print(f"{biru}╭────────────────────────────────────────────{puti}")
+		    exit(f"{biru}└──[{mer} Pilih yang bener :-( ")
 		try:lin = open('CYXIEON-OK/'+geh,'r').read().splitlines()
 		except:
-		    print(f"{kun}╭────────────────────────────────────────────{puti}")
-		    exit(f"{kun}└──[{mer} File tidak di temukan ")
+		    print(f"{biru}╭────────────────────────────────────────────{puti}")
+		    exit(f"{biru}└──[{mer} File tidak di temukan ")
 		nocp=0
 		for cpku in range(len(lin)):
 			cpkuni=lin[nocp].split('|')
@@ -647,21 +590,21 @@ def hasil_ok():
 			tree.add(f"{hijo}{cpkuni[2]}{puti}")
 			prints(tree)
 			nocp +=1
-		print(f"{kun}╭────────────────────────────────────────────{puti}")
-		input(f'{kun}└──[{mer} Klik Enter {kun}]')
+		print(f"{biru}╭────────────────────────────────────────────{puti}")
+		input(f'{biru}└──[{mer} Klik Enter {biru}]')
 		menu()
 
 #----------[ HASIL-CP]----------#            
 def hasil_cp():
 	try:vin = os.listdir('CYXIEON-CP')
 	except FileNotFoundError:
-		print(f"{kun}╭────────────────────────────────────────────{puti}")
-		exit(f"{kun}└──[{mer} File tidak di temukan ")
+		print(f"{biru}╭────────────────────────────────────────────{puti}")
+		exit(f"{biru}└──[{mer} File tidak di temukan ")
 	if len(vin)==0:
-		print(f"{kun}╭────────────────────────────────────────────{puti}")
-		exit(f"{kun}└──[{mer} Tidak mempuyai file OK ")
+		print(f"{biru}╭────────────────────────────────────────────{puti}")
+		exit(f"{biru}└──[{mer} Tidak mempuyai file OK ")
 	else:
-		print(f"{kun}╭────────────────────────────────────────────{puti}")
+		print(f"{biru}╭────────────────────────────────────────────{puti}")
 		cih = 0
 		lol = {}
 		for isi in vin:
@@ -672,20 +615,20 @@ def hasil_cp():
 				nom = '0'+str(cih)
 				lol.update({str(cih):str(isi)})
 				lol.update({nom:str(isi)})
-				print(f'{kun}└──[{puti} %s. %s ( %s Idz )'%(nom,isi,len(hem)))
+				print(f'{biru}└──[{puti} %s. %s ( %s Idz )'%(nom,isi,len(hem)))
 			else:
 				lol.update({str(cih):str(isi)})
-				print(f'{kun}└──[{puti} %s. %s ( %s Idz )'%(nom,isi,len(hem)))
-		print(f"{kun}╭────────────────────────────────────────────{puti}")
-		geeh = input(f'{kun}└──[{puti} Input file : ')
+				print(f'{biru}└──[{puti} %s. %s ( %s Idz )'%(nom,isi,len(hem)))
+		print(f"{biru}╭────────────────────────────────────────────{puti}")
+		geeh = input(f'{biru}└──[{puti} Input file : ')
 		try:geh = lol[geeh]
 		except KeyError:
-		    print(f"{kun}╭────────────────────────────────────────────{puti}")
-		    exit(f"{kun}└──[{mer} Pilih yang bener :-( ")
+		    print(f"{biru}╭────────────────────────────────────────────{puti}")
+		    exit(f"{biru}└──[{mer} Pilih yang bener :-( ")
 		try:lin = open('CYXIEON-CP/'+geh,'r').read().splitlines()
 		except:
-		    print(f"{kun}╭────────────────────────────────────────────{puti}")
-		    exit(f"{kun}└──[{mer} File tidak di temukan ")
+		    print(f"{biru}╭────────────────────────────────────────────{puti}")
+		    exit(f"{biru}└──[{mer} File tidak di temukan ")
 		nocp=0
 		for cpku in range(len(lin)):
 			cpkuni=lin[nocp].split('|')
@@ -693,8 +636,8 @@ def hasil_cp():
 			tree.add(f"{kun}{cpkuni[0]}{puti}").add(f"{kun}{cpkuni[1]}{puti}")
 			prints(tree)
 			nocp +=1
-		print(f"{kun}╭────────────────────────────────────────────{puti}")
-		input(f'{kun}└──[{mer} Klik Enter {kun}]')
+		print(f"{biru}╭────────────────────────────────────────────{puti}")
+		input(f'{biru}└──[{mer} Klik Enter {biru}]')
 		menu()
 																		
 #----------[ MENU-IDZ ]----------#		
