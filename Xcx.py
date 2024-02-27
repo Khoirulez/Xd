@@ -228,6 +228,7 @@ def awal():
 	else:
 		print("")
 		print(f"{m} isi yang benar!! ")
+		time.sleep(1)
 		awal()
 #----------------------[ LICENSE ]---------------------#
 import requests
@@ -399,8 +400,8 @@ def menu():
 	    idt = input('└──[ ID Target : ')
 	    dump(idt,"",{"cookie":cok},token)
 	    atur_id()
-	elif CYXIEON_GANTENG in ['02','2']:
-	        massal()
+	if CYXIEON_GANTENG in ['02','2']:
+	    massal()
 	elif CYXIEON_GANTENG in ['03','3']:
 	        mail2()
 	elif CYXIEON_GANTENG in ['04','4']:
