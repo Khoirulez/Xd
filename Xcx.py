@@ -413,10 +413,10 @@ def menu():
 ###----------[ DUMP ID PUBLIK ]----------###
 def massal():
 	try:
-		token = open('.token.txt','r').read()
+		token = open('.tok.txt','r').read()
 		cok = open('.cok.txt','r').read()
 	except IOError:
-	    massal()
+	    exit()
 	try:
 		kumpulkan = int(input(f'Mau Berapa ID ? : '))
 	except ValueError:
