@@ -211,7 +211,7 @@ def banner():
 \t\t    {u}author by {K}RulRecoder\n''')
 def awal():
 	banner()
-	prints(panel(f"""{P}[{c}01{P}] Login With Lisensi\n{P}[{c}02{P}] Hubungi Admin\n{P}[{M}00{P}] Exit Licensi """,width=43,title=f"[[green] LOG IN [/]]",style=f"bold blue"))
+	prints(panel(f"""[white][[cyan]01[white]] Login With Lisensi\n[white][[cyan]02[white]] Hubungi Admin\n[white][[red]00[white]] Exit Licensi """,width=43,title=f"[[green] LOG IN [/]]",style=f"bold blue"))
 	cukuf = input(f"{biru}└──[{puti}{ung} Input{puti} : {H}")
 	if cukuf in ["1","01"]:
 		run()
@@ -398,7 +398,7 @@ def menu():
 	CYXIEON_GANTENG = input(f'{biru}└──[{puti}{ung} Input {puti}:{hijo} ')
 	if CYXIEON_GANTENG in ['01','1']:
 	    print(f"\n{biru}╭────────────────────────────────────────────{puti}")
-	    print(f"└──[ Ketik me untuk dump pertemanan dari akun tumbal")
+	    print(f"└──[ Ketik {hijo}me{puti} untuk dump pertemanan dari akun tumbal")
 	    idt = input('└──[ ID Target : ')
 	    dump(idt,"",{"cookie":cok},token)
 	    atur_id()
