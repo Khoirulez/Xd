@@ -395,7 +395,7 @@ def menu():
 	prints(panel(f"""[white][[cyan]•[white]] Name Tumbal [[green]{nama}[white]]\n[[cyan]•[white]] Idz Tumbal [white][[green]{uidfb}[white]]\n[white][[cyan]•[white]] Your Ip [[green]{alamat_ip}[white]]""",width=43,title=f"[[green] INFO [/]]",style=f"bold blue"))
 	prints(panel(f"""[white][[cyan]01[white]] Crack Publik [[green]ON[white]] \n[[cyan]02[white]] Crack Massal [white][[red]OF[white]] \n[[cyan]03[white]] Crack Email [white][[green]ON[white]] \n[[cyan]04[white]] Crack File [white][[green]ON[white]] \n[[cyan]05[white]] Result Ok/Cp [[green]ON[white]]\n[[cyan]{mer}00[white]] logout [white][[red]hapus cookies[white]] [[green]ON[white]] """,width=43,title=f"[[green] MENU CRACK [/]]",style=f"bold blue"))
 	print(f"{biru}╭────────────────────────────────────────────{puti}")
-	CYXIEON_GANTENG = input(f'{biru}└──[{puti} Input menu : ')
+	CYXIEON_GANTENG = input(f'{biru}└──[{puti}{ung} Input {puti}:{hijo} ')
 	if CYXIEON_GANTENG in ['01','1']:
 	    print(f"\n{biru}╭────────────────────────────────────────────{puti}")
 	    idt = input('└──[ ID Target : ')
@@ -658,7 +658,7 @@ def atur_method():
 	print(f'{biru}└──[{puti} {biru}01.{puti} m.prod.facebook.com ({hijo}Validate{puti}) ')
 	print(f'{biru}└──[{puti} {biru}02.{puti} m.facebook.com ({mer}Reguler{puti}) ')
 	print(f'{biru}└──[{puti} {biru}03.{puti} mbasic.facebook.com ({kun}Asyinc{puti}) ')      
-	CYXIEON_METHODE = input(f'{biru}└──[{puti} Input method : ')
+	CYXIEON_METHODE = input(f'{biru}└──[{puti}{ung} Input{puti} :{hijo} ')
 	if CYXIEON_METHODE in ['1','01']:
 	   method.append('validate')  
 	elif CYXIEON_METHODE in ['2','02']:
@@ -669,10 +669,10 @@ def atur_method():
 		method.append('validate')
 	print(f"\n{biru}╭────────────────────────────────────────────{puti}")
 	print(f'{biru}└──[{puti} Tambahkan pw manual (y/t) ')
-	passwtamb = input(f'{biru}└──[{puti} Input : ')
+	passwtamb = input(f'{biru}└──[{puti}{ung} Input {puti}:{hijo} ')
 	if passwtamb in ['y','Y']:
 		     sandine.append('ya')
-		     sandiku = input(f'{biru}└──[{puti} Input Pw : ')
+		     sandiku = input(f'{biru}└──[{puti}{ung} Input Pw{puti} :{hijo} ')
 		     sandimu = sandiku.split(',')
 		     for sandixnxx in sandimu:
 		         sandina.append(sandixnxx)		 
