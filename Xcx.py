@@ -363,6 +363,7 @@ def menu():
 	try:
 		token = open('.tok.txt','r').read()
 		cok = open('.cok.txt','r').read()
+		print(f"{u}Token : {h}{token} ")
 	except (IOError,KeyError,FileNotFoundError):
 		print(f'{m}cookies telah kadaluarsa bro')
 		time.sleep(2)
@@ -387,7 +388,7 @@ def menu():
 		try:os.remove(".cok.txt");os.remove(".tok.txt")
 		except:pass
 		login()
-	print(f"{h}cookie telah aktif")
+	print(f"\n{h}cookie telah aktif")
 	time.sleep(2)
 	os.system('clear')
 	banner()
