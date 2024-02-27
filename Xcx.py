@@ -330,8 +330,8 @@ def result1():
     if babi in ['01','1']:
        hasil_ok()
     elif babi in ['02','2']:
-	    hasil_cp()    
-	else:
+        hasil_cp()
+    else:
 		print("")
 		jalan(f"{m} isi yang benar!! ")
 		menu()
