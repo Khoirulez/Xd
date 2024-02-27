@@ -227,7 +227,7 @@ def awal():
 		ganti_lisensi()
 	else:
 		print("")
-		jalan(f"{m} isi yang benar!! ")
+		print(f"{m} isi yang benar!! ")
 		awal()
 #----------------------[ LICENSE ]---------------------#
 import requests
