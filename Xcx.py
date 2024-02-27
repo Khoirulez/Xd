@@ -321,6 +321,20 @@ def run():
           print(f"{m}Lisensi tidak valid atau telah kadaluarsa. Tolong masukan lisensi dengan benar.")
           time.sleep(0.03)
           run()
+       
+#result
+def result1():
+    prints(panel(f"""[white][[cyan]01[white]] Result Ok [[green]ON[white]] \n[[cyan]02[white]] Result Cp [white][[green]ON[white]]  """,width=43,title=f"[[green] RESULT [/]]",style=f"bold blue"))
+	print(f"{biru}╭────────────────────────────────────────────{puti}")
+	babi = input(f'{biru}└──[{puti} Input Result : ')
+	if babi in ['01','1']:
+	    hasil_ok()    
+	elif babi in ['02','2']:
+	    hasil_cp()    
+	else:
+		print("")
+		jalan(f"{m} isi yang benar!! ")
+		menu()
 #kukis
 def login():
 	os.system('clear')
@@ -337,6 +351,7 @@ def login():
 				took = re.search('(EAAB\w+)',xz.text).group(1)
 				open('.tok.txt', 'a').write(took);open('.cok.txt', 'a').write(cok)
 				print(f"{u}Token : {h}{took} ")
+				time.sleep(1)
 				menu()
 	except Exception as e:exit(e)
   
@@ -349,7 +364,7 @@ def menu():
 		cok = open('.cok.txt','r').read()
 	except (IOError,KeyError,FileNotFoundError):
 		print(f'{m}cookies telah kadaluarsa bro')
-		time.sleep(4)
+		time.sleep(2)
 		login()
 	try:
 		info_datafb = ses.get(f"https://graph.facebook.com/me?fields=name,id&access_token={token}", cookies = {'cookies':cok}).json()
@@ -376,7 +391,7 @@ def menu():
 	os.system('clear')
 	banner()
 	prints(panel(f"""[white][[cyan]•[white]] Name Tumbal [[green]{nama}[white]]\n[[cyan]•[white]] Idz Tumbal [white][[green]{uidfb}[white]]\n[white][[cyan]•[white]] Your Ip [[green]{alamat_ip}[white]]""",width=43,title=f"[[green] INFO [/]]",style=f"bold blue"))
-	prints(panel(f"""[white][[cyan]01[white]] Crack Publik [[green]ON[white]] \n[[cyan]02[white]] Crack Massal [white][[red]OF[white]] \n[[cyan]03[white]] Crack Email [white][[green]ON[white]] \n[[cyan]04[white]] Crack File [white][[green]ON[white]] \n[[cyan]05[white]] Result CP [[green]ON[white]]\n[[cyan]06[white]] Result OK [white][[green]ON[white]]\n[[cyan]{mer}00[white]] logout [white][[red]hapus cookies[white]] [[green]ON[white]] """,width=43,title=f"[[green] MENU CRACK [/]]",style=f"bold blue"))
+	prints(panel(f"""[white][[cyan]01[white]] Crack Publik [[green]ON[white]] \n[[cyan]02[white]] Crack Massal [white][[red]OF[white]] \n[[cyan]03[white]] Crack Email [white][[green]ON[white]] \n[[cyan]04[white]] Crack File [white][[green]ON[white]] \n[[cyan]05[white]] Result Ok/Cp [[green]ON[white]]\n[[cyan]{mer}00[white]] logout [white][[red]hapus cookies[white]] [[green]ON[white]] """,width=43,title=f"[[green] MENU CRACK [/]]",style=f"bold blue"))
 	print(f"{biru}╭────────────────────────────────────────────{puti}")
 	CYXIEON_GANTENG = input(f'{biru}└──[{puti} Input menu : ')
 	if CYXIEON_GANTENG in ['01','1']:
@@ -391,9 +406,7 @@ def menu():
 	elif CYXIEON_GANTENG in ['04','4']:
 	        Crack_file()
 	elif CYXIEON_GANTENG in ['05','5']:
-	        hasil_cp()
-	elif CYXIEON_GANTENG in ['06','6']:
-	        hasil_ok()
+	        result1()
 	elif CYXIEON_GANTENG in ['00','0']:
             ganti_cokies()
 #----------[ CRACK-MASSAL ]----------#     
