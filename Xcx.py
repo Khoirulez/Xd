@@ -291,8 +291,8 @@ def run():
         with open(LICENSE_FILE_PATH, 'r') as file:
             saved_license = file.read()
             expiration_date = get_expiration_date(saved_license)
-            print(f'  [•]{M} Sedang Mengecek Lisensi..... !!!! ');time.sleep(2)
-            print(f"{H}Lisensi kadaluwarsa pada tanggal: {B}{expiration_date.strftime('%Y-%m-%d %H:%M')}");time.sleep(2)
+            print(f'\n  [•]{M} Sedang Mengecek Lisensi..... !!!! ');time.sleep(2)
+            print(f"\n{H}Lisensi kadaluwarsa pada tanggal: {B}{expiration_date.strftime('%Y-%m-%d %H:%M')}");time.sleep(2)
             if saved_license and is_license_valid(saved_license):
                 time.sleep(0.03)
                 print(f"{H}Lisensi valid. Selamat menggunakan program.")
@@ -300,7 +300,7 @@ def run():
                 os.system("clear")
                 menu()
     except (IOError,FileNotFoundError):
-       print("")
+       print("\n")
        license_key = input(f"[•]{U}Masukkan lisensi:{B} ")
        licen = open(".saved_license.txt", "w").write(license_key)
        time.sleep(0.03)
@@ -309,8 +309,8 @@ def run():
           with open(LICENSE_FILE_PATH, 'r') as file:
               saved_license = file.read()
               expiration_date = get_expiration_date(saved_license)
-              print(f'  [•]{M} Sedang Mengecek Lisensi..... !!!! ');time.sleep(2)
-              print(f"{H}Lisensi kadaluwarsa pada tanggal: {B}{expiration_date.strftime('%Y-%m-%d %H:%M')}");time.sleep(2)
+              print(f'\n  [•]{M} Sedang Mengecek Lisensi..... !!!! ');time.sleep(2)
+              print(f"\n{H}Lisensi kadaluwarsa pada tanggal: {B}{expiration_date.strftime('%Y-%m-%d %H:%M')}");time.sleep(2)
               if saved_license and is_license_valid(saved_license):
                   time.sleep(0.03)
                   print(f"{H}Lisensi valid. Selamat menggunakan program.")
@@ -461,7 +461,7 @@ def massal():
 	    except requests.exceptions.ConnectionError:
 	      exit()
 	try:
-	      prints(f"{biru}└──[{puti} lagi mengumpulkan id, telah sukses mengumpulkan [green]{len(id)}[white] id")
+	      prints(f"└──[ lagi mengumpulkan id, telah sukses mengumpulkan [green]{len(id)}[white] id")
 	      atur_id()
 	except requests.exceptions.ConnectionError:
 	    exit()
@@ -667,7 +667,7 @@ def atur_method():
 	   method.append('asyinc')
 	else:
 		method.append('validate')
-	print(f"{biru}╭────────────────────────────────────────────{puti}")
+	print(f"\n{biru}╭────────────────────────────────────────────{puti}")
 	print(f'{biru}└──[{puti} Tambahkan pw manual (y/t) ')
 	print(f"{biru}╭────────────────────────────────────────────{puti}") 	
 	passwtamb = input(f'{biru}└──[{puti} Input : ')
@@ -685,7 +685,7 @@ def atur_method():
 #----------[ BAGIAN-WORDLIST ]----------#	
 def passwordlist():
 	global prog,des
-	print(f"{biru}╭────────────────────────────────────────────{puti}")
+	print(f"\n{biru}╭────────────────────────────────────────────{puti}")
 	print(f'{biru}└──[{puti} PROSES CRACK SEDANG BERLANGSUNG')
 	print(f"{biru}─────────────────────────────────────────────{puti}")
 	prog = Progress(TextColumn('{task.description}'),BarColumn(),TextColumn('{task.percentage:.0f}%'))
