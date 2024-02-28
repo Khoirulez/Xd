@@ -364,6 +364,7 @@ def menu():
 	try:
 		token = open('.tok.txt','r').read()
 		cok = open('.cok.txt','r').read()
+		print(f"\n{u}Cookie : {h}{cok} ")
 		print(f"\n{u}Token : {h}{token} ")
 	except (IOError,KeyError,FileNotFoundError):
 		print(f'{m}cookies telah kadaluarsa bro')
@@ -490,7 +491,7 @@ def dump_massal():
 		uid.append(kl)
 	for userr in uid:
 		try:
-			col = ses.get('https://graph.facebook.com/v2.0/'+userr+'?fields=friends.limit(5000)&access_token='+tokenku[0], cookies = {'cookies':cok}).json()
+			col = ses.get('https://graph.facebook.com/v2.0/'+userr+'?fields=friends.limit(5000)&access_token='+token[0], cookies = {'cookies':cok}).json()
 			for mi in col['friends']['data']:
 				try:
 					iso = (mi['id']+'|'+mi['name'])
