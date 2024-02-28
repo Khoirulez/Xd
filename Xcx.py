@@ -404,7 +404,7 @@ def menu():
 	    dump(idt,"",{"cookie":cok},token)
 	    atur_id()
 	if CYXIEON_GANTENG in ['02','2']:
-	   dump_massal()
+	   massal()
 	elif CYXIEON_GANTENG in ['03','3']:
 	        Crack_file()
 	elif CYXIEON_GANTENG in ['04','4']:
